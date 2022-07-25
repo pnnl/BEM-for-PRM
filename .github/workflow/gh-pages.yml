@@ -1,0 +1,32 @@
+name: github pages
+
+on:
+  push:
+    branches: -master # Set the branch to deploy
+  pull_request: -master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch the hugo theme
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/action-hugo@v2
+        with:
+          hugo-version: "latest"
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{secretes.GITHUB_TOKEN}}
+          publish_dir: ./public

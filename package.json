@@ -1,0 +1,24 @@
+{
+  "name": "osstd_doc",
+  "version": "1.0.0",
+  "homepage": "http://pnnl.github.io/bem_for_prm",
+  "description": "Osstd-PRM user documentation",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run hugo:build",
+    "clean": "npm run hugo:clean",
+    "server": "npm run hugo:server",
+    "chapter": "npm run hugo:new_chapter",
+    "new": "npm run hugo:new",
+    "hugo:build": "hugo -d build",
+    "hugo:server": "hugo server",
+    "hugo:clean": "rm -rf build resources public",
+    "hugo:new_chapter": "hugo new --kind chapter",
+    "hugo:new": "hugo new"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "hugo-bin": "^0.89.0"
+  }
+}
