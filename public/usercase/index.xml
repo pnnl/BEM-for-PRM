@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>User Case on OSSTD doc</title>
+    <link>http://example.org/usercase/</link>
+    <description>Recent content in User Case on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Jul 2022 10:42:07 -0700</lastBuildDate><atom:link href="http://example.org/usercase/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

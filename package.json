@@ -10,6 +10,7 @@
     "server": "npm run hugo:server",
     "chapter": "npm run hugo:new_chapter",
     "new": "npm run hugo:new",
+    "hugo": "hugo",
     "hugo:build": "hugo -d build",
     "hugo:server": "hugo server",
     "hugo:clean": "rm -rf build resources public",
