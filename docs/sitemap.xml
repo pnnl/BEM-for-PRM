@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/basics/</loc>
+    <loc>http://pnnl.github.io/bem_for_prm/basics/</loc>
     <lastmod>2022-07-11T16:26:38-07:00</lastmod>
   </url><url>
-    <loc>http://example.org/usercase/</loc>
+    <loc>http://pnnl.github.io/bem_for_prm/usercase/</loc>
     <lastmod>2022-07-13T10:42:07-07:00</lastmod>
   </url><url>
-    <loc>http://example.org/basics/configuration/</loc>
+    <loc>http://pnnl.github.io/bem_for_prm/basics/configuration/</loc>
     <lastmod>2022-07-11T16:29:40-07:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>http://pnnl.github.io/bem_for_prm/</loc>
     <lastmod>2022-07-13T10:42:07-07:00</lastmod>
   </url><url>
-    <loc>http://example.org/basics/requirements/</loc>
+    <loc>http://pnnl.github.io/bem_for_prm/basics/requirements/</loc>
     <lastmod>2022-07-11T16:29:28-07:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://pnnl.github.io/bem_for_prm/categories/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://pnnl.github.io/bem_for_prm/tags/</loc>
   </url>
 </urlset>
