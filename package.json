@@ -1,7 +1,7 @@
 {
   "name": "osstd_doc",
   "version": "1.0.0",
-  "homepage": "http://pnnl.github.io/bem_for_prm",
+  "homepage": "http://pnnl.github.io/BEM-for-PRM",
   "description": "Osstd-PRM user documentation",
   "main": "index.js",
   "scripts": {
