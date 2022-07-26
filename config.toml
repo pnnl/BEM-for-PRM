@@ -1,9 +1,8 @@
-baseURL = 'http://pnnl.github.io/bem_for_prm'
+baseURL = 'http://pnnl.github.io/BEM-for-PRM'
 languageCode = 'en-us'
 title = 'OSSTD doc'
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
-publishDir="docs"
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
