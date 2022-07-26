@@ -1,48 +1,48 @@
 [
 {
-	"uri": "http://pnnl.github.io/bem_for_prm/basics/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/basics/",
 	"title": "Basics",
 	"tags": [],
 	"description": "",
 	"content": "Chapter 1 Basic Let\u0026rsquo;s get OSSTD-PRM in your computer!\n"
 },
 {
-	"uri": "http://pnnl.github.io/bem_for_prm/usercase/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/usercase/",
 	"title": "User Case",
 	"tags": [],
 	"description": "",
 	"content": "Chapter 2 User Case Lorem Ipsum.\n"
 },
 {
-	"uri": "http://pnnl.github.io/bem_for_prm/basics/configuration/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/basics/configuration/",
 	"title": "Configuration",
 	"tags": [],
 	"description": "",
 	"content": "Global site parameters as a demo def this_is_a_dummy_function(arg1, arg2) return 42 end This is a template\nOn top of Hugo global configuration, Hugo-theme-learn lets you define the following parameters in your config.toml (here, values are default).\nNote that some of these parameters are explained in details in other sections of this documentation.\n[params] # Prefix URL to edit current page. Will display an \u0026#34;Edit this page\u0026#34; button on top right hand corner of every page. # Useful to give opportunity to people to create merge request for your doc. # See the config.toml file from this documentation site to have an example. editURL = \u0026#34;\u0026#34; # Author of the site, will be used in meta information author = \u0026#34;\u0026#34; # Description of the site, will be used in meta information description = \u0026#34;\u0026#34; # Shows a checkmark for visited pages on the menu showVisitedLinks = false # Disable search function. It will hide search bar disableSearch = false # Javascript and CSS cache are automatically busted when new version of site is generated. # Set this to true to disable this behavior (some proxies don\u0026#39;t handle well this optimization) disableAssetsBusting = false # Set this to true to disable copy-to-clipboard button for inline code. disableInlineCopyToClipBoard = false # A title for shortcuts in menu is set by default. Set this to true to disable it. disableShortcutsTitle = false # If set to false, a Home button will appear below the search bar on the menu. # It is redirecting to the landing page of the current language if specified. (Default is \u0026#34;/\u0026#34;) disableLandingPageButton = true # When using mulitlingual website, disable the switch language button. disableLanguageSwitchingButton = false # Hide breadcrumbs in the header and only show the current page title disableBreadcrumb = true # If set to true, prevents Hugo from including the mermaid module if not needed (will reduce load times and traffic) disableMermaid = false # Specifies the remote location of the mermaid js customMermaidURL = \u0026#34;https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js\u0026#34; # Hide Next and Previous page buttons normally displayed full height beside content disableNextPrev = true # Order sections in menu by \u0026#34;weight\u0026#34; or \u0026#34;title\u0026#34;. Default to \u0026#34;weight\u0026#34; ordersectionsby = \u0026#34;weight\u0026#34; # Change default color scheme with a variant one. Can be \u0026#34;red\u0026#34;, \u0026#34;blue\u0026#34;, \u0026#34;green\u0026#34;. themeVariant = \u0026#34;\u0026#34; # Provide a list of custom css files to load relative from the `static/` folder in the site root. custom_css = [\u0026#34;css/foo.css\u0026#34;, \u0026#34;css/bar.css\u0026#34;] # Change the title separator. Default to \u0026#34;::\u0026#34;. titleSeparator = \u0026#34;-\u0026#34; Activate search If not already present, add the follow lines in the same config.toml file.\n[outputs] home = [ \u0026#34;HTML\u0026#34;, \u0026#34;RSS\u0026#34;, \u0026#34;JSON\u0026#34;] Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.\nHugo generate lunrjs index.json at the root of public folder. When you build the site with hugo server, hugo generates it internally and of course it doesn’t show up in the filesystem\nMermaid The mermaid configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one.\nExample:\nMermaid is globally disabled. By default it won\u0026rsquo;t be loaded by any page.\nOn page \u0026ldquo;Architecture\u0026rdquo; you need a class diagram. You can set the mermaid parameters locally to only load mermaid on this page (not on the others).\nYou also can disable mermaid for specific pages while globally enabled.\nHome Button Configuration If the disableLandingPage option is set to false, an Home button will appear on the left menu. It is an alternative for clicking on the logo. To edit the appearance, you will have to configure two parameters for the defined languages:\n[Lanugages] [Lanugages.en] ... landingPageURL = \u0026#34;/en\u0026#34; landingPageName = \u0026#34;\u0026lt;i class=\u0026#39;fas fa-home\u0026#39;\u0026gt;\u0026lt;/i\u0026gt; Redirect to Home\u0026#34; ... [Lanugages.fr] ... landingPageURL = \u0026#34;/fr\u0026#34; landingPageName = \u0026#34;\u0026lt;i class=\u0026#39;fas fa-home\u0026#39;\u0026gt;\u0026lt;/i\u0026gt; Accueil\u0026#34; ... If those params are not configured for a specific language, they will get their default values:\nlandingPageURL = \u0026#34;/\u0026#34; landingPageName = \u0026#34;\u0026lt;i class=\u0026#39;fas fa-home\u0026#39;\u0026gt;\u0026lt;/i\u0026gt; Home\u0026#34; The home button is going to looks like this:\n"
 },
 {
-	"uri": "http://pnnl.github.io/bem_for_prm/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/",
 	"title": "OSSTD doc",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://pnnl.github.io/bem_for_prm/basics/requirements/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/basics/requirements/",
 	"title": "Requirements",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://pnnl.github.io/bem_for_prm/categories/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://pnnl.github.io/bem_for_prm/tags/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on OSSTD doc</title>
-    <link>http://pnnl.github.io/bem_for_prm/categories/</link>
+    <link>http://pnnl.github.io/BEM-for-PRM/categories/</link>
     <description>Recent content in Categories on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://pnnl.github.io/bem_for_prm/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://pnnl.github.io/BEM-for-PRM/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

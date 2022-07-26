@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>User Case on OSSTD doc</title>
-    <link>http://pnnl.github.io/bem_for_prm/usercase/</link>
+    <link>http://pnnl.github.io/BEM-for-PRM/usercase/</link>
     <description>Recent content in User Case on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jul 2022 10:42:07 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/bem_for_prm/usercase/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jul 2022 10:42:07 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/usercase/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
