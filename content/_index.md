@@ -2,6 +2,6 @@
 title: "Home"
 ---
 
-# OSSTD Home
+# OSSTD PRM
 
-OpenStudio Standard PRM is a project
+OpenStudio Standard PRM is a tool to support energy model automation for performance
