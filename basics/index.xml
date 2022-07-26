@@ -7,5 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Jul 2022 16:26:38 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev_instruction</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/basics/dev_instruction/</link>
+      <pubDate>Tue, 26 Jul 2022 15:43:57 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/basics/dev_instruction/</guid>
+      <description>Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.
+![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.
+![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it
+![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px&amp;amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer</description>
+    </item>
+    
   </channel>
 </rss>
