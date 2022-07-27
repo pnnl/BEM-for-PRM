@@ -16,7 +16,8 @@
       <description>Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.
 ![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.
 ![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it
-![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px&amp;amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer</description>
+![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px&amp;amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer
+Code # Template method for adding a setpoint manager for a coil control logic to a heating coil.</description>
     </item>
     
   </channel>

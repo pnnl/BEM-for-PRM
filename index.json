@@ -25,7 +25,7 @@
 	"title": "Dev_instruction",
 	"tags": [],
 	"description": "",
-	"content": "Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px\u0026amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer\n"
+	"content": "Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px\u0026amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer\nCode # Template method for adding a setpoint manager for a coil control logic to a heating coil. # ASHRAE 90.1-2019 Appendix G. # # @param model [OpenStudio::Model::Model] Openstudio model # @param thermalZones Array([OpenStudio::Model::ThermalZone]) thermal zone array # @param coil Heating Coils # @return [Boolean] true def model_set_central_preheat_coil_spm(model, thermalZones, coil) return true end "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/",
