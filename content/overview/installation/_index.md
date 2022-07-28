@@ -1,5 +1,5 @@
 ---
-title: "Configuration"
+title: "Getting Started"
 date: 2022-07-11T16:29:40-07:00
 weight: 5
 draft: false
