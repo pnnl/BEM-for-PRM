@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction to user data on OSSTD doc</title>
+    <link>http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/</link>
+    <description>Recent content in Introduction to user data on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Jul 2022 20:33:44 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
