@@ -13,7 +13,10 @@
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/installation/requirements/</guid>
-      <description></description>
+      <description>You will need following applications to ensure OpenStudio Standard running smoothly on your project.
+Ruby version support Officially Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
+Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:
+C:\Users\sample_user&amp;gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.</description>
     </item>
     
     <item>
