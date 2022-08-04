@@ -20,6 +20,24 @@ C:\Users\sample_user&amp;gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d
     </item>
     
     <item>
+      <title>Exterior Lights</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/exterior_lights/</link>
+      <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/exterior_lights/</guid>
+      <description>User Data CSV File: user_data_exterior_lights.csv
+Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:
+end_use_subcategory_01
+through
+end_use_subcategory_09
+For each subcategory, the appropriate quantity must also be listed, as designated by:
+end_use_measurement_value_01
+through
+end_use_measurement_value_09
+The units of the measurement value are indicated by the last part of the subcategory name:</description>
+    </item>
+    
+    <item>
       <title>Installation</title>
       <link>http://pnnl.github.io/BEM-for-PRM/overview/installation/installation/</link>
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>

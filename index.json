@@ -43,14 +43,14 @@
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/",
-	"title": "Introduction to user data",
+	"title": "User Data Form Files",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": " userdata_airloop_hvac.csv userdata_airloop_hvac_doas.csv userdata_building.csv userdata_design_specification_outdoor_air.csv userdata_electric_equipment.csv userdata_exterior_lights.csv userdata_gas_equipment.csv userdata_lights.csv userdata_space.csv userdata_spacetype.csv userdata_thermal_zone.csv userdata_wateruse_connections.csv userdata_wateruse_equipment.csv userdata_wateruse_equipment_definition.csv userdata_zone_hvac.csv userdata_zone_infiltration.csv "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/userdata/",
-	"title": "Compliance user dataforms",
+	"title": "Compliance User Data",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -82,6 +82,13 @@
 	"tags": [],
 	"description": "",
 	"content": "You will need following applications to ensure OpenStudio Standard running smoothly on your project.\nRuby version support Officially Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz\nFollow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:\nC:\\Users\\sample_user\u0026gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.2.1 and it can be downloaded at: https://github.com/NREL/OpenStudio/releases/tag/v3.2.1\nIt is important to download the correct OpenStudio version as the OpenStudio Standard is not tested against OpenStudio 3.3 and above.\nYou can Install with all add-ons (in the install utility) enabled.\nConnect Ruby to OpenStudio Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.\nStep 1: navigate to ruby installation directory and find the site_ruby folder. In Windows, it should be a directory like this: C:\\Ruby27-x64\\lib\\ruby\\site_ruby Step 2: create a new ruby file called openstudio.rb under the site_ruby folder. Step 3: open the openstudio.rb file and add one line:\nrequire \u0026#34;C:/openstudio-3.2.1/Ruby/openstudio.rb\u0026#34; The directory shall be pointing to the openstudio.rb file under the OpenStudio installation folder. Revise the directory after require based on your actual installation directory.\nYou can verify the setting with the following command in command line.\nC:\\Users\\smaple_user\u0026gt; irb irb(main):001:0\u0026gt; require \u0026#34;openstudio\u0026#34; =\u0026gt; true Return true verifies a success on your local setup.\nThat is all we need to prepare before the installation OpenStudio Standard package. Click NEXT to install the package!\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/exterior_lights/",
+	"title": "Exterior Lights",
+	"tags": [],
+	"description": "",
+	"content": "User Data CSV File: user_data_exterior_lights.csv\nEach exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:\nend_use_subcategory_01\nthrough\nend_use_subcategory_09\nFor each subcategory, the appropriate quantity must also be listed, as designated by:\nend_use_measurement_value_01\nthrough\nend_use_measurement_value_09\nThe units of the measurement value are indicated by the last part of the subcategory name:\n\u0026lsquo;area\u0026rsquo; = area in square feet\n\u0026lsquo;perim\u0026rsquo; = perimiter length in linear feet\n\u0026lsquo;qty\u0026rsquo; = integer quantity of items\nNote: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to \u0026lsquo;1\u0026rsquo; for the baseline model.\nCredit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.\nIn order to work with the Appendix G code database, the following subcategory names must be used in the user data file:\nTradeable Exterior Lighting Subcategories parking_lots_and_drives_area\nwalkways_less_than_10_ft_wide_perim\nwalkways_10_ft_wide_or_greater_area\nplaza_areas_area\nspecial_feature_areas_area\nstairways_area\nmain_entries_area\nother_doors_perim\ncanopies_area\nopen_areas_including_vehicle_sales_lots_area\nstreet_frontage_for_vehicle_sales_perim\nNon-Tradeable Exterior Lighting Subcategories nontradeable_general_qty\nbuilding_facades_area\nbuilding_facades_perim\nautomated_teller_machines_per_location_qty\nautomated_teller_machines_per_machine_qty\nentries_and_gates_area\nloading_areas_for_emergency_vehicles_area\ndrive_through_windows_and_doors_qty\nparking_near_24_hour_entrances_qty\nroadway_parking_qty\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/installation/installation/",

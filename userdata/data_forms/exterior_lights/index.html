@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Limitations : OSSTD doc</title>
+    <title>Exterior Lights : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1659654659" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/BEM-for-PRM/overview/limitations/">
+  <body class="" data-url="/BEM-for-PRM/userdata/data_forms/exterior_lights/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -81,7 +81,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/overview/" title="Overview" class="dd-item
-        parent
+        
         
         
         ">
@@ -193,7 +193,7 @@
     
     <li data-nav-id="/BEM-for-PRM/overview/limitations/" title="Limitations" class="dd-item
         
-        active
+        
         
         ">
       <a href="/BEM-for-PRM/overview/limitations/">
@@ -454,7 +454,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userdata/" title="Compliance User Data" class="dd-item
-        
+        parent
         
         
         ">
@@ -485,7 +485,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userdata/data_forms/" title="User Data Form Files" class="dd-item
-        
+        parent
         
         
         ">
@@ -513,7 +513,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/userdata/data_forms/exterior_lights/" title="Exterior Lights" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/userdata/data_forms/exterior_lights/" title="Exterior Lights" class="dd-item active">
         <a href="/BEM-for-PRM/userdata/data_forms/exterior_lights/">
         Exterior Lights
         <i class="fas fa-check read-icon"></i>
@@ -612,6 +612,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -626,7 +628,13 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/overview/'>Overview</a> > Limitations
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/userdata/'>Compliance User Data</a> > <a href='/BEM-for-PRM/userdata/data_forms/'>User Data Form Files</a> > Exterior Lights
+          
+        
           
         
           
@@ -637,6 +645,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -644,26 +667,62 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Exterior Lights
+            </h1>
           
 
         
 
 
+<p>User Data CSV File: user_data_exterior_lights.csv</p>
+<p>Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:<br>
+end_use_subcategory_01<br>
+<em>through</em><br>
+end_use_subcategory_09</p>
+<p>For each subcategory, the appropriate quantity must also be listed, as designated by:<br>
+end_use_measurement_value_01<br>
+<em>through</em><br>
+end_use_measurement_value_09</p>
+<p>The units of the measurement value are indicated by the last part of the subcategory name:<br>
+&lsquo;area&rsquo; = area in square feet<br>
+&lsquo;perim&rsquo; = perimiter length in linear feet<br>
+&lsquo;qty&rsquo; = integer quantity of items</p>
+<p>Note: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to &lsquo;1&rsquo; for the baseline model.</p>
+<p>Credit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.</p>
+<p>In order to work with the Appendix G code database, the following subcategory names must be used in the user data file:</p>
+<h4 id="tradeable-exterior-lighting-subcategories">Tradeable Exterior Lighting Subcategories</h4>
+<p>parking_lots_and_drives_area<br>
+walkways_less_than_10_ft_wide_perim<br>
+walkways_10_ft_wide_or_greater_area<br>
+plaza_areas_area<br>
+special_feature_areas_area<br>
+stairways_area<br>
+main_entries_area<br>
+other_doors_perim<br>
+canopies_area<br>
+open_areas_including_vehicle_sales_lots_area<br>
+street_frontage_for_vehicle_sales_perim</p>
+<h4 id="non-tradeable-exterior-lighting-subcategories">Non-Tradeable Exterior Lighting Subcategories</h4>
+<p>nontradeable_general_qty<br>
+building_facades_area<br>
+building_facades_perim<br>
+automated_teller_machines_per_location_qty<br>
+automated_teller_machines_per_machine_qty<br>
+entries_and_gates_area<br>
+loading_areas_for_emergency_vehicles_area<br>
+drive_through_windows_and_doors_qty<br>
+parking_near_24_hour_entrances_qty<br>
+roadway_parking_qty</p>
 
-	
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -695,6 +754,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -711,9 +772,6 @@
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -734,6 +792,25 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -754,33 +831,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -915,6 +969,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -930,6 +985,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -942,6 +998,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -969,10 +1026,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/overview/installation/installation/" title="Installation"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/userdata/data_forms/" title="User Data Form Files"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/overview/dev_instruction/" title="Dev_instruction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/overview/" title="Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1004,3 +1061,4 @@
 
   </body>
 </html>
+
