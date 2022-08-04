@@ -4,3 +4,59 @@ date: 2022-07-11T16:29:40-07:00
 weight: 6
 draft: false
 ---
+
+You will need following applications to ensure OpenStudio Standard running smoothly on your project.
+
+### Ruby version support
+
+Officially Ruby 2.7. Latest stable version is **2.7.6** and it can be downloaded at: [https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz](https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz)
+
+Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:
+
+```
+C:\Users\sample_user>ruby -v
+ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32]
+```
+
+### OpenStudio
+
+OpenStudio 3.2. The latest stable 3.2 version is **3.2.1** and it can be downloaded at: [https://github.com/NREL/OpenStudio/releases/tag/v3.2.1](https://github.com/NREL/OpenStudio/releases/tag/v3.2.1)
+
+It is important to download the correct OpenStudio version as the OpenStudio Standard is not tested against OpenStudio **3.3** and above.
+
+{{% notice tip %}}
+You can Install with all add-ons (in the install utility) enabled.
+{{% /notice %}}
+
+### Connect Ruby to OpenStudio
+
+Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.
+
+- **Step 1**: navigate to ruby installation directory and find the `site_ruby` folder. In Windows, it should be a directory like this:
+
+```
+C:\Ruby27-x64\lib\ruby\site_ruby
+```
+
+- **Step 2**: create a new ruby file called `openstudio.rb` under the `site_ruby` folder.
+  ![Folder Image](/BEM-for-PRM/overview/installation/images/connect_ruby_os_folder.PNG?width=600px&align=left&classes=border,alignLeft)
+
+- **Step 3**: open the `openstudio.rb` file and add one line:
+
+```ruby
+require "C:/openstudio-3.2.1/Ruby/openstudio.rb"
+```
+
+The directory shall be pointing to the `openstudio.rb` file under the OpenStudio installation folder. Revise the directory after `require` based on your actual installation directory.
+
+You can verify the setting with the following command in command line.
+
+```
+C:\Users\smaple_user> irb
+irb(main):001:0> require "openstudio"
+=> true
+```
+
+Return **true** verifies a success on your local setup.
+
+That is all we need to prepare before the installation OpenStudio Standard package. Click [NEXT](/BEM-for-PRM/overview/installation/installation) to install the package!
