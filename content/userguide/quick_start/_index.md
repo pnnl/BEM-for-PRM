@@ -5,8 +5,8 @@ weight = 1
 chapter = true
 +++
 
-### Chapter X
+### Chapter 2.1
 
-# Some Chapter title
+# Quick Start
 
-Lorem Ipsum.
+### 10 minutes to OSSTD-PRM automation

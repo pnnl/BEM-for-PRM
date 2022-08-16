@@ -8,6 +8,8 @@ pre = "<b>2. </b>"
 
 ### Chapter 2
 
-# User Case
+# User Guide
 
-Lorem Ipsum.
+Learn how to use OSSTD-PRM
+
+[Quick start](/BEM-for-PRM/userguide/quick_start)
