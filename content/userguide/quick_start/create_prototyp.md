@@ -7,9 +7,9 @@ draft: false
 
 ### Create a prototype model
 
-OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. In this quick tutorial, we will create a prototype building and then run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.
+OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a prototype building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.
 
-To begin with, we need to import both packages
+To begin with, we need to import both packages.
 
 ```ruby
 require 'openstudio'
@@ -17,7 +17,7 @@ require 'openstudio-standard'
 ```
 
 {{% notice info %}}
-You can use `require_relative [ABSOLUTE_PATH]` to import the OSSTD source code if you choose to use package from Github.
+You can use `require_relative [ABSOLUTE_PATH]` to import the OSSTD source code if you choose to use the package from Github.
 {{% /notice %}}
 
 Next, we want to create a `MediumOffice` prototype building in climate zone 4A (New York) that is designed following the 90.1 2019 standard. Before doing that, we will need to define these parameters.
@@ -30,7 +30,7 @@ epw_file = 'USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw'
 prototype_dir = "#{File.dirname(Dir.pwd)}/output" # path where the generated prototype saved.
 ```
 
-Next step is to generate the prototype model
+The next step is to generate the prototype model
 
 ```ruby
 standard = Standard.build("#{code_version}_#{prototype_template}")
@@ -44,7 +44,7 @@ Last, we can save the generated prototype model to a directory and view it in Op
 
 ![saved model](/BEM-for-PRM/userguide/quick_start/image/prototype_medium_office.PNG?width=800px)
 
-The full script of this part of tutorial is provided below:
+The full script of this part of the tutorial is provided below:
 
 ```ruby
 require 'openstudio'
