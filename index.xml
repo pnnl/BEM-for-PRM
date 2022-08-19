@@ -6,7 +6,42 @@
     <description>Recent content in Home on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jul 2022 20:33:44 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Aug 2022 09:36:35 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create prototype model</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/create_prototyp/</link>
+      <pubDate>Tue, 26 Jul 2022 15:43:57 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/create_prototyp/</guid>
+      <description>Create a prototype model OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a prototype building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.
+To begin with, we need to import both packages.
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.
+Next, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.</description>
+    </item>
+    
+    <item>
+      <title>Baseline automation</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/baseline_automation/</link>
+      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/baseline_automation/</guid>
+      <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
+In the previous step, we created a medium office prototype model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
+    </item>
+    
+    <item>
+      <title>More_examples</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/more_examples/</link>
+      <pubDate>Fri, 19 Aug 2022 09:36:35 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/more_examples/</guid>
+      <description>This section will walk through an additional script that alters our prototype model before running the baseline.
+OpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.
+In this section, we will use the OpenStudio Standard package to:
+Reset window to wall ratio to 60% Add overhangs to the south facade Replace the HVAC system with DOAS + water source heat pumps.</description>
+    </item>
+    
     <item>
       <title>Requirements</title>
       <link>http://pnnl.github.io/BEM-for-PRM/overview/installation/requirements/</link>
