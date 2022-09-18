@@ -37,10 +37,10 @@ standard = Standard.build("#{code_version}_#{prototype_template}")
 model = standard.model_create_prototype_model(climate_zone, epw_file, prototype_dir)
 ```
 
-The first line loads a specific OpenStudio Standard object based on code version (`90.1-2019`) and prototype template (`MediumOffice`).
+The first line loads a specific OpenStudio Standard object based on the code version (`90.1-2019`) and the prototype template (`MediumOffice`).
 The second line calls `model_create_prototype_model` method from the object with arguments include `climate_zone`, `epw_file` and `prototype_dir` to create the prototype model. This method will create a path in the computer to store the draft prototype model and sizing run of the model. Then it will fine-calibrate the model based on the sizing outcome to produce the final version, which is the returned value from this method.
 
-Last, we can save the generated prototype model to a directory and view it in OpenStudio Application.
+Last, we can save the generated prototype model to a directory and view it in the OpenStudio Application.
 
 ![saved model](/BEM-for-PRM/userguide/quick_start/image/prototype_medium_office.PNG?width=800px)
 
