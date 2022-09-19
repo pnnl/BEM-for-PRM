@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Compliance User Data : OSSTD doc</title>
+    <title>Create prototype model : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1663610935" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/userdata/">
+  <body class="" data-url="/BEM-for-PRM/userguide/quick_start/create_prototyp/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -257,7 +257,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userguide/" title="User Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -288,7 +288,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userguide/quick_start/" title="Quick start" class="dd-item
-        
+        parent
         
         
         ">
@@ -316,7 +316,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/userguide/quick_start/create_prototyp/" title="Create prototype model" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/userguide/quick_start/create_prototyp/" title="Create prototype model" class="dd-item active">
         <a href="/BEM-for-PRM/userguide/quick_start/create_prototyp/">
         Create prototype model
         <i class="fas fa-check read-icon"></i>
@@ -537,7 +537,7 @@
     
     <li data-nav-id="/BEM-for-PRM/userdata/" title="Compliance User Data" class="dd-item
         
-        active
+        
         
         ">
       <a href="/BEM-for-PRM/userdata/">
@@ -694,6 +694,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -704,7 +706,19 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > Compliance User Data
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/userguide/'>User Guide</a> > <a href='/BEM-for-PRM/userguide/quick_start/'>Quick start</a> > Create prototype model
+          
+        
+          
+        
           
         
           
@@ -713,6 +727,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#create-a-prototype-model">Create a prototype model</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -720,26 +749,64 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Create prototype model
+            </h1>
           
 
         
 
 
+<h3 id="create-a-prototype-model">Create a prototype model</h3>
+<p>OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a prototype building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.</p>
+<p>To begin with, we need to import both packages.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;openstudio&#39;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;openstudio-standard&#39;</span>
+</span></span></code></pre></div>
+<div class="notices info" ><p>You can use <code>require_relative [ABSOLUTE_PATH]</code> to import the OSSTD source code if you choose to use the package from Github.</p>
+</div>
 
-	
+<p>Next, we want to create a <code>MediumOffice</code> prototype building in climate zone 4A (New York) that is designed following the 90.1 2019 standard. Before doing that, we will need to define these parameters.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>code_version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;90.1-2019&#39;</span>
+</span></span><span style="display:flex;"><span>prototype_template <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MediumOffice&#39;</span>
+</span></span><span style="display:flex;"><span>climate_zone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ASHRAE 169-2013-4A&#39;</span>
+</span></span><span style="display:flex;"><span>epw_file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw&#39;</span>
+</span></span><span style="display:flex;"><span>prototype_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output&#34;</span> <span style="color:#75715e"># path where the generated prototype saved.</span>
+</span></span></code></pre></div><p>The next step is to generate the prototype model</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>code_version<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">#{</span>prototype_template<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_create_prototype_model(climate_zone, epw_file, prototype_dir)
+</span></span></code></pre></div><p>The first line loads a specific OpenStudio Standard object based on the code version (<code>90.1-2019</code>) and the prototype template (<code>MediumOffice</code>).
+The second line calls <code>model_create_prototype_model</code> method from the object with arguments include <code>climate_zone</code>, <code>epw_file</code> and <code>prototype_dir</code> to create the prototype model. This method will create a path in the computer to store the draft prototype model and sizing run of the model. Then it will fine-calibrate the model based on the sizing outcome to produce the final version, which is the returned value from this method.</p>
+<p>Last, we can save the generated prototype model to a directory and view it in the OpenStudio Application.</p>
+<p><img src="/BEM-for-PRM/userguide/quick_start/image/prototype_medium_office.PNG?width=800px" alt="saved model"></p>
+<p>The full script of this part of the tutorial is provided below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;openstudio&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This imports the source code of the openstudio standard. If OSSTD is installed in GEM, then simply</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># use require &#39;openstudio-standards&#39;</span>
+</span></span><span style="display:flex;"><span>require_relative <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#39;..&#39;</span>,<span style="color:#e6db74">&#39;..&#39;</span>,<span style="color:#e6db74">&#39;..&#39;</span>, <span style="color:#e6db74">&#39;OSSTD_Repo&#39;</span>,<span style="color:#e6db74">&#39;lib&#39;</span>,<span style="color:#e6db74">&#39;openstudio-standards.rb&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>code_version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;90.1-2019&#39;</span>
+</span></span><span style="display:flex;"><span>prototype_template <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MediumOffice&#39;</span>
+</span></span><span style="display:flex;"><span>climate_zone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ASHRAE 169-2013-4A&#39;</span>
+</span></span><span style="display:flex;"><span>epw_file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\WeatherData\USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw&#39;</span>
+</span></span><span style="display:flex;"><span>prototype_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>code_version<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">#{</span>prototype_template<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_create_prototype_model(climate_zone, epw_file, prototype_dir)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Save prototype OSM file</span>
+</span></span><span style="display:flex;"><span>osm_path <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenStudio</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Path</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>prototype_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">/test_model.osm&#34;</span>)
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>save(osm_path, <span style="color:#66d9ef">true</span>)
+</span></span></code></pre></div><p>Next, we will write a script to automatically generate ASHRAE 90.1 Appendix G (PRM) model from the generated prototype model. Click the Next button at the right edge to start the script.</p>
 
 
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -872,6 +939,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -887,6 +955,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -894,6 +963,61 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
                         
             
@@ -943,57 +1067,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1034,7 +1107,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1049,9 +1121,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1092,10 +1161,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/userguide/log_file/" title="Log file"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/userguide/quick_start/" title="Quick start"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/userdata/data_forms/" title="User Data Form Files" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/userguide/quick_start/baseline_automation/" title="Baseline automation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1127,3 +1196,4 @@
 
   </body>
 </html>
+

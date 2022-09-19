@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Getting Started : OSSTD doc</title>
+    <title>More_examples : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1663610935" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/overview/installation/">
+  <body class="" data-url="/BEM-for-PRM/userguide/quick_start/more_examples/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -90,7 +90,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/overview/" title="Overview" class="dd-item
-        parent
+        
         
         
         ">
@@ -122,7 +122,7 @@
     
     <li data-nav-id="/BEM-for-PRM/overview/installation/" title="Getting Started" class="dd-item
         
-        active
+        
         
         ">
       <a href="/BEM-for-PRM/overview/installation/">
@@ -257,7 +257,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userguide/" title="User Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -288,7 +288,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userguide/quick_start/" title="Quick start" class="dd-item
-        
+        parent
         
         
         ">
@@ -358,7 +358,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/userguide/quick_start/more_examples/" title="More_examples" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/userguide/quick_start/more_examples/" title="More_examples" class="dd-item active">
         <a href="/BEM-for-PRM/userguide/quick_start/more_examples/">
         More_examples
         <i class="fas fa-check read-icon"></i>
@@ -710,7 +710,13 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/overview/'>Overview</a> > Getting Started
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/userguide/'>User Guide</a> > <a href='/BEM-for-PRM/userguide/quick_start/'>Quick start</a> > More_examples
+          
+        
           
         
           
@@ -723,14 +729,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#global-site-parameters-as-a-demo">Global site parameters as a demo</a></li>
-    <li><a href="#activate-search">Activate search</a></li>
-    <li><a href="#mermaid">Mermaid</a></li>
-    <li><a href="#home-button-configuration">Home Button Configuration</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -746,106 +745,123 @@
           
             <h1>
               
-              Getting Started
+              More_examples
             </h1>
           
 
         
 
 
-
-	<h2 id="global-site-parameters-as-a-demo">Global site parameters as a demo</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">this_is_a_dummy_function</span>(arg1, arg2)
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span>
+<p>This section will walk through an additional script that alters our prototype model before running the baseline.</p>
+<p>OpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.</p>
+<p>In this section, we will use the OpenStudio Standard package to:</p>
+<ol>
+<li>Reset window to wall ratio to 60%</li>
+<li>Add overhangs to the south facade</li>
+<li>Replace the HVAC system with DOAS + water source heat pumps.</li>
+</ol>
+<p><img src="/BEM-for-PRM/userguide/quick_start/image/modified_model_image.PNG?width=800px&amp;classes=border" alt="modified_model"></p>
+<p>First, let&rsquo;s load the model and standard package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>model_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output/&#34;</span>
+</span></span><span style="display:flex;"><span>save_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/source/&#34;</span>
+</span></span><span style="display:flex;"><span>base_model <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;test_model.osm&#39;</span>
+</span></span><span style="display:flex;"><span>modified_model <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;modified_model_demo.osm&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Load standard package</span>
+</span></span><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#39;90.1-PRM-2019&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># load model</span>
+</span></span><span style="display:flex;"><span>translator <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenStudio</span><span style="color:#f92672">::</span><span style="color:#66d9ef">OSVersion</span><span style="color:#f92672">::</span><span style="color:#66d9ef">VersionTranslator</span><span style="color:#f92672">.</span>new
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> translator<span style="color:#f92672">.</span>loadModel(model_path <span style="color:#f92672">+</span> base_model)<span style="color:#f92672">.</span>get
+</span></span></code></pre></div><p>After the model is loaded, we can firstly modify the window-to-wall ratio using a simple function: <code>setWindowToWallRatio</code> from OpenStudio API.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># Remove HVAC system and EMS (if any)</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_remove_prm_hvac(model)
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_remove_prm_ems_objects(model)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># remove transformers</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>getElectricLoadCenterTransformers<span style="color:#f92672">.</span>each(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:remove</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Loop through every sub surface</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>getSurfaces<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>ss<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">unless</span> ss<span style="color:#f92672">.</span>subSurfaces<span style="color:#f92672">.</span>empty?
+</span></span><span style="display:flex;"><span>    orig_construction <span style="color:#f92672">=</span> ss<span style="color:#f92672">.</span>subSurfaces<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">].</span>construction<span style="color:#f92672">.</span>get
+</span></span><span style="display:flex;"><span>    ss<span style="color:#f92672">.</span>subSurfaces<span style="color:#f92672">.</span>sort<span style="color:#f92672">.</span>each(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:remove</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Set WWR to 60% with sill height of 0.8 m.</span>
+</span></span><span style="display:flex;"><span>    new_window <span style="color:#f92672">=</span> ss<span style="color:#f92672">.</span>setWindowToWallRatio(<span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">8</span>, <span style="color:#66d9ef">true</span>)<span style="color:#f92672">.</span>get
+</span></span><span style="display:flex;"><span>    new_window<span style="color:#f92672">.</span>setConstruction(orig_construction)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><p>This is a template</p>
-<p>On top of <a href="https://gohugo.io/overview/configuration/">Hugo global configuration</a>, <strong>Hugo-theme-learn</strong> lets you define the following parameters in your <code>config.toml</code> (here, values are default).</p>
-<p>Note that some of these parameters are explained in details in other sections of this documentation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Prefix URL to edit current page. Will display an &#34;Edit this page&#34; button on top right hand corner of every page.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Useful to give opportunity to people to create merge request for your doc.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># See the config.toml file from this documentation site to have an example.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">editURL</span> = <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Author of the site, will be used in meta information</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Description of the site, will be used in meta information</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Shows a checkmark for visited pages on the menu</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showVisitedLinks</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Disable search function. It will hide search bar</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableSearch</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Javascript and CSS cache are automatically busted when new version of site is generated.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Set this to true to disable this behavior (some proxies don&#39;t handle well this optimization)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableAssetsBusting</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Set this to true to disable copy-to-clipboard button for inline code.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableInlineCopyToClipBoard</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># A title for shortcuts in menu is set by default. Set this to true to disable it.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableShortcutsTitle</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># If set to false, a Home button will appear below the search bar on the menu.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># It is redirecting to the landing page of the current language if specified. (Default is &#34;/&#34;)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableLandingPageButton</span> = <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># When using mulitlingual website, disable the switch language button.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableLanguageSwitchingButton</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Hide breadcrumbs in the header and only show the current page title</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableBreadcrumb</span> = <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># If set to true, prevents Hugo from including the mermaid module if not needed (will reduce load times and traffic)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableMermaid</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Specifies the remote location of the mermaid js</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">customMermaidURL</span> = <span style="color:#e6db74">&#34;https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Hide Next and Previous page buttons normally displayed full height beside content</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableNextPrev</span> = <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Order sections in menu by &#34;weight&#34; or &#34;title&#34;. Default to &#34;weight&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ordersectionsby</span> = <span style="color:#e6db74">&#34;weight&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Provide a list of custom css files to load relative from the `static/` folder in the site root.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">custom_css</span> = [<span style="color:#e6db74">&#34;css/foo.css&#34;</span>, <span style="color:#e6db74">&#34;css/bar.css&#34;</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Change the title separator. Default to &#34;::&#34;.</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">titleSeparator</span> = <span style="color:#e6db74">&#34;-&#34;</span>
-</span></span></code></pre></div><h2 id="activate-search">Activate search</h2>
-<p>If not already present, add the follow lines in the same <code>config.toml</code> file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">outputs</span>]
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">home</span> = [ <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
-</span></span></code></pre></div><p>Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.</p>
-<blockquote>
-<p>Hugo generate lunrjs index.json at the root of public folder.
-When you build the site with <code>hugo server</code>, hugo generates it internally and of course it doesn’t show up in the filesystem</p>
-</blockquote>
-<h2 id="mermaid">Mermaid</h2>
-<p>The mermaid configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one.</p>
-<blockquote>
-<p>Example:</p>
-<p>Mermaid is globally disabled. By default it won&rsquo;t be loaded by any page.<br>
-On page &ldquo;Architecture&rdquo; you need a class diagram. You can set the mermaid parameters locally to only load mermaid on this page (not on the others).</p>
-</blockquote>
-<p>You also can disable mermaid for specific pages while globally enabled.</p>
-<h2 id="home-button-configuration">Home Button Configuration</h2>
-<p>If the <code>disableLandingPage</code> option is set to <code>false</code>, an Home button will appear
-on the left menu. It is an alternative for clicking on the logo. To edit the
-appearance, you will have to configure two parameters for the defined languages:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">Lanugages</span>]
-</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">Lanugages</span>.<span style="color:#a6e22e">en</span>]
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">landingPageURL</span> = <span style="color:#e6db74">&#34;/en&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">landingPageName</span> = <span style="color:#e6db74">&#34;&lt;i class=&#39;fas fa-home&#39;&gt;&lt;/i&gt; Redirect to Home&#34;</span>
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">Lanugages</span>.<span style="color:#a6e22e">fr</span>]
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">landingPageURL</span> = <span style="color:#e6db74">&#34;/fr&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">landingPageName</span> = <span style="color:#e6db74">&#34;&lt;i class=&#39;fas fa-home&#39;&gt;&lt;/i&gt; Accueil&#34;</span>
-</span></span><span style="display:flex;"><span>...
-</span></span></code></pre></div><p>If those params are not configured for a specific language, they will get their
-default values:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">landingPageURL</span> = <span style="color:#e6db74">&#34;/&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">landingPageName</span> = <span style="color:#e6db74">&#34;&lt;i class=&#39;fas fa-home&#39;&gt;&lt;/i&gt; Home&#34;</span>
-</span></span></code></pre></div><p>The home button is going to looks like this:</p>
-<p><img src="/en/basics/configuration/images/home_button_defaults.jpg?width=100%25" alt="Default Home Button"></p>
+</span></span></code></pre></div><p>Next, we will add overhangs to the south facade</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># loop sub surfaces</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>getSubSurfaces<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>s<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># get the absolute azimuth of the sub surface</span>
+</span></span><span style="display:flex;"><span>    absoluteAzimuth <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenStudio</span><span style="color:#f92672">.</span>convert(s<span style="color:#f92672">.</span>azimuth, <span style="color:#e6db74">&#39;rad&#39;</span>, <span style="color:#e6db74">&#39;deg&#39;</span>)<span style="color:#f92672">.</span>get <span style="color:#f92672">+</span> s<span style="color:#f92672">.</span>space<span style="color:#f92672">.</span>get<span style="color:#f92672">.</span>directionofRelativeNorth <span style="color:#f92672">+</span> model<span style="color:#f92672">.</span>getBuilding<span style="color:#f92672">.</span>northAxis
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># filter out non-south sub surfaces</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">next</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>((absoluteAzimuth <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">135</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;&amp;</span> (absoluteAzimuth <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">225</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">&gt;</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Adds overhangs 0.8 m</span>
+</span></span><span style="display:flex;"><span>    s<span style="color:#f92672">.</span>addOverhangByProjectionFactor(<span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Last, we will add a DOAS + water source heat pump to the model. We will add one DOAS per floor and one heat pump per thermal zone.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># split thermal zones by floors, exclude plenum zones</span>
+</span></span><span style="display:flex;"><span>thermal_top_zones <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>thermal_mid_zones <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>thermal_bot_zones <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>getThermalZones<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>zone<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">unless</span> <span style="color:#e6db74">/Plenum/</span> <span style="color:#f92672">=~</span> zone<span style="color:#f92672">.</span>name<span style="color:#f92672">.</span>get
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">/top/</span> <span style="color:#f92672">=~</span> zone<span style="color:#f92672">.</span>name<span style="color:#f92672">.</span>get
+</span></span><span style="display:flex;"><span>      thermal_top_zones<span style="color:#f92672">.</span>append(zone)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elsif</span> <span style="color:#e6db74">/bot/</span> <span style="color:#f92672">=~</span> zone<span style="color:#f92672">.</span>name<span style="color:#f92672">.</span>get
+</span></span><span style="display:flex;"><span>      thermal_bot_zones<span style="color:#f92672">.</span>append(zone)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>      thermal_mid_zones<span style="color:#f92672">.</span>append(zone)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add a hot water plant loop for DOAS</span>
+</span></span><span style="display:flex;"><span>hot_water_loop <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_add_hw_loop(model, <span style="color:#e6db74">&#39;NaturalGas&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add a heat pump plant loop</span>
+</span></span><span style="display:flex;"><span>condenser_loop <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_get_or_add_heat_pump_loop(model, <span style="color:#e6db74">&#39;Electricity&#39;</span>,
+</span></span><span style="display:flex;"><span>                                                          <span style="color:#e6db74">&#39;Electricity&#39;</span>,
+</span></span><span style="display:flex;"><span>                                                          <span style="color:#e6db74">heat_pump_loop_cooling_type</span>: <span style="color:#e6db74">&#39;CoolingTower&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Top floor zone</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_add_water_source_hp(model, thermal_top_zones, condenser_loop, <span style="color:#e6db74">ventilation</span>: <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_add_doas(model, thermal_top_zones,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">system_name</span>: <span style="color:#e6db74">&#39;DOAS TOP System&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">doas_type</span>: <span style="color:#e6db74">&#39;DOASCV&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">hot_water_loop</span>: hot_water_loop,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">chilled_water_loop</span>: <span style="color:#66d9ef">nil</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mid floor zone</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_add_water_source_hp(model, thermal_mid_zones, condenser_loop, <span style="color:#e6db74">ventilation</span>: <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_add_doas(model, thermal_mid_zones,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">system_name</span>: <span style="color:#e6db74">&#39;DOAS MID System&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">doas_type</span>: <span style="color:#e6db74">&#39;DOASCV&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">hot_water_loop</span>: hot_water_loop,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">chilled_water_loop</span>: <span style="color:#66d9ef">nil</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Bottom floor zone</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_add_water_source_hp(model, thermal_bot_zones, condenser_loop, <span style="color:#e6db74">ventilation</span>: <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_add_doas(model, thermal_bot_zones,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">system_name</span>: <span style="color:#e6db74">&#39;DOAS BOT System&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">doas_type</span>: <span style="color:#e6db74">&#39;DOASCV&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">hot_water_loop</span>: hot_water_loop,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">chilled_water_loop</span>: <span style="color:#66d9ef">nil</span>)
+</span></span></code></pre></div><p>That&rsquo;s it. In the end, we will call the baseline function to generate a baseline.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MediumOffice&#39;</span>
+</span></span><span style="display:flex;"><span>climate_zone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ASHRAE 169-2013-4A&#39;</span>
+</span></span><span style="display:flex;"><span>baseline_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output&#34;</span>
+</span></span><span style="display:flex;"><span>default_hvac_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;other nonresidential&#39;</span>
+</span></span><span style="display:flex;"><span>default_wwr_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Office 5,000 to 50,000 sq ft&#39;</span>
+</span></span><span style="display:flex;"><span>default_swh_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Office&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>baseline_models <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, <span style="color:#66d9ef">nil</span>, baseline_dir, run_all_orients<span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>, unmet_load_hours_check<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>, debug<span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>)
+</span></span></code></pre></div><p><img src="/BEM-for-PRM/userguide/quick_start/image/before_after_comparison.PNG?width=600px&amp;classes=border" alt="before_after_compare"></p>
+<p>Now we can have a more visual comparison between the prototype and baseline. In the baseline, the windows are shrunk, and the overhangs are removed. Also, the HVAC system was changed from DOAS + water source heat pump to Packaged VAV system (system type 5).</p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -880,6 +896,107 @@ default values:</p>
             
                 
                     
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -940,29 +1057,11 @@ default values:</p>
             
         
                     
-            
-        
-                    
                         
             
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -983,84 +1082,8 @@ default values:</p>
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1199,10 +1222,10 @@ default values:</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/overview/" title="Overview"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/userguide/quick_start/baseline_automation/" title="Baseline automation"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/overview/installation/requirements/" title="Requirements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/userguide/prepare_model/" title="Prepare a model for PRM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1234,3 +1257,4 @@ default values:</p>
 
   </body>
 </html>
+

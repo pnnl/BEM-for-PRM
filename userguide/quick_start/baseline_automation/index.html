@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Compliance User Data : OSSTD doc</title>
+    <title>Baseline automation : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1663610935" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/userdata/">
+  <body class="" data-url="/BEM-for-PRM/userguide/quick_start/baseline_automation/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -257,7 +257,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userguide/" title="User Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -288,7 +288,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/userguide/quick_start/" title="Quick start" class="dd-item
-        
+        parent
         
         
         ">
@@ -337,7 +337,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/userguide/quick_start/baseline_automation/" title="Baseline automation" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/userguide/quick_start/baseline_automation/" title="Baseline automation" class="dd-item active">
         <a href="/BEM-for-PRM/userguide/quick_start/baseline_automation/">
         Baseline automation
         <i class="fas fa-check read-icon"></i>
@@ -537,7 +537,7 @@
     
     <li data-nav-id="/BEM-for-PRM/userdata/" title="Compliance User Data" class="dd-item
         
-        active
+        
         
         ">
       <a href="/BEM-for-PRM/userdata/">
@@ -694,6 +694,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -704,7 +706,19 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > Compliance User Data
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/userguide/'>User Guide</a> > <a href='/BEM-for-PRM/userguide/quick_start/'>Quick start</a> > Baseline automation
+          
+        
+          
+        
           
         
           
@@ -713,6 +727,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -720,26 +741,49 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Baseline automation
+            </h1>
           
 
         
 
 
+<p>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.</p>
+<p>In the previous step, we created a medium office prototype model in Climate zone 4.
+<img src="/BEM-for-PRM/userguide/quick_start/image/prototype_medium_office.PNG?width=800px" alt="saved model"></p>
+<p>In this section, let&rsquo;s write the script to generate a baseline for this prototype building.
+First, we need to import <code>openstudio</code> and <code>openstudio-standards</code> packages.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;openstudio&#39;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;openstudio-standard&#39;</span>
+</span></span></code></pre></div><p>Next, load the model and prepare compliance parameters for baseline generation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># Load the openstudio model</span>
+</span></span><span style="display:flex;"><span>model_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output_baseline/test_model.osm&#34;</span>
+</span></span><span style="display:flex;"><span>translator <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenStudio</span><span style="color:#f92672">::</span><span style="color:#66d9ef">OSVersion</span><span style="color:#f92672">::</span><span style="color:#66d9ef">VersionTranslator</span><span style="color:#f92672">.</span>new
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> translator<span style="color:#f92672">.</span>loaModel(model_path)<span style="color:#f92672">.</span>get
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Baseline parameters</span>
+</span></span><span style="display:flex;"><span>bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MediumOffice&#39;</span>
+</span></span><span style="display:flex;"><span>climate_zone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ASHRAE 169-2013-4A&#39;</span>
+</span></span><span style="display:flex;"><span>baseline_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output&#34;</span>
+</span></span><span style="display:flex;"><span>default_hvac_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;other nonresidential&#39;</span>
+</span></span><span style="display:flex;"><span>default_wwr_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Office 5,000 to 50,000 sq ft&#39;</span>
+</span></span><span style="display:flex;"><span>default_swh_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Office&#39;</span>
+</span></span></code></pre></div><p>Finally, add the script to generate baseline:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># load the PRM standard package</span>
+</span></span><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#39;90.1-PRM-2019&#39;</span>)
+</span></span><span style="display:flex;"><span>P <span style="color:#e6db74">&#34;start generating baseline model ... at </span><span style="color:#e6db74">#{</span>baseline_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>baseline_models <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, <span style="color:#66d9ef">nil</span>, baseline_dir, run_all_orients<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>, unmet_load_hours_check<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>, debug<span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>)
+</span></span></code></pre></div><p>There are many arguments for the <code>model_create_prm_stable_baseline_building</code> function but don&rsquo;t sweat on it. We will cover each one of them in later sections. Nevertheless, this script is sufficient to generate the baseline models for our prototype model.</p>
 
-	
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -872,6 +916,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -887,6 +932,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -894,6 +940,64 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
                         
             
@@ -943,57 +1047,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1034,7 +1087,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1049,9 +1101,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1092,10 +1141,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/userguide/log_file/" title="Log file"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/userguide/quick_start/create_prototyp/" title="Create prototype model"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/userdata/data_forms/" title="User Data Form Files" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/userguide/quick_start/more_examples/" title="More_examples" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1127,3 +1176,4 @@
 
   </body>
 </html>
+
