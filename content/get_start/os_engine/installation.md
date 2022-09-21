@@ -1,8 +1,9 @@
 ---
-title: "Requirements"
-date: 2022-07-11T16:29:40-07:00
-weight: 6
+title: "Installation"
+date: 2022-09-21T15:01:00-07:00
+weight: 221
 draft: false
+pre: "<b>- </b>"
 ---
 
 You will need following applications to ensure OpenStudio Standard running smoothly on your project.
@@ -39,7 +40,7 @@ C:\Ruby27-x64\lib\ruby\site_ruby
 ```
 
 - **Step 2**: create a new ruby file called `openstudio.rb` under the `site_ruby` folder.
-  ![Folder Image](/BEM-for-PRM/overview/installation/images/connect_ruby_os_folder.PNG?width=600px&align=left&classes=border,alignLeft)
+  ![Folder Image](/BEM-for-PRM/get_start/os_engine/images/connect_ruby_os_folder.PNG?width=600px&align=left&classes=border,alignLeft)
 
 - **Step 3**: open the `openstudio.rb` file and add one line:
 

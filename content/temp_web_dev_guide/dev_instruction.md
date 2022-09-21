@@ -1,7 +1,9 @@
 ---
 title: "Dev_instruction"
 date: 2022-07-26T15:43:57-07:00
+weight: 41
 draft: false
+pre: "<b>- </b>"
 ---
 
 ## Image
