@@ -1,12 +1,5 @@
 [
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/",
-	"title": "Quick start",
-	"tags": [],
-	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
-},
-{
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/",
 	"title": "Overview",
 	"tags": [],
@@ -19,13 +12,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/",
-	"title": "User Guide",
-	"tags": [],
-	"description": "",
-	"content": "Chapter 2 User Case Lorem Ipsum.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/",
