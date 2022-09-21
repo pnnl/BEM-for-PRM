@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Home : OSSTD doc</title>
+    <title>Installation : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1663800290" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/">
+  <body class="" data-url="/BEM-for-PRM/get_start/os_engine/installation/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -168,7 +168,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/get_start/" title="Getting Started" class="dd-item
-        
+        parent
         
         
         ">
@@ -300,7 +300,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/get_start/os_engine/" title="Use with OpenStudio Engine" class="dd-item
-        
+        parent
         
         
         ">
@@ -328,7 +328,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/get_start/os_engine/installation/" title="Installation" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/get_start/os_engine/installation/" title="Installation" class="dd-item active">
         <a href="/BEM-for-PRM/get_start/os_engine/installation/">
         <b>- </b>Installation
         <i class="fas fa-check read-icon"></i>
@@ -1002,24 +1002,127 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/get_start/'>Getting Started</a> > <a href='/BEM-for-PRM/get_start/os_engine/'>Use with OpenStudio Engine</a> > Installation
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ruby-version-support">Ruby version support</a></li>
+        <li><a href="#openstudio">OpenStudio</a></li>
+        <li><a href="#connect-ruby-to-openstudio">Connect Ruby to OpenStudio</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Installation
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="osstd-prm">OSSTD PRM</h1>
-<p>OpenStudio Standard PRM is a tool to support energy model automation for performance</p>
+<p>You will need following applications to ensure OpenStudio Standard running smoothly on your project.</p>
+<h3 id="ruby-version-support">Ruby version support</h3>
+<p>Officially Ruby 2.7. Latest stable version is <strong>2.7.6</strong> and it can be downloaded at: <a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz">https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz</a></p>
+<p>Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:</p>
+<pre tabindex="0"><code>C:\Users\sample_user&gt;ruby -v
+ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32]
+</code></pre><h3 id="openstudio">OpenStudio</h3>
+<p>OpenStudio 3.2. The latest stable 3.2 version is <strong>3.2.1</strong> and it can be downloaded at: <a href="https://github.com/NREL/OpenStudio/releases/tag/v3.2.1">https://github.com/NREL/OpenStudio/releases/tag/v3.2.1</a></p>
+<p>It is important to download the correct OpenStudio version as the OpenStudio Standard is not tested against OpenStudio <strong>3.3</strong> and above.</p>
+
+<div class="notices tip" ><p>You can Install with all add-ons (in the install utility) enabled.</p>
+</div>
+
+<h3 id="connect-ruby-to-openstudio">Connect Ruby to OpenStudio</h3>
+<p>Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.</p>
+<ul>
+<li><strong>Step 1</strong>: navigate to ruby installation directory and find the <code>site_ruby</code> folder. In Windows, it should be a directory like this:</li>
+</ul>
+<pre tabindex="0"><code>C:\Ruby27-x64\lib\ruby\site_ruby
+</code></pre><ul>
+<li>
+<p><strong>Step 2</strong>: create a new ruby file called <code>openstudio.rb</code> under the <code>site_ruby</code> folder.
+<img src="/BEM-for-PRM/get_start/os_engine/images/connect_ruby_os_folder.PNG?width=600px&amp;align=left&amp;classes=border,alignLeft" alt="Folder Image"></p>
+</li>
+<li>
+<p><strong>Step 3</strong>: open the <code>openstudio.rb</code> file and add one line:</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#34;C:/openstudio-3.2.1/Ruby/openstudio.rb&#34;</span>
+</span></span></code></pre></div><p>The directory shall be pointing to the <code>openstudio.rb</code> file under the OpenStudio installation folder. Revise the directory after <code>require</code> based on your actual installation directory.</p>
+<p>You can verify the setting with the following command in command line.</p>
+<pre tabindex="0"><code>C:\Users\smaple_user&gt; irb
+irb(main):001:0&gt; require &#34;openstudio&#34;
+=&gt; true
+</code></pre><p>Return <strong>true</strong> verifies a success on your local setup.</p>
+<p>That is all we need to prepare before the installation OpenStudio Standard package. Click <a href="/BEM-for-PRM/overview/installation/installation">NEXT</a> to install the package!</p>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
         </div>
         
@@ -1102,6 +1205,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1117,18 +1221,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1137,9 +1231,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -1173,22 +1264,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1205,10 +1280,47 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1576,8 +1688,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/BEM-for-PRM/get_start/os_engine/" title="Use with OpenStudio Engine"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/overview/" title="Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/BEM-for-PRM/get_start/os_engine/call_use_api/" title="Call measure via API" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

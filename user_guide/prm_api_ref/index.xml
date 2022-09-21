@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PRM API Reference on OSSTD doc</title>
+    <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/</link>
+    <description>Recent content in PRM API Reference on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Sep 2022 15:05:08 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Baseline generation API</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:50 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WWR API</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:59 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

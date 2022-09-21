@@ -5,62 +5,101 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/</loc>
     <lastmod>2022-07-27T20:20:53-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/create_prototyp/</loc>
-    <lastmod>2022-07-26T15:43:57-07:00</lastmod>
-  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/overview/</loc>
     <lastmod>2022-07-11T16:26:38-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/baseline_automation/</loc>
-    <lastmod>2022-08-16T13:04:42-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/prepare_model/</loc>
-    <lastmod>2022-07-27T20:21:40-07:00</lastmod>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/</loc>
+    <lastmod>2022-09-21T14:49:22-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/userguide/</loc>
     <lastmod>2022-07-13T10:42:07-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/more_examples/</loc>
-    <lastmod>2022-08-19T09:36:35-07:00</lastmod>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/</loc>
+    <lastmod>2022-09-21T15:03:32-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/use_gui/</loc>
-    <lastmod>2022-07-27T20:28:53-07:00</lastmod>
+    <loc>http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/</loc>
+    <lastmod>2022-09-21T15:07:24-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/gen_prm_baseline_run_sim/</loc>
-    <lastmod>2022-07-27T20:30:51-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/</loc>
-    <lastmod>2022-07-27T20:33:44-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userdata/</loc>
-    <lastmod>2022-07-27T20:32:44-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/create_usr_data/</loc>
-    <lastmod>2022-07-27T20:31:30-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/overview/installation/</loc>
-    <lastmod>2022-07-11T16:29:40-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userguide/log_file/</loc>
-    <lastmod>2022-07-27T20:31:50-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/overview/installation/requirements/</loc>
-    <lastmod>2022-07-11T16:29:40-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/exterior_lights/</loc>
-    <lastmod>2022-07-11T16:29:40-07:00</lastmod>
-  </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/overview/installation/installation/</loc>
-    <lastmod>2022-07-11T16:29:40-07:00</lastmod>
+    <loc>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/</loc>
+    <lastmod>2022-09-21T14:48:04-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</loc>
-    <lastmod>2022-07-11T16:26:38-07:00</lastmod>
+    <lastmod>2022-09-21T14:48:14-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/</loc>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/</loc>
+    <lastmod>2022-09-21T14:49:40-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/</loc>
+    <lastmod>2022-09-21T14:50:09-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/</loc>
+    <lastmod>2022-09-21T14:50:10-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/</loc>
+    <lastmod>2022-09-21T15:04:10-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/</loc>
+    <lastmod>2022-09-21T15:04:27-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/</loc>
+    <lastmod>2022-09-21T15:05:08-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/</loc>
+    <lastmod>2022-07-26T15:43:57-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</loc>
+    <lastmod>2022-09-21T14:50:40-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</loc>
+    <lastmod>2022-09-21T14:51:16-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</loc>
+    <lastmod>2022-09-21T14:52:25-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</loc>
+    <lastmod>2022-09-21T15:01:00-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/</loc>
+    <lastmod>2022-09-21T15:00:28-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</loc>
+    <lastmod>2022-09-21T15:01:04-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</loc>
+    <lastmod>2022-08-16T13:04:42-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/create_typical/</loc>
+    <lastmod>2022-07-26T15:43:57-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/</loc>
     <lastmod>2022-08-19T09:36:35-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/overview/dev_instruction/</loc>
-    <lastmod>2022-07-26T15:43:57-07:00</lastmod>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</loc>
+    <lastmod>2022-09-21T15:05:37-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/</loc>
+    <lastmod>2022-09-21T15:05:48-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</loc>
+    <lastmod>2022-09-21T15:06:18-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</loc>
+    <lastmod>2022-09-21T15:06:26-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/</loc>
+    <lastmod>2022-07-11T16:29:40-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</loc>
+    <lastmod>2022-09-21T15:06:50-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</loc>
+    <lastmod>2022-09-21T15:06:59-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/</loc>
+    <lastmod>2022-09-21T15:07:24-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/categories/</loc>
   </url><url>

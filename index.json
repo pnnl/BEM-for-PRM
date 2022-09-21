@@ -4,32 +4,18 @@
 	"title": "Quick start",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 2.1 Quick Start 10 minutes to OSSTD-PRM automation "
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/create_prototyp/",
-	"title": "Create prototype model",
-	"tags": [],
-	"description": "",
-	"content": "Create a prototype model OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a prototype building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.\nTo begin with, we need to import both packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.\nNext, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.1 2019 standard. Before doing that, we will need to define these parameters.\ncode_version = \u0026#39;90.1-2019\u0026#39; prototype_template = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; epw_file = \u0026#39;USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw\u0026#39; prototype_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; # path where the generated prototype saved. The next step is to generate the prototype model\nstandard = Standard.build(\u0026#34;#{code_version}_#{prototype_template}\u0026#34;) model = standard.model_create_prototype_model(climate_zone, epw_file, prototype_dir) The first line loads a specific OpenStudio Standard object based on the code version (90.1-2019) and the prototype template (MediumOffice). The second line calls model_create_prototype_model method from the object with arguments include climate_zone, epw_file and prototype_dir to create the prototype model. This method will create a path in the computer to store the draft prototype model and sizing run of the model. Then it will fine-calibrate the model based on the sizing outcome to produce the final version, which is the returned value from this method.\nLast, we can save the generated prototype model to a directory and view it in the OpenStudio Application.\nThe full script of this part of the tutorial is provided below:\nrequire \u0026#39;openstudio\u0026#39; # This imports the source code of the openstudio standard. If OSSTD is installed in GEM, then simply # use require \u0026#39;openstudio-standards\u0026#39; require_relative File.join(\u0026#39;..\u0026#39;,\u0026#39;..\u0026#39;,\u0026#39;..\u0026#39;, \u0026#39;OSSTD_Repo\u0026#39;,\u0026#39;lib\u0026#39;,\u0026#39;openstudio-standards.rb\u0026#39;) code_version = \u0026#39;90.1-2019\u0026#39; prototype_template = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; epw_file = \u0026#39;C:\\WeatherData\\USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw\u0026#39; prototype_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; standard = Standard.build(\u0026#34;#{code_version}_#{prototype_template}\u0026#34;) model = standard.model_create_prototype_model(climate_zone, epw_file, prototype_dir) # Save prototype OSM file osm_path = OpenStudio::Path.new(\u0026#34;#{prototype_dir}/test_model.osm\u0026#34;) model.save(osm_path, true) Next, we will write a script to automatically generate ASHRAE 90.1 Appendix G (PRM) model from the generated prototype model. Click the Next button at the right edge to start the script.\n"
+	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/",
 	"title": "Overview",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 1 What is OSSTD-PRM INTRODUCTION ABOUT THE TOOL\n"
+	"content": "Chapter 1 What is OSSTD-PRM [Give a description of what the automated baseline measure does. Explain the key limitation that it is for 90.1-2019]\n"
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/baseline_automation/",
-	"title": "Baseline automation",
-	"tags": [],
-	"description": "",
-	"content": "This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.\nIn the previous step, we created a medium office prototype model in Climate zone 4. In this section, let\u0026rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; Next, load the model and prepare compliance parameters for baseline generation.\n# Load the openstudio model model_path = \u0026#34;#{File.dirname(Dir.pwd)}/output_baseline/test_model.osm\u0026#34; translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loaModel(model_path).get # Baseline parameters bldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; Finally, add the script to generate baseline:\n# load the PRM standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) P \u0026#34;start generating baseline model ... at #{baseline_dir}\u0026#34; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=true, unmet_load_hours_check=true, debug=false) There are many arguments for the model_create_prm_stable_baseline_building function but don\u0026rsquo;t sweat on it. We will cover each one of them in later sections. Nevertheless, this script is sufficient to generate the baseline models for our prototype model.\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/prepare_model/",
-	"title": "Prepare a model for PRM",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/",
+	"title": "Getting Started",
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
@@ -39,81 +25,25 @@
 	"title": "User Guide",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 2 User Guide Learn how to use OSSTD-PRM\nQuick start\n"
+	"content": "Chapter 2 User Case Lorem Ipsum.\n"
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/more_examples/",
-	"title": "More_examples",
-	"tags": [],
-	"description": "",
-	"content": "This section will walk through an additional script that alters our prototype model before running the baseline.\nOpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.\nIn this section, we will use the OpenStudio Standard package to:\nReset window to wall ratio to 60% Add overhangs to the south facade Replace the HVAC system with DOAS + water source heat pumps. First, let\u0026rsquo;s load the model and standard package.\nmodel_path = \u0026#34;#{File.dirname(Dir.pwd)}/output/\u0026#34; save_path = \u0026#34;#{File.dirname(Dir.pwd)}/source/\u0026#34; base_model = \u0026#39;test_model.osm\u0026#39; modified_model = \u0026#39;modified_model_demo.osm\u0026#39; # Load standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) # load model translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get After the model is loaded, we can firstly modify the window-to-wall ratio using a simple function: setWindowToWallRatio from OpenStudio API.\n# Remove HVAC system and EMS (if any) standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) # remove transformers model.getElectricLoadCenterTransformers.each(\u0026amp;:remove) # Loop through every sub surface model.getSurfaces.each do |ss| unless ss.subSurfaces.empty? orig_construction = ss.subSurfaces[0].construction.get ss.subSurfaces.sort.each(\u0026amp;:remove) # Set WWR to 60% with sill height of 0.8 m. new_window = ss.setWindowToWallRatio(0.6, 0.8, true).get new_window.setConstruction(orig_construction) end end Next, we will add overhangs to the south facade\n# loop sub surfaces model.getSubSurfaces.each do |s| # get the absolute azimuth of the sub surface absoluteAzimuth = OpenStudio.convert(s.azimuth, \u0026#39;rad\u0026#39;, \u0026#39;deg\u0026#39;).get + s.space.get.directionofRelativeNorth + model.getBuilding.northAxis # filter out non-south sub surfaces next if !((absoluteAzimuth \u0026gt;= 135.0) \u0026amp;\u0026amp; (absoluteAzimuth \u0026lt; 225.0\u0026gt;)) # Adds overhangs 0.8 m s.addOverhangByProjectionFactor(0.8, 0) end Last, we will add a DOAS + water source heat pump to the model. We will add one DOAS per floor and one heat pump per thermal zone.\n# split thermal zones by floors, exclude plenum zones thermal_top_zones = [] thermal_mid_zones = [] thermal_bot_zones = [] model.getThermalZones.each do |zone| unless /Plenum/ =~ zone.name.get if /top/ =~ zone.name.get thermal_top_zones.append(zone) elsif /bot/ =~ zone.name.get thermal_bot_zones.append(zone) else thermal_mid_zones.append(zone) end end end # Add a hot water plant loop for DOAS hot_water_loop = standard.model_add_hw_loop(model, \u0026#39;NaturalGas\u0026#39;) # Add a heat pump plant loop condenser_loop = standard.model_get_or_add_heat_pump_loop(model, \u0026#39;Electricity\u0026#39;, \u0026#39;Electricity\u0026#39;, heat_pump_loop_cooling_type: \u0026#39;CoolingTower\u0026#39;) # Top floor zone standard.model_add_water_source_hp(model, thermal_top_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_top_zones, system_name: \u0026#39;DOAS TOP System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) # Mid floor zone standard.model_add_water_source_hp(model, thermal_mid_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_mid_zones, system_name: \u0026#39;DOAS MID System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) # Bottom floor zone standard.model_add_water_source_hp(model, thermal_bot_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_bot_zones, system_name: \u0026#39;DOAS BOT System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) That\u0026rsquo;s it. In the end, we will call the baseline function to generate a baseline.\nbldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false) Now we can have a more visual comparison between the prototype and baseline. In the baseline, the windows are shrunk, and the overhangs are removed. Also, the HVAC system was changed from DOAS + water source heat pump to Packaged VAV system (system type 5).\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/use_gui/",
-	"title": "PRM in OpenStudio GUI",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/",
+	"title": "User Guide",
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/gen_prm_baseline_run_sim/",
-	"title": "Generate baseline",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/",
+	"title": "Temp web development guide",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "Chapter 4 Some Chapter title Lorem Ipsum.\n"
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/",
-	"title": "User Data Form Files",
-	"tags": [],
-	"description": "",
-	"content": " userdata_airloop_hvac.csv userdata_airloop_hvac_doas.csv userdata_building.csv userdata_design_specification_outdoor_air.csv userdata_electric_equipment.csv userdata_exterior_lights.csv userdata_gas_equipment.csv userdata_lights.csv userdata_space.csv userdata_spacetype.csv userdata_thermal_zone.csv userdata_wateruse_connections.csv userdata_wateruse_equipment.csv userdata_wateruse_equipment_definition.csv userdata_zone_hvac.csv userdata_zone_infiltration.csv "
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userdata/",
-	"title": "Compliance User Data",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/create_usr_data/",
-	"title": "Create user data",
-	"tags": [],
-	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/installation/",
-	"title": "Getting Started",
-	"tags": [],
-	"description": "",
-	"content": "Global site parameters as a demo def this_is_a_dummy_function(arg1, arg2) return 42 end This is a template\nOn top of Hugo global configuration, Hugo-theme-learn lets you define the following parameters in your config.toml (here, values are default).\nNote that some of these parameters are explained in details in other sections of this documentation.\n[params] # Prefix URL to edit current page. Will display an \u0026#34;Edit this page\u0026#34; button on top right hand corner of every page. # Useful to give opportunity to people to create merge request for your doc. # See the config.toml file from this documentation site to have an example. editURL = \u0026#34;\u0026#34; # Author of the site, will be used in meta information author = \u0026#34;\u0026#34; # Description of the site, will be used in meta information description = \u0026#34;\u0026#34; # Shows a checkmark for visited pages on the menu showVisitedLinks = false # Disable search function. It will hide search bar disableSearch = false # Javascript and CSS cache are automatically busted when new version of site is generated. # Set this to true to disable this behavior (some proxies don\u0026#39;t handle well this optimization) disableAssetsBusting = false # Set this to true to disable copy-to-clipboard button for inline code. disableInlineCopyToClipBoard = false # A title for shortcuts in menu is set by default. Set this to true to disable it. disableShortcutsTitle = false # If set to false, a Home button will appear below the search bar on the menu. # It is redirecting to the landing page of the current language if specified. (Default is \u0026#34;/\u0026#34;) disableLandingPageButton = true # When using mulitlingual website, disable the switch language button. disableLanguageSwitchingButton = false # Hide breadcrumbs in the header and only show the current page title disableBreadcrumb = true # If set to true, prevents Hugo from including the mermaid module if not needed (will reduce load times and traffic) disableMermaid = false # Specifies the remote location of the mermaid js customMermaidURL = \u0026#34;https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js\u0026#34; # Hide Next and Previous page buttons normally displayed full height beside content disableNextPrev = true # Order sections in menu by \u0026#34;weight\u0026#34; or \u0026#34;title\u0026#34;. Default to \u0026#34;weight\u0026#34; ordersectionsby = \u0026#34;weight\u0026#34; # Change default color scheme with a variant one. Can be \u0026#34;red\u0026#34;, \u0026#34;blue\u0026#34;, \u0026#34;green\u0026#34;. themeVariant = \u0026#34;\u0026#34; # Provide a list of custom css files to load relative from the `static/` folder in the site root. custom_css = [\u0026#34;css/foo.css\u0026#34;, \u0026#34;css/bar.css\u0026#34;] # Change the title separator. Default to \u0026#34;::\u0026#34;. titleSeparator = \u0026#34;-\u0026#34; Activate search If not already present, add the follow lines in the same config.toml file.\n[outputs] home = [ \u0026#34;HTML\u0026#34;, \u0026#34;RSS\u0026#34;, \u0026#34;JSON\u0026#34;] Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.\nHugo generate lunrjs index.json at the root of public folder. When you build the site with hugo server, hugo generates it internally and of course it doesn’t show up in the filesystem\nMermaid The mermaid configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one.\nExample:\nMermaid is globally disabled. By default it won\u0026rsquo;t be loaded by any page.\nOn page \u0026ldquo;Architecture\u0026rdquo; you need a class diagram. You can set the mermaid parameters locally to only load mermaid on this page (not on the others).\nYou also can disable mermaid for specific pages while globally enabled.\nHome Button Configuration If the disableLandingPage option is set to false, an Home button will appear on the left menu. It is an alternative for clicking on the logo. To edit the appearance, you will have to configure two parameters for the defined languages:\n[Lanugages] [Lanugages.en] ... landingPageURL = \u0026#34;/en\u0026#34; landingPageName = \u0026#34;\u0026lt;i class=\u0026#39;fas fa-home\u0026#39;\u0026gt;\u0026lt;/i\u0026gt; Redirect to Home\u0026#34; ... [Lanugages.fr] ... landingPageURL = \u0026#34;/fr\u0026#34; landingPageName = \u0026#34;\u0026lt;i class=\u0026#39;fas fa-home\u0026#39;\u0026gt;\u0026lt;/i\u0026gt; Accueil\u0026#34; ... If those params are not configured for a specific language, they will get their default values:\nlandingPageURL = \u0026#34;/\u0026#34; landingPageName = \u0026#34;\u0026lt;i class=\u0026#39;fas fa-home\u0026#39;\u0026gt;\u0026lt;/i\u0026gt; Home\u0026#34; The home button is going to looks like this:\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userguide/log_file/",
-	"title": "Log file",
-	"tags": [],
-	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/installation/requirements/",
-	"title": "Requirements",
-	"tags": [],
-	"description": "",
-	"content": "You will need following applications to ensure OpenStudio Standard running smoothly on your project.\nRuby version support Officially Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz\nFollow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:\nC:\\Users\\sample_user\u0026gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.2.1 and it can be downloaded at: https://github.com/NREL/OpenStudio/releases/tag/v3.2.1\nIt is important to download the correct OpenStudio version as the OpenStudio Standard is not tested against OpenStudio 3.3 and above.\nYou can Install with all add-ons (in the install utility) enabled.\nConnect Ruby to OpenStudio Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.\nStep 1: navigate to ruby installation directory and find the site_ruby folder. In Windows, it should be a directory like this: C:\\Ruby27-x64\\lib\\ruby\\site_ruby Step 2: create a new ruby file called openstudio.rb under the site_ruby folder. Step 3: open the openstudio.rb file and add one line:\nrequire \u0026#34;C:/openstudio-3.2.1/Ruby/openstudio.rb\u0026#34; The directory shall be pointing to the openstudio.rb file under the OpenStudio installation folder. Revise the directory after require based on your actual installation directory.\nYou can verify the setting with the following command in command line.\nC:\\Users\\smaple_user\u0026gt; irb irb(main):001:0\u0026gt; require \u0026#34;openstudio\u0026#34; =\u0026gt; true Return true verifies a success on your local setup.\nThat is all we need to prepare before the installation OpenStudio Standard package. Click NEXT to install the package!\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/exterior_lights/",
-	"title": "Exterior Lights",
-	"tags": [],
-	"description": "",
-	"content": "User Data CSV File: user_data_exterior_lights.csv\nEach exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:\nend_use_subcategory_01\nthrough\nend_use_subcategory_09\nFor each subcategory, the appropriate quantity must also be listed, as designated by:\nend_use_measurement_value_01\nthrough\nend_use_measurement_value_09\nThe units of the measurement value are indicated by the last part of the subcategory name:\n\u0026lsquo;area\u0026rsquo; = area in square feet\n\u0026lsquo;perim\u0026rsquo; = perimiter length in linear feet\n\u0026lsquo;qty\u0026rsquo; = integer quantity of items\nNote: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to \u0026lsquo;1\u0026rsquo; for the baseline model.\nCredit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.\nIn order to work with the Appendix G code database, the following subcategory names must be used in the user data file:\nTradeable Exterior Lighting Subcategories parking_lots_and_drives_area\nwalkways_less_than_10_ft_wide_perim\nwalkways_10_ft_wide_or_greater_area\nplaza_areas_area\nspecial_feature_areas_area\nstairways_area\nmain_entries_area\nother_doors_perim\ncanopies_area\nopen_areas_including_vehicle_sales_lots_area\nstreet_frontage_for_vehicle_sales_perim\nNon-Tradeable Exterior Lighting Subcategories nontradeable_general_qty\nbuilding_facades_area\nbuilding_facades_perim\nautomated_teller_machines_per_location_qty\nautomated_teller_machines_per_machine_qty\nentries_and_gates_area\nloading_areas_for_emergency_vehicles_area\ndrive_through_windows_and_doors_qty\nparking_near_24_hour_entrances_qty\nroadway_parking_qty\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/installation/installation/",
-	"title": "Installation",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/",
+	"title": "Key Capabilities",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -126,18 +56,179 @@
 	"content": ""
 },
 {
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/",
+	"title": "Use with OpenStudio Application",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2.1 Use with OpenStudio Application\nLorem Ipsum.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/",
+	"title": "Use with OpenStudio Engine",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2.2 Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/",
+	"title": "Quick start",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2.3 Quick Start 10 minutes to OSSTD-PRM automation "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/",
+	"title": "Model_requirements",
+	"tags": [],
+	"description": "",
+	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/",
+	"title": "Add_compliance_data",
+	"tags": [],
+	"description": "",
+	"content": " userdata_airloop_hvac.csv userdata_airloop_hvac_doas.csv userdata_building.csv userdata_design_specification_outdoor_air.csv userdata_electric_equipment.csv userdata_exterior_lights.csv userdata_gas_equipment.csv userdata_lights.csv userdata_space.csv userdata_spacetype.csv userdata_thermal_zone.csv userdata_wateruse_connections.csv userdata_wateruse_equipment.csv userdata_wateruse_equipment_definition.csv userdata_zone_hvac.csv userdata_zone_infiltration.csv "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/",
+	"title": "PRM API Reference",
+	"tags": [],
+	"description": "",
+	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/",
+	"title": "Dev_instruction",
+	"tags": [],
+	"description": "",
+	"content": "Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px\u0026amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer\nCode # Template method for adding a setpoint manager for a coil control logic to a heating coil. # ASHRAE 90.1-2019 Appendix G. # # @param model [OpenStudio::Model::Model] Openstudio model # @param thermalZones Array([OpenStudio::Model::ThermalZone]) thermal zone array # @param coil Heating Coils # @return [Boolean] true def model_set_central_preheat_coil_spm(model, thermalZones, coil) return true end "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/",
+	"title": "Get OpenStudio",
+	"tags": [],
+	"description": "",
+	"content": "Note: Where to find OpenStudio Applicatio\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/",
+	"title": "Install the measure",
+	"tags": [],
+	"description": "",
+	"content": "Note: Where to find OSSTD create baseline measure and how to install\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/",
+	"title": "Run the measure",
+	"tags": [],
+	"description": "",
+	"content": "Note: How to run the measure\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": "You will need following applications to ensure OpenStudio Standard running smoothly on your project.\nRuby version support Officially Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz\nFollow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:\nC:\\Users\\sample_user\u0026gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.2.1 and it can be downloaded at: https://github.com/NREL/OpenStudio/releases/tag/v3.2.1\nIt is important to download the correct OpenStudio version as the OpenStudio Standard is not tested against OpenStudio 3.3 and above.\nYou can Install with all add-ons (in the install utility) enabled.\nConnect Ruby to OpenStudio Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.\nStep 1: navigate to ruby installation directory and find the site_ruby folder. In Windows, it should be a directory like this: C:\\Ruby27-x64\\lib\\ruby\\site_ruby Step 2: create a new ruby file called openstudio.rb under the site_ruby folder. Step 3: open the openstudio.rb file and add one line:\nrequire \u0026#34;C:/openstudio-3.2.1/Ruby/openstudio.rb\u0026#34; The directory shall be pointing to the openstudio.rb file under the OpenStudio installation folder. Revise the directory after require based on your actual installation directory.\nYou can verify the setting with the following command in command line.\nC:\\Users\\smaple_user\u0026gt; irb irb(main):001:0\u0026gt; require \u0026#34;openstudio\u0026#34; =\u0026gt; true Return true verifies a success on your local setup.\nThat is all we need to prepare before the installation OpenStudio Standard package. Click NEXT to install the package!\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/",
+	"title": "Call measure via API",
+	"tags": [],
+	"description": "",
+	"content": "Note: How to call the measure via API\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/",
+	"title": "API documentation",
+	"tags": [],
+	"description": "",
+	"content": "Note: Link to API documentation\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/",
+	"title": "Baseline automation",
+	"tags": [],
+	"description": "",
+	"content": "This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.\nIn the previous step, we created a medium office prototype model in Climate zone 4. In this section, let\u0026rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; Next, load the model and prepare compliance parameters for baseline generation.\n# Load the openstudio model model_path = \u0026#34;#{File.dirname(Dir.pwd)}/output_baseline/test_model.osm\u0026#34; translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loaModel(model_path).get # Baseline parameters bldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; Finally, add the script to generate baseline:\n# load the PRM standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) P \u0026#34;start generating baseline model ... at #{baseline_dir}\u0026#34; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=true, unmet_load_hours_check=true, debug=false) There are many arguments for the model_create_prm_stable_baseline_building function but don\u0026rsquo;t sweat on it. We will cover each one of them in later sections. Nevertheless, this script is sufficient to generate the baseline models for our prototype model.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/create_typical/",
+	"title": "Create a typical model",
+	"tags": [],
+	"description": "",
+	"content": "Create a typical model OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a typical building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.\nTo begin with, we need to import both packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.\nNext, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.1 2019 standard. Before doing that, we will need to define these parameters.\ncode_version = \u0026#39;90.1-2019\u0026#39; prototype_template = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; epw_file = \u0026#39;USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw\u0026#39; prototype_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; # path where the generated prototype saved. The next step is to generate the typical medium office model\nstandard = Standard.build(\u0026#34;#{code_version}_#{prototype_template}\u0026#34;) model = standard.model_create_prototype_model(climate_zone, epw_file, prototype_dir) The first line loads a specific OpenStudio Standard object based on the code version (90.1-2019) and the prototype template (MediumOffice). The second line calls model_create_prototype_model method from the object with arguments include climate_zone, epw_file and prototype_dir to create the prototype model. This method will create a path in the computer to store the draft prototype model and sizing run of the model. Then it will fine-calibrate the model based on the sizing outcome to produce the final version, which is the returned value from this method.\nLast, we can save the generated prototype model to a directory and view it in the OpenStudio Application.\nThe full script of this part of the tutorial is provided below:\nrequire \u0026#39;openstudio\u0026#39; # This imports the source code of the openstudio standard. If OSSTD is installed in GEM, then simply # use require \u0026#39;openstudio-standards\u0026#39; require_relative File.join(\u0026#39;..\u0026#39;,\u0026#39;..\u0026#39;,\u0026#39;..\u0026#39;, \u0026#39;OSSTD_Repo\u0026#39;,\u0026#39;lib\u0026#39;,\u0026#39;openstudio-standards.rb\u0026#39;) code_version = \u0026#39;90.1-2019\u0026#39; prototype_template = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; epw_file = \u0026#39;C:\\WeatherData\\USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw\u0026#39; prototype_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; standard = Standard.build(\u0026#34;#{code_version}_#{prototype_template}\u0026#34;) model = standard.model_create_prototype_model(climate_zone, epw_file, prototype_dir) # Save prototype OSM file osm_path = OpenStudio::Path.new(\u0026#34;#{prototype_dir}/test_model.osm\u0026#34;) model.save(osm_path, true) Next, we will write a script to automatically generate ASHRAE 90.1 Appendix G (PRM) model from the generated prototype model. Click the Next button at the right edge to start the script.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/",
+	"title": "More examples",
+	"tags": [],
+	"description": "",
+	"content": "This section will walk through an additional script that alters our prototype model before running the baseline.\nOpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.\nIn this section, we will use the OpenStudio Standard package to:\nReset window to wall ratio to 60% Add overhangs to the south facade Replace the HVAC system with DOAS + water source heat pumps. First, let\u0026rsquo;s load the model and standard package.\nmodel_path = \u0026#34;#{File.dirname(Dir.pwd)}/output/\u0026#34; save_path = \u0026#34;#{File.dirname(Dir.pwd)}/source/\u0026#34; base_model = \u0026#39;test_model.osm\u0026#39; modified_model = \u0026#39;modified_model_demo.osm\u0026#39; # Load standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) # load model translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get After the model is loaded, we can firstly modify the window-to-wall ratio using a simple function: setWindowToWallRatio from OpenStudio API.\n# Remove HVAC system and EMS (if any) standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) # remove transformers model.getElectricLoadCenterTransformers.each(\u0026amp;:remove) # Loop through every sub surface model.getSurfaces.each do |ss| unless ss.subSurfaces.empty? orig_construction = ss.subSurfaces[0].construction.get ss.subSurfaces.sort.each(\u0026amp;:remove) # Set WWR to 60% with sill height of 0.8 m. new_window = ss.setWindowToWallRatio(0.6, 0.8, true).get new_window.setConstruction(orig_construction) end end Next, we will add overhangs to the south facade\n# loop sub surfaces model.getSubSurfaces.each do |s| # get the absolute azimuth of the sub surface absoluteAzimuth = OpenStudio.convert(s.azimuth, \u0026#39;rad\u0026#39;, \u0026#39;deg\u0026#39;).get + s.space.get.directionofRelativeNorth + model.getBuilding.northAxis # filter out non-south sub surfaces next if !((absoluteAzimuth \u0026gt;= 135.0) \u0026amp;\u0026amp; (absoluteAzimuth \u0026lt; 225.0\u0026gt;)) # Adds overhangs 0.8 m s.addOverhangByProjectionFactor(0.8, 0) end Last, we will add a DOAS + water source heat pump to the model. We will add one DOAS per floor and one heat pump per thermal zone.\n# split thermal zones by floors, exclude plenum zones thermal_top_zones = [] thermal_mid_zones = [] thermal_bot_zones = [] model.getThermalZones.each do |zone| unless /Plenum/ =~ zone.name.get if /top/ =~ zone.name.get thermal_top_zones.append(zone) elsif /bot/ =~ zone.name.get thermal_bot_zones.append(zone) else thermal_mid_zones.append(zone) end end end # Add a hot water plant loop for DOAS hot_water_loop = standard.model_add_hw_loop(model, \u0026#39;NaturalGas\u0026#39;) # Add a heat pump plant loop condenser_loop = standard.model_get_or_add_heat_pump_loop(model, \u0026#39;Electricity\u0026#39;, \u0026#39;Electricity\u0026#39;, heat_pump_loop_cooling_type: \u0026#39;CoolingTower\u0026#39;) # Top floor zone standard.model_add_water_source_hp(model, thermal_top_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_top_zones, system_name: \u0026#39;DOAS TOP System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) # Mid floor zone standard.model_add_water_source_hp(model, thermal_mid_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_mid_zones, system_name: \u0026#39;DOAS MID System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) # Bottom floor zone standard.model_add_water_source_hp(model, thermal_bot_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_bot_zones, system_name: \u0026#39;DOAS BOT System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) That\u0026rsquo;s it. In the end, we will call the baseline function to generate a baseline.\nbldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false) Now we can have a more visual comparison between the prototype and baseline. In the baseline, the windows are shrunk, and the overhangs are removed. Also, the HVAC system was changed from DOAS + water source heat pump to Packaged VAV system (system type 5).\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/",
+	"title": "Standards space type",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/",
+	"title": "Other requirements",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/",
+	"title": "User data: Building",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/",
+	"title": "User data: Space",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/",
+	"title": "User data: Space type",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/",
+	"title": "User Data: Exterior Lights",
+	"tags": [],
+	"description": "",
+	"content": "User Data CSV File: user_data_exterior_lights.csv\nEach exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:\nenduse_subcategory_01\n_through\nend_use_subcategory_09\nFor each subcategory, the appropriate quantity must also be listed, as designated by:\nenduse_measurement_value_01\n_through\nend_use_measurement_value_09\nThe units of the measurement value are indicated by the last part of the subcategory name:\n\u0026lsquo;area\u0026rsquo; = area in square feet\n\u0026lsquo;perim\u0026rsquo; = perimiter length in linear feet\n\u0026lsquo;qty\u0026rsquo; = integer quantity of items\nNote: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to \u0026lsquo;1\u0026rsquo; for the baseline model.\nCredit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.\nIn order to work with the Appendix G code database, the following subcategory names must be used in the user data file:\nTradeable Exterior Lighting Subcategories parking_lots_and_drives_area\nwalkways_less_than_10_ft_wide_perim\nwalkways_10_ft_wide_or_greater_area\nplaza_areas_area\nspecial_feature_areas_area\nstairways_area\nmain_entries_area\nother_doors_perim\ncanopies_area\nopen_areas_including_vehicle_sales_lots_area\nstreet_frontage_for_vehicle_sales_perim\nNon-Tradeable Exterior Lighting Subcategories nontradeable_general_qty\nbuilding_facades_area\nbuilding_facades_perim\nautomated_teller_machines_per_location_qty\nautomated_teller_machines_per_machine_qty\nentries_and_gates_area\nloading_areas_for_emergency_vehicles_area\ndrive_through_windows_and_doors_qty\nparking_near_24_hour_entrances_qty\nroadway_parking_qty\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/",
+	"title": "Baseline generation API",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/",
+	"title": "WWR API",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://pnnl.github.io/BEM-for-PRM/",
 	"title": "Home",
 	"tags": [],
 	"description": "",
 	"content": "OSSTD PRM OpenStudio Standard PRM is a tool to support energy model automation for performance\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/dev_instruction/",
-	"title": "Dev_instruction",
-	"tags": [],
-	"description": "",
-	"content": "Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px\u0026amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer\nCode # Template method for adding a setpoint manager for a coil control logic to a heating coil. # ASHRAE 90.1-2019 Appendix G. # # @param model [OpenStudio::Model::Model] Openstudio model # @param thermalZones Array([OpenStudio::Model::ThermalZone]) thermal zone array # @param coil Heating Coils # @return [Boolean] true def model_set_central_preheat_coil_spm(model, thermalZones, coil) return true end "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/categories/",

@@ -6,48 +6,71 @@
     <description>Recent content in Home on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Aug 2022 09:36:35 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 15:07:24 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Create prototype model</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/create_prototyp/</link>
+      <title>Key Capabilities</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Limitations</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:14 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dev_instruction</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/</link>
       <pubDate>Tue, 26 Jul 2022 15:43:57 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/create_prototyp/</guid>
-      <description>Create a prototype model OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a prototype building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.
-To begin with, we need to import both packages.
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.
-Next, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/</guid>
+      <description>Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.
+![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.
+![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it
+![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px&amp;amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer
+Code # Template method for adding a setpoint manager for a coil control logic to a heating coil.</description>
     </item>
     
     <item>
-      <title>Baseline automation</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/baseline_automation/</link>
-      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      <title>Get OpenStudio</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</link>
+      <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/baseline_automation/</guid>
-      <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
-In the previous step, we created a medium office prototype model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</guid>
+      <description>Note: Where to find OpenStudio Applicatio</description>
     </item>
     
     <item>
-      <title>More_examples</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/more_examples/</link>
-      <pubDate>Fri, 19 Aug 2022 09:36:35 -0700</pubDate>
+      <title>Install the measure</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</link>
+      <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/userguide/quick_start/more_examples/</guid>
-      <description>This section will walk through an additional script that alters our prototype model before running the baseline.
-OpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.
-In this section, we will use the OpenStudio Standard package to:
-Reset window to wall ratio to 60% Add overhangs to the south facade Replace the HVAC system with DOAS + water source heat pumps.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</guid>
+      <description>Note: Where to find OSSTD create baseline measure and how to install</description>
     </item>
     
     <item>
-      <title>Requirements</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/installation/requirements/</link>
-      <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
+      <title>Run the measure</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</link>
+      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/installation/requirements/</guid>
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
+      <description>Note: How to run the measure</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</link>
+      <pubDate>Wed, 21 Sep 2022 15:01:00 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</guid>
       <description>You will need following applications to ensure OpenStudio Standard running smoothly on your project.
 Ruby version support Officially Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
 Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:
@@ -55,43 +78,137 @@ C:\Users\sample_user&amp;gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d
     </item>
     
     <item>
-      <title>Exterior Lights</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/exterior_lights/</link>
+      <title>Call measure via API</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/</link>
+      <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/</guid>
+      <description>Note: How to call the measure via API</description>
+    </item>
+    
+    <item>
+      <title>API documentation</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</link>
+      <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</guid>
+      <description>Note: Link to API documentation</description>
+    </item>
+    
+    <item>
+      <title>Baseline automation</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</link>
+      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</guid>
+      <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
+In the previous step, we created a medium office prototype model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
+    </item>
+    
+    <item>
+      <title>Create a typical model</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/create_typical/</link>
+      <pubDate>Tue, 26 Jul 2022 15:43:57 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/create_typical/</guid>
+      <description>Create a typical model OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a typical building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.
+To begin with, we need to import both packages.
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.
+Next, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.</description>
+    </item>
+    
+    <item>
+      <title>More examples</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/</link>
+      <pubDate>Fri, 19 Aug 2022 09:36:35 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/</guid>
+      <description>This section will walk through an additional script that alters our prototype model before running the baseline.
+OpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.
+In this section, we will use the OpenStudio Standard package to:
+Reset window to wall ratio to 60% Add overhangs to the south facade Replace the HVAC system with DOAS + water source heat pumps.</description>
+    </item>
+    
+    <item>
+      <title>Standards space type</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</link>
+      <pubDate>Wed, 21 Sep 2022 15:05:37 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Other requirements</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/</link>
+      <pubDate>Wed, 21 Sep 2022 15:05:48 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>User data: Building</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>User data: Space</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>User data: Space type</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>User Data: Exterior Lights</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/</link>
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/userdata/data_forms/exterior_lights/</guid>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/</guid>
       <description>User Data CSV File: user_data_exterior_lights.csv
 Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:
-end_use_subcategory_01
-through
+enduse_subcategory_01
+_through
 end_use_subcategory_09
 For each subcategory, the appropriate quantity must also be listed, as designated by:
-end_use_measurement_value_01
-through
+enduse_measurement_value_01
+_through
 end_use_measurement_value_09
 The units of the measurement value are indicated by the last part of the subcategory name:</description>
     </item>
     
     <item>
-      <title>Installation</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/installation/installation/</link>
-      <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
+      <title>Baseline generation API</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:50 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/installation/installation/</guid>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Dev_instruction</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/dev_instruction/</link>
-      <pubDate>Tue, 26 Jul 2022 15:43:57 -0700</pubDate>
+      <title>WWR API</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:59 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/dev_instruction/</guid>
-      <description>Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.
-![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.
-![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it
-![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px&amp;amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer
-Code # Template method for adding a setpoint manager for a coil control logic to a heating coil.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</guid>
+      <description></description>
     </item>
     
   </channel>

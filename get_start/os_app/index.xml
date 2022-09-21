@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Use with OpenStudio Application on OSSTD doc</title>
+    <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/</link>
+    <description>Recent content in Use with OpenStudio Application on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Sep 2022 14:49:40 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/get_start/os_app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get OpenStudio</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</link>
+      <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</guid>
+      <description>Note: Where to find OpenStudio Applicatio</description>
+    </item>
+    
+    <item>
+      <title>Install the measure</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</link>
+      <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</guid>
+      <description>Note: Where to find OSSTD create baseline measure and how to install</description>
+    </item>
+    
+    <item>
+      <title>Run the measure</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</link>
+      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
+      <description>Note: How to run the measure</description>
+    </item>
+    
+  </channel>
+</rss>
