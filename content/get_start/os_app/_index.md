@@ -1,5 +1,5 @@
 +++
-title = "Use with OpenStudio Application"
+title = "Use with OpenStudio App"
 date = 2022-09-21T14:49:40-07:00
 weight = 21
 chapter = true

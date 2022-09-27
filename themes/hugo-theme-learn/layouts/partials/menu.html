@@ -115,8 +115,10 @@
         ">
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
-          {{ if $showvisitedlinks}}
-            <i class="fas fa-check read-icon"></i>
+          {{if eq .File.UniqueID $currentFileUniqueID}}
+            <i class="fas fa-solid fa-chevron-down read-icon"></i>
+          {{else}}
+            <i class="fas fa-chevron-right read-icon"></i>
           {{ end }}
       </a>
       {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
