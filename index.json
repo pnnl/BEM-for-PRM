@@ -4,7 +4,7 @@
 	"title": "Overview",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 1 What is OSSTD-PRM The \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.\nSince Appendix G began using a \u0026ldquo;stable baseline\u0026rdquo; approach beginning with the 2016 version, the 2019 baseline will be nearly the same as the 2016 version. Some differences are outlined here.\nAt this time, only a Baseline model is created by the tool. A future version is planned that will also create a Proposed model.\n"
+	"content": "What is OSSTD-PRM The \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.\nSince Appendix G began using a \u0026ldquo;stable baseline\u0026rdquo; approach beginning with the 2016 version, the 2019 baseline will be nearly the same as the 2016 version. Some differences are outlined here.\nAt this time, only a Baseline model is created by the tool. A future version is planned that will also create a Proposed model.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/",
@@ -95,7 +95,7 @@
 	"title": "Get OpenStudio",
 	"tags": [],
 	"description": "",
-	"content": "The OpenStudio application can be found on the github page for the OpenStudio Coalition. The application provides a graphical user interface to the OpenStudio engine, and the engine is included in the download package.\nhttps://github.com/openstudiocoalition/OpenStudioApplication/releases\n"
+	"content": "Get The OpenStudio Application The OpenStudio application can be found on the github page for the OpenStudio Coalition. The application provides a graphical user interface to the OpenStudio engine, and the engine is included in the download package.\nhttps://github.com/openstudiocoalition/OpenStudioApplication/releases\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/",
@@ -214,7 +214,7 @@
 	"title": "Home",
 	"tags": [],
 	"description": "",
-	"content": "OSSTD PRM OpenStudio Standard PRM is a tool to support energy model automation for performance\n"
+	"content": "Create ASHRAE 90.1-2019 PRM Model The OpenStudio Standard \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure is a tool to support energy model automation for ASHRAE 90.1 Appendix G performance rating method compliance evaluation.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/categories/",
