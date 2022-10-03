@@ -12,22 +12,22 @@
     <title>Limitations : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1664294776" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1664294776" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1664828222" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1664828222" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1664294776" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1664828222" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1664294776" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1664294776" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1664828222" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1664828222" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1664294776"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1664828222"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1664294776"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1664294776"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1664828222"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1664828222"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1664294776"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1664828222"></script>
 
     
   </div>
@@ -1001,6 +1001,24 @@
         
 
 
+<p>Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:</p>
+<ul>
+<li>Baseline humidification is same as user model in the current tool. In some cases the baseline is required to be changed to adiabatic humidification. This has not been implemented.</li>
+<li>Baseline dehumidification is same as user model in the current tool. For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance. This is not yet implemented, and must be handled via post-processing or an EMS applied to the Baseline model.</li>
+<li>Baseline transformer efficiencies have not been implemented.</li>
+<li>Where service water heater systems in the user model are comprised of multiple distributed systems, the Appendix G model is required to use a single central system. The conversion to a central system has not yet been implemented.</li>
+<li>For models where design ventilation rates are greater than that required by code, then the rules of Appendix G state that the Baseline ventilation rate shall be based on the building code, and will be lower than the user model. The ability to model this difference has not yet been implemented.</li>
+<li>Some Appendix G requirements for district energy systems have not yet been implemented.</li>
+<li>Efficiency requirements for motors serving miscellaneous electrical equipment have not yet been implemented.</li>
+<li>Efficiency requirements for commercial refrigeration equipment have not yet been implemented.</li>
+<li>The baseline requirement has not yet been implemented where lab exhaust fans must be modeled as constant horsepower, reflecting constant-volume stack discharge with outdoor air bypass.</li>
+</ul>
+<p>The rules of the 2016 version of 90.1 Appendix G are very similar to the 2019 version. Some differences are as follows:</p>
+<ul>
+<li>In 2016, if Proposed model has combined space/SWH system, the Baseline shall use separate systems. In 2019, a single central SWH system is to be used. This is similar, but maybe not identical to the 2016 version.</li>
+<li>The 2019 version has rules to allow credit for receptacle control, which are not present in the 2016 version.</li>
+<li>In 2016, the infiltration leakage rate is the same in Proposed and Baseline, at 0.4 cfm/sf at 0.3 in water. In 2019, the Proposed model is specified as 0.6 cfm/sf and the Baseline is at 1.0 cfm/sf at 0.3 in water.</li>
+</ul>
 
 
 <footer class="footline">
@@ -1547,16 +1565,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1664294776"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1664294776"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1664294776"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1664294776"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1664294776"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1664294776"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1664828222"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1664828222"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1664828222"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1664828222"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1664828222"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1664828222"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1664294776"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1664294776"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1664294776"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1664828222"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1664828222"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1664828222"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

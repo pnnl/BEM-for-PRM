@@ -13,7 +13,8 @@
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</guid>
-      <description>Note: Where to find OpenStudio Applicatio</description>
+      <description>The OpenStudio application can be found on the github page for the OpenStudio Coalition. The application provides a graphical user interface to the OpenStudio engine, and the engine is included in the download package.
+https://github.com/openstudiocoalition/OpenStudioApplication/releases</description>
     </item>
     
     <item>
@@ -22,7 +23,7 @@
       <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</guid>
-      <description>Note: Where to find OSSTD create baseline measure and how to install</description>
+      <description>Where to find OSSTD create baseline measure and how to install From the OpenStudio Application interface, select Components &amp;amp; Measures from the menu at the top. Search for &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; Select the &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure in the search result, and select Download Close the intall measure window </description>
     </item>
     
     <item>
@@ -31,7 +32,8 @@
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
-      <description>Note: How to run the measure</description>
+      <description>How to run the measure Before running the measure, review the model requirements in: Model Requirements
+Select &amp;ldquo;Components &amp;amp; Measures&amp;rdquo; from the top menu in the screen Select Whole Building/ Space Types in the Apply Measure window Click the arrow next to Space types to show available measures Select the &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure Make selections in the right-hand side of the window as needed Click on the Apply Measure at the bottom of the screen </description>
     </item>
     
   </channel>
