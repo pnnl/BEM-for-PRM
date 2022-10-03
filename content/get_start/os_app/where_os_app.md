@@ -6,4 +6,8 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-Note: Where to find OpenStudio Applicatio
+The OpenStudio application can be found on the github page for the OpenStudio Coalition. The application provides a graphical user interface to the OpenStudio engine, and the engine is included in the download package.
+
+https://github.com/openstudiocoalition/OpenStudioApplication/releases
+
+
