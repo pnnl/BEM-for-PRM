@@ -1,5 +1,5 @@
 +++
-title = "Model_requirements"
+title = "Model requirements"
 date = 2022-09-21T15:04:10-07:00
 weight = 31
 chapter = true
