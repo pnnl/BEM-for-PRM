@@ -64,14 +64,14 @@
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/",
-	"title": "Model_requirements",
+	"title": "Model requirements",
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/",
-	"title": "Add_compliance_data",
+	"title": "Add compliance data",
 	"tags": [],
 	"description": "",
 	"content": " userdata_airloop_hvac.csv userdata_airloop_hvac_doas.csv userdata_building.csv userdata_design_specification_outdoor_air.csv userdata_electric_equipment.csv userdata_exterior_lights.csv userdata_gas_equipment.csv userdata_lights.csv userdata_space.csv userdata_spacetype.csv userdata_thermal_zone.csv userdata_wateruse_connections.csv userdata_wateruse_equipment.csv userdata_wateruse_equipment_definition.csv userdata_zone_hvac.csv userdata_zone_infiltration.csv "
