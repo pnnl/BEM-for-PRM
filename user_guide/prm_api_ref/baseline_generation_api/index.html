@@ -12,22 +12,22 @@
     <title>Baseline generation API : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1664900536" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1664900536" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1665526931" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1665526931" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1664900536" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1665526931" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1664900536" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1664900536" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1665526931" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1665526931" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1664900536"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1665526931"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1664900536"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1664900536"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1665526931"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1665526931"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1664900536"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1665526931"></script>
 
     
   </div>
@@ -985,7 +985,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1008,6 +1016,140 @@
         
 
 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#34;90.1-PRM-2019&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>create_results <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_create_prm_stable_baseline_building(model, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, output_dir, unmet_load_hours, debug)
+</span></span></code></pre></div><p>The key function that generates the ASHRAE 90.1 PRM model contains many arguments. Many of them have specific enum values. For a successful generation, these arguments need to have exact match to their enum values.
+In this instruction, we will walk through the argument list so this API call can be customized for any purposes and building cases.</p>
+<ul>
+<li><a href="#--prm-model">model</a></li>
+<li><a href="#--climate_zone">climate_zone</a></li>
+<li><a href="#--default_hvac_bldg_type">default_hvac_bldg_type</a></li>
+<li><a href="#--default_wwr_bldg_type">default_wwr_bldg_type</a></li>
+<li><a href="#--default_swh_bldg_type">default_swh_bldg_type</a></li>
+<li><a href="#--output_dir">output_dir</a></li>
+<li><a href="#--unmet_load_hours">unmet_load_hours</a></li>
+<li><a href="#--debug">debug</a></li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--model">- model</h4>
+<p><code>model</code> is the OpenStudio model. A typical way to load an OpenStudio model is through the version translator.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>model_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\some_path\some_os_model.osm&#39;</span>
+</span></span><span style="display:flex;"><span>translator <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenStudio</span><span style="color:#f92672">::</span><span style="color:#66d9ef">OSVersion</span><span style="color:#f92672">::</span><span style="color:#66d9ef">VersionTranslator</span><span style="color:#f92672">.</span>new
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> translator<span style="color:#f92672">.</span>loadModel(model_path)<span style="color:#f92672">.</span>get
+</span></span></code></pre></div><div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--climate_zone">- climate_zone</h4>
+<p>The <code>climate_zone</code> shall be one of the strings from the list below:</p>
+<ul>
+<li><code>ASHRAE 169-2013-0A</code></li>
+<li><code>ASHRAE 169-2013-0B</code></li>
+<li><code>ASHRAE 169-2013-1A</code></li>
+<li><code>ASHRAE 169-2013-1B</code></li>
+<li><code>ASHRAE 169-2013-2A</code></li>
+<li><code>ASHRAE 169-2013-2B</code></li>
+<li><code>ASHRAE 169-2013-3A</code></li>
+<li><code>ASHRAE 169-2013-3B</code></li>
+<li><code>ASHRAE 169-2013-3C</code></li>
+<li><code>ASHRAE 169-2013-4A</code></li>
+<li><code>ASHRAE 169-2013-4B</code></li>
+<li><code>ASHRAE 169-2013-4C</code></li>
+<li><code>ASHRAE 169-2013-5A</code></li>
+<li><code>ASHRAE 169-2013-5B</code></li>
+<li><code>ASHRAE 169-2013-5C</code></li>
+<li><code>ASHRAE 169-2013-6A</code></li>
+<li><code>ASHRAE 169-2013-6B</code></li>
+<li><code>ASHRAE 169-2013-7A</code></li>
+<li><code>ASHRAE 169-2013-7B</code></li>
+<li><code>ASHRAE 169-2013-8A</code></li>
+<li><code>ASHRAE 169-2013-8B</code></li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--default_hvac_bldg_type">- default_hvac_bldg_type</h4>
+<p>The <code>default_hvac_bldg_type</code> shall be one of the strings in the list below:</p>
+<ul>
+<li><code>heated only storage</code></li>
+<li><code>hospital</code></li>
+<li><code>public assembly</code></li>
+<li><code>retail</code></li>
+<li><code>other nonresidential</code></li>
+<li><code>residential</code></li>
+<li><code>unconditioned</code></li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--default_wwr_bldg_type">- default_wwr_bldg_type</h4>
+<p>The <code>default_wwr_bldg_type</code> shall be one of the strings in the list below:</p>
+<ul>
+<li><code>Warehouse (nonrefrigerated)</code></li>
+<li><code>School (secondary and university)</code></li>
+<li><code>School (primary)</code></li>
+<li><code>Retail (strip mall)</code></li>
+<li><code>Retail (stand alone)</code></li>
+<li><code>Restaurant (quick service)</code></li>
+<li><code>Restaurant (full serivce)</code></li>
+<li><code>Office &gt; 50,000 sq ft</code></li>
+<li><code>Office &lt;= 5,000 sq ft</code></li>
+<li><code>Office 5,00 to 50,000 sq ft</code></li>
+<li><code>Hotel/motel &gt; 75 rooms</code></li>
+<li><code>Hotel/motel &lt;= 75 rooms</code></li>
+<li><code>Hospital</code></li>
+<li><code>Healthcare (outpatient)</code></li>
+<li><code>Grocery store</code></li>
+<li><code>All other</code></li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--default_swh_bldg_type">- default_swh_bldg_type</h4>
+<p>The <code>default_swh_bldg_type</code> shall be one of the strings in the list below:</p>
+<ul>
+<li><code>Workshop</code></li>
+<li><code>Warehouse</code></li>
+<li><code>Transportation</code></li>
+<li><code>Town hall</code></li>
+<li><code>Sport arena</code></li>
+<li><code>School/university</code></li>
+<li><code>Retail</code></li>
+<li><code>Religious facility</code></li>
+<li><code>Post office</code></li>
+<li><code>Police station</code></li>
+<li><code>Performing arts theater</code></li>
+<li><code>Penitentiary</code></li>
+<li><code>Parking garage</code></li>
+<li><code>Office</code></li>
+<li><code>Museum</code></li>
+<li><code>Multifamily</code></li>
+<li><code>Motion picture theater</code></li>
+<li><code>Motel</code></li>
+<li><code>Manufacturing facility</code></li>
+<li><code>Library</code></li>
+<li><code>Hotel</code></li>
+<li><code>Hospital and outpatient surgery center</code></li>
+<li><code>Health-care clinic</code></li>
+<li><code>Gymnasium</code></li>
+<li><code>Grocery store</code></li>
+<li><code>Fire station</code></li>
+<li><code>Exercise center</code></li>
+<li><code>Domitory</code></li>
+<li><code>Dining:Family</code></li>
+<li><code>Dining: Cafeteria/fast food</code></li>
+<li><code>Dining: Bar lounge/leisure</code></li>
+<li><code>Courthouse</code></li>
+<li><code>Convention center</code></li>
+<li><code>Convenience store</code></li>
+<li><code>Automotive facility</code></li>
+<li><code>All others</code></li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--output_dir">- output_dir</h4>
+<p><code>output_dir</code> is a mandatory field that specifies the directory to save all sizing runs. When applying PRM method on a proposed model, OSSTD will perform several sizing runs. These sizing runs usually saved in a directory specified in <code>sizing_run_dir</code>. In addition, the generated baseline model <code>.idf</code> and <code>.osm</code> will also be saved in the this directory.</p>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--unmet_load_hours">- unmet_load_hours</h4>
+<p><code>unmet_load_hours</code> is a flag to check whether the <code>model</code> can successfully run a annual simulation and the annual unmet load hours is smaller than 300 hours as required by ASHRAE 90.1 Appendix G. The default value for this flag is <code>false</code>, which skips the two checks and run baseline generation.</p>
+
+<div class="notices info" ><p>Cautious when setting the <code>unmet_load_hours</code> to <code>false</code>. This could result in wrong baseline models or crash the baseline generation process.</p>
+</div>
+
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="--debug">- debug</h4>
+<p><code>debug</code> default is set to <code>false</code>. This argument has no impact to the current PRM generation and is part of the future implementation. For now, any API calls can set to <code>false</code> or simply ignore this argument.</p>
 
 
 <footer class="footline">
@@ -1558,16 +1700,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1664900536"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1664900536"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1664900536"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1664900536"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1664900536"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1664900536"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1665526932"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1665526932"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1665526932"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1665526932"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1665526932"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1665526932"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1664900536"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1664900536"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1664900536"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1665526932"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1665526932"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1665526932"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
