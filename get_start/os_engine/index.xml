@@ -13,10 +13,10 @@
       <pubDate>Wed, 21 Sep 2022 15:01:00 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</guid>
-      <description>You will need following applications to ensure OpenStudio Standard running smoothly on your project.
-Ruby version support Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
-Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:
-C:\Users\sample_user&amp;gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.</description>
+      <description>This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.
+Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard You will need following applications to ensure OpenStudio Standard running on your project.
+Download Ruby Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
+Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:</description>
     </item>
     
     <item>
@@ -36,7 +36,9 @@ require `openstudio` require `openstudio-standard` model_path = &amp;#39;C:\demo
       <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</guid>
-      <description>Note: Link to API documentation</description>
+      <description>The description of PRM API methods can be found in this API document.
+In addition, the PRM method is a subroutine under the package of OpenStudio Standard project. Therefore, OpenStudio Standard API methods can be accessed from the same routine. For example:
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) thermal_zones = [] model.getThermalZones.each do |zone| thermal_zones.append(zone) end end # Hot water loop hot_water_loop = standard.</description>
     </item>
     
   </channel>

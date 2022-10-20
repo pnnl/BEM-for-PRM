@@ -17,12 +17,13 @@
     </item>
     
     <item>
-      <title>WWR API</title>
+      <title>Window API</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:59 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</guid>
-      <description></description>
+      <description>Quick use Function workflow Quick Use climate_zone = &amp;#34;ASHRAE 169-2013-4A&amp;#34; wwr_building_type = &amp;#34;Office &amp;lt;= 5,000 sq ft&amp;#34; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone, wwr_building_type) The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.
+Building Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office &amp;gt; 50,000 sq ft 40% Office &amp;lt;= 5,000 sq ft 19% Office 5,00 to 50,000 sq ft 31% Hotel/motel &amp;gt; 75 rooms 34% Hotel/motel &amp;lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table.</description>
     </item>
     
   </channel>

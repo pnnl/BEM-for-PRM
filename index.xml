@@ -75,10 +75,10 @@ Select &amp;ldquo;Components &amp;amp; Measures&amp;rdquo; from the top menu in 
       <pubDate>Wed, 21 Sep 2022 15:01:00 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</guid>
-      <description>You will need following applications to ensure OpenStudio Standard running smoothly on your project.
-Ruby version support Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
-Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:
-C:\Users\sample_user&amp;gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.</description>
+      <description>This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.
+Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard You will need following applications to ensure OpenStudio Standard running on your project.
+Download Ruby Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
+Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:</description>
     </item>
     
     <item>
@@ -98,18 +98,9 @@ require `openstudio` require `openstudio-standard` model_path = &amp;#39;C:\demo
       <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</guid>
-      <description>Note: Link to API documentation</description>
-    </item>
-    
-    <item>
-      <title>Baseline automation</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</link>
-      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</guid>
-      <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
-In the previous step, we created a medium office prototype model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
+      <description>The description of PRM API methods can be found in this API document.
+In addition, the PRM method is a subroutine under the package of OpenStudio Standard project. Therefore, OpenStudio Standard API methods can be accessed from the same routine. For example:
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) thermal_zones = [] model.getThermalZones.each do |zone| thermal_zones.append(zone) end end # Hot water loop hot_water_loop = standard.</description>
     </item>
     
     <item>
@@ -122,6 +113,17 @@ require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#3
 To begin with, we need to import both packages.
 require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.
 Next, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.</description>
+    </item>
+    
+    <item>
+      <title>Baseline automation</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</link>
+      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</guid>
+      <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
+In the previous step, we created a medium office prototype model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
     </item>
     
     <item>
@@ -209,12 +211,13 @@ The units of the measurement value are indicated by the last part of the subcate
     </item>
     
     <item>
-      <title>WWR API</title>
+      <title>Window API</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:59 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</guid>
-      <description></description>
+      <description>Quick use Function workflow Quick Use climate_zone = &amp;#34;ASHRAE 169-2013-4A&amp;#34; wwr_building_type = &amp;#34;Office &amp;lt;= 5,000 sq ft&amp;#34; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone, wwr_building_type) The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.
+Building Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office &amp;gt; 50,000 sq ft 40% Office &amp;lt;= 5,000 sq ft 19% Office 5,00 to 50,000 sq ft 31% Hotel/motel &amp;gt; 75 rooms 34% Hotel/motel &amp;lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table.</description>
     </item>
     
   </channel>

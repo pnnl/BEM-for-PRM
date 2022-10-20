@@ -4,21 +4,21 @@
 	"title": "Overview",
 	"tags": [],
 	"description": "",
-	"content": "What is OSSTD-PRM The \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.\nSince Appendix G began using a \u0026ldquo;stable baseline\u0026rdquo; approach beginning with the 2016 version, the 2019 baseline will be nearly the same as the 2016 version. Some differences are outlined here.\nAt this time, only a Baseline model is created by the tool. A future version is planned that will also create a Proposed model.\n"
+	"content": "Chapter 1 What is OSSTD-PRM The \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.\nSince Appendix G began using a \u0026ldquo;stable baseline\u0026rdquo; approach beginning with the 2016 version, the 2019 baseline will be nearly the same as the 2016 version. Some differences are outlined here.\nAt this time, only a Baseline model is created by the tool. A future version is planned that will also create a Proposed model.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/",
 	"title": "Getting Started",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "Chapter 2 Get Started Start using OpenStudio Standard PRM method in your compliance modeling workflow\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/",
 	"title": "User Guide",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "Chapter 3 PRM Method User Guide A detail user guide to walk through API methods in the PRM method\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/",
@@ -42,6 +42,13 @@
 	"content": "Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:\nBaseline humidification is same as user model in the current tool. In some cases the baseline is required to be changed to adiabatic humidification. This has not been implemented. Baseline dehumidification is same as user model in the current tool. For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance. This is not yet implemented, and must be handled via post-processing or an EMS applied to the Baseline model. Baseline transformer efficiencies have not been implemented. Where service water heater systems in the user model are comprised of multiple distributed systems, the Appendix G model is required to use a single central system. The conversion to a central system has not yet been implemented. For models where design ventilation rates are greater than that required by code, then the rules of Appendix G state that the Baseline ventilation rate shall be based on the building code, and will be lower than the user model. The ability to model this difference has not yet been implemented. Some Appendix G requirements for district energy systems have not yet been implemented. Efficiency requirements for motors serving miscellaneous electrical equipment have not yet been implemented. Efficiency requirements for commercial refrigeration equipment have not yet been implemented. The baseline requirement has not yet been implemented where lab exhaust fans must be modeled as constant horsepower, reflecting constant-volume stack discharge with outdoor air bypass. The rules of the 2016 version of 90.1 Appendix G are very similar to the 2019 version. Some differences are as follows:\nIn 2016, if Proposed model has combined space/SWH system, the Baseline shall use separate systems. In 2019, a single central SWH system is to be used. This is similar, but maybe not identical to the 2016 version. The 2019 version has rules to allow credit for receptacle control, which are not present in the 2016 version. In 2016, the infiltration leakage rate is the same in Proposed and Baseline, at 0.4 cfm/sf at 0.3 in water. In 2019, the Proposed model is specified as 0.6 cfm/sf and the Baseline is at 1.0 cfm/sf at 0.3 in water. "
 },
 {
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/",
+	"title": "Quick start",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2.1 Quick Start 10 minutes to OSSTD-PRM automation "
+},
+{
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/",
 	"title": "Use with OpenStudio App",
 	"tags": [],
@@ -53,14 +60,7 @@
 	"title": "Use with OpenStudio Engine",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 2.2 Some Chapter title Lorem Ipsum.\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/",
-	"title": "Quick start",
-	"tags": [],
-	"description": "",
-	"content": "Chapter 2.3 Quick Start 10 minutes to OSSTD-PRM automation "
+	"content": "Chapter 2.3 Use with OpenStudio Engine This tutorial introduces scripting method of using OpenStudio Standard PRM in combination with OpenStudio engine.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/",
@@ -81,7 +81,7 @@
 	"title": "PRM API Reference",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "Chapter 3.3 PRM API Reference A detail API reference to walk through functions in the OpenStudio Standard PRM method.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/",
@@ -116,7 +116,7 @@
 	"title": "Installation",
 	"tags": [],
 	"description": "",
-	"content": "You will need following applications to ensure OpenStudio Standard running smoothly on your project.\nRuby version support Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz\nFollow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:\nC:\\Users\\sample_user\u0026gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.2.1 and it can be downloaded at: https://github.com/NREL/OpenStudio/releases/tag/v3.2.1\nMore recent version of OpenStudio can be found in the OpenStudio release link: https://github.com/NREL/OpenStudio/releases. The PRM is tested against v3.4 and lower.\nImportnat Note: The PRM routine in the OpenStudio Standard is tested against v3.4. However, the OpenStudio Standard is currently still running on v3.2.1 or lower.\nConnect Ruby to OpenStudio Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.\nStep 1: navigate to ruby installation directory and find the site_ruby folder. In Windows, it should be a directory like this: C:\\Ruby27-x64\\lib\\ruby\\site_ruby Step 2: create a new ruby file called openstudio.rb under the site_ruby folder. Step 3: open the openstudio.rb file and add one line:\nrequire \u0026#34;C:/[Openstudio directory]/Ruby/openstudio.rb\u0026#34; The directory shall be pointing to the openstudio.rb file under the OpenStudio installation folder. Revise the directory after require based on your actual installation directory.\nYou can verify the setting with the following command in command line.\nC:\\Users\\smaple_user\u0026gt; irb irb(main):001:0\u0026gt; require \u0026#34;openstudio\u0026#34; =\u0026gt; true Return true verifies a success on your local setup.\nThat is all we need to prepare before the installation OpenStudio Standard package. Click NEXT to install the package!\n"
+	"content": "This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.\nDownload Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard You will need following applications to ensure OpenStudio Standard running on your project.\nDownload Ruby Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz\nFollow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:\nC:\\Users\\sample_user\u0026gt;ruby -v ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32] Download OpenStudio OpenStudio 3.2. The latest stable 3.2 version is 3.2.1 and it can be downloaded at: https://github.com/NREL/OpenStudio/releases/tag/v3.2.1\nMore recent version of OpenStudio can be found in the OpenStudio release link: https://github.com/NREL/OpenStudio/releases. The PRM is tested against v3.4 and lower.\nImportnat Note: The PRM routine in the OpenStudio Standard is tested against v3.4. However, the OpenStudio Standard is only tested on v3.2.1 or lower.\nConnect Ruby to OpenStudio Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.\nStep 1: navigate to ruby installation directory and find the site_ruby folder. In Windows, it should be a directory like this: C:\\Ruby27-x64\\lib\\ruby\\site_ruby Step 2: create a new ruby file called openstudio.rb under the site_ruby folder. Step 3: open the openstudio.rb file and add one line:\nrequire \u0026#34;C:/[Openstudio directory]/Ruby/openstudio.rb\u0026#34; The directory shall be pointing to the openstudio.rb file under the OpenStudio installation folder. Revise the directory after require based on your actual installation directory.\nYou can verify the setting with the following command in command line.\nC:\\Users\\smaple_user\u0026gt; irb irb(main):001:0\u0026gt; require \u0026#34;openstudio\u0026#34; =\u0026gt; true Return true verifies a success on your local setup. Download OpenStudio Standard Now we can create a new ruby project that is going to use the OpenStudio Standard package.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/",
@@ -130,14 +130,7 @@
 	"title": "API documentation",
 	"tags": [],
 	"description": "",
-	"content": "Note: Link to API documentation\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/",
-	"title": "Baseline automation",
-	"tags": [],
-	"description": "",
-	"content": "This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.\nIn the previous step, we created a medium office prototype model in Climate zone 4. In this section, let\u0026rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; Next, load the model and prepare compliance parameters for baseline generation.\n# Load the openstudio model model_path = \u0026#34;#{File.dirname(Dir.pwd)}/output_baseline/test_model.osm\u0026#34; translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loaModel(model_path).get # Baseline parameters bldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; Finally, add the script to generate baseline:\n# load the PRM standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) P \u0026#34;start generating baseline model ... at #{baseline_dir}\u0026#34; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=true, unmet_load_hours_check=true, debug=false) There are many arguments for the model_create_prm_stable_baseline_building function but don\u0026rsquo;t sweat on it. We will cover each one of them in later sections. Nevertheless, this script is sufficient to generate the baseline models for our prototype model.\n"
+	"content": "The description of PRM API methods can be found in this API document.\nIn addition, the PRM method is a subroutine under the package of OpenStudio Standard project. Therefore, OpenStudio Standard API methods can be accessed from the same routine. For example:\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; standard = Standard.build(\u0026#34;90.1-PRM-2019\u0026#34;) translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) thermal_zones = [] model.getThermalZones.each do |zone| thermal_zones.append(zone) end end # Hot water loop hot_water_loop = standard.model_add_hw_loop(model, \u0026#39;NaturalGas\u0026#39;) # Heat pump loop condenser_loop = standard.model_get_or_add_heat_pump_loop(model, \u0026#39;Electricity\u0026#39;, \u0026#39;Electricity\u0026#39;, heat_pump_loop_cooling_type:\u0026#39;CoolingTower\u0026#39;) standard.model_add_water_source_hp(model, thermal_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_top_zones, system_name: \u0026#39;DOAS TOP System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) The code above loads a model, removes the existing HVAC systems, and calls the OpenStudio Standard methods to add a water source heat pump system.\nHowever, the use of those functions is out of the scope of this documentation. Using those functions shall always refer to the official OpenStudio Standard API documentation.\nThe PRM routine also can be used to work with OpenStudio APIs. The access to the OpenStudio API documentation can be found in the OpenStudio official website.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/create_typical/",
@@ -145,6 +138,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Create a typical model OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a typical building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.\nTo begin with, we need to import both packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.\nNext, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.1 2019 standard. Before doing that, we will need to define these parameters.\ncode_version = \u0026#39;90.1-2019\u0026#39; prototype_template = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; epw_file = \u0026#39;USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw\u0026#39; prototype_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; # path where the generated prototype saved. The next step is to generate the typical medium office model\nstandard = Standard.build(\u0026#34;#{code_version}_#{prototype_template}\u0026#34;) model = standard.model_create_prototype_model(climate_zone, epw_file, prototype_dir) The first line loads a specific OpenStudio Standard object based on the code version (90.1-2019) and the prototype template (MediumOffice). The second line calls model_create_prototype_model method from the object with arguments include climate_zone, epw_file and prototype_dir to create the prototype model. This method will create a path in the computer to store the draft prototype model and sizing run of the model. Then it will fine-calibrate the model based on the sizing outcome to produce the final version, which is the returned value from this method.\nLast, we can save the generated prototype model to a directory and view it in the OpenStudio Application.\nThe full script of this part of the tutorial is provided below:\nrequire \u0026#39;openstudio\u0026#39; # This imports the source code of the openstudio standard. If OSSTD is installed in GEM, then simply # use require \u0026#39;openstudio-standards\u0026#39; require_relative File.join(\u0026#39;..\u0026#39;,\u0026#39;..\u0026#39;,\u0026#39;..\u0026#39;, \u0026#39;OSSTD_Repo\u0026#39;,\u0026#39;lib\u0026#39;,\u0026#39;openstudio-standards.rb\u0026#39;) code_version = \u0026#39;90.1-2019\u0026#39; prototype_template = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; epw_file = \u0026#39;C:\\WeatherData\\USA_NY_New.York-J.F.Kennedy.Intl.AP.744860_TMY3.epw\u0026#39; prototype_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; standard = Standard.build(\u0026#34;#{code_version}_#{prototype_template}\u0026#34;) model = standard.model_create_prototype_model(climate_zone, epw_file, prototype_dir) # Save prototype OSM file osm_path = OpenStudio::Path.new(\u0026#34;#{prototype_dir}/test_model.osm\u0026#34;) model.save(osm_path, true) Next, we will write a script to automatically generate ASHRAE 90.1 Appendix G (PRM) model from the generated prototype model. Click the Next button at the right edge to start the script.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/",
+	"title": "Baseline automation",
+	"tags": [],
+	"description": "",
+	"content": "This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.\nIn the previous step, we created a medium office prototype model in Climate zone 4. In this section, let\u0026rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; Next, load the model and prepare compliance parameters for baseline generation.\n# Load the openstudio model model_path = \u0026#34;#{File.dirname(Dir.pwd)}/output_baseline/test_model.osm\u0026#34; translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loaModel(model_path).get # Baseline parameters bldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; Finally, add the script to generate baseline:\n# load the PRM standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) P \u0026#34;start generating baseline model ... at #{baseline_dir}\u0026#34; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=true, unmet_load_hours_check=true, debug=false) There are many arguments for the model_create_prm_stable_baseline_building function but don\u0026rsquo;t sweat on it. We will cover each one of them in later sections. Nevertheless, this script is sufficient to generate the baseline models for our prototype model.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/",
@@ -204,10 +204,10 @@
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/",
-	"title": "WWR API",
+	"title": "Window API",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Quick use Function workflow Quick Use climate_zone = \u0026#34;ASHRAE 169-2013-4A\u0026#34; wwr_building_type = \u0026#34;Office \u0026lt;= 5,000 sq ft\u0026#34; standard = Standard.build(\u0026#34;90.1-PRM-2019\u0026#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone, wwr_building_type) The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.\nBuilding Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office \u0026gt; 50,000 sq ft 40% Office \u0026lt;= 5,000 sq ft 19% Office 5,00 to 50,000 sq ft 31% Hotel/motel \u0026gt; 75 rooms 34% Hotel/motel \u0026lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table. Once the function identifies the correct building area, it will applies the window to wall ratio to the entire model.\nFunction workflow Step 1: Check proposed model graph LR; A(Model) --\u003e|Loop| B(Spaces) B --\u003e|Apply building area type| C(BAT) B --\u003e|Surface conditioning category| D{Condition} D --\u003e|Conditioned space| E(Surfaces) C --\u003e|Target WWR| F(Adjust Ratio) E --\u003e|Existing WWR| F(Adjust WWR) "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/",
