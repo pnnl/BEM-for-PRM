@@ -5,8 +5,8 @@ weight = 3
 chapter = true
 +++
 
-### Chapter X
+### Chapter 3
 
-# Some Chapter title
+# PRM Method User Guide
 
-Lorem Ipsum.
+A detail user guide to walk through API methods in the PRM method

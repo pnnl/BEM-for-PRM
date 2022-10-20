@@ -6,9 +6,18 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-You will need following applications to ensure OpenStudio Standard running smoothly on your project.
+This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.
 
-### Ruby version support
+- [Download Ruby](#download-ruby)
+- [Download OpenStudio](#download-openstudio)
+- [Connect Ruby with OpenStudio](#connect-ruby-to-openstudio)
+- [Download OpenStudio Standard](#download-openstudio-standard)
+
+{{< line_break >}}
+
+You will need following applications to ensure OpenStudio Standard running on your project.
+
+#### Download Ruby
 
 **Ruby 2.7**. Latest stable version is **2.7.6** and it can be downloaded at: [https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz](https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz)
 
@@ -19,7 +28,9 @@ C:\Users\sample_user>ruby -v
 ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32]
 ```
 
-### OpenStudio
+{{< line_break >}}
+
+#### Download OpenStudio
 
 **OpenStudio 3.2**. The latest stable 3.2 version is **3.2.1** and it can be downloaded at: [https://github.com/NREL/OpenStudio/releases/tag/v3.2.1](https://github.com/NREL/OpenStudio/releases/tag/v3.2.1)
 
@@ -27,10 +38,11 @@ More recent version of **OpenStudio** can be found in the OpenStudio release lin
 
 {{% notice tip %}}
 **Importnat Note:**
-The PRM routine in the OpenStudio Standard is tested against **v3.4**. However, the OpenStudio Standard is currently still running on **v3.2.1** or lower.
+The PRM routine in the OpenStudio Standard is tested against **v3.4**. However, the OpenStudio Standard is only tested on **v3.2.1** or lower.
 {{% /notice %}}
+{{< line_break >}}
 
-### Connect Ruby to OpenStudio
+#### Connect Ruby to OpenStudio
 
 Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.
 
@@ -60,5 +72,8 @@ irb(main):001:0> require "openstudio"
 ```
 
 Return **true** verifies a success on your local setup.
+{{< line_break >}}
 
-That is all we need to prepare before the installation OpenStudio Standard package. Click [NEXT](/BEM-for-PRM/get_start/os_engine/call_use_api/) to install the package!
+#### Download OpenStudio Standard
+
+Now we can create a new ruby project that is going to use the OpenStudio Standard package.

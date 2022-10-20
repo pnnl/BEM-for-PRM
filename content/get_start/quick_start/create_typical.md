@@ -1,7 +1,7 @@
 ---
 title: "Create a typical model"
 date: 2022-07-26T15:43:57-07:00
-weight: 232
+weight: 231
 draft: false
 pre: "<b>- </b>"
 ---
