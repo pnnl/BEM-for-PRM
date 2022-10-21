@@ -9,4 +9,4 @@ chapter = true
 
 # PRM Method User Guide
 
-A detail user guide to walk through API methods in the PRM method
+A detail user guide that walks through API methods in the PRM method
