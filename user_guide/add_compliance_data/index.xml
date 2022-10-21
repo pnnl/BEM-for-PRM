@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Add compliance data on OSSTD doc</title>
+    <title>User compliance data on OSSTD doc</title>
     <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/</link>
-    <description>Recent content in Add compliance data on OSSTD doc</description>
+    <description>Recent content in User compliance data on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 15:04:27 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>User data: Airloop HVAC</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac/</guid>
+      <description> User Data CSV File: userdata_airloop_hvac.csv (988 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Airloop HVAC DOAS</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/</guid>
+      <description> User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) </description>
+    </item>
+    
     <item>
       <title>User data: Building</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</guid>
-      <description></description>
+      <description> User Data CSV File: userdata_building.csv (97 B) </description>
     </item>
     
     <item>
-      <title>User data: Space</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
+      <title>User data: Outdoor Air</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_design_specification_outdoor_air/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>User data: Space type</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</guid>
-      <description></description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_design_specification_outdoor_air/</guid>
+      <description> User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) </description>
     </item>
     
     <item>
@@ -40,16 +49,107 @@
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/</guid>
-      <description>User Data CSV File: user_data_exterior_lights.csv
-Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:
-enduse_subcategory_01
-_through
-end_use_subcategory_09
-For each subcategory, the appropriate quantity must also be listed, as designated by:
-enduse_measurement_value_01
-_through
-end_use_measurement_value_09
-The units of the measurement value are indicated by the last part of the subcategory name:</description>
+      <description>Exterior lights end_use_subcategory tradeable-exterior-lighting-subcategories non-tradeable-exterior-lighting-subcategories end_use_measurement_value Exterior Lights User Data CSV File: userdata_exterior_lights.csv (467 B) The user_data_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. A sample of data record is shown below.
+end_use_subcategory Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:</description>
+    </item>
+    
+    <item>
+      <title>User data: Electric Equip</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_electric_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_electric_equipment/</guid>
+      <description> User Data CSV File: userdata_electric_equipment.csv (411 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Gas Equip</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_gas_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_gas_equipment/</guid>
+      <description> User Data CSV File: userdata_gas_equipment.csv (65 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Lights</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights/</guid>
+      <description> User Data CSV File: userdata_lights.csv (81 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Space</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</guid>
+      <description> User Data CSV File: userdata_space.csv (745 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Space type</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</guid>
+      <description> User Data CSV File: userdata_spacetype.csv (723 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Thermal Zone</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/</guid>
+      <description> User Data CSV File: userdata_thermal_zone.csv (114 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Water Connections</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_connections/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_connections/</guid>
+      <description> User Data CSV File: userdata_wateruse_connections.csv (82 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Water Equip Def</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment_definition/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment_definition/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Water Equipment</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment.csv (22 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Zone HVAC</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/</guid>
+      <description> User Data CSV File: userdata_zone_hvac.csv (896 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Zone Infiltration</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_infiltration/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_infiltration/</guid>
+      <description> User Data CSV File: userdata_zone_infiltration.csv (19 B) </description>
     </item>
     
   </channel>

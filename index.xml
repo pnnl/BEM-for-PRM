@@ -6,7 +6,7 @@
     <description>Recent content in Home on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Sep 2022 15:07:24 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 15:06:59 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Key Capabilities</title>
       <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/</link>
@@ -25,19 +25,6 @@ Apply baseline envelope rules Space conditioning type Constructions Insulation l
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</guid>
       <description>Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:
 Baseline humidification is same as user model in the current tool. In some cases the baseline is required to be changed to adiabatic humidification. This has not been implemented. Baseline dehumidification is same as user model in the current tool. For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance.</description>
-    </item>
-    
-    <item>
-      <title>Dev_instruction</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/</link>
-      <pubDate>Tue, 26 Jul 2022 15:43:57 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/</guid>
-      <description>Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.
-![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.
-![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it
-![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px&amp;amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer
-Code # Template method for adding a setpoint manager for a coil control logic to a heating coil.</description>
     </item>
     
     <item>
@@ -127,18 +114,6 @@ require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#3
     </item>
     
     <item>
-      <title>More examples</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/</link>
-      <pubDate>Fri, 19 Aug 2022 09:36:35 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/</guid>
-      <description>This section will walk through an additional script that alters our prototype model before running the baseline.
-OpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.
-In this section, we will use the OpenStudio Standard package to:
-Reset window to wall ratio to 60% Add overhangs to the south facade Replace the HVAC system with DOAS + water source heat pumps.</description>
-    </item>
-    
-    <item>
       <title>Standards space type</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</link>
       <pubDate>Wed, 21 Sep 2022 15:05:37 -0700</pubDate>
@@ -157,30 +132,39 @@ Reset window to wall ratio to 60% Add overhangs to the south facade Replace the 
     </item>
     
     <item>
+      <title>User data: Airloop HVAC</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac/</guid>
+      <description> User Data CSV File: userdata_airloop_hvac.csv (988 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Airloop HVAC DOAS</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/</guid>
+      <description> User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) </description>
+    </item>
+    
+    <item>
       <title>User data: Building</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</guid>
-      <description></description>
+      <description> User Data CSV File: userdata_building.csv (97 B) </description>
     </item>
     
     <item>
-      <title>User data: Space</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
+      <title>User data: Outdoor Air</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_design_specification_outdoor_air/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>User data: Space type</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</guid>
-      <description></description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_design_specification_outdoor_air/</guid>
+      <description> User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) </description>
     </item>
     
     <item>
@@ -189,16 +173,53 @@ Reset window to wall ratio to 60% Add overhangs to the south facade Replace the 
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/</guid>
-      <description>User Data CSV File: user_data_exterior_lights.csv
-Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:
-enduse_subcategory_01
-_through
-end_use_subcategory_09
-For each subcategory, the appropriate quantity must also be listed, as designated by:
-enduse_measurement_value_01
-_through
-end_use_measurement_value_09
-The units of the measurement value are indicated by the last part of the subcategory name:</description>
+      <description>Exterior lights end_use_subcategory tradeable-exterior-lighting-subcategories non-tradeable-exterior-lighting-subcategories end_use_measurement_value Exterior Lights User Data CSV File: userdata_exterior_lights.csv (467 B) The user_data_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. A sample of data record is shown below.
+end_use_subcategory Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:</description>
+    </item>
+    
+    <item>
+      <title>User data: Electric Equip</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_electric_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_electric_equipment/</guid>
+      <description> User Data CSV File: userdata_electric_equipment.csv (411 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Gas Equip</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_gas_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_gas_equipment/</guid>
+      <description> User Data CSV File: userdata_gas_equipment.csv (65 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Lights</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights/</guid>
+      <description> User Data CSV File: userdata_lights.csv (81 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Space</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</guid>
+      <description> User Data CSV File: userdata_space.csv (745 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Space type</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</guid>
+      <description> User Data CSV File: userdata_spacetype.csv (723 B) </description>
     </item>
     
     <item>
@@ -218,6 +239,60 @@ The units of the measurement value are indicated by the last part of the subcate
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</guid>
       <description>Quick use Function workflow Quick Use climate_zone = &amp;#34;ASHRAE 169-2013-4A&amp;#34; wwr_building_type = &amp;#34;Office &amp;lt;= 5,000 sq ft&amp;#34; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone, wwr_building_type) The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.
 Building Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office &amp;gt; 50,000 sq ft 40% Office &amp;lt;= 5,000 sq ft 19% Office 5,00 to 50,000 sq ft 31% Hotel/motel &amp;gt; 75 rooms 34% Hotel/motel &amp;lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table.</description>
+    </item>
+    
+    <item>
+      <title>User data: Thermal Zone</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/</guid>
+      <description> User Data CSV File: userdata_thermal_zone.csv (114 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Water Connections</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_connections/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_connections/</guid>
+      <description> User Data CSV File: userdata_wateruse_connections.csv (82 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Water Equip Def</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment_definition/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment_definition/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Water Equipment</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment.csv (22 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Zone HVAC</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/</guid>
+      <description> User Data CSV File: userdata_zone_hvac.csv (896 B) </description>
+    </item>
+    
+    <item>
+      <title>User data: Zone Infiltration</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_infiltration/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_infiltration/</guid>
+      <description> User Data CSV File: userdata_zone_infiltration.csv (19 B) </description>
     </item>
     
   </channel>

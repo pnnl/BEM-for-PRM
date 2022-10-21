@@ -11,21 +11,14 @@
 	"title": "Getting Started",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 2 Get Started Start using OpenStudio Standard PRM method in your compliance modeling workflow\n"
+	"content": "Chapter 2 Get Started Start using OpenStudio Standard to create ASHRAE 90.1-2019 PRM models in your compliance modeling workflow\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/",
 	"title": "User Guide",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 3 PRM Method User Guide A detail user guide to walk through API methods in the PRM method\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/",
-	"title": "Temp web development guide",
-	"tags": [],
-	"description": "",
-	"content": "Chapter 4 Some Chapter title Lorem Ipsum.\n"
+	"content": "Chapter 3 PRM Method User Guide A detail user guide that walks through API methods in the PRM method\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/",
@@ -42,39 +35,39 @@
 	"content": "Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:\nBaseline humidification is same as user model in the current tool. In some cases the baseline is required to be changed to adiabatic humidification. This has not been implemented. Baseline dehumidification is same as user model in the current tool. For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance. This is not yet implemented, and must be handled via post-processing or an EMS applied to the Baseline model. Baseline transformer efficiencies have not been implemented. Where service water heater systems in the user model are comprised of multiple distributed systems, the Appendix G model is required to use a single central system. The conversion to a central system has not yet been implemented. For models where design ventilation rates are greater than that required by code, then the rules of Appendix G state that the Baseline ventilation rate shall be based on the building code, and will be lower than the user model. The ability to model this difference has not yet been implemented. Some Appendix G requirements for district energy systems have not yet been implemented. Efficiency requirements for motors serving miscellaneous electrical equipment have not yet been implemented. Efficiency requirements for commercial refrigeration equipment have not yet been implemented. The baseline requirement has not yet been implemented where lab exhaust fans must be modeled as constant horsepower, reflecting constant-volume stack discharge with outdoor air bypass. The rules of the 2016 version of 90.1 Appendix G are very similar to the 2019 version. Some differences are as follows:\nIn 2016, if Proposed model has combined space/SWH system, the Baseline shall use separate systems. In 2019, a single central SWH system is to be used. This is similar, but maybe not identical to the 2016 version. The 2019 version has rules to allow credit for receptacle control, which are not present in the 2016 version. In 2016, the infiltration leakage rate is the same in Proposed and Baseline, at 0.4 cfm/sf at 0.3 in water. In 2019, the Proposed model is specified as 0.6 cfm/sf and the Baseline is at 1.0 cfm/sf at 0.3 in water. "
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/",
-	"title": "Quick start",
-	"tags": [],
-	"description": "",
-	"content": "Chapter 2.1 Quick Start 10 minutes to OSSTD-PRM automation "
-},
-{
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/",
 	"title": "Use with OpenStudio App",
 	"tags": [],
 	"description": "",
-	"content": "Use with OpenStudio Application One way to use the Create ASHRAE 90.1-2019 PRM Model is as an add-in measure to the OpenStudio Application.\n"
+	"content": "Chapter 2.1 Use with OpenStudio APP One way to use the Create ASHRAE 90.1-2019 PRM Model is as an add-in measure to the OpenStudio Application.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/",
 	"title": "Use with OpenStudio Engine",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 2.3 Use with OpenStudio Engine This tutorial introduces scripting method of using OpenStudio Standard PRM in combination with OpenStudio engine.\n"
+	"content": "Chapter 2.2 Use with OpenStudio Engine This tutorial introduces a scripting method of using OpenStudio Standard in combination with OpenStudio engine to generate ASHRAE 90.1-2019 PRM model.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/",
+	"title": "Quick start",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2.3 Quick Start 10 minutes to OSSTD-PRM automation "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/",
 	"title": "Model requirements",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "Chapter 3.1 Model Requirements This chapter lists model requriements for a successful ASHRAE 90.1-2019 PRM model generation.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/",
-	"title": "Add compliance data",
+	"title": "User compliance data",
 	"tags": [],
 	"description": "",
-	"content": " userdata_airloop_hvac.csv userdata_airloop_hvac_doas.csv userdata_building.csv userdata_design_specification_outdoor_air.csv userdata_electric_equipment.csv userdata_exterior_lights.csv userdata_gas_equipment.csv userdata_lights.csv userdata_space.csv userdata_spacetype.csv userdata_thermal_zone.csv userdata_wateruse_connections.csv userdata_wateruse_equipment.csv userdata_wateruse_equipment_definition.csv userdata_zone_hvac.csv userdata_zone_infiltration.csv "
+	"content": "Chapter 3.2 User Compliance Data Compliance data is a set of .csv files with fixed format. The data can be used in the ASHRAE 90.1-2019 PRM method to provide additional information that cannot not be found in an OpenStudio model (e.g., motor_power). The compliance data can improve the accuracy of the PRM model.\nDownload Compliance Data Set userdata_csv.zip (5 KB) Currently there are 16 .csv files in the compliance data set. Each of them covers a specific set of ASHRAE 90.1-2019 compliance data to OpenStudio object. This chapter will provide the detail explaination on each of the file.\nQuick link to each compliance data file user guide: userdata_airloop_hvac.csv userdata_airloop_hvac_doas.csv userdata_building.csv userdata_design_specification_outdoor_air.csv userdata_electric_equipment.csv userdata_exterior_lights.csv userdata_gas_equipment.csv userdata_lights.csv userdata_space.csv userdata_spacetype.csv userdata_thermal_zone.csv userdata_wateruse_connections.csv userdata_wateruse_equipment.csv userdata_wateruse_equipment_definition.csv userdata_zone_hvac.csv userdata_zone_infiltration.csv "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/",
@@ -82,13 +75,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Chapter 3.3 PRM API Reference A detail API reference to walk through functions in the OpenStudio Standard PRM method.\n"
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/temp_web_dev_guide/dev_instruction/",
-	"title": "Dev_instruction",
-	"tags": [],
-	"description": "",
-	"content": "Image Images uses relative links to the local images folder (in the same level as the markdown file). A preceding exclamation point is needed.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg) You can adjust the image size by using the css width and/or height to the link image.\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px) And add CSS (border) to it\n![PNNL Campus](/BEM-for-PRM/basics/images/PNNL_campus.jpg?width=200px\u0026amp;classes=border) Tips/Notes/Warnings Note A notice disclaimer\nCode # Template method for adding a setpoint manager for a coil control logic to a heating coil. # ASHRAE 90.1-2019 Appendix G. # # @param model [OpenStudio::Model::Model] Openstudio model # @param thermalZones Array([OpenStudio::Model::ThermalZone]) thermal zone array # @param coil Heating Coils # @return [Boolean] true def model_set_central_preheat_coil_spm(model, thermalZones, coil) return true end "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/",
@@ -147,13 +133,6 @@
 	"content": "This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.\nIn the previous step, we created a medium office prototype model in Climate zone 4. In this section, let\u0026rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.\nrequire \u0026#39;openstudio\u0026#39; require \u0026#39;openstudio-standard\u0026#39; Next, load the model and prepare compliance parameters for baseline generation.\n# Load the openstudio model model_path = \u0026#34;#{File.dirname(Dir.pwd)}/output_baseline/test_model.osm\u0026#34; translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loaModel(model_path).get # Baseline parameters bldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; Finally, add the script to generate baseline:\n# load the PRM standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) P \u0026#34;start generating baseline model ... at #{baseline_dir}\u0026#34; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=true, unmet_load_hours_check=true, debug=false) There are many arguments for the model_create_prm_stable_baseline_building function but don\u0026rsquo;t sweat on it. We will cover each one of them in later sections. Nevertheless, this script is sufficient to generate the baseline models for our prototype model.\n"
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/more_examples/",
-	"title": "More examples",
-	"tags": [],
-	"description": "",
-	"content": "This section will walk through an additional script that alters our prototype model before running the baseline.\nOpenStudio Standard package is a powerful package that allows user to manipulate their models with simple commands - particularly high-level HVAC templates and model data modifications.\nIn this section, we will use the OpenStudio Standard package to:\nReset window to wall ratio to 60% Add overhangs to the south facade Replace the HVAC system with DOAS + water source heat pumps. First, let\u0026rsquo;s load the model and standard package.\nmodel_path = \u0026#34;#{File.dirname(Dir.pwd)}/output/\u0026#34; save_path = \u0026#34;#{File.dirname(Dir.pwd)}/source/\u0026#34; base_model = \u0026#39;test_model.osm\u0026#39; modified_model = \u0026#39;modified_model_demo.osm\u0026#39; # Load standard package standard = Standard.build(\u0026#39;90.1-PRM-2019\u0026#39;) # load model translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get After the model is loaded, we can firstly modify the window-to-wall ratio using a simple function: setWindowToWallRatio from OpenStudio API.\n# Remove HVAC system and EMS (if any) standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) # remove transformers model.getElectricLoadCenterTransformers.each(\u0026amp;:remove) # Loop through every sub surface model.getSurfaces.each do |ss| unless ss.subSurfaces.empty? orig_construction = ss.subSurfaces[0].construction.get ss.subSurfaces.sort.each(\u0026amp;:remove) # Set WWR to 60% with sill height of 0.8 m. new_window = ss.setWindowToWallRatio(0.6, 0.8, true).get new_window.setConstruction(orig_construction) end end Next, we will add overhangs to the south facade\n# loop sub surfaces model.getSubSurfaces.each do |s| # get the absolute azimuth of the sub surface absoluteAzimuth = OpenStudio.convert(s.azimuth, \u0026#39;rad\u0026#39;, \u0026#39;deg\u0026#39;).get + s.space.get.directionofRelativeNorth + model.getBuilding.northAxis # filter out non-south sub surfaces next if !((absoluteAzimuth \u0026gt;= 135.0) \u0026amp;\u0026amp; (absoluteAzimuth \u0026lt; 225.0\u0026gt;)) # Adds overhangs 0.8 m s.addOverhangByProjectionFactor(0.8, 0) end Last, we will add a DOAS + water source heat pump to the model. We will add one DOAS per floor and one heat pump per thermal zone.\n# split thermal zones by floors, exclude plenum zones thermal_top_zones = [] thermal_mid_zones = [] thermal_bot_zones = [] model.getThermalZones.each do |zone| unless /Plenum/ =~ zone.name.get if /top/ =~ zone.name.get thermal_top_zones.append(zone) elsif /bot/ =~ zone.name.get thermal_bot_zones.append(zone) else thermal_mid_zones.append(zone) end end end # Add a hot water plant loop for DOAS hot_water_loop = standard.model_add_hw_loop(model, \u0026#39;NaturalGas\u0026#39;) # Add a heat pump plant loop condenser_loop = standard.model_get_or_add_heat_pump_loop(model, \u0026#39;Electricity\u0026#39;, \u0026#39;Electricity\u0026#39;, heat_pump_loop_cooling_type: \u0026#39;CoolingTower\u0026#39;) # Top floor zone standard.model_add_water_source_hp(model, thermal_top_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_top_zones, system_name: \u0026#39;DOAS TOP System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) # Mid floor zone standard.model_add_water_source_hp(model, thermal_mid_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_mid_zones, system_name: \u0026#39;DOAS MID System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) # Bottom floor zone standard.model_add_water_source_hp(model, thermal_bot_zones, condenser_loop, ventilation: true) standard.model_add_doas(model, thermal_bot_zones, system_name: \u0026#39;DOAS BOT System\u0026#39;, doas_type: \u0026#39;DOASCV\u0026#39;, hot_water_loop: hot_water_loop, chilled_water_loop: nil) That\u0026rsquo;s it. In the end, we will call the baseline function to generate a baseline.\nbldg_type = \u0026#39;MediumOffice\u0026#39; climate_zone = \u0026#39;ASHRAE 169-2013-4A\u0026#39; baseline_dir = \u0026#34;#{File.dirname(Dir.pwd)}/output\u0026#34; default_hvac_bldg_type = \u0026#39;other nonresidential\u0026#39; default_wwr_bldg_type = \u0026#39;Office 5,000 to 50,000 sq ft\u0026#39; default_swh_bldg_type = \u0026#39;Office\u0026#39; baseline_models = standard.model_create_prm_stable_baseline_building(model, bldg_type, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, nil, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false) Now we can have a more visual comparison between the prototype and baseline. In the baseline, the windows are shrunk, and the overhangs are removed. Also, the HVAC system was changed from DOAS + water source heat pump to Packaged VAV system (system type 5).\n"
-},
-{
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/",
 	"title": "Standards space type",
 	"tags": [],
@@ -168,32 +147,74 @@
 	"content": ""
 },
 {
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac/",
+	"title": "User data: Airloop HVAC",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_airloop_hvac.csv (988 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/",
+	"title": "User data: Airloop HVAC DOAS",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) "
+},
+{
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/",
 	"title": "User data: Building",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " User Data CSV File: userdata_building.csv (97 B) "
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/",
-	"title": "User data: Space",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_design_specification_outdoor_air/",
+	"title": "User data: Outdoor Air",
 	"tags": [],
 	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/",
-	"title": "User data: Space type",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": " User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/",
 	"title": "User Data: Exterior Lights",
 	"tags": [],
 	"description": "",
-	"content": "User Data CSV File: user_data_exterior_lights.csv\nEach exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:\nenduse_subcategory_01\n_through\nend_use_subcategory_09\nFor each subcategory, the appropriate quantity must also be listed, as designated by:\nenduse_measurement_value_01\n_through\nend_use_measurement_value_09\nThe units of the measurement value are indicated by the last part of the subcategory name:\n\u0026lsquo;area\u0026rsquo; = area in square feet\n\u0026lsquo;perim\u0026rsquo; = perimiter length in linear feet\n\u0026lsquo;qty\u0026rsquo; = integer quantity of items\nNote: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to \u0026lsquo;1\u0026rsquo; for the baseline model.\nCredit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.\nIn order to work with the Appendix G code database, the following subcategory names must be used in the user data file:\nTradeable Exterior Lighting Subcategories parking_lots_and_drives_area\nwalkways_less_than_10_ft_wide_perim\nwalkways_10_ft_wide_or_greater_area\nplaza_areas_area\nspecial_feature_areas_area\nstairways_area\nmain_entries_area\nother_doors_perim\ncanopies_area\nopen_areas_including_vehicle_sales_lots_area\nstreet_frontage_for_vehicle_sales_perim\nNon-Tradeable Exterior Lighting Subcategories nontradeable_general_qty\nbuilding_facades_area\nbuilding_facades_perim\nautomated_teller_machines_per_location_qty\nautomated_teller_machines_per_machine_qty\nentries_and_gates_area\nloading_areas_for_emergency_vehicles_area\ndrive_through_windows_and_doors_qty\nparking_near_24_hour_entrances_qty\nroadway_parking_qty\n"
+	"content": " Exterior lights end_use_subcategory tradeable-exterior-lighting-subcategories non-tradeable-exterior-lighting-subcategories end_use_measurement_value Exterior Lights User Data CSV File: userdata_exterior_lights.csv (467 B) The user_data_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. A sample of data record is shown below.\nend_use_subcategory Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:\nend_use_subcategory_01 through end_use_subcategory_09\nIn order to work with the Appendix G code database, the following subcategory names must be used in the user data file:\nTradeable Exterior Lighting Subcategories parking_lots_and_drives_area walkways_less_than_10_ft_wide_perim\nwalkways_10_ft_wide_or_greater_area\nplaza_areas_area\nspecial_feature_areas_area\nstairways_area\nmain_entries_area\nother_doors_perim\ncanopies_area\nopen_areas_including_vehicle_sales_lots_area\nstreet_frontage_for_vehicle_sales_perim\nNon-Tradeable Exterior Lighting Subcategories nontradeable_general_qty\nbuilding_facades_area\nbuilding_facades_perim\nautomated_teller_machines_per_location_qty\nautomated_teller_machines_per_machine_qty\nentries_and_gates_area\nloading_areas_for_emergency_vehicles_area\ndrive_through_windows_and_doors_qty\nparking_near_24_hour_entrances_qty\nroadway_parking_qty\nIt is critical to use the identical string in the above list. Failure to match the list could result erroneous data in the PRM model.\nend_use_measurement_value For each subcategory, the appropriate quantity must also be listed, as designated by:\nend_use_measurement_value_01 through end_use_measurement_value_09\nThe units of the measurement value are indicated by the last part of the subcategory name:\narea = area in square feet\nperim = perimiter length in linear feet\nqty = integer quantity of items\nNote: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to \u0026lsquo;1\u0026rsquo; for the baseline model.\nCredit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.\n"
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_electric_equipment/",
+	"title": "User data: Electric Equip",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_electric_equipment.csv (411 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_gas_equipment/",
+	"title": "User data: Gas Equip",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_gas_equipment.csv (65 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights/",
+	"title": "User data: Lights",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_lights.csv (81 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/",
+	"title": "User data: Space",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_space.csv (745 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/",
+	"title": "User data: Space type",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_spacetype.csv (723 B) "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/",
@@ -208,6 +229,48 @@
 	"tags": [],
 	"description": "",
 	"content": " Quick use Function workflow Quick Use climate_zone = \u0026#34;ASHRAE 169-2013-4A\u0026#34; wwr_building_type = \u0026#34;Office \u0026lt;= 5,000 sq ft\u0026#34; standard = Standard.build(\u0026#34;90.1-PRM-2019\u0026#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone, wwr_building_type) The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.\nBuilding Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office \u0026gt; 50,000 sq ft 40% Office \u0026lt;= 5,000 sq ft 19% Office 5,00 to 50,000 sq ft 31% Hotel/motel \u0026gt; 75 rooms 34% Hotel/motel \u0026lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table. Once the function identifies the correct building area, it will applies the window to wall ratio to the entire model.\nFunction workflow Step 1: Check proposed model graph LR; A(Model) --\u003e|Loop| B(Spaces) B --\u003e|Apply building area type| C(BAT) B --\u003e|Surface conditioning category| D{Condition} D --\u003e|Conditioned space| E(Surfaces) C --\u003e|Target WWR| F(Adjust Ratio) E --\u003e|Existing WWR| F(Adjust WWR) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/",
+	"title": "User data: Thermal Zone",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_thermal_zone.csv (114 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_connections/",
+	"title": "User data: Water Connections",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_wateruse_connections.csv (82 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment_definition/",
+	"title": "User data: Water Equip Def",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment/",
+	"title": "User data: Water Equipment",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_wateruse_equipment.csv (22 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/",
+	"title": "User data: Zone HVAC",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_zone_hvac.csv (896 B) "
+},
+{
+	"uri": "http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_infiltration/",
+	"title": "User data: Zone Infiltration",
+	"tags": [],
+	"description": "",
+	"content": " User Data CSV File: userdata_zone_infiltration.csv (19 B) "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/",
