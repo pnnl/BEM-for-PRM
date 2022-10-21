@@ -9,4 +9,4 @@ chapter = true
 
 # Get Started
 
-Start using OpenStudio Standard PRM method in your compliance modeling workflow
+Start using OpenStudio Standard to create ASHRAE 90.1-2019 PRM models in your compliance modeling workflow
