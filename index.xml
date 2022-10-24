@@ -146,7 +146,8 @@ require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#3
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/</guid>
-      <description> User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) </description>
+      <description>Airloop HVAC DOAS Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Airloop HVAC DOAS User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) The user_data_airloop_hvac_doas.csv contains compliance data for airloop HVAC DOAS compliance calculation. A sample of data record is shown below.
+Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC DOAS object in the proposed model.</description>
     </item>
     
     <item>
