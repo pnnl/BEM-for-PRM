@@ -31,7 +31,7 @@ pre: "<b>- </b>"
 
 The `user_data_airloop_hvac_doas.csv` contains compliance data for airloop HVAC DOAS compliance calculation. A sample of data record is shown below.
 
-![user_data_airloop_hvac_doas](/BEM-for-PRM/user_guide/add_compliance_data/images/user_data_airloop_hvac_doas.PNG?width=1000px&align=left&classes=border,alignLeft)
+![user_data_airloop_hvac_doas](/BEM-for-PRM/user_guide/add_compliance_data/images/user_data_airloop_hvac_doas_sample.PNG?width=1000px&align=left&classes=border,alignLeft)
 
 #### Pressure-drop adjustments
 The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC DOAS object in the proposed model. Each field corresponds to one of the pressure-drop adjustment categories from **Table 6.5.3.1-2**.
