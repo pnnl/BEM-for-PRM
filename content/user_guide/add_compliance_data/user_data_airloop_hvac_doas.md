@@ -23,6 +23,8 @@ pre: "<b>- </b>"
   - [has_fan_power_credit_exhaust_serving_fume_hoods](#has_fan_power_credit_exhaust_serving_fume_hoods)
   - [has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct](#has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct)
 
+{{< line_break >}}
+
 #### Airloop HVAC DOAS
 
 {{%attachments title="User Data CSV File:" style="orange" pattern=".*\.(csv)$"/%}}
@@ -30,8 +32,6 @@ pre: "<b>- </b>"
 The `user_data_airloop_hvac_doas.csv` contains compliance data for airloop HVAC DOAS compliance calculation. A sample of data record is shown below.
 
 ![user_data_airloop_hvac_doas](/BEM-for-PRM/user_guide/add_compliance_data/images/user_data_airloop_hvac_doas.PNG?width=1000px&align=left&classes=border,alignLeft)
-
-{{< line_break >}}
 
 #### Pressure-drop adjustments
 The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC DOAS object in the proposed model. Each field corresponds to one of the pressure-drop adjustment categories from **Table 6.5.3.1-2**.
