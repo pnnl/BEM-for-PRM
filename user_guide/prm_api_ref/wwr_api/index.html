@@ -12,22 +12,22 @@
     <title>Window API : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1666650884" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1666650884" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1666652833" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1666652833" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1666650884" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1666652833" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1666650884" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666650884" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1666652833" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666652833" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666650884"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666652833"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666650884"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666650884"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666652833"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666652833"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666650884"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666652833"></script>
 
     
   </div>
@@ -1193,25 +1193,14 @@
 <ul>
 <li><a href="#quick-use">Quick use</a></li>
 <li><a href="#function-workflow">Function workflow</a></li>
-<li><a href="#how-to-use">How to use</a></li>
-<li><a href="#input-arguments">Input arguments</a>
-<ul>
-<li><a href="#user_model">user_model</a></li>
-<li><a href="#climate_zone">climate_zone</a></li>
-</ul>
-</li>
-<li><a href="#output-values">Output values</a>
-<ul>
-<li><a href="#result">result</a></li>
-<li><a href="#wwr_info">wwr_info</a></li>
-</ul>
-</li>
 </ul>
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h4 id="quick-use">Quick Use</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>wwr_building_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Office &lt;= 5,000 sq ft&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>climate_zone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ASHRAE 169-2013-4A&#34;</span>
+</span></span><span style="display:flex;"><span>wwr_building_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Office &lt;= 5,000 sq ft&#34;</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#34;90.1-PRM-2019&#34;</span>)
-</span></span><span style="display:flex;"><span>result, wwr_info <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">wwr_building_type</span>: wwr_building_type)
+</span></span><span style="display:flex;"><span>result, wwr_info <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone, wwr_building_type)
 </span></span></code></pre></div><p>The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.</p>
 <table>
 <thead>
@@ -1290,86 +1279,23 @@
 <p>The mapping is shown in the above table. Once the function identifies the correct building area, it will applies the window to wall ratio to the entire model.</p>
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h4 id="function-workflow">Function workflow</h4>
+<ul>
+<li>
+<h5 id="step-1-check-proposed-model">Step 1: Check proposed model</h5>
 
 <div class="mermaid" align="center">
-graph LR;
-A(Model) -->|Loop| B(Spaces)
-B -->|Apply building area type| C(BAT)
-B -->|Surface conditioning category| D{Condition}
-D -->|Conditioned space| E(Surfaces)
-C -->|Target WWR| F(Adjust Ratio)
-E -->|Existing WWR| F(Adjust WWR)
-</div>
+  graph LR;
+  A(Model) -->|Loop| B(Spaces)
+  B -->|Apply building area type| C(BAT)
+  B -->|Surface conditioning category| D{Condition}
+  D -->|Conditioned space| E(Surfaces)
+  C -->|Target WWR| F(Adjust Ratio)
+  E -->|Existing WWR| F(Adjust WWR)
+  </div>
 
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="how-to-use">How to use</h4>
-<p>As the workflow diagram indicated, the function checks each zone and surface to determine its conditioned type. The conditioned type of a zone is determined after model sizing simulation. Therefore, it is critical to note that this function will only work after a successful full year simulation or sizing run. To do that, follow the script below prior calling the function.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># Initiate the standard to PRM and load the model (model needs to be v3.4 or lower)</span>
-</span></span><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#34;90.1-PRM-2019&#34;</span>)
-</span></span><span style="display:flex;"><span>translator <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenStudio</span><span style="color:#f92672">::</span><span style="color:#66d9ef">OSVersion</span><span style="color:#f92672">::</span><span style="color:#66d9ef">VersionTranslator</span><span style="color:#f92672">.</span>new
-</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> translator<span style="color:#f92672">.</span>loadModel(model_path)<span style="color:#f92672">.</span>get
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Make a copy of the model</span>
-</span></span><span style="display:flex;"><span>user_model <span style="color:#f92672">=</span> <span style="color:#66d9ef">BTAP</span><span style="color:#f92672">::</span><span style="color:#66d9ef">FileIO</span><span style="color:#f92672">.</span>deep_copy(model)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run annual simulation</span>
-</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_run_simulation_and_log_errors(user_model, run_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>prototype_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">/PROP&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Modify the window to wall ratio.</span>
-</span></span><span style="display:flex;"><span>result, wwr_info <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>model_apply_prm_baseline_window_to_wall_ratio(user_model, climate_zone, <span style="color:#e6db74">wwr_building_type</span>: wwr_building_type)
-</span></span></code></pre></div>
-<div class="notices warning" ><p>If the model is not simulated, this function can still run, however, it will not apply a target WWR to the model because it cannot find any conditioned surface to adjust WWR.</p>
-</div>
-
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="function-behavior">Function behavior</h4>
-<p>It is important to understand the function behaviors before calling this function.</p>
-<ol>
-<li>If the target WWR is smaller than the model overall WWR, the function will proportionally reduce the size of every window while keep their center coordinates fixed</li>
-<li>If the target WWR is greater than the model overall WWR, the function will:
-<ul>
-<li>remove all windows in surfaces and then add a new windows to meet the required WWR. This step will only applies to surfaces that have windows</li>
-<li>If every surface that has window is reaching 90% window-to-wall ratio, but the total gross WWR of the building is still smaller than the target WWR, then the function will create new windows in every other surface to meet the target WWR for the building. The size of new windows should be proportional to their host surface.</li>
-<li>If there are doors in the surface, the maximum window to wall ratio for that surface will readjust to ensure the total area of fenestration and doors to be 90% of the surface area.</li>
-</ul>
 </li>
-</ol>
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="input-arguments">Input arguments</h4>
-<h5 id="user_model">user_model</h5>
-<p><code>user_model</code> shall be the OpenStudio model object (<code>OpenStudio::Model::Model</code>) that contains a full description of a building energy model in <code>.osm</code> format.</p>
-<h5 id="climate_zone">climate_zone</h5>
-<p><code>climate_zone</code> is a String data. However it is no longer used in the ASHRAE 90.1 2019 PRM method so it is OK to type in an empty string.</p>
-<h5 id="wwr_building_type">wwr_building_type</h5>
-<p><code>wwr_building_type</code> is a hash key and the value shall be user defined. The default is <code>nil</code>. The <code>wwr_building_type</code> shall be a string taken from the list below:</p>
-<ul>
-<li><code>Warehouse (nonrefrigerated)</code></li>
-<li><code>School (secondary and university)</code></li>
-<li><code>School (primary)</code></li>
-<li><code>Retail (strip mall)</code></li>
-<li><code>Retail (stand alone)</code></li>
-<li><code>Restaurant (quick service)</code></li>
-<li><code>Restaurant (full serivce)</code></li>
-<li><code>Office &gt; 50,000 sq ft</code></li>
-<li><code>Office &lt;= 5,000 sq ft</code></li>
-<li><code>Office 5,00 to 50,000 sq ft</code></li>
-<li><code>Hotel/motel &gt; 75 rooms</code></li>
-<li><code>Hotel/motel &lt;= 75 rooms</code></li>
-<li><code>Hospital</code></li>
-<li><code>Healthcare (outpatient)</code></li>
-<li><code>Grocery store</code></li>
-<li><code>All other</code></li>
 </ul>
 
-<div class="notices info" ><p>It is important keep the <code>wwr_building_type</code> string identical to the list above. Otherwise the function will set the target building <code>WWR</code> to <code>40%</code>.</p>
-</div>
-
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="output-values">Output values</h4>
-<h5 id="result">result</h5>
-<p>The result is a boolean. <code>true</code> indicates a successful generation and <code>false</code> otherwise.</p>
-<h5 id="wwr_info">wwr_info</h5>
-<p>The <code>wwr_info</code> is a hash map that maps the <code>wwr_building_type</code> to its correspondent target <code>wwr</code>, which is applied when altering the model window to wall ratio.</p>
-<pre tabindex="0"><code>{&#34;Office &lt;= 5,000 sq ft&#34;=&gt;19.0}
-</code></pre>
 
 <footer class="footline">
 	
@@ -2063,16 +1989,16 @@ E -->|Existing WWR| F(Adjust WWR)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1666650884"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666650884"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666650884"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666650884"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1666650884"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1666650884"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1666652833"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666652833"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666652833"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666652833"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1666652833"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1666652833"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666650884"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1666650884"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1666650884"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666652833"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1666652833"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1666652833"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
