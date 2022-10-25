@@ -284,7 +284,8 @@ Building Area Types Baseline building vertical fenestration percentage of gross-
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/</guid>
-      <description> User Data CSV File: userdata_zone_hvac.csv (896 B) </description>
+      <description>Zone HVAC Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Zone HVAC User Data CSV File: userdata_zone_hvac.csv (896 B) The user_data_zone_hvac.csv contains compliance data for zone HVAC compliance calculation. A sample of data record is shown below.
+Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each zone HVAC object in the proposed model.</description>
     </item>
     
     <item>

@@ -12,22 +12,22 @@
     <title>User data: Zone HVAC : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1666727000" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1666727000" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1666727013" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1666727013" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1666727000" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1666727013" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1666727000" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666727000" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1666727013" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666727013" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666727000"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666727013"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666727000"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666727000"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666727013"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666727013"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666727000"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666727013"></script>
 
     
   </div>
@@ -1159,7 +1159,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1182,6 +1190,29 @@
         
 
 
+<ul>
+<li><a href="#zone-hvac">Zone HVAC</a></li>
+<li><a href="#pressure-drop-adjustments">Pressure-drop adjustments</a>
+<ul>
+<li><a href="#has_fan_power_credit_fully_ducted">has_fan_power_credit_fully_ducted</a></li>
+<li><a href="#has_fan_power_credit_return_or_exhaust_flow_control">has_fan_power_credit_return_or_exhaust_flow_control</a></li>
+<li><a href="#fan_power_credit_exhaust_treatment">fan_power_credit_exhaust_treatment</a></li>
+<li><a href="#has_fan_power_credit_filtration_m9to12">has_fan_power_credit_filtration_m9to12</a></li>
+<li><a href="#has_fan_power_credit_filtration_m13to15">has_fan_power_credit_filtration_m13to15</a></li>
+<li><a href="#clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus">clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus</a></li>
+<li><a href="#fan_power_credit_gas_phase_cleaners">fan_power_credit_gas_phase_cleaners</a></li>
+<li><a href="#fan_power_credit_biosafety">fan_power_credit_biosafety</a></li>
+<li><a href="#fan_power_credit_other_than_coil_runaround">fan_power_credit_other_than_coil_runaround</a></li>
+<li><a href="#has_fan_power_credit_coil_runaround">has_fan_power_credit_coil_runaround</a></li>
+<li><a href="#fan_power_credit_evaporative_humidifier_or_cooler">fan_power_credit_evaporative_humidifier_or_cooler</a></li>
+<li><a href="#has_fan_power_credit_sound_attenuation">has_fan_power_credit_sound_attenuation</a></li>
+<li><a href="#has_fan_power_credit_exhaust_serving_fume_hoods">has_fan_power_credit_exhaust_serving_fume_hoods</a></li>
+<li><a href="#has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct">has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct</a></li>
+</ul>
+</li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="zone-hvac">Zone HVAC</h4>
 <section class="attachments orange">
   <label>
     <i class="fas fa-paperclip" aria-hidden="true"></i>
@@ -1195,6 +1226,38 @@
   </div>
 </section>
 
+<p>The <code>user_data_zone_hvac.csv</code> contains compliance data for zone HVAC compliance calculation. A sample of data record is shown below.</p>
+<p><img src="/BEM-for-PRM/user_guide/add_compliance_data/images/user_data_zone_hvac_sample.PNG?width=1000px&amp;align=left&amp;classes=border,alignLeft" alt="user_data_zone_hvac"></p>
+<h4 id="pressure-drop-adjustments">Pressure-drop adjustments</h4>
+<p>The following fields can be used to indicate what pressure-drop adjustment devices are present in each zone HVAC object in the proposed model. Each field corresponds to one of the pressure-drop adjustment categories from <strong>Table 6.5.3.1-2</strong>.</p>
+<h5 id="has_fan_power_credit_fully_ducted">has_fan_power_credit_fully_ducted</h5>
+<p>Set this field to the number of return or exhaust systems required by code or accreditation standards to be fully ducted, or systems required to maintain air pressure differentials between adjacent rooms that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_return_or_exhaust_flow_control">has_fan_power_credit_return_or_exhaust_flow_control</h5>
+<p>Set this field to the number of return and/or exhaust airflow control devices that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_exhaust_treatment">fan_power_credit_exhaust_treatment</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at fan system design conditions) of all exhaust filters, scrubbers, or other exhaust treatment devices that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_filtration_m9to12">has_fan_power_credit_filtration_m9to12</h5>
+<p>Set this field to the number of MERV 9 through 12 filters that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_filtration_m13to15">has_fan_power_credit_filtration_m13to15</h5>
+<p>Set this field to the number of MERV 13 through 15 filters that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus">clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at 2 times the clean filter pressure-drop at fan system design conditions) of all MERV 16+ filters and electronically enhanced filters that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_gas_phase_cleaners">fan_power_credit_gas_phase_cleaners</h5>
+<p>Set this field to the sum of carbon and other gas-phase air cleaners&rsquo; pressure-drop (at the fan system design conditions) that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_biosafety">fan_power_credit_biosafety</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at fan system design conditions) of biosafety cabinets that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_other_than_coil_runaround">fan_power_credit_other_than_coil_runaround</h5>
+<p>Set this field to the number of energy recovery devices other than coil runaround loop that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_coil_runaround">has_fan_power_credit_coil_runaround</h5>
+<p>Set this field to the number of runaround loop that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_evaporative_humidifier_or_cooler">fan_power_credit_evaporative_humidifier_or_cooler</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at fan system design conditions) of the evaporative humidifier or cooler that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_sound_attenuation">has_fan_power_credit_sound_attenuation</h5>
+<p>Set this field to the number of sound attenuation sections of fans serving spaces with design background noise goals below NC35 that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_exhaust_serving_fume_hoods">has_fan_power_credit_exhaust_serving_fume_hoods</h5>
+<p>Set this field to the number of exhaust systems serving fume hoods that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct">has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct</h5>
+<p>Set this field to the number of laboratory and vivarium exhaust systems in high-rise buildings that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
 
 
 <footer class="footline">
@@ -1892,16 +1955,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1666727000"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666727000"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666727000"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666727000"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1666727000"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1666727000"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1666727013"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666727013"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666727013"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666727013"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1666727013"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1666727013"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666727000"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1666727000"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1666727000"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666727013"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1666727013"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1666727013"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
