@@ -12,22 +12,22 @@
     <title>User data: Lights : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1666655052" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1666655052" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1666672962" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1666672962" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1666655052" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1666672962" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1666655052" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666655052" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1666672962" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666672962" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666655052"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666672962"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666655052"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666655052"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666672962"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666672962"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666655052"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666672962"></script>
 
     
   </div>
@@ -1159,7 +1159,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1182,6 +1190,14 @@
         
 
 
+<ul>
+<li><a href="#lights">Lights</a></li>
+<li><a href="#has_retail_display_exception">has_retail_display_exception</a></li>
+<li><a href="#has_unregulated_exception">has_unregulated_exception</a></li>
+<li><a href="#unregulated_category">unregulated_category</a></li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="lights">Lights</h4>
 <section class="attachments orange">
   <label>
     <i class="fas fa-paperclip" aria-hidden="true"></i>
@@ -1195,6 +1211,33 @@
   </div>
 </section>
 
+<p>The <code>user_data_lights.csv</code> contains compliance data for lights compliance calculation. A sample of data record is shown below.</p>
+<p><img src="/BEM-for-PRM/user_guide/add_compliance_data/images/user_data_lights_sample.PNG?width=700px&amp;align=left&amp;classes=border,alignLeft" alt="user_data_lights"></p>
+<h4 id="has_retail_display_exception">has_retail_display_exception</h4>
+<p>Set this field to <strong>yes</strong> if the lights object qualifies as display lighting: the lighting must be specifically designed and directed to highlight merchandise and separately controlled from the general lighting. If it doesn&rsquo;t apply, leave this field blank or set to <strong>no</strong>.</p>
+<h4 id="has_unregulated_exception">has_unregulated_exception</h4>
+<p>Set this field to <strong>yes</strong> if the lights object qualifies as unregulated lighting. If it doesn&rsquo;t apply, leave this field blank or set to <strong>no</strong>. The following lighting system are considered unregulated.</p>
+<ul>
+<li>Display or accent lighting that is an essential element for the function performed in galleries, museums, and - uments.</li>
+<li>Lighting that is integral to equipment or instrumentation and is installed by its manufacturer.</li>
+<li>Lighting specifically designed for use only during medical or dental procedures and lighting integral to - ical equipment.</li>
+<li>Lighting integral to both open and glass-enclosed refrigerator and freezer cases.</li>
+<li>Lighting integral to food warming and food preparation equipment.</li>
+<li>Lighting specifically designed for the life support of nonhuman life forms.</li>
+<li>Lighting in retail display windows, provided the display area is enclosed by ceiling-height partitions.</li>
+<li>Lighting in interior spaces that have been specifically designated as a registered interior historic landmark.</li>
+<li>Lighting that is an integral part of advertising or directional signage.</li>
+<li>Exit signs.</li>
+<li>Lighting that is for sale or lighting educational demonstration systems.</li>
+<li>Lighting for theatrical purposes, including performance, stage, and film and video production.</li>
+<li>Lighting for television broadcasting in sporting activity areas.</li>
+<li>Casino gaming areas.</li>
+<li>Furniture-mounted supplemental task lighting that is controlled by automatic shutoff and complies with - ndard 90.1-2019 Section 9.4.1.3(c).</li>
+<li>Mirror lighting in dressing rooms and accent lighting in religious pulpit and choir areas.</li>
+<li>Parking garage transition lighting—lighting for covered vehicle entrances and exits from buildings and parking structures—that complies with Standard 90.1-2019 Section 9.4.1.2(a) and 9.4.1.2(c); each transition zone shall not exceed a depth of 66 ft inside the structure and a width of 50 ft.</li>
+</ul>
+<h4 id="unregulated_category">unregulated_category</h4>
+<p>This field is used to inform the code reviewer about which category of unregulated lighting the model represented. It does not affect the baseline building generation.</p>
 
 
 <footer class="footline">
@@ -1892,16 +1935,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1666655052"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666655052"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666655052"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666655052"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1666655052"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1666655052"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1666672962"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666672962"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666672962"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666672962"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1666672962"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1666672962"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666655052"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1666655052"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1666655052"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666672962"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1666672962"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1666672962"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
