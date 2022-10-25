@@ -96,8 +96,11 @@ It is important to understand the function behaviors before calling this functio
 1. If the target WWR is smaller than the model overall WWR, the function will proportionally reduce the size of every window while keep their center coordinates fixed
 2. If the target WWR is greater than the model overall WWR, the function will:
    - remove all windows in surfaces and then add a new windows to meet the required WWR. This step will only applies to surfaces that have windows
+   - Plenums (including air loop supply and return plenums) are not considered in the WWR expanding algorithm.
    - If every surface that has window is reaching 90% window-to-wall ratio, but the total gross WWR of the building is still smaller than the target WWR, then the function will create new windows in every other surface to meet the target WWR for the building. The size of new windows should be proportional to their host surface.
+     ![WWR_EXPAND](/BEM-for-PRM/user_guide/prm_api_ref/images/wwr_expand_test.PNG?width=800px&align=left&classes=border)
    - If there are doors in the surface, the maximum window to wall ratio for that surface will readjust to ensure the total area of fenestration and doors to be 90% of the surface area.
+     ![WWR_DOOR_EXPAND](/BEM-for-PRM/user_guide/prm_api_ref/images/wwr_expand_doors_test.PNG?width=800px&align=left&classes=border)
 
 {{< line_break >}}
 
@@ -124,7 +127,7 @@ It is important to understand the function behaviors before calling this functio
 - `Restaurant (full serivce)`
 - `Office > 50,000 sq ft`
 - `Office <= 5,000 sq ft`
-- `Office 5,00 to 50,000 sq ft`
+- `Office 5,000 to 50,000 sq ft`
 - `Hotel/motel > 75 rooms`
 - `Hotel/motel <= 75 rooms`
 - `Hospital`
