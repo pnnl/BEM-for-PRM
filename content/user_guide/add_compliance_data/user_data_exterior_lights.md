@@ -71,7 +71,7 @@ _end_use_measurement_value_01_ through _end_use_measurement_value_09_
 
 The units of the _measurement value_ are indicated by the last part of the subcategory name:  
 `area` = area in square feet  
-`perim` = perimiter length in linear feet  
+`perim` = perimeter length in linear feet  
 `qty` = integer quantity of items
 
 {{% notice tip %}}
