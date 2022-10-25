@@ -19,7 +19,7 @@ Currently there are 16 `.csv` files in the compliance data set. Each of them cov
 {{%expand "Quick link to each compliance data file user guide:" %}}
 
 - userdata_airloop_hvac.csv
-- userdata_airloop_hvac_doas.csv
+- [userdata_airloop_hvac_doas.csv](/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas)
 - userdata_building.csv
 - userdata_design_specification_outdoor_air.csv
 - userdata_electric_equipment.csv
@@ -32,6 +32,6 @@ Currently there are 16 `.csv` files in the compliance data set. Each of them cov
 - userdata_wateruse_connections.csv
 - userdata_wateruse_equipment.csv
 - userdata_wateruse_equipment_definition.csv
-- userdata_zone_hvac.csv
+- [userdata_zone_hvac.csv](/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac)
 - userdata_zone_infiltration.csv
   {{% /expand%}}
