@@ -159,7 +159,7 @@ The `default_wwr_bldg_type` shall be one of the strings in the list below:
 - `Restaurant (full serivce)`
 - `Office > 50,000 sq ft`
 - `Office <= 5,000 sq ft`
-- `Office 5,00 to 50,000 sq ft`
+- `Office 5,000 to 50,000 sq ft`
 - `Hotel/motel > 75 rooms`
 - `Hotel/motel <= 75 rooms`
 - `Hospital`
