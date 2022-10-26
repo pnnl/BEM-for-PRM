@@ -25,7 +25,7 @@ Currently there are 16 `.csv` files in the compliance data set. Each of them cov
 - userdata_electric_equipment.csv
 - [userdata_exterior_lights.csv](/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights)
 - userdata_gas_equipment.csv
-- userdata_lights.csv
+- [userdata_lights.csv](/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights)
 - userdata_space.csv
 - userdata_spacetype.csv
 - userdata_thermal_zone.csv
