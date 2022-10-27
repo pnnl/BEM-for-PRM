@@ -6,10 +6,10 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-- [Exterior lights](#exterior-lights)
+- [Exterior Lights](#exterior-lights)
 - [end_use_subcategory](#end_use_subcategory)
-  - [tradeable-exterior-lighting-subcategories](#tradeable-exterior-lighting-subcategories)
-  - [non-tradeable-exterior-lighting-subcategories](##non-tradeable-exterior-lighting-subcategories)
+  - [Tradeable Exterior Lighting Subcategories](#tradeable-exterior-lighting-subcategories)
+  - [Non-Tradeable Exterior Lighting Subcategories](#non-tradeable-exterior-lighting-subcategories)
 - [end_use_measurement_value](#end_use_measurement_value)
 
 {{< line_break >}}
@@ -33,7 +33,7 @@ In order to work with the **Appendix G** code database, the following subcategor
 
 ##### Tradeable Exterior Lighting Subcategories
 
-`parking_lots_and_drives_area`
+`parking_lots_and_drives_area`  
 `walkways_less_than_10_ft_wide_perim`  
 `walkways_10_ft_wide_or_greater_area`  
 `plaza_areas_area`  
