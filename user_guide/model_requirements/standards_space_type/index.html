@@ -12,22 +12,22 @@
     <title>Standards space type : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1666760240" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1666760240" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1666839242" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1666839242" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1666760240" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1666839242" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1666760240" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666760240" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1666839242" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1666839242" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666760240"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1666839242"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666760240"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666760240"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1666839242"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1666839242"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666760240"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1666839242"></script>
 
     
   </div>
@@ -1159,7 +1159,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#standards-space-type">Standards Space Type</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1182,6 +1186,454 @@
         
 
 
+<h2 id="standards-space-type">Standards Space Type</h2>
+<p>The SpaceType object in OpenStudio has the property StandardsSpaceType which can be used to identify the appropriate lighting space type. The lighting space type is used to determine the baseline lighting power density and lighting control savings based on Table G3.7 of 90.1 Appendix G. The lighting space type is also used for a number of other purposes in the baseline generation, including: determining special requirements for computer rooms and laboratories, identifying residential spaces, and determining applicability of receptacle control measures according to space type.</p>
+<p>The lighting space type can also be assigned using the User Compliance Data files for <a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type">Space Type</a> and <a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space">Space</a>. If the User Compliance Data files contain lighting space type assignments, there is a hierachy for determining the final assignments:</p>
+<ol>
+<li>user_data_space is first priority</li>
+<li>user_data_space_type is second priority</li>
+<li>StandardsSpaceType property of the SpaceType objest is lowest priority</li>
+</ol>
+<p>It is possible to have lighting space type identified at the user_data_space level for some spaces and at either the user_data_space_type level or SpaceType:StandardsSpaceType level for other spaces.</p>
+<p>Valid entries for StandardsSpaceType are listed below. If the &ldquo;whole building&rdquo; options are used, the baseline model will not get credit for occupancy control of lighting.</p>
+<table>
+<thead>
+<tr>
+<th>StandardsSpaceType</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apartment - hardwired</td>
+</tr>
+<tr>
+<td>audience seating - exercise center</td>
+</tr>
+<tr>
+<td>audience seating - gymnasium</td>
+</tr>
+<tr>
+<td>audience seating - sports arena</td>
+</tr>
+<tr>
+<td>audience seating - transportation facility</td>
+</tr>
+<tr>
+<td>audience seating - convention center</td>
+</tr>
+<tr>
+<td>audience seating - penitentiary</td>
+</tr>
+<tr>
+<td>audience seating - motion picture theater</td>
+</tr>
+<tr>
+<td>audience seating - religious facility</td>
+</tr>
+<tr>
+<td>audience seating - performing arts theater</td>
+</tr>
+<tr>
+<td>audience seating - auditorium</td>
+</tr>
+<tr>
+<td>audience seating - all other</td>
+</tr>
+<tr>
+<td>atrium &gt; 40 ft height</td>
+</tr>
+<tr>
+<td>atrium &lt;= 40 ft height</td>
+</tr>
+<tr>
+<td>banking activity</td>
+</tr>
+<tr>
+<td>classroom/lecture/training - penitentiary</td>
+</tr>
+<tr>
+<td>classroom/lecture/training - preschool to 12th</td>
+</tr>
+<tr>
+<td>classroom - laboratory or shop</td>
+</tr>
+<tr>
+<td>classroom/lecture/training - all other</td>
+</tr>
+<tr>
+<td>conference/meeting/multipurpose</td>
+</tr>
+<tr>
+<td>confinement cells</td>
+</tr>
+<tr>
+<td>copy/print</td>
+</tr>
+<tr>
+<td>corridor - manufacturing facility</td>
+</tr>
+<tr>
+<td>corridor - all other</td>
+</tr>
+<tr>
+<td>corridor - hospital</td>
+</tr>
+<tr>
+<td>corridor for visually impaired</td>
+</tr>
+<tr>
+<td>courtroom</td>
+</tr>
+<tr>
+<td>computer room</td>
+</tr>
+<tr>
+<td>dining - penitentiary</td>
+</tr>
+<tr>
+<td>dining - bar/lounge/leisure</td>
+</tr>
+<tr>
+<td>dining - family</td>
+</tr>
+<tr>
+<td>dining for visually impaired</td>
+</tr>
+<tr>
+<td>dining - cafeteria/fast food</td>
+</tr>
+<tr>
+<td>dining - all other</td>
+</tr>
+<tr>
+<td>electrical/mechanical</td>
+</tr>
+<tr>
+<td>emergency vehicle garage</td>
+</tr>
+<tr>
+<td>kitchen</td>
+</tr>
+<tr>
+<td>guest room</td>
+</tr>
+<tr>
+<td>judges chambers</td>
+</tr>
+<tr>
+<td>laboratory</td>
+</tr>
+<tr>
+<td>laundry/washing</td>
+</tr>
+<tr>
+<td>loading dock</td>
+</tr>
+<tr>
+<td>lobby - motion picture theater</td>
+</tr>
+<tr>
+<td>lobby - hotel</td>
+</tr>
+<tr>
+<td>lobby - performing arts theater</td>
+</tr>
+<tr>
+<td>lobby for visually impaired</td>
+</tr>
+<tr>
+<td>lobby - elevator</td>
+</tr>
+<tr>
+<td>lobby - all other</td>
+</tr>
+<tr>
+<td>locker room</td>
+</tr>
+<tr>
+<td>lounge/breakroom - healthcare facility</td>
+</tr>
+<tr>
+<td>lounge/breakroom - all other</td>
+</tr>
+<tr>
+<td>office - enclosed &lt;= 250 sf</td>
+</tr>
+<tr>
+<td>office - open</td>
+</tr>
+<tr>
+<td>office - open with workstation occup sensors</td>
+</tr>
+<tr>
+<td>parking area, interior</td>
+</tr>
+<tr>
+<td>pharmacy</td>
+</tr>
+<tr>
+<td>restroom - visually impaired</td>
+</tr>
+<tr>
+<td>restroom - all other</td>
+</tr>
+<tr>
+<td>sales</td>
+</tr>
+<tr>
+<td>seating area, general</td>
+</tr>
+<tr>
+<td>stairwell</td>
+</tr>
+<tr>
+<td>storage &lt; 50 sf - hospital</td>
+</tr>
+<tr>
+<td>storage 50 to 1000 sf - hospital</td>
+</tr>
+<tr>
+<td>storage &lt; 50 sf - all other</td>
+</tr>
+<tr>
+<td>storage 50 to 1000 sf - all other</td>
+</tr>
+<tr>
+<td>storage &gt;= 1000 sf - all other</td>
+</tr>
+<tr>
+<td>vehicular maintenance</td>
+</tr>
+<tr>
+<td>workshop</td>
+</tr>
+<tr>
+<td>chapel - visually impaired</td>
+</tr>
+<tr>
+<td>recreation/common living - visually impaired</td>
+</tr>
+<tr>
+<td>automotive</td>
+</tr>
+<tr>
+<td>exhibit - convention center</td>
+</tr>
+<tr>
+<td>dormitory - living quarters</td>
+</tr>
+<tr>
+<td>firestation - sleeping quarters</td>
+</tr>
+<tr>
+<td>gymnasium exercise area</td>
+</tr>
+<tr>
+<td>gymnasium playing area</td>
+</tr>
+<tr>
+<td>emergency room</td>
+</tr>
+<tr>
+<td>exam/treatment</td>
+</tr>
+<tr>
+<td>medical supply</td>
+</tr>
+<tr>
+<td>nursery</td>
+</tr>
+<tr>
+<td>nurses station</td>
+</tr>
+<tr>
+<td>operating room</td>
+</tr>
+<tr>
+<td>patient room</td>
+</tr>
+<tr>
+<td>physical therapy</td>
+</tr>
+<tr>
+<td>recovery</td>
+</tr>
+<tr>
+<td>library - reading</td>
+</tr>
+<tr>
+<td>library - stacks</td>
+</tr>
+<tr>
+<td>detailed manufacuring</td>
+</tr>
+<tr>
+<td>manufacturing equipment room</td>
+</tr>
+<tr>
+<td>manufacturing extra high bay</td>
+</tr>
+<tr>
+<td>manufacturing high bay</td>
+</tr>
+<tr>
+<td>manufacturing low bay</td>
+</tr>
+<tr>
+<td>museum exhibit area</td>
+</tr>
+<tr>
+<td>museum restoration</td>
+</tr>
+<tr>
+<td>post office - sorting area</td>
+</tr>
+<tr>
+<td>fellowship hall - religious facility</td>
+</tr>
+<tr>
+<td>worship/pulpit/choir area</td>
+</tr>
+<tr>
+<td>retail dressing room</td>
+</tr>
+<tr>
+<td>retail mall concourse</td>
+</tr>
+<tr>
+<td>sports arena playing area, class I</td>
+</tr>
+<tr>
+<td>sports arena playing area, class II</td>
+</tr>
+<tr>
+<td>sports arena playing area, class III</td>
+</tr>
+<tr>
+<td>sports arena playing area, class IV</td>
+</tr>
+<tr>
+<td>baggage/carousel</td>
+</tr>
+<tr>
+<td>airport concourse</td>
+</tr>
+<tr>
+<td>transportation ticket counter</td>
+</tr>
+<tr>
+<td>warehouse - bulk storage</td>
+</tr>
+<tr>
+<td>warehouse - fine storage</td>
+</tr>
+<tr>
+<td>attic - unoccupied</td>
+</tr>
+<tr>
+<td>elevator core</td>
+</tr>
+<tr>
+<td>plenum</td>
+</tr>
+<tr>
+<td>automotive facility - whole building</td>
+</tr>
+<tr>
+<td>convention center - whole building</td>
+</tr>
+<tr>
+<td>courthouse - whole building</td>
+</tr>
+<tr>
+<td>dining: bar lounge/leisure - whole building</td>
+</tr>
+<tr>
+<td>dining: cafeteria/fast food - whole building</td>
+</tr>
+<tr>
+<td>dining: family - whole building</td>
+</tr>
+<tr>
+<td>dormitory - whole building</td>
+</tr>
+<tr>
+<td>exercise center - whole building</td>
+</tr>
+<tr>
+<td>fire station - whole building</td>
+</tr>
+<tr>
+<td>gymnasium - whole building</td>
+</tr>
+<tr>
+<td>health-care clinic - whole building</td>
+</tr>
+<tr>
+<td>hospital - whole building</td>
+</tr>
+<tr>
+<td>hotel/motel - whole building</td>
+</tr>
+<tr>
+<td>library - whole building</td>
+</tr>
+<tr>
+<td>manufacturing facility - whole building</td>
+</tr>
+<tr>
+<td>motion picture theater - whole building</td>
+</tr>
+<tr>
+<td>multifamily - whole building</td>
+</tr>
+<tr>
+<td>museum - whole building</td>
+</tr>
+<tr>
+<td>office - whole building</td>
+</tr>
+<tr>
+<td>parking garage - whole building</td>
+</tr>
+<tr>
+<td>penitentiary - whole building</td>
+</tr>
+<tr>
+<td>performing arts theater - whole building</td>
+</tr>
+<tr>
+<td>police station - whole building</td>
+</tr>
+<tr>
+<td>post office - whole building</td>
+</tr>
+<tr>
+<td>religious facility - whole building</td>
+</tr>
+<tr>
+<td>retail - whole building</td>
+</tr>
+<tr>
+<td>school/university - whole building</td>
+</tr>
+<tr>
+<td>sports arena - whole building</td>
+</tr>
+<tr>
+<td>town hall - whole building</td>
+</tr>
+<tr>
+<td>transportation - whole building</td>
+</tr>
+<tr>
+<td>warehouse - whole building</td>
+</tr>
+<tr>
+<td>workshop - whole building</td>
+</tr>
+</tbody>
+</table>
 
 
 <footer class="footline">
@@ -1873,16 +2325,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1666760240"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666760240"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666760240"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666760240"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1666760240"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1666760240"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1666839242"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1666839242"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1666839242"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1666839242"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1666839242"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1666839242"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666760240"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1666760240"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1666760240"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1666839242"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1666839242"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1666839242"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
