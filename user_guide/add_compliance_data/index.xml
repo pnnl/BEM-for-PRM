@@ -33,7 +33,8 @@ Pressure-drop adjustments The following fields can be used to indicate what pres
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</guid>
-      <description> User Data CSV File: userdata_building.csv (97 B) </description>
+      <description>Building building_type_for_hvac building_type_for_swh building_type_for_wwr is_exempt_from_rotations Building User Data CSV File: userdata_building.csv (97 B) The user_data_building.csv contains compliance data for building compliance calculation. A sample of data record is shown below.
+building_type_for_hvac This field is used to determine the baseline model&amp;rsquo;s HVAC system. It can be overwritten at the zone level (see the documentation for user_data_thermal_zone.csv). It should be set to one of the following values that best described the proposed model&amp;rsquo;s building type.</description>
     </item>
     
     <item>
