@@ -6,11 +6,20 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-You will need following applications to ensure OpenStudio Standard running smoothly on your project.
+This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.
 
-### Ruby version support
+- [Download Ruby](#download-ruby)
+- [Download OpenStudio](#download-openstudio)
+- [Connect Ruby with OpenStudio](#connect-ruby-to-openstudio)
+- [Download OpenStudio Standard](#download-openstudio-standard)
 
-Officially Ruby 2.7. Latest stable version is **2.7.6** and it can be downloaded at: [https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz](https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz)
+{{< line_break >}}
+
+You will need following applications to ensure OpenStudio Standard running on your project.
+
+#### Download Ruby
+
+**Ruby 2.7**. Latest stable version is **2.7.6** and it can be downloaded at: [https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz](https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz)
 
 Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:
 
@@ -19,17 +28,21 @@ C:\Users\sample_user>ruby -v
 ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32]
 ```
 
-### OpenStudio
+{{< line_break >}}
 
-OpenStudio 3.2. The latest stable 3.2 version is **3.2.1** and it can be downloaded at: [https://github.com/NREL/OpenStudio/releases/tag/v3.2.1](https://github.com/NREL/OpenStudio/releases/tag/v3.2.1)
+#### Download OpenStudio
 
-It is important to download the correct OpenStudio version as the OpenStudio Standard is not tested against OpenStudio **3.3** and above.
+**OpenStudio 3.2**. The latest stable 3.2 version is **3.2.1** and it can be downloaded at: [https://github.com/NREL/OpenStudio/releases/tag/v3.2.1](https://github.com/NREL/OpenStudio/releases/tag/v3.2.1)
+
+More recent version of **OpenStudio** can be found in the OpenStudio release link: [https://github.com/NREL/OpenStudio/releases](https://github.com/NREL/OpenStudio/releases). The PRM is tested against **v3.4** and lower.
 
 {{% notice tip %}}
-You can Install with all add-ons (in the install utility) enabled.
+**Importnat Note:**
+The PRM routine in the OpenStudio Standard is tested against **v3.4**. However, the OpenStudio Standard is only tested on **v3.2.1** or lower.
 {{% /notice %}}
+{{< line_break >}}
 
-### Connect Ruby to OpenStudio
+#### Connect Ruby to OpenStudio
 
 Once you have both Ruby and OpenStudio installed, the next thing is to connect OpenStudio with Ruby.
 
@@ -45,7 +58,7 @@ C:\Ruby27-x64\lib\ruby\site_ruby
 - **Step 3**: open the `openstudio.rb` file and add one line:
 
 ```ruby
-require "C:/openstudio-3.2.1/Ruby/openstudio.rb"
+require "C:/[Openstudio directory]/Ruby/openstudio.rb"
 ```
 
 The directory shall be pointing to the `openstudio.rb` file under the OpenStudio installation folder. Revise the directory after `require` based on your actual installation directory.
@@ -59,5 +72,8 @@ irb(main):001:0> require "openstudio"
 ```
 
 Return **true** verifies a success on your local setup.
+{{< line_break >}}
 
-That is all we need to prepare before the installation OpenStudio Standard package. Click [NEXT](/BEM-for-PRM/overview/installation/installation) to install the package!
+#### Download OpenStudio Standard
+
+Now we can create a new ruby project that is going to use the OpenStudio Standard package.

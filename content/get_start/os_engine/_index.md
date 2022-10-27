@@ -8,6 +8,6 @@ pre = "<b>2. </b>"
 
 ### Chapter 2.2
 
-# Some Chapter title
+# Use with OpenStudio Engine
 
-Lorem Ipsum.
+This tutorial introduces a scripting method of using OpenStudio Standard in combination with OpenStudio engine to generate ASHRAE 90.1-2019 PRM model.

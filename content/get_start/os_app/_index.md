@@ -8,6 +8,6 @@ pre = "<b>1. </b>"
 
 ### Chapter 2.1
 
-Use with OpenStudio Application
+# Use with OpenStudio APP
 
-Lorem Ipsum.
+One way to use the Create ASHRAE 90.1-2019 PRM Model is as an add-in measure to the OpenStudio Application.

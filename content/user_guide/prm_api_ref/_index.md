@@ -6,8 +6,8 @@ chapter = true
 pre = "<b>3. </b>"
 +++
 
-### Chapter X
+### Chapter 3.3
 
-# Some Chapter title
+# PRM API Reference
 
-Lorem Ipsum.
+A detail API reference to walk through functions in the OpenStudio Standard PRM method.

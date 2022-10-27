@@ -5,8 +5,8 @@ weight = 2
 chapter = true
 +++
 
-### Chapter X
+### Chapter 2
 
-# Some Chapter title
+# Get Started
 
-Lorem Ipsum.
+Start using OpenStudio Standard to create ASHRAE 90.1-2019 PRM models in your compliance modeling workflow

@@ -2,6 +2,6 @@
 title: "Home"
 ---
 
-# OSSTD PRM
+# Create ASHRAE 90.1-2019 PRM Model
 
-OpenStudio Standard PRM is a tool to support energy model automation for performance
+The OpenStudio Standard "Create ASHRAE 90.1-2019 PRM Model" measure is a tool to support energy model automation for ASHRAE 90.1 Appendix G performance rating method compliance evaluation.
