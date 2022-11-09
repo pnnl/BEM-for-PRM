@@ -15,6 +15,7 @@ pre: "<b>- </b>"
 - [Output values](#output-values)
   - [result](#result)
   - [wwr_info](#wwr_info)
+- [Multi building area type handling](#multi-building-area-type-handling)
 
 {{< line_break >}}
 
@@ -40,7 +41,7 @@ The above code adjust the window to wall ratio in the model to the specified bui
 | `Restaurant (full serivce)`         | 24%                                                                               |
 | `Office > 50,000 sq ft`             | 40%                                                                               |
 | `Office <= 5,000 sq ft`             | 19%                                                                               |
-| `Office 5,00 to 50,000 sq ft`       | 31%                                                                               |
+| `Office 5,000 to 50,000 sq ft`      | 31%                                                                               |
 | `Hotel/motel > 75 rooms`            | 34%                                                                               |
 | `Hotel/motel <= 75 rooms`           | 24%                                                                               |
 | `Hospital`                          | 27%                                                                               |
@@ -154,3 +155,86 @@ The `wwr_info` is a hash map that maps the `wwr_building_type` to its correspond
 ```
 {"Office <= 5,000 sq ft"=>19.0}
 ```
+
+{{< line_break >}}
+
+#### Multi building area type handling
+
+One of the feature in the PRM routine is the capability of handling multiple building area types in one energy model.
+For example, if an energy model is simulating a building mixed with retail (strip mall) and offices (>50,000 sq ft). The baseline vertical fenestration percentage requirements are different for these two building area types. Previously, modeler has to manually adjusted the generated baseline model to meet the compliance request. In the new workflow, we introduces the user data that can handle this situation in the baseline generation runtime.
+
+##### Create user data
+
+To do that, we need to create a user data. The example we are using is a typical small office model, in which we will identify the one space as a retail (strip mall) space and the rest are a office (>50,000 sq ft).
+
+In this example, we are going to edit the [userdata_space](/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/) file in a spreadsheet.
+
+![wwr_user_data](/BEM-for-PRM/user_guide/prm_api_ref/images/wwr_user_data_space.PNG)
+
+{{% notice info %}}
+It is recommended to edit the file in a spreadsheet cause this can avoid any special characters in the string misidentified by the OSSTD-PRM.
+In this case, `Office > 50,000 sq ft` can be mis-identified into two columns as `Office > 50` and `000 sq ft`.
+{{% /notice %}}
+
+Once is is done, save the file as a `.csv` into a `user_data` folder.
+
+##### Set up the script
+
+Let's first set up basic data and load the user energy model
+
+```ruby
+# Set up directories
+model_dir = "#{File.dirname(Dir.pwd)}/output"
+user_model_dir = "#{File.dirname(Dir.pwd)}/source"
+user_model_name = 'proposed_model.osm'
+user_data_path = "#{File.dirname(Dir.pwd)}/user_data"
+
+# Set up basic parameters
+climate_zone = "ASHRAE 169-2013-4A"
+wwr_building_type = "Office <= 5,000 sq ft"
+
+# load user model
+translator = OpenStudio::OSVersion::VersionTranslator.new
+model = translator.loadModel("#{user_model_dir}/#{user_model_name}").get
+user_model = BTAP::FileIO.deep_copy(model)
+
+# Initialize the standard routine
+standard = Standard.build("90.1-PRM-2019")
+```
+
+Now we have everything we need, first, let's load the user data
+
+```ruby
+# Convert the .csv files into json files and save the json files into model_dir
+json_path = standard.convert_userdata_csv_to_json(user_data_path, model_dir)
+# load the user data into standard object instance
+standard.load_userdata_to_standards_database(json_path)
+# Add the user data to the user model.
+standard.handle_multi_building_area_types(user_model, climate_zone, '', wwr_building_type, '', {})
+```
+
+The three lines of code above accomplished three things:
+
+1. Convert the .csv files into json files and save the json files into `model_dir`
+2. Load the user data into a Standard object instance
+3. Call the Standard instance to add user data to the user energy model.
+
+The above three steps are crucial to the overal process. The function `handle_multi_building_area_types()` have six arguments. However, in this example, we only focus on the window to wall ratio API function. So supplying `user_model`, `climate_zone` and `wwr_building_type` and set the other argument to empty values is sufficient for our next step.
+
+##### Run window to wall ratio API
+
+```ruby
+# Run a simulation
+standard.model_run_simulation_and_log_errors(user_model, run_dir = "#{prototype_dir}/PROP")
+# Adjust window to wall ratio
+result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(user_model, climate_zone, wwr_building_type: wwr_building_type)
+# Save model
+user_model.save(OpenStudio::Path.new("#{prototype_dir}/wwr_output.osm"), true)
+```
+
+In the above three lines, the Standard first run an annual simulation of the model to ensure the model is correct and produce sizing script for analyzing space conditioning category.
+Then the `model_apply_prm_baseline_window_to_wall_ratio` function applies the window to wall ratio adjustment to the user energy model.
+
+![multi-building-handling-output](/BEM-for-PRM/user_guide/prm_api_ref/images/multi-building-type-handling-output.PNG)
+
+Open the model in the OpenStudio Application, you can see the `Perimeter_ZN_2` space is adjusted to `19%` window to wall ratio and the rest are adjusted to `40%` window to wall ratio.
