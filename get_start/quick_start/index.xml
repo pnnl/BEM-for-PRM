@@ -26,7 +26,7 @@ Next, we want to create a MediumOffice prototype building in climate zone 4A (Ne
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</guid>
       <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
-In the previous step, we created a medium office prototype model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
+In the previous step, we created a typical medium office model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
 require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
     </item>
     

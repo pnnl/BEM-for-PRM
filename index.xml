@@ -63,9 +63,9 @@ Select &amp;ldquo;Components &amp;amp; Measures&amp;rdquo; from the top menu in 
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</guid>
       <description>This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.
-Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard You will need following applications to ensure OpenStudio Standard running on your project.
+Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard You will need the following applications to ensure OpenStudio Standard is running on your project.
 Download Ruby Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
-Follow the installation guide to complete the ruby installation. You can also verify the ruby installation with the following command in command line:</description>
+Follow the installation guide to complete the ruby installation.</description>
     </item>
     
     <item>
@@ -109,7 +109,7 @@ Next, we want to create a MediumOffice prototype building in climate zone 4A (Ne
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</guid>
       <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
-In the previous step, we created a medium office prototype model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
+In the previous step, we created a typical medium office model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
 require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
     </item>
     
@@ -235,7 +235,8 @@ The user_data_space_type.csv file allows the application of multiple lighting sp
       <pubDate>Wed, 21 Sep 2022 15:06:50 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</guid>
-      <description>model_create_prm_stable_baseline_building model climate_zone default_hvac_bldg_type default_wwr_bldg_type default_swh_bldg_type output_dir unmet_load_hours debug convert_userdata_csv_to_json userdata_dir output_dir load_userdata_to_standards_database model_create_prm_stable_baseline_building standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) create_results = standard.model_create_prm_stable_baseline_building(model, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, output_dir, unmet_load_hours, debug) The key function that generates the ASHRAE 90.1 PRM model contains many arguments. Many of them have specific enum values. For a successful generation, these arguments need to have exact match to their enum values. In this instruction, we will walk through the argument list so this API call can be customized for any purposes and building cases.</description>
+      <description>model_create_prm_stable_baseline_building model climate_zone default_hvac_bldg_type default_wwr_bldg_type default_swh_bldg_type output_dir unmet_load_hours debug convert_userdata_csv_to_json userdata_dir output_dir load_userdata_to_standards_database model_create_prm_stable_baseline_building standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) create_results = standard.model_create_prm_stable_baseline_building(model, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, output_dir, unmet_load_hours, debug) The key function that generates the ASHRAE 90.1 PRM model contains many arguments. Many of them have specific enum values. For a successful generation, these arguments need to match their enum values.
+This instruction will walk through the argument list, so this API call can be customized for any purpose and building cases.</description>
     </item>
     
     <item>
@@ -244,8 +245,8 @@ The user_data_space_type.csv file allows the application of multiple lighting sp
       <pubDate>Wed, 21 Sep 2022 15:06:59 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</guid>
-      <description>Quick use Function workflow How to use Input arguments user_model climate_zone Output values result wwr_info Quick Use wwr_building_type = &amp;#34;Office &amp;lt;= 5,000 sq ft&amp;#34; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone=&amp;#39;&amp;#39;, wwr_building_type: wwr_building_type) The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.
-Building Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office &amp;gt; 50,000 sq ft 40% Office &amp;lt;= 5,000 sq ft 19% Office 5,00 to 50,000 sq ft 31% Hotel/motel &amp;gt; 75 rooms 34% Hotel/motel &amp;lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table.</description>
+      <description>Quick use Function workflow How to use Input arguments user_model climate_zone Output values result wwr_info Multi building area type handling Quick Use wwr_building_type = &amp;#34;Office &amp;lt;= 5,000 sq ft&amp;#34; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone=&amp;#39;&amp;#39;, wwr_building_type: wwr_building_type) The above code adjusts the window-to-wall ratio in the model to the specified building type. Each building type maps to a window-to-wall ratio.
+Building Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office &amp;gt; 50,000 sq ft 40% Office &amp;lt;= 5,000 sq ft 19% Office 5,000 to 50,000 sq ft 31% Hotel/motel &amp;gt; 75 rooms 34% Hotel/motel &amp;lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table.</description>
     </item>
     
     <item>
