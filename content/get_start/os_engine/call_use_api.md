@@ -59,13 +59,13 @@ standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bld
 
 What the script above did was:
 
-1. Load an OSM model - it could be any model created as a proposed model for creating baseline system.
+1. Load an OSM model - it could be any model created as a proposed model for creating a baseline system.
 2. Make adjustments to the model:
-   - Change the window to wall ratio to 60% (adding a span glazings on every wall)
+   - Change the window-to-wall ratio to 60% (adding a span glazings on every wall)
    - Add overhangs to the south facade of the model.
 3. General the baseline model by calling the API method.
 
-In the end of the script, the `standard` object calls a function `model_create_prm_stable_baseline_building` is the API function that generates the baseline model.
+At the end of the script, the `standard` object calls a function `model_create_prm_stable_baseline_building` is the API function that generates the baseline model.
 
 ```ruby
 standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false)
@@ -77,8 +77,8 @@ A detail description of the arguments can be found in the [API document](/BEM-fo
 
 #### User data
 
-In PRM routines, there is one additional step that allows user to adds code compliance specific data to the baseline generation workflow. Data that is missing in most of the building energy models such as space type for a space, lighting space type for a space lighting, or motor horsepower for a electric equipment can be added to the user data before calling the API.
-The use of the user data can be find in [Add compliance data](/BEM-for-PRM/user_guide/add_compliance_data/) section.
+In PRM routines, one additional step allows users to add code compliance-specific data to the baseline generation workflow. Data missing in most building energy models, such as space type for a space, lighting space type for space lighting, or motor horsepower for electric equipment, can be added to the user data before calling the API.
+The use of the user data can be found in the [Add compliance data](/BEM-for-PRM/user_guide/add_compliance_data/) section.
 
 ```ruby
 # Create PRM object
@@ -92,22 +92,22 @@ standard.load_userdata_to_standards_database(json_path)
 standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false)
 ```
 
-The above script first create the PRM object from OpenStudio Standards, then converts the data from `csv` to `json` and load them into the object before generating the baseline. It is important to convert the csv to json first before loading them to the PRM object. The [API documents](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/#convert_userdata_csv_to_json) gives a more detail description of the function `convert_userdata_csv_to_json` and `load_userdata_to_standards_database`.
+The above script first creates the PRM object from OpenStudio Standards, then converts the data from `.csv` to `.json` and loads them into the object before generating the baseline. It is important to convert the CSV to JSON before loading them to the PRM object. The [API documents](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/#convert_userdata_csv_to_json) gives a more detail description of the function `convert_userdata_csv_to_json` and `load_userdata_to_standards_database`.
 
 {{< line_break >}}
 
 #### Baseline outputs
 
-A successful baseline generation creates a number of baseline model(s) and folders under the `baseline_dir` as shown in the image below.
+A successful baseline generation creates several baseline model(s) and folders under the `baseline_dir` as shown in the image below.
 ![Folder structure](/BEM-for-PRM/get_start/os_engine/images/baseline_generation_completion_folder.PNG?width=650px&align=left&classes=border,alignLeft)
 
 **SR\_[NUMBER]**:
-A number of folders are generated in the process and saved in the `baseline_dir`. They typically starts with `SR_` and ends with a number or `PROP`. These folders contains the energy model and their sizing run outputs. The number records the index of the the sizing run. `PROP` indicates that this is a sizing run on a proposed model. A more detail description of the baseline generation steps is described in the [API document](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+Several folders are generated and saved in the `baseline_dir`. They typically start with `SR_` and ends with a number or `PROP`. These folders contain the energy model and their sizing run outputs. The number records the index of the sizing run. `PROP` indicates a sizing run on a proposed model. A more detailed description of the baseline generation steps is described in the [API document](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
 
 **user_data_json**:
-The `user_data_json` saves all user defined data in JSON format. The list includes the full set of the user data regardless there is data or not.
+The `user_data_json` saves all user-defined data in JSON format. The list includes the complete set of user data regardless there is data or not.
 
-**final.osm**: A baseline openstudio model at 0 rotation degree.
+**final.osm**: A baseline OpenStudio model at 0 rotation degrees.
 
 **final_NUM.idf**:
-Depending on whether the baseline model case meets the G3.1(5).a building rotation requirements, the baseline generation produces one or four EnergyPlus files. If no rotations, then the folder only contain one `final.idf` else, there are `final_0.idf`, `final_90.idf`, `final_180.idf` and `final_270.idf`.
+Depending on whether the baseline model case meets the G3.1(5).a building rotation requirements, the baseline generation produces one or four EnergyPlus files. If there are no rotations, the folder would only contain one `final.idf`; else, there would be`final_0.idf`, `final_90.idf`, `final_180.idf`, and `final_270.idf`.

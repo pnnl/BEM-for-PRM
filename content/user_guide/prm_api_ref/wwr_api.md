@@ -27,7 +27,7 @@ standard = Standard.build("90.1-PRM-2019")
 result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone='', wwr_building_type: wwr_building_type)
 ```
 
-The above code adjust the window to wall ratio in the model to the specified building type. Each building type maps to a window to wall ratio.
+The above code adjusts the window-to-wall ratio in the model to the specified building type. Each building type maps to a window-to-wall ratio.
 
 | Building Area Types                 | Baseline building vertical fenestration percentage of gross-above-grade wall area |
 | ----------------------------------- | --------------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ The above code adjust the window to wall ratio in the model to the specified bui
 | `Healthcare (outpatient)`           | 21%                                                                               |
 | `All other`                         | 40%                                                                               |
 
-The mapping is shown in the above table. Once the function identifies the correct building area, it will applies the window to wall ratio to the entire model.
+The mapping is shown in the above table. Once the function identifies the correct building area, it will apply the window-to-wall ratio to the entire model.
 
 {{< line_break >}}
 
@@ -68,7 +68,7 @@ E -->|Existing WWR| F(Adjust WWR)
 
 #### How to use
 
-As the workflow diagram indicated, the function checks each zone and surface to determine its conditioned type. The conditioned type of a zone is determined after model sizing simulation. Therefore, it is critical to note that this function will only work after a successful full year simulation or sizing run. To do that, follow the script below prior calling the function.
+As the workflow diagram indicated, the function checks each zone and surface to determine its conditioned type. The conditioned type of a zone is determined after model sizing simulation. Therefore, it is critical to note that this function will only work after a successful full-year simulation or sizing run. To do that, follow the script below before calling the function.
 
 ```ruby
 # Initiate the standard to PRM and load the model (model needs to be v3.4 or lower)
@@ -85,22 +85,22 @@ result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(user_m
 ```
 
 {{% notice warning %}}
-If the model is not simulated, this function can still run, however, it will not apply a target WWR to the model because it cannot find any conditioned surface to adjust WWR.
+If the model is not simulated, this function can still run. However, it will not apply a target WWR to the model because it cannot find any conditioned surface to adjust WWR.
 {{% /notice %}}
 
 {{< line_break >}}
 
 #### Function behavior
 
-It is important to understand the function behaviors before calling this function.
+It is essential to understand the function behaviors before calling this function.
 
-1. If the target WWR is smaller than the model overall WWR, the function will proportionally reduce the size of every window while keep their center coordinates fixed
+1. If the target WWR is smaller than the model overall WWR, the function will proportionally reduce the size of every window while keeping their center coordinates fixed
 2. If the target WWR is greater than the model overall WWR, the function will:
-   - remove all windows in surfaces and then add a new windows to meet the required WWR. This step will only applies to surfaces that have windows
+   - remove all windows in surfaces and add new ones to meet the required WWR. This step will only apply to surfaces that have windows
    - Plenums (including air loop supply and return plenums) are not considered in the WWR expanding algorithm.
-   - If every surface that has window is reaching 90% window-to-wall ratio, but the total gross WWR of the building is still smaller than the target WWR, then the function will create new windows in every other surface to meet the target WWR for the building. The size of new windows should be proportional to their host surface.
+   - If surfaces with windows reach a 90% WWR, the total gross WWR of the building is still smaller than the target WWR. The function will create new windows on every other surface to meet the target WWR for the building. The size of new windows should be proportional to their host surface.
      ![WWR_EXPAND](/BEM-for-PRM/user_guide/prm_api_ref/images/wwr_expand_test.PNG?width=800px&align=left&classes=border)
-   - If there are doors in the surface, the maximum window to wall ratio for that surface will readjust to ensure the total area of fenestration and doors to be 90% of the surface area.
+   - If there are doors on the surface, the maximum WWR for the surface will readjust to ensure the total fenestration area and doors are 90% of the surface area.
      ![WWR_DOOR_EXPAND](/BEM-for-PRM/user_guide/prm_api_ref/images/wwr_expand_doors_test.PNG?width=800px&align=left&classes=border)
 
 {{< line_break >}}
@@ -109,15 +109,15 @@ It is important to understand the function behaviors before calling this functio
 
 ##### user_model
 
-`user_model` shall be the OpenStudio model object (`OpenStudio::Model::Model`) that contains a full description of a building energy model in `.osm` format.
+`user_model` shall be the OpenStudio model object (`OpenStudio::Model::Model`) that contains a complete description of a building energy model in `.osm` format.
 
 ##### climate_zone
 
-`climate_zone` is a String data. However it is no longer used in the ASHRAE 90.1 2019 PRM method so it is OK to type in an empty string.
+`climate_zone` is a String data. However, it is no longer used in the ASHRAE 90.1 2019 PRM method, so it is OK to type in an empty string.
 
 ##### wwr_building_type
 
-`wwr_building_type` is a hash key and the value shall be user defined. The default is `nil`. The `wwr_building_type` shall be a string taken from the list below:
+`wwr_building_type` is a hash key, and the value shall be user-defined. The default is `nil`. The `wwr_building_type` shall be a string taken from the list below:
 
 - `Warehouse (nonrefrigerated)`
 - `School (secondary and university)`
@@ -137,7 +137,7 @@ It is important to understand the function behaviors before calling this functio
 - `All other`
 
 {{% notice info %}}
-It is important keep the `wwr_building_type` string identical to the list above. Otherwise the function will set the target building `WWR` to `40%`.
+It is important to keep the `wwr_building_type` string identical to the list above. Otherwise, the function will set the target building `WWR` to `40%`.
 {{% /notice %}}
 
 {{< line_break >}}
@@ -150,7 +150,7 @@ The result is a boolean. `true` indicates a successful generation and `false` ot
 
 ##### wwr_info
 
-The `wwr_info` is a hash map that maps the `wwr_building_type` to its correspondent target `wwr`, which is applied when altering the model window to wall ratio.
+The `wwr_info` is a hash map that maps the `wwr_building_type` to its correspondent target `wwr`, which is applied when altering the model window-to-wall ratio.
 
 ```
 {"Office <= 5,000 sq ft"=>19.0}
@@ -160,14 +160,14 @@ The `wwr_info` is a hash map that maps the `wwr_building_type` to its correspond
 
 #### Multi building area type handling
 
-One of the feature in the PRM routine is the capability of handling multiple building area types in one energy model.
-For example, if an energy model is simulating a building mixed with retail (strip mall) and offices (>50,000 sq ft). The baseline vertical fenestration percentage requirements are different for these two building area types. Previously, modeler has to manually adjusted the generated baseline model to meet the compliance request. In the new workflow, we introduces the user data that can handle this situation in the baseline generation runtime.
+One feature of the PRM routine is the capability of handling multiple building area types in one energy model.
+For example, if an energy model is simulating a building mixed with retail (strip mall) and offices (>50,000 sq ft). The baseline vertical fenestration percentage requirements differ for these two building area types. Previously, modelers had to manually adjust the generated baseline model to meet the compliance request. In the new workflow, we introduce the user data to handle this situation in the baseline generation runtime.
 
 ##### Create user data
 
-To do that, we need to create a user data. The example we are using is a typical small office model, in which we will identify the one space as a retail (strip mall) space and the rest are a office (>50,000 sq ft).
+To do that, we need to create user data. The example we are using is a typical small office model. In this model, we will identify one space as a retail (strip mall) space and the rest are an office (>50,000 sq ft).
 
-In this example, we are going to edit the [userdata_space](/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/) file in a spreadsheet.
+In this example, we will edit the [userdata_space](/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/) file in a spreadsheet.
 
 ![wwr_user_data](/BEM-for-PRM/user_guide/prm_api_ref/images/wwr_user_data_space.PNG)
 
@@ -176,7 +176,7 @@ It is recommended to edit the file in a spreadsheet cause this can avoid any spe
 In this case, `Office > 50,000 sq ft` can be mis-identified into two columns as `Office > 50` and `000 sq ft`.
 {{% /notice %}}
 
-Once is is done, save the file as a `.csv` into a `user_data` folder.
+Once the user data is set, save the file as a `.csv` into a `user_data` folder.
 
 ##### Set up the script
 
@@ -202,7 +202,7 @@ user_model = BTAP::FileIO.deep_copy(model)
 standard = Standard.build("90.1-PRM-2019")
 ```
 
-Now we have everything we need, first, let's load the user data
+Now we have everything we need, let's load the user data
 
 ```ruby
 # Convert the .csv files into json files and save the json files into model_dir
@@ -213,13 +213,13 @@ standard.load_userdata_to_standards_database(json_path)
 standard.handle_multi_building_area_types(user_model, climate_zone, '', wwr_building_type, '', {})
 ```
 
-The three lines of code above accomplished three things:
+The three lines of code above accomplished three goals:
 
-1. Convert the .csv files into json files and save the json files into `model_dir`
+1. Convert the .csv files into JSON files and save the JSON files into `model_dir`
 2. Load the user data into a Standard object instance
 3. Call the Standard instance to add user data to the user energy model.
 
-The above three steps are crucial to the overal process. The function `handle_multi_building_area_types()` have six arguments. However, in this example, we only focus on the window to wall ratio API function. So supplying `user_model`, `climate_zone` and `wwr_building_type` and set the other argument to empty values is sufficient for our next step.
+The above three steps are crucial to the overall process. The function `handle_multi_building_area_types()` has six arguments. However, in this example, we only focus on the WWR API function. So supplying `user_model`, `climate_zone`, and `wwr_building_type` and setting the other argument to empty values is sufficient for our next step.
 
 ##### Run window to wall ratio API
 
@@ -232,9 +232,9 @@ result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(user_m
 user_model.save(OpenStudio::Path.new("#{prototype_dir}/wwr_output.osm"), true)
 ```
 
-In the above three lines, the Standard first run an annual simulation of the model to ensure the model is correct and produce sizing script for analyzing space conditioning category.
-Then the `model_apply_prm_baseline_window_to_wall_ratio` function applies the window to wall ratio adjustment to the user energy model.
+In the above three lines, the Standard first run an annual simulation of the model to ensure the model is correct and produces a sizing script for analyzing the space conditioning category.
+Then the `model_apply_prm_baseline_window_to_wall_ratio` function applies the WWR adjustment to the user energy model.
 
 ![multi-building-handling-output](/BEM-for-PRM/user_guide/prm_api_ref/images/multi-building-type-handling-output.PNG)
 
-Open the model in the OpenStudio Application, you can see the `Perimeter_ZN_2` space is adjusted to `19%` window to wall ratio and the rest are adjusted to `40%` window to wall ratio.
+Open the model in the OpenStudio Application, and you can see the `Perimeter_ZN_2` space is adjusted to `19%` WWR, and the rest are adjusted to `40%` WWR.

@@ -8,7 +8,7 @@ pre: "<b>- </b>"
 
 This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
 
-In the previous step, we created a medium office prototype model in Climate zone 4.
+In the previous step, we created a typical medium office model in Climate zone 4.
 ![saved model](/BEM-for-PRM/get_start/quick_start/image/prototype_medium_office.PNG?width=800px)
 
 In this section, let's write the script to generate a baseline for this prototype building.

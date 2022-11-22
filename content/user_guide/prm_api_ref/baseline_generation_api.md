@@ -30,10 +30,11 @@ standard = Standard.build("90.1-PRM-2019")
 create_results = standard.model_create_prm_stable_baseline_building(model, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, output_dir, unmet_load_hours, debug)
 ```
 
-The key function that generates the ASHRAE 90.1 PRM model contains many arguments. Many of them have specific enum values. For a successful generation, these arguments need to have exact match to their enum values.
-In this instruction, we will walk through the argument list so this API call can be customized for any purposes and building cases.
+The key function that generates the ASHRAE 90.1 PRM model contains many arguments. Many of them have specific enum values. For a successful generation, these arguments need to match their enum values.
 
-This API function is a primary function to generate baseline models. The function takes in a user created OpenStudio model and a number of user-defined arguments to generate baseline.
+This instruction will walk through the argument list, so this API call can be customized for any purpose and building cases.
+
+This API function is a primary function to generate baseline models. The process takes a user-created OpenStudio model and several user-defined arguments and produce a PRM baseline model.
 
 - ##### Step 1: Check proposed model
 
@@ -47,7 +48,7 @@ This API function is a primary function to generate baseline models. The functio
 
 - ##### Step 2: Adjust envelope and internal loads
 
-  In this step, the function primarily start adjusting the envelope and internal loads based on the information stored in the method arguments and user supplied model. In addition, this step also prepares HVAC systems, adjust the HVAC system for a sizing run.
+  In this step, the function starts adjusting the envelope and internal loads based on the information stored in the method arguments and user-supplied model. In addition, this step also prepares HVAC systems for a sizing run.
 
   {{<mermaid align="left">}}
   graph LR;
@@ -61,11 +62,11 @@ This API function is a primary function to generate baseline models. The functio
   A -->|Add HVAC and sizing info| I(HVAC)
   {{</mermaid>}}
 
-  After all above is applied, a sizing run is conducted and labeled as `SR1` in the output directory.
+  After all the above is applied, a sizing run is conducted and labeled as `SR1` in the output directory.
 
 - ##### Step 3: Fine tune HVAC system parameters 1
 
-  Based on the sizing run results in the `SR1` folder, this step will fine tuning the HVAC parameters based on the ASHRAE 90.1 appendix G specifications.
+  Based on the sizing run results in the `SR1` folder, this step will fine-tune the HVAC parameters based on the ASHRAE 90.1 appendix G specifications.
 
   {{<mermaid align="left">}}
   graph LR;
@@ -76,19 +77,19 @@ This API function is a primary function to generate baseline models. The functio
   A -->|Tune cooling towers| F(CoolingTowers)
   {{</mermaid>}}
 
-  After all above steps are completed, a second sizing run is conducted and labeled as `SR2` in the output directory. In this run, several key metrics in the HVAC system will be determined such as the capacity of the chillers and loop flow rates.
+  After all the above steps are completed, a second sizing run is conducted and labeled as `SR2` in the output directory. In this run, several key metrics in the HVAC system will be determined, such as the capacity of the chillers and loop flow rates.
 
 - ##### Step 4: Fine tune HVAC system parameters 2
-  In this step, it further fine tune some parameters in the HVAC components
+  This step further fine-tunes some parameters in the HVAC components.
   {{<mermaid align="left">}}
   graph LR;
   A(HVAC Component) -->|Tune component efficiency| B(Efficiency)
   A -->|Set demand control ventilation| C(DCV)
   A -->|Tune pump power and controls| D(Pump)
   {{</mermaid>}}
-  A third sizing run is conducted after this step and labeled as `SR3` in the output directory. The third sizing run is the final sizing run to refining size-dependent values including the secondary flow rate in the parallel PIU reheat terminal, and the maximum flow rate in the air terminal.
+  A third sizing run is conducted after this step and labeled as `SR3` in the output directory. The third sizing run is the final sizing run to refine size-dependent values, including the secondary flow rate in the parallel PIU reheat terminal and the maximum flow rate in the air terminal.
 
-One or four baseline models will generated in the output directory after these four steps. The output directory is an arugment provided by user when calling this function. In the next section, we will provide a detail explanation of these arguments.
+After these four steps, baseline model(s) will be generated in the output directory. The output directory is an argument the user provides when calling this function. In the next section, we will give a detail explanation of these arguments.
 
 {{< line_break >}}
 
@@ -214,13 +215,13 @@ The `default_swh_bldg_type` shall be one of the strings in the list below:
 
 #### - output_dir
 
-`output_dir` is a mandatory field that specifies the directory to save all sizing runs. When applying PRM method on a proposed model, OSSTD will perform several sizing runs. These sizing runs usually saved in a directory specified in `sizing_run_dir`. In addition, the generated baseline model `.idf` and `.osm` will also be saved in the this directory.
+`output_dir` is a mandatory field that specifies the directory to save all sizing runs. When applying the PRM method to a proposed model, OSSTD will perform several sizing runs. These sizing runs are usually saved in a directory specified in `sizing_run_dir`. In addition, the generated baseline model `.idf` and `.osm` will also be saved in this directory.
 
 {{< line_break >}}
 
 #### - unmet_load_hours
 
-`unmet_load_hours` is a flag to check whether the `model` can successfully run a annual simulation and the annual unmet load hours is smaller than 300 hours as required by ASHRAE 90.1 Appendix G. The default value for this flag is `false`, which skips the two checks and run baseline generation.
+`unmet_load_hours` is a flag that checks whether a `model` can successfully run an annual simulation and whether its annual unmet load hours meet the ASHRAE 90.1 Appendix G requirements. The default value for this flag is `true`.
 
 {{% notice info %}}
 Cautious when setting the `unmet_load_hours` to `false`. This could result in wrong baseline models or crash the baseline generation process.
@@ -230,13 +231,13 @@ Cautious when setting the `unmet_load_hours` to `false`. This could result in wr
 
 #### - debug
 
-`debug` default is set to `false`. This argument has no impact to the current PRM generation and is part of the future implementation. For now, any API calls can set to `false` or simply ignore this argument.
+`debug` default is set to `false`. This argument has no impact on the current PRM generation and is part of the future implementation. Any API calls set this field to `false` or ignore this argument.
 
 {{< line_break >}}
 
 ### convert_userdata_csv_to_json
 
-The function converts user data in csv format to json format and it is typically called before loading the user data before baseline generation.
+The function converts user data from CSV format to JSON format, and it is typically called before loading the user data before baseline generation.
 
 ```
 standard = Standard.build("90.1-PRM-2019")
@@ -246,11 +247,11 @@ output_dir = "#{File.dirname(Dir.pwd)}/output"
 json_path = standard.convert_userdata_csv_to_json(userdata_dir, output_dir)
 ```
 
-The function has two arguments, `userdata_dir` and `output_dir`. The function first load all the default userdata templates as `json`, then grabs all the user csv files saved in the `userdata_dir` and insert data from the `csv` files into the `json` data. Lastly, the function saves the `json` to the `output_dir` in the `user_data_json` folder.
+The function has two arguments, `userdata_dir` and `output_dir`. The process first loads all the default user data templates as `json`, then grabs all the user CSV files saved in the `userdata_dir` and inserts data from the `csv` files into the `json` data. Lastly, the function saves the `json` to the `output_dir` in the `user_data_json` folder.
 
 #### - userdata_dir
 
-This argument shall be a valid directory string that pointing to the folder where all user data `csv` are saved. Example can be:
+This argument shall be a valid directory string that points to the folder where all user data `csv` is saved. An example can be:
 
 ```
 "C:\\documents\\my_user_data"
@@ -258,7 +259,7 @@ This argument shall be a valid directory string that pointing to the folder wher
 
 #### - output_dir
 
-This argument shall be a valid directory string that pointing to the folder where all user data `json` saved. Example can be:
+This argument shall be a valid directory string that points to the folder where all user data `json` is saved. An example can be:
 
 ```
 "C:\\documents\\user_data_json"
@@ -268,7 +269,7 @@ This argument shall be a valid directory string that pointing to the folder wher
 
 ### load_userdata_to_standards_database
 
-The function loads the user data folder into the `90.1-PRM-2019` standard object. A typical workflow will call `convert_userdata_csv_to_json` first to convert all user data from `csv` to `json` and then call `load_userdata_to_standards_database` to load the json into the workflow.
+The function loads the user data folder into the `90.1-PRM-2019` instance. A typical workflow will call `convert_userdata_csv_to_json` first to convert all user data from `csv` to `json` and then call `load_userdata_to_standards_database` to load the json into the workflow.
 
 ```
 standard = Standard.build("90.1-PRM-2019")
@@ -279,4 +280,4 @@ json_path = standard.convert_userdata_csv_to_json(userdata_dir, output_dir)
 standard.load_userdata_to_standards_database(json_path)
 ```
 
-`json_path` shall be a valid directory string that pointing to the folder where all user data `json` saved.
+`json_path` shall be a valid directory string that points to the folder where all user data `json` is saved.
