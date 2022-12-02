@@ -41,5 +41,16 @@ In addition, the PRM method is a subroutine under the package of OpenStudio Stan
 require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) thermal_zones = [] model.getThermalZones.each do |zone| thermal_zones.append(zone) end end # Hot water loop hot_water_loop = standard.</description>
     </item>
     
+    <item>
+      <title>Examples</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</link>
+      <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</guid>
+      <description>In this chapter, we will cover three examples to showcase the capability of the OSSTD-PRM method.
+Demo files Preparation Demo 1: Transformations Project parameters Directories Initialize Baseline generation Demo 1 results Demo 2: User data User data Demo 2 results Demo 3: HVAC Demo 3 results Demo files Each zip file contains the model, user data and weather file for performing demos.
+Demo zip files demo1.zip (304 KB) demo2.zip (303 KB) demo3.</description>
+    </item>
+    
   </channel>
 </rss>

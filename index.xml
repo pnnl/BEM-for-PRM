@@ -91,26 +91,14 @@ require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#3
     </item>
     
     <item>
-      <title>Create a typical model</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/create_typical/</link>
-      <pubDate>Tue, 26 Jul 2022 15:43:57 -0700</pubDate>
+      <title>Examples</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</link>
+      <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/create_typical/</guid>
-      <description>Create a typical model OpenStudio Standard package embedded code to generate OpenStudio version of prototype buildings. This quick tutorial will create a typical building and run the ASHRAE 90.1-2019 Appendix G (PRM) automation process.
-To begin with, we need to import both packages.
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; You can use require_relative [ABSOLUTE_PATH] to import the OSSTD source code if you choose to use the package from Github.
-Next, we want to create a MediumOffice prototype building in climate zone 4A (New York) that is designed following the 90.</description>
-    </item>
-    
-    <item>
-      <title>Baseline automation</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</link>
-      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/quick_start/baseline_automation/</guid>
-      <description>This quick tutorial will generate an ASHRAE 90.1-2019 Appendix G baseline from a medium office prototype.
-In the previous step, we created a typical medium office model in Climate zone 4. In this section, let&amp;rsquo;s write the script to generate a baseline for this prototype building. First, we need to import openstudio and openstudio-standards packages.
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; Next, load the model and prepare compliance parameters for baseline generation.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</guid>
+      <description>In this chapter, we will cover three examples to showcase the capability of the OSSTD-PRM method.
+Demo files Preparation Demo 1: Transformations Project parameters Directories Initialize Baseline generation Demo 1 results Demo 2: User data User data Demo 2 results Demo 3: HVAC Demo 3 results Demo files Each zip file contains the model, user data and weather file for performing demos.
+Demo zip files demo1.zip (304 KB) demo2.zip (303 KB) demo3.</description>
     </item>
     
     <item>
