@@ -2,7 +2,7 @@
 title: "Baseline automation"
 date: 2022-08-16T13:04:42-07:00
 weight: 232
-draft: false
+draft: true
 pre: "<b>- </b>"
 ---
 
