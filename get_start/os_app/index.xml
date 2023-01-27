@@ -36,5 +36,17 @@ https://github.com/openstudiocoalition/OpenStudioApplication/releases</descripti
 Select &amp;ldquo;Components &amp;amp; Measures&amp;rdquo; from the top menu in the screen Select Whole Building/ Space Types in the Apply Measure window Click the arrow next to Space types to show available measures Select the &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure Make selections in the right-hand side of the window as needed Click on the Apply Measure at the bottom of the screen </description>
     </item>
     
+    <item>
+      <title>Run measure in CLI</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</link>
+      <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</guid>
+      <description>Introduction This guide is intended to provide instructions on how to run the Create ASHRAE 90.1-2019 PRM Model measure via the command line interface (CLI).
+Background The Create ASHRAE 90.1-2019 PRM Model measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.
+Usage Instructions Setup To get started :
+Download and install OpenStudio v3.</description>
+    </item>
+    
   </channel>
 </rss>
