@@ -25,14 +25,18 @@ The _Create ASHRAE 90.1-2019 PRM Model_ measure provides a tool to automatically
 To get started :
 
 1. Download and install [OpenStudio v3.5.0](https://github.com/NREL/OpenStudio/releases/tag/v3.5.0) using the default components selection.
-2. Download this [openstudio-standards package](https://github.com/NREL/openstudio-standards/tree/appendixG_dev_debug_user_directory_error) which includes a fix to the master branch.
-3. Setup a local directory to include all required inputs (the following example is one way to setup the directory): - **Seed mode**: place the `.osm` file in a directory named `files`. The Openstudio model should meet the [model requirements](https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/). - **Weather file**: place the `.epw` file in a directory named `weather`. - **Measure**: place the `CreateBaselineBuilding` measure in a directory called `measures`. - **OS Workflow**: place the `.osw` file in the main directory. - **User Data (_Optional_)**: place the `.csv` file in the main directory. The use of the user data can be found in the [add compliance data section](https://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/).
-   <br/><br/>
+2. Download this [openstudio-standards package](https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip).
+3. Setup a local directory to include all required inputs (the following example is one way to setup the directory):
+
+- **Seed mode**: place the `.osm` file in a directory named `files`. The Openstudio model should meet the [model requirements](https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/).
+- **Weather file**: place the `.epw` file in a directory named `weather`.
+- **Measure**: place the `CreateBaselineBuilding` measure in a directory called `measures`.
+- **OS Workflow**: place the `.osw` file in the main directory.
+- **User Data (_Optional_)**: place the `.csv` file in the main directory (same level as the `.osw`). The use of the user data can be found in the [add compliance data section](https://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/).
 
 The image below shows one way to setup the main directory and their correponding sub-directories.
 
 ![Directory Setup](/BEM-for-PRM/get_start/os_app/images/DirectSetup.JPG?width=800px&align=left&classes=border)
-<br/><br/>
 
 The OSW file can be structured as shown in the image below.
 
@@ -41,7 +45,6 @@ The OSW file can be structured as shown in the image below.
 - Lines 9-14 contain arguments to be passed to the measure. A detail description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
 
 ![OS Workflow Structure](/BEM-for-PRM/get_start/os_app/images/osw.JPG?width=600px&align=left&classes=border)
-<br/><br/>
 
 {{% notice tip %}}
 **Importnat Note:**
@@ -55,8 +58,8 @@ The directory names are not case sensitive. If you want to change the names of t
 - Open Command Prompt as an adminstrator.
 - Type the following command with paths to the **openstudio\bin**, **openstudio-standard\lib** and the **OSW** directories.  
   `C:\openstudio-3.5.0\bin\openstudio.exe -I "[LOCAL_PATH]\openstudio-standard\lib" run -w "[LOCAL_PATH]\workflow.osw"`
-  <br/><br/>
-  **Example**
+
+**Example:**
 
 ```ruby
 C:\openstudio-3.5.0\bin\openstudio.exe  -I "C:\Users\example_user\openstudio-standard\lib" run -w "C:\Users\example_user\baselinePRM\test.osw"
@@ -68,7 +71,7 @@ It is advised to avoid spaces in file and directory names. Use quotation marks w
 {{% /notice %}}
 
 {{% notice tip %}}
-The OpenStudio SDK version can be 3.2.1 or later.
+The OpenStudio SDK version can be **3.2.1** or later.
 {{% /notice %}}
 
 {{< line_break >}}
