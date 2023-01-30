@@ -25,7 +25,7 @@ The _Create ASHRAE 90.1-2019 PRM Model_ measure provides a tool to automatically
 To get started :
 
 1. Download and install [OpenStudio v3.5.0](https://github.com/NREL/OpenStudio/releases/tag/v3.5.0) using the default components selection.
-2. Download this [openstudio-standards package](https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip).
+2. Download this [openstudio-standards package](https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip). Unzip the package to a local directory.
 3. Setup a local directory to include all required inputs (the following example is one way to setup the directory):
 
 - **Seed mode**: place the `.osm` file in a directory named `files`. The Openstudio model should meet the [model requirements](https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/).
@@ -64,6 +64,10 @@ The directory names are not case sensitive. If you want to change the names of t
 ```ruby
 C:\openstudio-3.5.0\bin\openstudio.exe  -I "C:\Users\example_user\openstudio-standard\lib" run -w "C:\Users\example_user\baselinePRM\test.osw"
 ```
+
+{{% notice warning %}}
+The `-I` command shall pointing to the local directory of the [Openstudio-standards](https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip).
+{{% /notice %}}
 
 {{% notice tip %}}
 If the openstudio command is not recognized, either add the executable to your environemnt PATH or add the full length to the `openstudio-3.5.0\bin` directory.
