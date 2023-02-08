@@ -12,22 +12,22 @@
     <title>Run measure in CLI : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1675092968" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1675092968" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1675896466" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1675896466" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1675092968" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1675896466" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1675092968" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1675092968" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1675896466" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1675896466" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1675092968"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1675896466"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1675092968"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1675092968"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1675896466"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1675896466"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1675092968"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1675896466"></script>
 
     
   </div>
@@ -1154,16 +1154,31 @@
 
 <h4 id="introduction">Introduction</h4>
 <p>This guide is intended to provide instructions on how to run the <em>Create ASHRAE 90.1-2019 PRM Model</em> measure via the <a href="http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/">command line interface (CLI)</a>.</p>
+<p>Note: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.5).</p>
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h4 id="background">Background</h4>
 <p>The <em>Create ASHRAE 90.1-2019 PRM Model</em> measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.</p>
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h4 id="usage-instructions">Usage Instructions</h4>
+<section class="attachments orange">
+  <label>
+    <i class="fas fa-paperclip" aria-hidden="true"></i>
+    Create Baseline Building:
+  </label>
+  <div class="attachments-files">
+    <li>
+      <a href="/BEM-for-PRM/get_start/os_app/run_measure_cli.files/measures.zip">measures.zip</a>
+      (7 KB)
+    </li>
+  </div>
+</section>
+
 <h5 id="setup">Setup</h5>
 <p>To get started :</p>
 <ol>
 <li>Download and install <a href="https://github.com/NREL/OpenStudio/releases/tag/v3.5.0">OpenStudio v3.5.0</a> using the default components selection.</li>
 <li>Download this <a href="https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip">openstudio-standards package</a>. Unzip the package to a local directory.</li>
+<li>Download the create baseline building measure in this page.</li>
 <li>Setup a local directory to include all required inputs (the following example is one way to setup the directory):</li>
 </ol>
 <ul>
@@ -1898,16 +1913,16 @@ It is advised to avoid spaces in file and directory names. Use quotation marks w
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1675092968"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1675092968"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1675092968"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1675092968"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1675092968"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1675092968"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1675896466"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1675896466"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1675896466"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1675896466"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1675896466"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1675896466"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1675092968"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1675092968"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1675092968"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1675896466"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1675896466"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1675896466"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
