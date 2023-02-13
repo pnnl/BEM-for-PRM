@@ -8,7 +8,7 @@ pre: "<b>- </b>"
 
 #### Introduction
 
-This guide is intended to provide instructions on how to run the _Create ASHRAE 90.1-2019 PRM Model_ measure via the [command line interface (CLI)](http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/).
+This guide is intended to provide instructions on how to run the _Create ASHRAE 90.1-2019 PRM Model_ measure via the [command line interface (CLI)](http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/). This allows the use of an updated version of the OpenStudio Standards package, which is not accessible through the OpenStudio App.
 
 {{< line_break >}}
 
@@ -42,12 +42,12 @@ The OSW file can be structured as shown in the image below.
 
 - Lines 2-3 define the seed model and weather file.
 - Lines 4-5 define the measure path.
-- Lines 9-14 contain arguments to be passed to the measure. A detail description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+- Lines 9-14 contain arguments to be passed to the measure. A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
 
 ![OS Workflow Structure](/BEM-for-PRM/get_start/os_app/images/osw.JPG?width=600px&align=left&classes=border)
 
 {{% notice tip %}}
-**Importnat Note:**
+**Important Note:**
 The directory names are not case sensitive. If you want to change the names of the directories that contain the seed model and weather file, make sure to define the paths in the OSW file.
 {{% /notice %}}
 
