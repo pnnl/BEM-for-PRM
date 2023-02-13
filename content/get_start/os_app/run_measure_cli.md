@@ -10,6 +10,8 @@ pre: "<b>- </b>"
 
 This guide is intended to provide instructions on how to run the _Create ASHRAE 90.1-2019 PRM Model_ measure via the [command line interface (CLI)](http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/). This allows the use of an updated version of the OpenStudio Standards package, which is not accessible through the OpenStudio App.
 
+Note: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.5).
+
 {{< line_break >}}
 
 #### Background
@@ -20,13 +22,16 @@ The _Create ASHRAE 90.1-2019 PRM Model_ measure provides a tool to automatically
 
 #### Usage Instructions
 
+{{%attachments title="Create Baseline Building:" style="orange" pattern=".*\.(zip)$"/%}}
+
 ##### Setup
 
 To get started:
 
 1. Download and install [OpenStudio v3.5.0](https://github.com/NREL/OpenStudio/releases/tag/v3.5.0) using the default components selection.
 2. Download this [openstudio-standards package](https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip). Unzip the package to a local directory.
-3. Setup a local directory to include all required inputs (the following example is one way to setup the directory):
+3. Download the create baseline building measure in this page.
+4. Setup a local directory to include all required inputs (the following example is one way to setup the directory):
 
 - **Seed model**: place the `.osm` file in a directory named `files`. The Openstudio model should meet the [model requirements](https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/).
 - **Weather file**: place the `.epw` file in a directory named `weather`.
