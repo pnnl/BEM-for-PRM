@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Building - Type &amp; System on OSSTD doc</title>
+    <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/</link>
+    <description>Recent content in Building - Type &amp; System on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Sep 2022 15:04:27 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/</guid>
+      <description>Building building_type_for_hvac building_type_for_swh building_type_for_wwr is_exempt_from_rotations Building User Data CSV File: userdata_building.csv (97 B) The user_data_building.csv contains compliance data for building compliance calculation. A sample of data record is shown below.
+building_type_for_hvac This field is used to determine the baseline model&amp;rsquo;s HVAC system. It can be overwritten at the zone level (see the documentation for user_data_thermal_zone.csv). It should be set to one of the following values that best described the proposed model&amp;rsquo;s building type.</description>
+    </item>
+    
+    <item>
+      <title>Thermal Zone</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/</guid>
+      <description>User Data CSV File: userdata_thermal_zone.csv (114 B) File Name: userdata_thermal_zone.csv name: Name of the thermal zone object in the model.
+building_type_for_hvac This is the building type designation used for determining the Appendix G baseline system type. Valid entries are:
+residential public assembly heated-only storage retail other nonresidential unconditioned hospital number_of_systems This allows multiple systems to be modeled conceptually in a single thermal zone. This could be used when a single thermal zone in the model is used to represent multiple thermal zones in the actual building.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Water on OSSTD doc</title>
+    <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/</link>
+    <description>Recent content in Water on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Sep 2022 15:04:27 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Water Connections</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</guid>
+      <description> User Data CSV File: userdata_wateruse_connections.csv (82 B) </description>
+    </item>
+    
+    <item>
+      <title>Water Equipment</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment.csv (22 B) </description>
+    </item>
+    
+    <item>
+      <title>Water Equip Definition</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) </description>
+    </item>
+    
+  </channel>
+</rss>

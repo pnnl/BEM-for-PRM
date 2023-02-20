@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ASHRAE 90.1 Appendix G on OSSTD doc</title>
+    <link>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/</link>
+    <description>Recent content in ASHRAE 90.1 Appendix G on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Sep 2022 14:49:22 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/overview/ashrae/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Performance Rating Method (PRM)</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/prm/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/prm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ASHRAE 90.1 Stable Baseline</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/stable_baseline/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/stable_baseline/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

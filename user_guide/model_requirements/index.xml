@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 15:04:10 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Best Practices</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</link>
+      <pubDate>Wed, 21 Sep 2022 15:05:48 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Standards space type</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</link>
       <pubDate>Wed, 21 Sep 2022 15:05:37 -0700</pubDate>

@@ -1,0 +1,2921 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
+
+    <title>Thermal Zone : OSSTD doc</title>
+
+    
+    <link href="/BEM-for-PRM/css/nucleus.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1676906886" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1676906886" rel="stylesheet">
+    
+    <link href="/BEM-for-PRM/css/theme-copper.css?1676906886" rel="stylesheet">
+    
+    <link href="/BEM-for-PRM/css/foo.css?1676906886" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1676906886" rel="stylesheet">
+
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1676906886"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XWF7DKJRZD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XWF7DKJRZD');
+</script>
+  </head>
+  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <h4 style="margin-bottom:2px; color: white !important"> OpenStudio Standards </h4>
+<h5 style="margin-top: 2px; color: white !important"> - Create Baseline Building</h5>
+<p style="font-size: 13px; color: white">ASHRAE Standard 90.1-2019 Performance Rating Method Automated</p>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1676906886"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1676906886"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
+    
+</script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1676906886"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/overview/" title="Overview" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/overview/">
+          Overview
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/overview/ashrae/" title="ASHRAE 90.1 Appendix G" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/overview/ashrae/">
+          ASHRAE 90.1 Appendix G
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/ashrae/prm/" title="Performance Rating Method (PRM)" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/ashrae/prm/">
+        <b>- </b>Performance Rating Method (PRM)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/ashrae/stable_baseline/" title="ASHRAE 90.1 Stable Baseline" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/ashrae/stable_baseline/">
+        <b>- </b>ASHRAE 90.1 Stable Baseline
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/overview/features/" title="Features" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/overview/features/">
+          Features
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/features/current_features/" title="Current Features" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/features/current_features/">
+        <b>- </b>Current Features
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/features/comparison_tools/" title="Comparison to Other Tools" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/features/comparison_tools/">
+        <b>- </b>Comparison to Other Tools
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/features/benefits/" title="Benefits" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/features/benefits/">
+        <b>- </b>Benefits
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/features/gallery/" title="Gallery" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/features/gallery/">
+        <b>- </b>Gallery
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/overview/capabilities/" title="Capabilities" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/overview/capabilities/">
+          Capabilities
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/capabilities/mechanism/" title="Automation Mechanism" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/capabilities/mechanism/">
+        <b>- </b>Automation Mechanism
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/capabilities/capabilities/" title="Appendix G PRM Rules" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/capabilities/capabilities/">
+        <b>- </b>Appendix G PRM Rules
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/capabilities/measures/" title="Installation &amp; Tutorial" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/capabilities/measures/">
+        <b>- </b>Installation &amp; Tutorial
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/capabilities/use_case_applications/" title="Use Case - Applications" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/capabilities/use_case_applications/">
+        <b>- </b>Use Case - Applications
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/capabilities/tutorials/" title="Tutorials" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/capabilities/tutorials/">
+        <b>- </b>Tutorials
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/capabilities/examples/" title="Examples" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/capabilities/examples/">
+        <b>- </b>Examples
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/overview/limitations/" title="Limitations" class="dd-item ">
+        <a href="/BEM-for-PRM/overview/limitations/">
+        <b> </b>Limitations
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/get_start/" title="Getting Started" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/get_start/">
+          Getting Started
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/get_start/os_app/" title="Use with OpenStudio App" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/get_start/os_app/">
+          <b>1. </b>Use with OpenStudio App
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_app/where_os_app/" title="Get OpenStudio" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_app/where_os_app/">
+        <b>- </b>Get OpenStudio
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_app/where_os_measure/" title="Install the measure" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_app/where_os_measure/">
+        <b>- </b>Install the measure
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_app/how_run_measure/" title="Run the measure" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_app/how_run_measure/">
+        <b>- </b>Run the measure
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_app/troubleshooting/" title="Troubleshooting" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_app/troubleshooting/">
+        <b>- </b>Troubleshooting
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_app/run_measure_cli/" title="Run measure in CLI" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_app/run_measure_cli/">
+        <b>- </b>Run measure in CLI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/get_start/os_engine/" title="Use with OpenStudio Engine" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/get_start/os_engine/">
+          <b>2. </b>Use with OpenStudio Engine
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_engine/installation/" title="Installation" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_engine/installation/">
+        <b>- </b>Installation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_engine/call_use_api/" title="Call measure via API" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_engine/call_use_api/">
+        <b>- </b>Call measure via API
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_engine/link_api_doc/" title="API documentation" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_engine/link_api_doc/">
+        <b>- </b>API documentation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_engine/quick_start/" title="Examples" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_engine/quick_start/">
+        <b>- </b>Examples
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/get_start/os_engine/troubleshooting/" title="Troubleshooting" class="dd-item ">
+        <a href="/BEM-for-PRM/get_start/os_engine/troubleshooting/">
+        <b>- </b>Troubleshooting
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/" title="User Guide" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/">
+          User Guide
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/model_requirements/" title="Model requirements" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/model_requirements/">
+          <b>1. </b>Model requirements
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/model_requirements/best_practices/" title="Best Practices" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/model_requirements/best_practices/">
+        <b>- </b>Best Practices
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/" title="Standards space type" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/">
+        <b>- </b>Standards space type
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/model_requirements/other_requirements/" title="Other requirements" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/model_requirements/other_requirements/">
+        <b>- </b>Other requirements
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/">
+          <b>2. </b>User Compliance Data
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/space/" title="Space" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/space/">
+          <b>  </b>Space
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space/" title="Space" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space/">
+        <b>- </b>Space
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space_type/" title="Space type" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space_type/">
+        <b>- </b>Space type
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/building_type/" title="Building - Type &amp; System" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/building_type/">
+          <b>  </b>Building - Type &amp; System
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/" title="Building" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/">
+        <b>- </b>Building
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/" title="Thermal Zone" class="dd-item active">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/">
+        <b>- </b>Thermal Zone
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/" title="HVAC" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/">
+          <b>  </b>HVAC
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/" title="Zone HVAC" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/">
+        <b>- </b>Zone HVAC
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/" title="Zone Infiltration" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/">
+        <b>- </b>Zone Infiltration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/" title="Airloop HVAC" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/">
+        <b>- </b>Airloop HVAC
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac_doas/" title="Airloop HVAC DOAS" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac_doas/">
+        <b>- </b>Airloop HVAC DOAS
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_design_specification_outdoor_air/" title="Outdoor Air" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_design_specification_outdoor_air/">
+        <b>- </b>Outdoor Air
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/equipment/" title="Equipment" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/equipment/">
+          <b>  </b>Equipment
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_electric_equipment/" title="Electric Equipment" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_electric_equipment/">
+        <b>- </b>Electric Equipment
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_gas_equipment/" title="Gas Equipment" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_gas_equipment/">
+        <b>- </b>Gas Equipment
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/" title="Lighting" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/">
+          <b>  </b>Lighting
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/" title="Lights" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/">
+        <b>- </b>Lights
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/" title="Exterior Lights" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/">
+        <b>- </b>Exterior Lights
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/water/" title="Water" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/water/">
+          <b>  </b>Water
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/" title="Water Connections" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/">
+        <b>- </b>Water Connections
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment/" title="Water Equipment" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment/">
+        <b>- </b>Water Equipment
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/" title="Water Equip Definition" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/">
+        <b>- </b>Water Equip Definition
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/BEM-for-PRM/user_guide/prm_api_ref/" title="PRM API Reference" class="dd-item
+        
+        
+        
+        ">
+      <a href="/BEM-for-PRM/user_guide/prm_api_ref/">
+          <b>3. </b>PRM API Reference
+          
+            <i class="fas fa-chevron-right read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/" title="Baseline generation API" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/">
+        <b> </b>Baseline generation API
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/" title="Window API" class="dd-item ">
+        <a href="/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/">
+        <b> </b>Window API
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/NREL/openstudio-standards/tree/AppendixG_Dev"><i class='fab fa-github'></i> Github repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="http://www.rubydoc.info/gems/openstudio-standards"><i class='fas fa-bookmark'></i> API Documentation</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/NREL/openstudio-standards/archive/AppendixG_Dev.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/NREL/openstudio-standards" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/NREL/openstudio-standards/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p><i class="fas fa-heart"></i></a> from <a href="https://pnnl.gov">PNNL</a></p>
+
+    <img src="/BEM-for-PRM/images/PNNL_CENTER_White.png" alt="PNNL-logo" width="200px" style="margin-top: 50px">
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/'>User Compliance Data</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/building_type/'>Building - Type & System</a> > Thermal Zone
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#name">name:</a></li>
+    <li><a href="#building_type_for_hvac">building_type_for_hvac</a></li>
+    <li><a href="#number_of_systems">number_of_systems</a></li>
+    <li><a href="#dcv_exception_thermal_zone">dcv_exception_thermal_zone</a></li>
+    <li><a href="#has_health_safety_night_cycle_exception">has_health_safety_night_cycle_exception</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Thermal Zone
+            </h1>
+          
+
+        
+
+
+<section class="attachments orange">
+  <label>
+    <i class="fas fa-paperclip" aria-hidden="true"></i>
+    User Data CSV File:
+  </label>
+  <div class="attachments-files">
+    <li>
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone.files/userdata_thermal_zone.csv">userdata_thermal_zone.csv</a>
+      (114 B)
+    </li>
+  </div>
+</section>
+
+<h1 id="file-name-userdata_thermal_zonecsv">File Name: userdata_thermal_zone.csv</h1>
+<h2 id="name">name:</h2>
+<p>Name of the thermal zone object in the model.</p>
+<h2 id="building_type_for_hvac">building_type_for_hvac</h2>
+<p>This is the building type designation used for determining the Appendix G baseline system type. Valid entries are:</p>
+<ul>
+<li>residential</li>
+<li>public assembly</li>
+<li>heated-only storage</li>
+<li>retail</li>
+<li>other nonresidential</li>
+<li>unconditioned</li>
+<li>hospital</li>
+</ul>
+<h2 id="number_of_systems">number_of_systems</h2>
+<p>This allows multiple systems to be modeled conceptually in a single thermal zone. This could be used when a single thermal zone in the model is used to represent multiple thermal zones in the actual building. It could also be used for large zones that contain multiple packaged HVAC systems in the actual building design. When the baseline cooling or heating efficiency depends on system capacity, the capacity determined in the baseline sizing run is divided by number_of_systems before the efficiency lookup is performed.</p>
+<h2 id="dcv_exception_thermal_zone">dcv_exception_thermal_zone</h2>
+<p>This allows the modeler to claim an exception to demand controlled ventilation requirements based on the rules of 90.1 Section 6.4.3.8. If the exception is taken, then DCV will not be included in the baseline, regardless of the outdoor air flow and occupant density.</p>
+<ul>
+<li>A value of &lsquo;True&rsquo; for a given zone indicates an exception applies to the zone.</li>
+<li>A value of &lsquo;False&rsquo; or no value indicates there is no exception.</li>
+</ul>
+<h2 id="has_health_safety_night_cycle_exception">has_health_safety_night_cycle_exception</h2>
+<p>Appendix G has a general requirement that fans should operate in a cycling mode during unoccupied hours (night cycle). An exception is allowed for spaces that have health or safety mandated minimum ventilation requirements during unoccupied hours.</p>
+<ul>
+<li>A value of &lsquo;True&rsquo; for a given zone indicates an exception applies to the zone.</li>
+<li>A value of &lsquo;False&rsquo; or no value indicates there is no exception.</li>
+</ul>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/" title="Building"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/" title="HVAC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1676906886"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1676906886"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1676906886"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1676906886"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1676906886"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1676906886"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1676906886"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1676906886"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1676906886"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

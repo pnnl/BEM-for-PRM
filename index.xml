@@ -8,16 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 15:06:59 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Key Capabilities</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/</guid>
-      <description>The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:
-Apply baseline envelope rules Space conditioning type Constructions Insulation levels Window-to-wall ratio Skylight-to-roof ratio Infiltration Apply baseline lighting rules Lighting power Lighting occupancy sensor control Determine and create baseline HVAC systems Remove user model HVAC Determine baseline HVAC based on building type and Appendix G rules Create new baseline HVAC systems Apply special rules for computer rooms and laboratories Size HVAC systems Appl HVAC efficiencies Apply fan power adjustments Apply baseline HVAC controls Rotate building model through cardinal directions Check for unmet load hours and rectify, if needed Handle additional compliance data Multiple building types Plug load measures Elevators Exterior lighting Interior lighting exceptions Number of systems per zone </description>
-    </item>
-    
-    <item>
       <title>Limitations</title>
       <link>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</link>
       <pubDate>Wed, 21 Sep 2022 14:48:14 -0700</pubDate>
@@ -25,6 +15,115 @@ Apply baseline envelope rules Space conditioning type Constructions Insulation l
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</guid>
       <description>Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:
 Baseline humidification is same as user model in the current tool. In some cases the baseline is required to be changed to adiabatic humidification. This has not been implemented. Baseline dehumidification is same as user model in the current tool. For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance.</description>
+    </item>
+    
+    <item>
+      <title>Performance Rating Method (PRM)</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/prm/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/prm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ASHRAE 90.1 Stable Baseline</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/stable_baseline/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/stable_baseline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automation Mechanism</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/mechanism/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/mechanism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Current Features</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/current_features/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/current_features/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appendix G PRM Rules</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/capabilities/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/capabilities/</guid>
+      <description>The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:
+Apply baseline envelope rules Space conditioning type Constructions Insulation levels Window-to-wall ratio Skylight-to-roof ratio Infiltration Apply baseline lighting rules Lighting power Lighting occupancy sensor control Determine and create baseline HVAC systems Remove user model HVAC Determine baseline HVAC based on building type and Appendix G rules Create new baseline HVAC systems Apply special rules for computer rooms and laboratories Size HVAC systems Appl HVAC efficiencies Apply fan power adjustments Apply baseline HVAC controls Rotate building model through cardinal directions Check for unmet load hours and rectify, if needed Handle additional compliance data Multiple building types Plug load measures Elevators Exterior lighting Interior lighting exceptions Number of systems per zone </description>
+    </item>
+    
+    <item>
+      <title>Comparison to Other Tools</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/comparison_tools/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/comparison_tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benefits</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/benefits/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/benefits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Installation &amp; Tutorial</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/measures/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/measures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gallery</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Use Case - Applications</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/use_case_applications/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/use_case_applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/tutorials/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/tutorials/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Examples</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/examples/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/examples/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -54,6 +153,15 @@ https://github.com/openstudiocoalition/OpenStudioApplication/releases</descripti
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
       <description>How to run the measure Before running the measure, review the model requirements in: Model Requirements
 Select &amp;ldquo;Components &amp;amp; Measures&amp;rdquo; from the top menu in the screen Select Whole Building/ Space Types in the Apply Measure window Click the arrow next to Space types to show available measures Select the &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure Make selections in the right-hand side of the window as needed Click on the Apply Measure at the bottom of the screen </description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</link>
+      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -113,6 +221,24 @@ Demo zip files demo1.zip (304 KB) demo2.zip (303 KB) demo3.</description>
     </item>
     
     <item>
+      <title>Troubleshooting</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</link>
+      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Best Practices</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</link>
+      <pubDate>Wed, 21 Sep 2022 15:05:48 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Standards space type</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</link>
       <pubDate>Wed, 21 Sep 2022 15:05:37 -0700</pubDate>
@@ -129,103 +255,6 @@ Demo zip files demo1.zip (304 KB) demo2.zip (303 KB) demo3.</description>
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/</guid>
       <description>The user model should have occupancy control of lighting incorporated into the lighing use schedules where it is required by ASHRAE 90.1-2019. The program will back-calculate the uncontrolled lighting schedules for the Baseline model based on the occupancy sensor reduction values in Appendix G Table G3.7.
 The user model needs to have a fully defined HVAC system. Most of the HVAC objects are deleted when the Appendix G Baseline is created, but some information is taken from the user model and transferred to the Baselne.</description>
-    </item>
-    
-    <item>
-      <title>User data: Airloop HVAC</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac/</guid>
-      <description>Airloop HVAC Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Air-side economizer economizer_exception_for_gas_phase_air_cleaning economizer_exception_for_open_refrigerated_cases Exhaust air energy recovery exhaust_energy_recovery_exception_for_toxic_fumes_etc exhaust_energy_recovery_exception_for_type1_kitchen_hoods exhaust_energy_recovery_exception_for_type_distributed_exhaust exhaust_energy_recovery_exception_for_dehumidifcation_with_series_cooling_recovery Airloop HVAC User Data CSV File: userdata_airloop_hvac.csv (988 B) The user_data_airloop_hvac.csv contains compliance data for airloop HVAC compliance calculation. A sample of data record is shown below.
-Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC object in the proposed model.</description>
-    </item>
-    
-    <item>
-      <title>User data: Airloop HVAC DOAS</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas/</guid>
-      <description>Airloop HVAC DOAS Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Airloop HVAC DOAS User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) The user_data_airloop_hvac_doas.csv contains compliance data for airloop HVAC DOAS compliance calculation. A sample of data record is shown below.
-Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC DOAS object in the proposed model.</description>
-    </item>
-    
-    <item>
-      <title>User data: Building</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_building/</guid>
-      <description>Building building_type_for_hvac building_type_for_swh building_type_for_wwr is_exempt_from_rotations Building User Data CSV File: userdata_building.csv (97 B) The user_data_building.csv contains compliance data for building compliance calculation. A sample of data record is shown below.
-building_type_for_hvac This field is used to determine the baseline model&amp;rsquo;s HVAC system. It can be overwritten at the zone level (see the documentation for user_data_thermal_zone.csv). It should be set to one of the following values that best described the proposed model&amp;rsquo;s building type.</description>
-    </item>
-    
-    <item>
-      <title>User data: Outdoor Air</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_design_specification_outdoor_air/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_design_specification_outdoor_air/</guid>
-      <description> User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) </description>
-    </item>
-    
-    <item>
-      <title>User Data: Exterior Lights</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/</link>
-      <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights/</guid>
-      <description>Exterior Lights end_use_subcategory Tradeable Exterior Lighting Subcategories Non-Tradeable Exterior Lighting Subcategories end_use_measurement_value Exterior Lights User Data CSV File: userdata_exterior_lights.csv (467 B) The user_data_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. A sample of data record is shown below.
-end_use_subcategory Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:</description>
-    </item>
-    
-    <item>
-      <title>User data: Electric Equip</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_electric_equipment/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_electric_equipment/</guid>
-      <description> User Data CSV File: userdata_electric_equipment.csv (411 B) </description>
-    </item>
-    
-    <item>
-      <title>User data: Gas Equip</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_gas_equipment/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_gas_equipment/</guid>
-      <description> User Data CSV File: userdata_gas_equipment.csv (65 B) </description>
-    </item>
-    
-    <item>
-      <title>User data: Lights</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights/</guid>
-      <description>Lights has_retail_display_exception has_unregulated_exception unregulated_category Lights User Data CSV File: userdata_lights.csv (81 B) The user_data_lights.csv contains compliance data for lights compliance calculation. A sample of data record is shown below.
-has_retail_display_exception Set this field to yes if the lights object qualifies as display lighting: the lighting must be specifically designed and directed to highlight merchandise and separately controlled from the general lighting. If it doesn&amp;rsquo;t apply, leave this field blank or set to no.</description>
-    </item>
-    
-    <item>
-      <title>User data: Space</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/</guid>
-      <description>User Data CSV File: userdata_space.csv (745 B) The user_data_space.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries.
-The user_data_space.csv file allows the application of multiple lighting space types to a single Space object in the model. Each lighting space type entered into the user_data_space_type.csv file must be paired with a fraction value to indicate the percentage of the floor area for spaces that is to be assigned to that lighting space type.</description>
-    </item>
-    
-    <item>
-      <title>User data: Space type</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/</guid>
-      <description>User Data CSV File: userdata_spacetype.csv (723 B) The user_data_space_type.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries.
-The user_data_space_type.csv file allows the application of multiple lighting space types to a single SpaceType object in the model. Each lighting space type entered into the user_data_space_type.csv file must be paired with a fraction value to indicate the percentage of the floor area for spaces that is to be assigned to that lighting space type.</description>
     </item>
     
     <item>
@@ -249,60 +278,157 @@ Building Area Types Baseline building vertical fenestration percentage of gross-
     </item>
     
     <item>
-      <title>User data: Thermal Zone</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/</link>
+      <title>Space</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space/</guid>
+      <description>User Data CSV File: userdata_space.csv (745 B) The user_data_space.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries.
+The user_data_space.csv file allows the application of multiple lighting space types to a single Space object in the model. Each lighting space type entered into the user_data_space_type.csv file must be paired with a fraction value to indicate the percentage of the floor area for spaces that is to be assigned to that lighting space type.</description>
+    </item>
+    
+    <item>
+      <title>Space type</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space_type/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space_type/</guid>
+      <description>User Data CSV File: userdata_spacetype.csv (723 B) The user_data_space_type.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries.
+The user_data_space_type.csv file allows the application of multiple lighting space types to a single SpaceType object in the model. Each lighting space type entered into the user_data_space_type.csv file must be paired with a fraction value to indicate the percentage of the floor area for spaces that is to be assigned to that lighting space type.</description>
+    </item>
+    
+    <item>
+      <title>Building</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/</guid>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/</guid>
+      <description>Building building_type_for_hvac building_type_for_swh building_type_for_wwr is_exempt_from_rotations Building User Data CSV File: userdata_building.csv (97 B) The user_data_building.csv contains compliance data for building compliance calculation. A sample of data record is shown below.
+building_type_for_hvac This field is used to determine the baseline model&amp;rsquo;s HVAC system. It can be overwritten at the zone level (see the documentation for user_data_thermal_zone.csv). It should be set to one of the following values that best described the proposed model&amp;rsquo;s building type.</description>
+    </item>
+    
+    <item>
+      <title>Thermal Zone</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/</guid>
       <description>User Data CSV File: userdata_thermal_zone.csv (114 B) File Name: userdata_thermal_zone.csv name: Name of the thermal zone object in the model.
 building_type_for_hvac This is the building type designation used for determining the Appendix G baseline system type. Valid entries are:
 residential public assembly heated-only storage retail other nonresidential unconditioned hospital number_of_systems This allows multiple systems to be modeled conceptually in a single thermal zone. This could be used when a single thermal zone in the model is used to represent multiple thermal zones in the actual building.</description>
     </item>
     
     <item>
-      <title>User data: Water Connections</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_connections/</link>
+      <title>Zone HVAC</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_connections/</guid>
-      <description> User Data CSV File: userdata_wateruse_connections.csv (82 B) </description>
-    </item>
-    
-    <item>
-      <title>User data: Water Equip Def</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment_definition/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment_definition/</guid>
-      <description> User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) </description>
-    </item>
-    
-    <item>
-      <title>User data: Water Equipment</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_wateruse_equipment/</guid>
-      <description> User Data CSV File: userdata_wateruse_equipment.csv (22 B) </description>
-    </item>
-    
-    <item>
-      <title>User data: Zone HVAC</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac/</guid>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/</guid>
       <description>Zone HVAC Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Zone HVAC User Data CSV File: userdata_zone_hvac.csv (896 B) The user_data_zone_hvac.csv contains compliance data for zone HVAC compliance calculation. A sample of data record is shown below.
 Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each zone HVAC object in the proposed model.</description>
     </item>
     
     <item>
-      <title>User data: Zone Infiltration</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_infiltration/</link>
+      <title>Zone Infiltration</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_infiltration/</guid>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/</guid>
       <description> User Data CSV File: userdata_zone_infiltration.csv (19 B) </description>
+    </item>
+    
+    <item>
+      <title>Airloop HVAC</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/</guid>
+      <description>Airloop HVAC Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Air-side economizer economizer_exception_for_gas_phase_air_cleaning economizer_exception_for_open_refrigerated_cases Exhaust air energy recovery exhaust_energy_recovery_exception_for_toxic_fumes_etc exhaust_energy_recovery_exception_for_type1_kitchen_hoods exhaust_energy_recovery_exception_for_type_distributed_exhaust exhaust_energy_recovery_exception_for_dehumidifcation_with_series_cooling_recovery Airloop HVAC User Data CSV File: userdata_airloop_hvac.csv (988 B) The user_data_airloop_hvac.csv contains compliance data for airloop HVAC compliance calculation. A sample of data record is shown below.
+Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC object in the proposed model.</description>
+    </item>
+    
+    <item>
+      <title>Airloop HVAC DOAS</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac_doas/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac_doas/</guid>
+      <description>Airloop HVAC DOAS Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Airloop HVAC DOAS User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) The user_data_airloop_hvac_doas.csv contains compliance data for airloop HVAC DOAS compliance calculation. A sample of data record is shown below.
+Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC DOAS object in the proposed model.</description>
+    </item>
+    
+    <item>
+      <title>Outdoor Air</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_design_specification_outdoor_air/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_design_specification_outdoor_air/</guid>
+      <description> User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) </description>
+    </item>
+    
+    <item>
+      <title>Electric Equipment</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_electric_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_electric_equipment/</guid>
+      <description> User Data CSV File: userdata_electric_equipment.csv (411 B) </description>
+    </item>
+    
+    <item>
+      <title>Gas Equipment</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_gas_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_gas_equipment/</guid>
+      <description> User Data CSV File: userdata_gas_equipment.csv (65 B) </description>
+    </item>
+    
+    <item>
+      <title>Lights</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/</guid>
+      <description>Lights has_retail_display_exception has_unregulated_exception unregulated_category Lights User Data CSV File: userdata_lights.csv (81 B) The user_data_lights.csv contains compliance data for lights compliance calculation. A sample of data record is shown below.
+has_retail_display_exception Set this field to yes if the lights object qualifies as display lighting: the lighting must be specifically designed and directed to highlight merchandise and separately controlled from the general lighting. If it doesn&amp;rsquo;t apply, leave this field blank or set to no.</description>
+    </item>
+    
+    <item>
+      <title>Exterior Lights</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</link>
+      <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</guid>
+      <description>Exterior Lights end_use_subcategory Tradeable Exterior Lighting Subcategories Non-Tradeable Exterior Lighting Subcategories end_use_measurement_value Exterior Lights User Data CSV File: userdata_exterior_lights.csv (467 B) The user_data_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. A sample of data record is shown below.
+end_use_subcategory Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:</description>
+    </item>
+    
+    <item>
+      <title>Water Connections</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</guid>
+      <description> User Data CSV File: userdata_wateruse_connections.csv (82 B) </description>
+    </item>
+    
+    <item>
+      <title>Water Equipment</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment.csv (22 B) </description>
+    </item>
+    
+    <item>
+      <title>Water Equip Definition</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</guid>
+      <description> User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) </description>
     </item>
     
   </channel>
