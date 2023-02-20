@@ -1,9 +1,9 @@
 ---
 title: "Limitations"
 date: 2022-09-21T14:48:14-07:00
-weight: 12
+weight: 14
 draft: false
-pre: "<b>- </b>"
+pre: "<b> </b>"
 ---
 
 Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:
