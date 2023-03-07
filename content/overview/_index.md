@@ -9,8 +9,11 @@ chapter = true
 
 # What is OSSTD-PRM
 
-The "Create ASHRAE 90.1-2019 PRM Model" measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.
+The purpose of this documentation is to be a reference for the OSSTD-PRM tool that can be used to demonstrate compliance with the ASHRAE 90.1 standard and to rate the energy efficiency of commercial and high-rise residential buildings with designs that exceed the requirements of Standard 90.1.
 
-Since Appendix G began using a "stable baseline" approach beginning with the 2016 version, the 2019 baseline will be nearly the same as the 2016 version. Some differences are outlined [here](/BEM-for-PRM/overview/limitations).
+**OpenStudio Standards (OSSTD)** is a collection of measures and resources that automate the construction of prototype building models (e.g., office, hospital, primary school) as well as the transformations associated with *ASHRAE Standard 90.1 Appendix G Performance Rating Method (PRM)*, a commonly exercised transformation that supports code compliance, LEED certification, and utility incentive calculations.
 
-At this time, only a Baseline model is created by the tool. A future version is planned that will also create a Proposed model.
+**OSSTD-PRM** is a tool that includes the *“Create ASHRAE 90.1-2019 PRM Model”* measure to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method. 
+While the tool currently creates a ‘baseline’ model, a future version is planned for a ‘proposed’ model. 
+
+The following sections provide details on the ASHRAE 90.1 Appendix G (PRM) and stable baseline that OSSTD-PRM is grounded on.
