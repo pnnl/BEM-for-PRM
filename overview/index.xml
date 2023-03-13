@@ -13,8 +13,8 @@
       <pubDate>Wed, 21 Sep 2022 14:48:14 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</guid>
-      <description>Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:
-Baseline humidification is same as user model in the current tool. In some cases the baseline is required to be changed to adiabatic humidification. This has not been implemented. Baseline dehumidification is same as user model in the current tool. For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance.</description>
+      <description>Current Limitations of the OSSTD-PRM Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are summarized below.
+PRM Rules and Differences System 90.1 Appendix G version Baseline Model Proposed Model Space and SWH system 2016 Separate System Combined System 2019 Single Central SWH System Combined System Receptacle Control 2016 No credit 2019 Allows credit Infiltration leakage rate 2016 0.4 cfm/sf at 0.3 in water 0.</description>
     </item>
     
   </channel>
