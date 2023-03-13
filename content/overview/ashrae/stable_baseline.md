@@ -15,4 +15,10 @@ pre: "<b>- </b>"
 > - Instead, as the standard becomes more stringent, a greater level of improvement over the stable baseline is required. The 2004 version of the standard has been used for defining the baseline performance. 
 > - This version of the standard has been used as a benchmark by ASHRAE and the US DOE for evaluating the stringency of more recent versions of Standard 90.1 and now it is used as a stable baseline for all performance calculations. Each consecutive version of the Standard would update the target PCI without modifying the stringency of the baseline building requirements.
 
+{{< line_break >}}
 
+#### Appendix G Moving Baseline vs. Stable Baseline
+
+The image below compares the Appendix G "moving baseline" and the "stable baseline".
+
+![Stable Baseline vs. Moving Baseline](/BEM-for-PRM/content/overview/ashrae/images/baseline_stable_moving.jpg?width=800px&align=left&classes=border)

@@ -23,9 +23,9 @@ The benefits of automating the stable baseline include:
 - Time
     - Reduce Labor
     - Minimize disruptions in permit application
- - Cost
-   - Reduce company training cost
-   - Reduce data entry errors
- - Opportunities
-   - Standardized reporting (ASHRAE 229)
-   - OpenStudio measure integrations
+- Cost
+    - Reduce company training cost
+    - Reduce data entry errors
+- Opportunities
+    - Standardized reporting (ASHRAE 229)
+    - OpenStudio measure integrations
