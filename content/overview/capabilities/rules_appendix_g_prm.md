@@ -5,6 +5,9 @@ weight: 122
 draft: false
 pre: "<b>- </b>"
 ---
+### Appendix G Performance Rating Method Rules and OSSTD-PRM
+
+{{< line_break >}}
 
 The "Create ASHRAE 90.1-2019 PRM Model" measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model: 
 - Apply baseline envelope rules
@@ -23,9 +26,9 @@ The "Create ASHRAE 90.1-2019 PRM Model" measure provides a detailed implementati
   - Create new baseline HVAC systems
   - Apply special rules for computer rooms and laboratories
 - Size HVAC systems
-- Appl HVAC efficiencies
-- Apply fan power adjustments
-- Apply baseline HVAC controls
+  - Apply HVAC efficiencies
+  - Apply fan power adjustments
+  - Apply baseline HVAC controls
 - Rotate building model through cardinal directions
 - Check for unmet load hours and rectify, if needed
 - Handle additional compliance data

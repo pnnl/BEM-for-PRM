@@ -52,7 +52,7 @@ The OSW file can be structured as shown in the image below.
 ![OS Workflow Structure](/BEM-for-PRM/get_start/os_app/images/osw.JPG?width=600px&align=left&classes=border)
 
 {{% notice tip %}}
-**Importnat Note:**
+**Important Note:**
 The directory names are not case sensitive. If you want to change the names of the directories that contain the seed model and weather file, make sure to define the paths in the OSW file.
 {{% /notice %}}
 
