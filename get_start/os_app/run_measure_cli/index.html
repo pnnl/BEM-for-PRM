@@ -12,22 +12,22 @@
     <title>Run measure in CLI : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1680551280" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1680551280" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1680551440" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1680551440" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1680551280" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1680551440" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1680551280" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1680551280" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1680551440" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1680551440" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1680551280"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1680551440"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1680551280"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1680551280"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1680551440"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1680551440"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1680551280"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1680551440"></script>
 
     
   </div>
@@ -1646,7 +1646,7 @@
 
 
 <h4 id="introduction">Introduction</h4>
-<p>This guide is intended to provide instructions on how to run the <em>Create ASHRAE 90.1-2019 PRM Model</em> measure via the <a href="http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/">command line interface (CLI)</a>.</p>
+<p>This guide is intended to provide instructions on how to run the <em>Create ASHRAE 90.1-2019 PRM Model</em> measure via the <a href="http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/">command line interface (CLI)</a>. This allows the use of an updated version of the OpenStudio Standards package, which is not accessible through the OpenStudio App.</p>
 <p>Note: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.5).</p>
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h4 id="background">Background</h4>
@@ -1667,7 +1667,7 @@
 </section>
 
 <h5 id="setup">Setup</h5>
-<p>To get started :</p>
+<p>To get started:</p>
 <ol>
 <li>Download and install <a href="https://github.com/NREL/OpenStudio/releases/tag/v3.5.0">OpenStudio v3.5.0</a> using the default components selection.</li>
 <li>Download this <a href="https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip">openstudio-standards package</a>. Unzip the package to a local directory.</li>
@@ -1675,19 +1675,19 @@
 <li>Setup a local directory to include all required inputs (the following example is one way to setup the directory):</li>
 </ol>
 <ul>
-<li><strong>Seed mode</strong>: place the <code>.osm</code> file in a directory named <code>files</code>. The Openstudio model should meet the <a href="https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/">model requirements</a>.</li>
+<li><strong>Seed model</strong>: place the <code>.osm</code> file in a directory named <code>files</code>. The Openstudio model should meet the <a href="https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/">model requirements</a>.</li>
 <li><strong>Weather file</strong>: place the <code>.epw</code> file in a directory named <code>weather</code>.</li>
 <li><strong>Measure</strong>: place the <code>CreateBaselineBuilding</code> measure in a directory called <code>measures</code>.</li>
 <li><strong>OS Workflow</strong>: place the <code>.osw</code> file in the main directory.</li>
 <li><strong>User Data (<em>Optional</em>)</strong>: place the <code>.csv</code> file in the main directory (same level as the <code>.osw</code>). The use of the user data can be found in the <a href="https://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/">add compliance data section</a>.</li>
 </ul>
-<p>The image below shows one way to setup the main directory and their correponding sub-directories.</p>
+<p>The image below shows one way to setup the main directory and their corresponding sub-directories.</p>
 <p><img src="/BEM-for-PRM/get_start/os_app/images/DirectSetup.JPG?width=800px&amp;align=left&amp;classes=border" alt="Directory Setup"></p>
 <p>The OSW file can be structured as shown in the image below.</p>
 <ul>
 <li>Lines 2-3 define the seed model and weather file.</li>
 <li>Lines 4-5 define the measure path.</li>
-<li>Lines 9-14 contain arguments to be passed to the measure. A detail description of the arguments can be found in the <a href="https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/">API document</a>.</li>
+<li>Lines 9-14 contain arguments to be passed to the measure. A detailed description of the arguments can be found in the <a href="https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/">API document</a>.</li>
 </ul>
 <p><img src="/BEM-for-PRM/get_start/os_app/images/osw.JPG?width=600px&amp;align=left&amp;classes=border" alt="OS Workflow Structure"></p>
 
@@ -1698,18 +1698,18 @@ The directory names are not case sensitive. If you want to change the names of t
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h4 id="execution">Execution</h4>
 <ul>
-<li>Open Command Prompt as an adminstrator.</li>
+<li>Open Command Prompt as an administrator.</li>
 <li>Type the following command with paths to the <strong>openstudio\bin</strong>, <strong>openstudio-standard\lib</strong> and the <strong>OSW</strong> directories.<br>
 <code>C:\openstudio-3.5.0\bin\openstudio.exe -I &quot;[LOCAL_PATH]\openstudio-standard\lib&quot; run -w &quot;[LOCAL_PATH]\workflow.osw&quot;</code></li>
 </ul>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#e6db74">C</span>:\openstudio<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">5</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>\bin\openstudio<span style="color:#f92672">.</span>exe  <span style="color:#f92672">-</span>I <span style="color:#e6db74">&#34;C:\Users</span><span style="color:#ae81ff">\e</span><span style="color:#e6db74">xample_user\openstudio-standard\lib&#34;</span> run <span style="color:#f92672">-</span>w <span style="color:#e6db74">&#34;C:\Users</span><span style="color:#ae81ff">\e</span><span style="color:#e6db74">xample_user</span><span style="color:#ae81ff">\b</span><span style="color:#e6db74">aselinePRM</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">est.osw&#34;</span>
 </span></span></code></pre></div>
-<div class="notices warning" ><p>The <code>-I</code> command shall pointing to the local directory of the <a href="https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip">Openstudio-standards</a>.</p>
+<div class="notices warning" ><p>The <code>-I</code> command shall point to the local directory of the <a href="https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip">Openstudio-standards</a>.</p>
 </div>
 
 
-<div class="notices tip" ><p>If the openstudio command is not recognized, either add the executable to your environemnt PATH or add the full length to the <code>openstudio-3.5.0\bin</code> directory.
+<div class="notices tip" ><p>If the openstudio command is not recognized, either add the executable to your environment PATH or add the full path to the <code>openstudio-3.5.0\bin</code> directory.
 It is advised to avoid spaces in file and directory names. Use quotation marks when specifying long file names or paths with spaces.</p>
 </div>
 
@@ -1719,9 +1719,13 @@ It is advised to avoid spaces in file and directory names. Use quotation marks w
 
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h4 id="output">Output</h4>
-<p>Once the workflow is completed:</p>
+<p>Once the workflow simulation is <strong>completed</strong>:</p>
 <ul>
 <li>An output OSW file <code>out.osw</code> is written to indicate whether or not the simulation run was successful.</li>
+</ul>
+<p>Once the workflow is completed <strong>unsuccessfully (fails)</strong> :</p>
+<ul>
+<li>A <code>run</code> directory is generated with a <code>run.log</code> file that contains the error message.</li>
 </ul>
 <p>Once the workflow is completed <strong>successfully</strong>:</p>
 <ul>
@@ -2666,16 +2670,16 @@ It is advised to avoid spaces in file and directory names. Use quotation marks w
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1680551280"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1680551280"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1680551280"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1680551280"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1680551280"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1680551280"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1680551440"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1680551440"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1680551440"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1680551440"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1680551440"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1680551440"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1680551280"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1680551280"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1680551280"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1680551440"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1680551440"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1680551440"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

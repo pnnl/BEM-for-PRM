@@ -72,8 +72,10 @@ Software Developers: Software developers can use the PRM-RM modeling guidelines 
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</guid>
-      <description>Get The OpenStudio Application The OpenStudio application can be found on the github page for the OpenStudio Coalition. The application provides a graphical user interface to the OpenStudio engine, and the engine is included in the download package.
-https://github.com/openstudiocoalition/OpenStudioApplication/releases</description>
+      <description>Get The OpenStudio Application The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.
+Installation Download the latest release of OpenStudio application from OpenStudio Coalition github page. Select the installer that matches your operating system.
+The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
+For more information, refer to the installation instructions by the OpenStudio Coalition.</description>
     </item>
     
     <item>
@@ -82,7 +84,10 @@ https://github.com/openstudiocoalition/OpenStudioApplication/releases</descripti
       <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</guid>
-      <description>Where to find OSSTD create baseline measure and how to install From the OpenStudio Application interface, select Components &amp;amp; Measures from the menu at the top. Search for &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; Select the &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure in the search result, and select Download Close the intall measure window </description>
+      <description>This page provides details on where to find OSSTD create baseline measure and how to install it.
+Launch the OpenStudio application by clicking on the executable &amp;ldquo;OpenStudioApp.exe&amp;rdquo; located in the \bin folder under the installation directory. The default installation directory is C:\openstudioapplication-x.x.x where x.x.x defines the version.
+From the OpenStudio Application interface, select Components &amp;amp; Measures from the menu at the top.
+Navigate to Whole Building in the categories list.</description>
     </item>
     
     <item>
@@ -91,8 +96,8 @@ https://github.com/openstudiocoalition/OpenStudioApplication/releases</descripti
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
-      <description>How to run the measure Before running the measure, review the model requirements in: Model Requirements
-Select &amp;ldquo;Components &amp;amp; Measures&amp;rdquo; from the top menu in the screen Select Whole Building/ Space Types in the Apply Measure window Click the arrow next to Space types to show available measures Select the &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure Make selections in the right-hand side of the window as needed Click on the Apply Measure at the bottom of the screen </description>
+      <description>How to run the measure Before running the measure, review the model requirements in Model Requirements
+Navigate to the Measures tab from the vertical list on the left side of the interface. Select the Create ASHRAE 90.1-2019 PRM Model measure under Whole Building &amp;gt; Space Types from the library (right side) and drag it into the OpenStudio Measures section (left side). After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the Edit tab (right side).</description>
     </item>
     
     <item>
@@ -110,9 +115,8 @@ Select &amp;ldquo;Components &amp;amp; Measures&amp;rdquo; from the top menu in 
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</guid>
-      <description>Introduction This guide is intended to provide instructions on how to run the Create ASHRAE 90.1-2019 PRM Model measure via the command line interface (CLI).
-Note: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.5).
-Background The Create ASHRAE 90.1-2019 PRM Model measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.</description>
+      <description>Introduction This guide is intended to provide instructions on how to run the Create ASHRAE 90.1-2019 PRM Model measure via the command line interface (CLI). This allows the use of an updated version of the OpenStudio Standards package, which is not accessible through the OpenStudio App.
+Note: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.</description>
     </item>
     
     <item>
