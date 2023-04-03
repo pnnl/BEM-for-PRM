@@ -4,7 +4,7 @@
 	"title": "Overview",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 1 What is OSSTD-PRM The \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.\nSince Appendix G began using a \u0026ldquo;stable baseline\u0026rdquo; approach beginning with the 2016 version, the 2019 baseline will be nearly the same as the 2016 version. Some differences are outlined here.\nAt this time, only a Baseline model is created by the tool. A future version is planned that will also create a Proposed model.\n"
+	"content": "Chapter 1 What is OSSTD-PRM The purpose of this documentation is to be a reference for the OSSTD-PRM tool that can be used to demonstrate compliance with the ASHRAE 90.1 standard and to rate the energy efficiency of commercial and high-rise residential buildings with designs that exceed the requirements of Standard 90.1.\nOpenStudio Standards (OSSTD) is a collection of measures and resources that automate the construction of prototype building models (e.g., office, hospital, primary school) as well as the transformations associated with ASHRAE Standard 90.1 Appendix G Performance Rating Method (PRM), a commonly exercised transformation that supports code compliance, LEED certification, and utility incentive calculations.\nOSSTD-PRM is a tool that includes the “Create ASHRAE 90.1-2019 PRM Model” measure to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method. While the tool currently creates a ‘baseline’ model, a future version is planned for a ‘proposed’ model.\nThe following sections provide details on the ASHRAE 90.1 Appendix G (PRM) and stable baseline that OSSTD-PRM is grounded on.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/",
@@ -25,28 +25,28 @@
 	"title": "ASHRAE 90.1 Appendix G",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "ASHRAE 90.1 Appendix G Performance Rating Method (PRM) The ASHRAE 90.1 Appendix G Performance Rating Method can be used to demonstrate compliance with the standard and to rate the energy efficiency of commercial and high-rise residential buildings with designs that exceed the requirements of Standard 90.1.\nEvaluate building energy performance using annual simulation Demonstrate code compliance and allowance for trade-offs after meeting mandatory requirements Quantify performance in excess of the standard Benefits The benefits of automating the stable baseline include:\nTime Reduce Labor Minimize disruptions in permit application Cost Reduce company training cost Reduce data entry errors Opportunities Standardized reporting (ASHRAE 229) OpenStudio measure integrations "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/features/",
 	"title": "Features",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Current Features of the OSSTD-PRM Here are some key features of the OSSTD-PRM:\nAutomating the 90.1 baseline generation that can help to addres accuracy and tuning of the models. Flexibility for the baseline generation. Model system transformation instead of model transformations. API calls for specific systems without running through the entire baseline generation With \u0026lsquo;rule-set\u0026rsquo; specific data not typically found in the EnergyPlus model (space), mixed typologies can be adressed through the use of compliance datasets that are included in our user documentation. There are currently 16 .csv files in the ‘compliance data’ set, each covering a specific set of /ASHRAE 90.1-2019 compliance data to OpenStudio object. The tool includes ‘compliance data’ as a set of .csv files with fixed format to improve accuracy of the PRM model. This data can be used in the ASHRAE 90.1-2019 PRM method to provide additional information that cannot be found in the OpenStudio Model (e.g., motor power). "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/",
 	"title": "Capabilities",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Current Capabilities of the OSSTD-PRM Automation Mechanism OpenStudio software facilitates the creation and manipulation of building energy models\nOpenStudio Software Development Kt (SDK) is the engine OpenStudio Application is the graphical user interface (GUI) OpenStudio Standards is a Ruby Gem add-on measure that: Includes Appendix G Baseline Automation Stable Baseline "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/limitations/",
 	"title": "Limitations",
 	"tags": [],
 	"description": "",
-	"content": "Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are as follows:\nBaseline humidification is same as user model in the current tool. In some cases the baseline is required to be changed to adiabatic humidification. This has not been implemented. Baseline dehumidification is same as user model in the current tool. For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance. This is not yet implemented, and must be handled via post-processing or an EMS applied to the Baseline model. Baseline transformer efficiencies have not been implemented. Where service water heater systems in the user model are comprised of multiple distributed systems, the Appendix G model is required to use a single central system. The conversion to a central system has not yet been implemented. For models where design ventilation rates are greater than that required by code, then the rules of Appendix G state that the Baseline ventilation rate shall be based on the building code, and will be lower than the user model. The ability to model this difference has not yet been implemented. Some Appendix G requirements for district energy systems have not yet been implemented. Efficiency requirements for motors serving miscellaneous electrical equipment have not yet been implemented. Efficiency requirements for commercial refrigeration equipment have not yet been implemented. The baseline requirement has not yet been implemented where lab exhaust fans must be modeled as constant horsepower, reflecting constant-volume stack discharge with outdoor air bypass. The rules of the 2016 version of 90.1 Appendix G are very similar to the 2019 version. Some differences are as follows:\nIn 2016, if Proposed model has combined space/SWH system, the Baseline shall use separate systems. In 2019, a single central SWH system is to be used. This is similar, but maybe not identical to the 2016 version. The 2019 version has rules to allow credit for receptacle control, which are not present in the 2016 version. In 2016, the infiltration leakage rate is the same in Proposed and Baseline, at 0.4 cfm/sf at 0.3 in water. In 2019, the Proposed model is specified as 0.6 cfm/sf and the Baseline is at 1.0 cfm/sf at 0.3 in water. "
+	"content": "Current Limitations of the OSSTD-PRM Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are summarized below.\nPRM Rules and Differences System 90.1 Appendix G version Baseline Model Proposed Model Space and SWH system 2016 Separate System Combined System 2019 Single Central SWH System Combined System Receptacle Control 2016 No credit 2019 Allows credit Infiltration leakage rate 2016 0.4 cfm/sf at 0.3 in water 0.4 cfm/sf at 0.3 in water 2019 1.0 cfm/sf at 0.3 in water 0.6 cfm/sf in water Features System Item Baseline Model vs. Proposed Model Notes HVAC components Humidification Same as proposed model in the tool. In some cases, the baseline is required to be changed to adiabatic humidification. This has not been implemented Humidification For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance This is not yet implemented. It must be handled via post-processing, or an EMS applied to the Baseline model. SWH Where service water heater systems in the user model are comprised of multiple distributed systems, the Appendix G model is required to use a single central system. The conversion to a central system has not yet been implemented. Design Ventilation Rates For models where design ventilation rates are greater than that required by code, then the rules of Appendix G state that the Baseline ventilation rate shall be based on the building code and will be lower than the user model. The ability to model this difference has not yet been implemented. DES Some Appendix G requirements for district energy systems have not yet been implemented. Lab exhaust fans The baseline requirement has not yet been implemented where lab exhaust fans must be modeled as constant horsepower, reflecting constant-volume stack discharge with outdoor air bypass. Equipment Transformer Efficiencies Baseline transformer efficiencies have not been implemented. Motor Efficiencies Efficiency requirements for motors serving miscellaneous electrical equipment have not yet been implemented. Commercial refrigeration equipment Efficiency requirements for commercial refrigeration equipment have not yet been implemented. "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/",
@@ -84,60 +84,25 @@
 	"content": "Chapter 3.3 PRM API Reference A detail API reference to walk through functions in the OpenStudio Standard PRM method.\n"
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/ashrae/prm/",
-	"title": "Performance Rating Method (PRM)",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/ashrae/stable_baseline/",
 	"title": "ASHRAE 90.1 Stable Baseline",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Appendix G uses a stable baseline approach with efficiency levels set at values that are not intended to be updated with each new addition of the code. Instead, the proposed building energy performance needs to exceed that of the baseline by an amount commensurate with the code year being evaluated.\nBackground These changes came about with the modeling procedures in the 2016 standard, that are fundamentally different from previous versions in that the baseline building is fixed to be roughly equal in stringency to Standard 90.1-2004 and compliance is determined through a metric called Performance Cost Index (PCI). Prior to 2016, the Appendix G baseline building stringency changed with each version of Standard 90.1 and sometimes with each addendum that created much confusion for software developers, energy modelers and program administrators. For many use-cases, an excessive amount of time was spent creating the baseline building and verifying its correctness. With the new procedure, the intent is that the baseline building stringency does not change. Instead, as the standard becomes more stringent, a greater level of improvement over the stable baseline is required. The 2004 version of the standard has been used for defining the baseline performance. This version of the standard has been used as a benchmark by ASHRAE and the US DOE for evaluating the stringency of more recent versions of Standard 90.1 and now it is used as a stable baseline for all performance calculations. Each consecutive version of the Standard would update the target PCI without modifying the stringency of the baseline building requirements. Appendix G Moving Baseline vs. Stable Baseline The image below compares the Appendix G \u0026ldquo;moving baseline\u0026rdquo; and the \u0026ldquo;stable baseline\u0026rdquo;.\n"
 },
 {
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/mechanism/",
-	"title": "Automation Mechanism",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/features/current_features/",
-	"title": "Current Features",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/capabilities/",
+	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/rules_appendix_g_prm/",
 	"title": "Appendix G PRM Rules",
 	"tags": [],
 	"description": "",
-	"content": "The \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:\nApply baseline envelope rules Space conditioning type Constructions Insulation levels Window-to-wall ratio Skylight-to-roof ratio Infiltration Apply baseline lighting rules Lighting power Lighting occupancy sensor control Determine and create baseline HVAC systems Remove user model HVAC Determine baseline HVAC based on building type and Appendix G rules Create new baseline HVAC systems Apply special rules for computer rooms and laboratories Size HVAC systems Appl HVAC efficiencies Apply fan power adjustments Apply baseline HVAC controls Rotate building model through cardinal directions Check for unmet load hours and rectify, if needed Handle additional compliance data Multiple building types Plug load measures Elevators Exterior lighting Interior lighting exceptions Number of systems per zone "
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/features/comparison_tools/",
-	"title": "Comparison to Other Tools",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": "Appendix G Performance Rating Method Rules and OSSTD-PRM The \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:\nApply baseline envelope rules Space conditioning type Constructions Insulation levels Window-to-wall ratio Skylight-to-roof ratio Infiltration Apply baseline lighting rules Lighting power Lighting occupancy sensor control Determine and create baseline HVAC systems Remove user model HVAC Determine baseline HVAC based on building type and Appendix G rules Create new baseline HVAC systems Apply special rules for computer rooms and laboratories Size HVAC systems Apply HVAC efficiencies Apply fan power adjustments Apply baseline HVAC controls Rotate building model through cardinal directions Check for unmet load hours and rectify, if needed Handle additional compliance data Multiple building types Plug load measures Elevators Exterior lighting Interior lighting exceptions Number of systems per zone "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/features/benefits/",
 	"title": "Benefits",
 	"tags": [],
 	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/measures/",
-	"title": "Installation &amp; Tutorial",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": " Here are some key benefits of using the OSSTD-PRM: OpenStudio provides an Application Programming Interface (API) to access the EnergyPlus modeling engine providing some key benefits:\nStable Version controlled interface Space typology abstractions Ease for end-users to model buildings Accessibility with language bindings in Ruby, Python and C Sharp Command Line Interface (CLI) is a powerful, cross-platform tool that allows users to run OpenStudio based workflows on supported architectures such as Linux, Windows and Mac. OpenStudio Measures is a scripting facility that uses Ruby (and soon to extend support for Python) scripts to automate model queries and transformations and to incrementally extend and customize the platform. These Measures perform transformations that correspond to energy conservation measures—that’s the origin of the name—that range from simple lighting power density reductions to complex and context sensitive daylighting transformations, create custom reports, and link energy simulation to other analyses.\nOSSTD-PRM\nStable platform for existing users and third-party tool while enabling development of new applications Improve runtime execution Reduce computation costs Improve accessibility of modeling capabilities using SDK, CLI and/or language bindings Expand the range of equipment available for simulations Provide easier access to analytical tools Code, documentation, and discussions related to the software and its documentation are in the open, and the algorithms and procedures used in the software are open to audit and validation Transparency in process and development using GitHub and ‘git’ version control "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/",
@@ -148,45 +113,31 @@
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/use_case_applications/",
-	"title": "Use Case - Applications",
+	"title": "Use Cases and Applications",
 	"tags": [],
 	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/tutorials/",
-	"title": "Tutorials",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://pnnl.github.io/BEM-for-PRM/overview/capabilities/examples/",
-	"title": "Examples",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": "Here are some use cases for the OSSTD-PRM Energy Modelers: can use the OSSTD-PRM measure to automatically generate the baseline building and refer to PRM-RM for rules on generating the model of the proposed design.\nSoftware Developers: Software developers can use the PRM-RM modeling guidelines to customize their software to automatically create the baseline building model and assure that schedules and other modeling assumptions are neutral. The PRM-RM also defines contents for a standard output report that address the reporting requirements as defined for the PRM as well as United States Green Building Council’s (USGBC) Leadership in Energy and Environmental Design (LEED) certification\nProgram Administrators: Program administrators, code officials and rating authorities that administer incentive programs that are based on the PRM of Standard 90.1. Program administrators can use this documentation to better understand the tool and measure for the building modeling requirements.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/",
 	"title": "Get OpenStudio",
 	"tags": [],
 	"description": "",
-	"content": "Get The OpenStudio Application The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.\nInstallation Download the latest release of OpenStudio application from OpenStudio Coalition github page. Select the installer that matches your operating system.\nThe OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.\nFor more information, refer to the installation instructions by the OpenStudio Coalition.\nThe following table shows a compatibility matrix for OpenStudio application:\nOpenStudio App OpenStudio SDK EnergyPlus Release Date v1.5.0 3.5.1 22.2.0 01/03/2023 v1.4.0 3.4.0 22.1.0 06/08/2022 v1.3.0 3.3.0 9.6.0 12/17/2021 v1.2.0 3.2.0 9.5.0 06/10/2021 "
+	"content": "Get The OpenStudio Application The OpenStudio application can be found on the github page for the OpenStudio Coalition. The application provides a graphical user interface to the OpenStudio engine, and the engine is included in the download package.\nhttps://github.com/openstudiocoalition/OpenStudioApplication/releases\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/",
 	"title": "Install the measure",
 	"tags": [],
 	"description": "",
-	"content": "This page provides details on where to find OSSTD create baseline measure and how to install it.\nLaunch the OpenStudio application by clicking on the executable \u0026ldquo;OpenStudioApp.exe\u0026rdquo; located in the \\bin folder under the installation directory. The default installation directory is C:\\openstudioapplication-x.x.x where x.x.x defines the version.\nFrom the OpenStudio Application interface, select Components \u0026amp; Measures from the menu at the top.\nNavigate to Whole Building in the categories list.\nSearch for Create ASHRAE 90.1-2019 PRM Model.\nSelect the Create ASHRAE 90.1-2019 PRM Model measure in the search result (check the box), and click download.\nClose the find measures window.\n"
+	"content": "Where to find OSSTD create baseline measure and how to install From the OpenStudio Application interface, select Components \u0026amp; Measures from the menu at the top. Search for \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; Select the \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure in the search result, and select Download Close the intall measure window "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/",
 	"title": "Run the measure",
 	"tags": [],
 	"description": "",
-	"content": "How to run the measure Before running the measure, review the model requirements in Model Requirements\nNavigate to the Measures tab from the vertical list on the left side of the interface. Select the Create ASHRAE 90.1-2019 PRM Model measure under Whole Building \u0026gt; Space Types from the library (right side) and drag it into the OpenStudio Measures section (left side). After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the Edit tab (right side). A detailed description of the arguments can be found in the API document. Navigate to the Run Simulation tab to execute the simulation. The measures selected on this tab will not run until you run your model, unlike the Apply Measure Now option.\n"
+	"content": "How to run the measure Before running the measure, review the model requirements in: Model Requirements\nSelect \u0026ldquo;Components \u0026amp; Measures\u0026rdquo; from the top menu in the screen Select Whole Building/ Space Types in the Apply Measure window Click the arrow next to Space types to show available measures Select the \u0026ldquo;Create ASHRAE 90.1-2019 PRM Model\u0026rdquo; measure Make selections in the right-hand side of the window as needed Click on the Apply Measure at the bottom of the screen "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/",
@@ -200,7 +151,7 @@
 	"title": "Run measure in CLI",
 	"tags": [],
 	"description": "",
-	"content": "Introduction This guide is intended to provide instructions on how to run the Create ASHRAE 90.1-2019 PRM Model measure via the command line interface (CLI). This allows the use of an updated version of the OpenStudio Standards package, which is not accessible through the OpenStudio App.\nNote: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.5).\nBackground The Create ASHRAE 90.1-2019 PRM Model measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.\nUsage Instructions Create Baseline Building: measures.zip (7 KB) Setup To get started:\nDownload and install OpenStudio v3.5.0 using the default components selection. Download this openstudio-standards package. Unzip the package to a local directory. Download the create baseline building measure in this page. Setup a local directory to include all required inputs (the following example is one way to setup the directory): Seed model: place the .osm file in a directory named files. The Openstudio model should meet the model requirements. Weather file: place the .epw file in a directory named weather. Measure: place the CreateBaselineBuilding measure in a directory called measures. OS Workflow: place the .osw file in the main directory. User Data (Optional): place the .csv file in the main directory (same level as the .osw). The use of the user data can be found in the add compliance data section. The image below shows one way to setup the main directory and their corresponding sub-directories.\nThe OSW file can be structured as shown in the image below.\nLines 2-3 define the seed model and weather file. Lines 4-5 define the measure path. Lines 9-14 contain arguments to be passed to the measure. A detailed description of the arguments can be found in the API document. Important Note: The directory names are not case sensitive. If you want to change the names of the directories that contain the seed model and weather file, make sure to define the paths in the OSW file.\nExecution Open Command Prompt as an administrator. Type the following command with paths to the openstudio\\bin, openstudio-standard\\lib and the OSW directories.\nC:\\openstudio-3.5.0\\bin\\openstudio.exe -I \u0026quot;[LOCAL_PATH]\\openstudio-standard\\lib\u0026quot; run -w \u0026quot;[LOCAL_PATH]\\workflow.osw\u0026quot; Example:\nC:\\openstudio-3.5.0\\bin\\openstudio.exe -I \u0026#34;C:\\Users\\example_user\\openstudio-standard\\lib\u0026#34; run -w \u0026#34;C:\\Users\\example_user\\baselinePRM\\test.osw\u0026#34; The -I command shall point to the local directory of the Openstudio-standards.\nIf the openstudio command is not recognized, either add the executable to your environment PATH or add the full path to the openstudio-3.5.0\\bin directory. It is advised to avoid spaces in file and directory names. Use quotation marks when specifying long file names or paths with spaces.\nThe OpenStudio SDK version can be 3.2.1 or later.\nOutput Once the workflow simulation is completed:\nAn output OSW file out.osw is written to indicate whether or not the simulation run was successful. Once the workflow is completed unsuccessfully (fails) :\nA run directory is generated with a run.log file that contains the error message. Once the workflow is completed successfully:\nA run directory is generated which contains all input/output files. A reports directory is created which contains energyplus\u0026rsquo;s standard html report. "
+	"content": "Introduction This guide is intended to provide instructions on how to run the Create ASHRAE 90.1-2019 PRM Model measure via the command line interface (CLI).\nNote: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.5).\nBackground The Create ASHRAE 90.1-2019 PRM Model measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.\nUsage Instructions Create Baseline Building: measures.zip (7 KB) Setup To get started :\nDownload and install OpenStudio v3.5.0 using the default components selection. Download this openstudio-standards package. Unzip the package to a local directory. Download the create baseline building measure in this page. Setup a local directory to include all required inputs (the following example is one way to setup the directory): Seed mode: place the .osm file in a directory named files. The Openstudio model should meet the model requirements. Weather file: place the .epw file in a directory named weather. Measure: place the CreateBaselineBuilding measure in a directory called measures. OS Workflow: place the .osw file in the main directory. User Data (Optional): place the .csv file in the main directory (same level as the .osw). The use of the user data can be found in the add compliance data section. The image below shows one way to setup the main directory and their correponding sub-directories.\nThe OSW file can be structured as shown in the image below.\nLines 2-3 define the seed model and weather file. Lines 4-5 define the measure path. Lines 9-14 contain arguments to be passed to the measure. A detail description of the arguments can be found in the API document. Important Note: The directory names are not case sensitive. If you want to change the names of the directories that contain the seed model and weather file, make sure to define the paths in the OSW file.\nExecution Open Command Prompt as an adminstrator. Type the following command with paths to the openstudio\\bin, openstudio-standard\\lib and the OSW directories.\nC:\\openstudio-3.5.0\\bin\\openstudio.exe -I \u0026quot;[LOCAL_PATH]\\openstudio-standard\\lib\u0026quot; run -w \u0026quot;[LOCAL_PATH]\\workflow.osw\u0026quot; Example:\nC:\\openstudio-3.5.0\\bin\\openstudio.exe -I \u0026#34;C:\\Users\\example_user\\openstudio-standard\\lib\u0026#34; run -w \u0026#34;C:\\Users\\example_user\\baselinePRM\\test.osw\u0026#34; The -I command shall pointing to the local directory of the Openstudio-standards.\nIf the openstudio command is not recognized, either add the executable to your environemnt PATH or add the full length to the openstudio-3.5.0\\bin directory. It is advised to avoid spaces in file and directory names. Use quotation marks when specifying long file names or paths with spaces.\nThe OpenStudio SDK version can be 3.2.1 or later.\nOutput Once the workflow is completed:\nAn output OSW file out.osw is written to indicate whether or not the simulation run was successful. Once the workflow is completed successfully:\nA run directory is generated which contains all input/output files. A reports directory is created which contains energyplus\u0026rsquo;s standard html report. "
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/",

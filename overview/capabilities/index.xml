@@ -8,58 +8,23 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 14:49:22 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/overview/capabilities/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Automation Mechanism</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/mechanism/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/mechanism/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Appendix G PRM Rules</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/capabilities/</link>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/rules_appendix_g_prm/</link>
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/capabilities/</guid>
-      <description>The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:
-Apply baseline envelope rules Space conditioning type Constructions Insulation levels Window-to-wall ratio Skylight-to-roof ratio Infiltration Apply baseline lighting rules Lighting power Lighting occupancy sensor control Determine and create baseline HVAC systems Remove user model HVAC Determine baseline HVAC based on building type and Appendix G rules Create new baseline HVAC systems Apply special rules for computer rooms and laboratories Size HVAC systems Appl HVAC efficiencies Apply fan power adjustments Apply baseline HVAC controls Rotate building model through cardinal directions Check for unmet load hours and rectify, if needed Handle additional compliance data Multiple building types Plug load measures Elevators Exterior lighting Interior lighting exceptions Number of systems per zone </description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/rules_appendix_g_prm/</guid>
+      <description>Appendix G Performance Rating Method Rules and OSSTD-PRM The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:
+Apply baseline envelope rules Space conditioning type Constructions Insulation levels Window-to-wall ratio Skylight-to-roof ratio Infiltration Apply baseline lighting rules Lighting power Lighting occupancy sensor control Determine and create baseline HVAC systems Remove user model HVAC Determine baseline HVAC based on building type and Appendix G rules Create new baseline HVAC systems Apply special rules for computer rooms and laboratories Size HVAC systems Apply HVAC efficiencies Apply fan power adjustments Apply baseline HVAC controls Rotate building model through cardinal directions Check for unmet load hours and rectify, if needed Handle additional compliance data Multiple building types Plug load measures Elevators Exterior lighting Interior lighting exceptions Number of systems per zone </description>
     </item>
     
     <item>
-      <title>Installation &amp; Tutorial</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/measures/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/measures/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Use Case - Applications</title>
+      <title>Use Cases and Applications</title>
       <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/use_case_applications/</link>
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/use_case_applications/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorials</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/tutorials/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/tutorials/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Examples</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/examples/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/examples/</guid>
-      <description></description>
+      <description>Here are some use cases for the OSSTD-PRM Energy Modelers: can use the OSSTD-PRM measure to automatically generate the baseline building and refer to PRM-RM for rules on generating the model of the proposed design.
+Software Developers: Software developers can use the PRM-RM modeling guidelines to customize their software to automatically create the baseline building model and assure that schedules and other modeling assumptions are neutral. The PRM-RM also defines contents for a standard output report that address the reporting requirements as defined for the PRM as well as United States Green Building Council’s (USGBC) Leadership in Energy and Environmental Design (LEED) certification</description>
     </item>
     
   </channel>
