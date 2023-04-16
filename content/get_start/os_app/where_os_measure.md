@@ -2,7 +2,7 @@
 title: "Install the measure"
 date: 2022-09-21T14:51:16-07:00
 weight: 212
-draft: false
+draft: true
 pre: "<b>- </b>"
 ---
 

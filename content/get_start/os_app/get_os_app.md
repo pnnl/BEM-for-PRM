@@ -12,7 +12,7 @@ The OpenStudio application, managed by the [OpenStudio Coalition](https://openst
 
 
 ## Installation
-* Download the latest release of OpenStudio application from [OpenStudio Coalition github page](https://github.com/openstudiocoalition/OpenStudioApplication/releases). Select the installer that matches your operating system.
+* Download the latest release of OpenStudio application from [OpenStudio Coalition GitHub page](https://github.com/openstudiocoalition/OpenStudioApplication/releases). Select the installer that matches your operating system.
 * The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
 * For more information, refer to the [installation instructions](https://openstudiocoalition.org/getting_started/getting_started/) by the OpenStudio Coalition.  
  
