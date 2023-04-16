@@ -10,7 +10,7 @@ pre: "<b> </b>"
 
 {{< line_break >}}
 
-Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are summarized below.
+Some features of 90.1-2019 Appendix G that have not yet been implemented into the baseline automation are summarized below.
 
 #### PRM Rules and Differences
 | System      | 90.1 Appendix G version                         | Baseline Model       | Proposed Model                                    |
