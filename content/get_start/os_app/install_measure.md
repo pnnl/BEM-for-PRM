@@ -19,4 +19,4 @@ a)	Download from documentation website
 
 •	You can check the measures directory by clicking on `Change My Measures Directory` under the Preferences tab of the OS app. Typically, the local measures directory is located in `C:\Users\sample_user\OpenStudio\Measures`.
 
-    ![Openstudio Measures Directory](/BEM-for-PRM/content/get_start/os_app/images/osapp_measures_directory.jpg?width=800px&align=left&classes=border)
+![Openstudio Measures Directory](/content\get_start\os_app\images\osapp_measures_directory.jpg?width=800px&align=left&classes=border)
