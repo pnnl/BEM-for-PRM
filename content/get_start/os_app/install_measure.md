@@ -11,10 +11,12 @@ This page provides details on where to find OSSTD create baseline measure and ho
 The baseline measure can be downloaded using two different approaches including:
 a)	Download from documentation website
 
-•	The create baseline building measure can be downloaded from measures.zip (7 KB)
+•	The create baseline building measure can be downloaded from [measures.zip](content\get_start\os_app\run_measure_cli.files\measures.zip) (7 KB)
 
 •	After downloading the measure, unzip the folder.
 
 •	Copy/Move the `CreateBaselineBuilding` measure folder to the local measures (My Measures) directory used by the OpenStudio App.
 
 •	You can check the measures directory by clicking on `Change My Measures Directory` under the Preferences tab of the OS app. Typically, the local measures directory is located in `C:\Users\sample_user\OpenStudio\Measures`.
+
+    ![Openstudio Measures Directory](/BEM-for-PRM/content/get_start/os_app/images/osapp_measures_directory.jpg?width=800px&align=left&classes=border)
