@@ -21,4 +21,4 @@ pre: "<b>- </b>"
 
 The image below compares the Appendix G "moving baseline" and the "stable baseline".
 
-![Stable Baseline vs. Moving Baseline](/BEM-for-PRM/overview/ashrae/images/baseline_stable_moving.JPG?width=800px&align=left&classes=border)
+![Stable Baseline vs. Moving Baseline](/BEM-for-PRM/overview/ashrae/images/baseline_stable_moving.jpg?width=800px&align=left&classes=border)

@@ -19,6 +19,14 @@ Before running the measure, review the model requirements in
   - Click on the Apply Measure at the bottom of the screen
    -->
 
+ {{<mermaid align="center">}}
+graph LR;
+    A(1.Navigate to Measures tab) --> B(*Optional Step 2.* Check measure directory)
+    B --> C(3.Select measure)
+    C --> D(4.Adjust measure inputs)
+    D --> E(5.Run simulation)
+    {{</mermaid>}}
+
 - Navigate to the *_Measures_* tab from the vertical list on the left side of the interface. 
 - Select the Create *_ASHRAE 90.1-2019 PRM Model_* measure under *_Whole Building > Space Types_* from the library (right side) and drag it into the *_OpenStudio Measures_* section (left side).
 - After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the *_Edit_* tab (right side). A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
