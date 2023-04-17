@@ -2,7 +2,7 @@
 title: Run measure in CLI
 date: 2022-09-21T14:50:40-07:00
 weight: 221
-draft: true
+draft: false
 pre: "<b>- </b>"
 ---
 
