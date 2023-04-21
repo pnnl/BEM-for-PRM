@@ -27,11 +27,11 @@ graph LR;
     D --> E(5.Run simulation)
     {{</mermaid>}}
 
-1. Navigate to the *_Measures_* tab from the vertical list on the left side of the interface. 
-2. *Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.*
-3. Select the Create *_ASHRAE 90.1-2019 PRM Model_* measure under *_Whole Building > Space Types_* from the library (right side) and drag it into the *_OpenStudio Measures_* section (left side).
-4. After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the *_Edit_* tab (right side). A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
-5. Navigate to the *_Run Simulation_* tab to execute the simulation. 
+>1. Navigate to the *_Measures_* tab from the vertical list on the left side of the interface. 
+>2. *Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.*
+>3. Select the Create *_ASHRAE 90.1-2019 PRM Model_* measure under *_Whole Building > Space Types_* from the library (right side) and drag it into the *_OpenStudio Measures_* section (left side).
+>4. After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the *_Edit_* tab (right side). A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+>5. Navigate to the *_Run Simulation_* tab to execute the simulation. 
 
 ![Openstudio download measure](/BEM-for-PRM/get_start/os_app/images/osapp3.jpg?width=800px&align=left&classes=border)
 

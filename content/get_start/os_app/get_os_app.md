@@ -1,15 +1,14 @@
 ---
-title: Get OpenStudio
+title: Get OpenStudio App
 date: 2022-09-21T14:50:40-07:00
 weight: 211
 draft: false
 pre: "<b>- </b>"
 ---
 
-## Get The OpenStudio Application
-
 The OpenStudio application, managed by the [OpenStudio Coalition](https://openstudiocoalition.org/), provides a graphical user interface to the OpenStudio engine.
 
+{{< line_break >}}
 
 ## Installation
 * Download the latest release of OpenStudio application from [OpenStudio Coalition GitHub page](https://github.com/openstudiocoalition/OpenStudioApplication/releases). Select the installer that matches your operating system.
