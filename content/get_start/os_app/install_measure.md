@@ -11,7 +11,7 @@ This page provides details on where to find OSSTD 'Create Baseline Measure' and 
 The baseline measure can be downloaded using two different approaches including:
 a)	Download from documentation website:
 
-•	The create baseline building measure can be downloaded from [measures.zip](content\get_start\os_app\run_measure_cli.files\measures.zip) (7 KB)
+•	The create baseline building measure can be downloaded from [measures.zip](BEM-for-PRM\get_start\os_app\run_measure_cli.files\measures.zip) (7 KB)
 
 •	After downloading the measure, unzip the folder.
 

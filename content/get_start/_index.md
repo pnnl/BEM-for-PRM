@@ -12,7 +12,7 @@ chapter = true
 Start using OpenStudio Standard to create ASHRAE 90.1-2019 PRM models in your compliance modeling workflow. 
 
 There are a few approaches for the setup that include:
-1. [Use with OS App](/BEM-for-PRM/content/get_start/os_app/)
+1. [Use with OS App](/BEM-for-PRM/get_start/os_app/)
 2. Use with OS CLI
 3. Use with OS API
 
