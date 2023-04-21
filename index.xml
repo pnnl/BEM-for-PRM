@@ -13,7 +13,7 @@
       <pubDate>Wed, 21 Sep 2022 14:48:14 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</guid>
-      <description>Current Limitations of the OSSTD-PRM Some features of 90.1-2019 Appendix G that have not yet been implemenented into the baseline automation are summarized below.
+      <description>Current Limitations of the OSSTD-PRM Some features of 90.1-2019 Appendix G that have not yet been implemented into the baseline automation are summarized below.
 PRM Rules and Differences System 90.1 Appendix G version Baseline Model Proposed Model Space and SWH system 2016 Separate System Combined System 2019 Single Central SWH System Combined System Receptacle Control 2016 No credit 2019 Allows credit Infiltration leakage rate 2016 0.4 cfm/sf at 0.3 in water 0.</description>
     </item>
     
@@ -53,7 +53,7 @@ Stable Version controlled interface Space typology abstractions Ease for end-use
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/</guid>
-      <description></description>
+      <description>This page is currently being updated. Please check back soon for new information.</description>
     </item>
     
     <item>
@@ -67,27 +67,29 @@ Software Developers: Software developers can use the PRM-RM modeling guidelines 
     </item>
     
     <item>
-      <title>Get OpenStudio</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</link>
+      <title>Get OpenStudio App</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/get_os_app/</link>
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</guid>
-      <description>Get The OpenStudio Application The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.
-Installation Download the latest release of OpenStudio application from OpenStudio Coalition github page. Select the installer that matches your operating system.
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/get_os_app/</guid>
+      <description>The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.
+Installation Download the latest release of OpenStudio application from OpenStudio Coalition GitHub page. Select the installer that matches your operating system.
 The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
-For more information, refer to the installation instructions by the OpenStudio Coalition.</description>
+For more information, refer to the installation instructions by the OpenStudio Coalition.
+The following table shows a compatibility matrix for OpenStudio application:</description>
     </item>
     
     <item>
       <title>Install the measure</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</link>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</link>
       <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</guid>
-      <description>This page provides details on where to find OSSTD create baseline measure and how to install it.
-Launch the OpenStudio application by clicking on the executable &amp;ldquo;OpenStudioApp.exe&amp;rdquo; located in the \bin folder under the installation directory. The default installation directory is C:\openstudioapplication-x.x.x where x.x.x defines the version.
-From the OpenStudio Application interface, select Components &amp;amp; Measures from the menu at the top.
-Navigate to Whole Building in the categories list.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</guid>
+      <description>This page provides details on where to find OSSTD &amp;lsquo;Create Baseline Measure&amp;rsquo; and how to install it. The baseline measure can be downloaded using two different approaches.
+1)	Download measure from the documentation website
+•	The create baseline building measure can be downloaded from measures.zip (7 KB)
+•	After downloading the measure, unzip the folder.
+•	Copy/Move the CreateBaselineBuilding measure folder to the local measures (My Measures) directory used by the OpenStudio App.</description>
     </item>
     
     <item>
@@ -97,7 +99,7 @@ Navigate to Whole Building in the categories list.</description>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
       <description>How to run the measure Before running the measure, review the model requirements in Model Requirements
-Navigate to the Measures tab from the vertical list on the left side of the interface. Select the Create ASHRAE 90.1-2019 PRM Model measure under Whole Building &amp;gt; Space Types from the library (right side) and drag it into the OpenStudio Measures section (left side). After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the Edit tab (right side).</description>
+graph LR; A(1.Navigate to Measures tab) --&gt; B(*Optional Step 2.* Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
     </item>
     
     <item>
@@ -106,15 +108,15 @@ Navigate to the Measures tab from the vertical list on the left side of the inte
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</guid>
-      <description></description>
+      <description>This page is currently being updated. Please check back soon for new information.</description>
     </item>
     
     <item>
       <title>Run measure in CLI</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</link>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_cli/</link>
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</guid>
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_cli/</guid>
       <description>Introduction This guide is intended to provide instructions on how to run the Create ASHRAE 90.1-2019 PRM Model measure via the command line interface (CLI). This allows the use of an updated version of the OpenStudio Standards package, which is not accessible through the OpenStudio App.
 Note: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.</description>
     </item>
@@ -137,7 +139,7 @@ Follow the installation guide to complete the ruby installation.</description>
       <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/</guid>
-      <description>This instruction will give an quick overview of the API method that generates baseline model(s) from a provided openstudio model.
+      <description>This instruction will give a quick overview of the API method that generates baseline model(s) from a provided openstudio model.
 Create stable baseline building API User data Baseline outputs Create stable baseline building API The ASHRAE 90.1-2019 PRM automation can be called in a Ruby script via its API method. The API method provides great flexibility for creating customized modeling workflow. For example:
 require `openstudio` require `openstudio-standard` model_path = &amp;#39;C:\demo\output\\&amp;#39; save_path = &amp;#39;C:\demo\source\\&amp;#39; base_model = &amp;#39;test_model.</description>
     </item>
@@ -154,23 +156,55 @@ require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#3
     </item>
     
     <item>
-      <title>Examples</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</link>
-      <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</guid>
-      <description>In this chapter, we will cover three examples to showcase the capability of the OSSTD-PRM method.
-Demo files Preparation Demo 1: Transformations Project parameters Directories Initialize Baseline generation Demo 1 results Demo 2: User data User data Demo 2 results Demo 3: HVAC Demo 3 results Demo files Each zip file contains the model, user data and weather file for performing demos.
-Demo zip files demo1.zip (304 KB) demo2.zip (303 KB) demo3.</description>
-    </item>
-    
-    <item>
       <title>Troubleshooting</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</link>
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</guid>
-      <description></description>
+      <description>This page is currently being updated. Please check back soon for new information.</description>
+    </item>
+    
+    <item>
+      <title>Demo Files</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo_files/</link>
+      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo_files/</guid>
+      <description>Each zip file contains the model, user data and weather file for performing demos.
+Demo Files demo1_zip: Transformations
+demo2_zip: User Data
+demo3_zip: HVAC
+Preparation You will need the script below for running the demo case. We will later explain each code block in the script.
+require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standards&amp;#39; # Project parameters default_hvac_bldg_type = &amp;#39;other nonresidential&amp;#39; default_wwr_bldg_type = &amp;#39;Office 5,000 to 50,000 sq ft&amp;#39; default_swh_bldg_type = &amp;#39;Office&amp;#39; climate_zone = &amp;#39;ASHRAE 169-2013-4A&amp;#39; # directories - change these two variables demo_folder = &amp;#39;demo1&amp;#39; proposed_model = &amp;#39;geometry_demo_model.</description>
+    </item>
+    
+    <item>
+      <title>Demo 1</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo1/</link>
+      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo1/</guid>
+      <description>Demo 1 - Transformation The proposed model is a typical medium sized office building with roughly 60% window-to-wall ratio (WWR) and overhangs on its south facade. Project parameters First, we will need to check the project parameters in the script.
+# Project parameters default_hvac_bldg_type = &amp;#39;other nonresidential&amp;#39; default_wwr_bldg_type = &amp;#39;Office 5,000 to 50,000 sq ft&amp;#39; default_swh_bldg_type = &amp;#39;Office&amp;#39; climate_zone = &amp;#39;ASHRAE 169-2013-4A&amp;#39; For this demo, the example is a typical medium sized office building.</description>
+    </item>
+    
+    <item>
+      <title>Demo 2</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo2/</link>
+      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo2/</guid>
+      <description>Demo 2: User data Demo 1 shows the basic functionality of the PRM method. In Demo 2, we will demonstrate how to hanle multiple building types in a model. It is common for a building to have multiple types, for example, the first floor of the medium office can function as retail spaces and the rest of floors are offices. In this case, we will need to provide more information for the PRM function so it can properly handle the multi-building types scenario.</description>
+    </item>
+    
+    <item>
+      <title>Demo 3</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo3/</link>
+      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo3/</guid>
+      <description>Demo 3: HVAC In the last demo, we have a medium office equipped with water source heat pumps for heating and cooling and a DOAS for ventilation. Also, the Core Top Zone is being identified as a high equipment density (40 W/m2) room.
+According to the ASHRAE 90.1 PRM method, the baseline system type for the medium office shall be a packaged VAV with reheat (system 5) and the Core Top Zone shall be separately conditioned by a packaged single zone air conditioner (system 3) according to the exception c.</description>
     </item>
     
     <item>

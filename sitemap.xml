@@ -26,7 +26,13 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/</loc>
     <lastmod>2022-09-21T14:49:40-07:00</lastmod>
   </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/</loc>
+    <lastmod>2022-09-21T14:49:40-07:00</lastmod>
+  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/</loc>
+    <lastmod>2022-09-21T14:50:09-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/demo/</loc>
     <lastmod>2022-09-21T14:50:09-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/</loc>
@@ -53,10 +59,10 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/use_case_applications/</loc>
     <lastmod>2022-09-21T14:48:04-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</loc>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/get_os_app/</loc>
     <lastmod>2022-09-21T14:50:40-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</loc>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</loc>
     <lastmod>2022-09-21T14:51:16-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</loc>
@@ -65,7 +71,7 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</loc>
     <lastmod>2022-09-21T14:52:25-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</loc>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_cli/</loc>
     <lastmod>2022-09-21T14:50:40-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</loc>
@@ -77,11 +83,20 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</loc>
     <lastmod>2022-09-21T15:01:04-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</loc>
-    <lastmod>2022-09-21T15:01:04-07:00</lastmod>
-  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</loc>
     <lastmod>2022-09-21T14:52:25-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo_files/</loc>
+    <lastmod>2022-08-16T13:04:42-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo1/</loc>
+    <lastmod>2022-08-16T13:04:42-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo2/</loc>
+    <lastmod>2022-08-16T13:04:42-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo3/</loc>
+    <lastmod>2022-08-16T13:04:42-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</loc>
     <lastmod>2022-09-21T15:05:48-07:00</lastmod>

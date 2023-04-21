@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Use with OpenStudio Engine on OSSTD doc</title>
+    <title>Use with OS Engine on OSSTD doc</title>
     <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/</link>
-    <description>Recent content in Use with OpenStudio Engine on OSSTD doc</description>
+    <description>Recent content in Use with OS Engine on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 14:50:09 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/index.xml" rel="self" type="application/rss+xml" />
@@ -25,7 +25,7 @@ Follow the installation guide to complete the ruby installation.</description>
       <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/</guid>
-      <description>This instruction will give an quick overview of the API method that generates baseline model(s) from a provided openstudio model.
+      <description>This instruction will give a quick overview of the API method that generates baseline model(s) from a provided openstudio model.
 Create stable baseline building API User data Baseline outputs Create stable baseline building API The ASHRAE 90.1-2019 PRM automation can be called in a Ruby script via its API method. The API method provides great flexibility for creating customized modeling workflow. For example:
 require `openstudio` require `openstudio-standard` model_path = &amp;#39;C:\demo\output\\&amp;#39; save_path = &amp;#39;C:\demo\source\\&amp;#39; base_model = &amp;#39;test_model.</description>
     </item>
@@ -42,23 +42,12 @@ require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#3
     </item>
     
     <item>
-      <title>Examples</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</link>
-      <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/quick_start/</guid>
-      <description>In this chapter, we will cover three examples to showcase the capability of the OSSTD-PRM method.
-Demo files Preparation Demo 1: Transformations Project parameters Directories Initialize Baseline generation Demo 1 results Demo 2: User data User data Demo 2 results Demo 3: HVAC Demo 3 results Demo files Each zip file contains the model, user data and weather file for performing demos.
-Demo zip files demo1.zip (304 KB) demo2.zip (303 KB) demo3.</description>
-    </item>
-    
-    <item>
       <title>Troubleshooting</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</link>
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</guid>
-      <description></description>
+      <description>This page is currently being updated. Please check back soon for new information.</description>
     </item>
     
   </channel>

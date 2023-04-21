@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Use with OpenStudio App on OSSTD doc</title>
+    <title>Use with OS App on OSSTD doc</title>
     <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/</link>
-    <description>Recent content in Use with OpenStudio App on OSSTD doc</description>
+    <description>Recent content in Use with OS App on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 14:49:40 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/get_start/os_app/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Get OpenStudio</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</link>
+      <title>Get OpenStudio App</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/get_os_app/</link>
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_app/</guid>
-      <description>Get The OpenStudio Application The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.
-Installation Download the latest release of OpenStudio application from OpenStudio Coalition github page. Select the installer that matches your operating system.
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/get_os_app/</guid>
+      <description>The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.
+Installation Download the latest release of OpenStudio application from OpenStudio Coalition GitHub page. Select the installer that matches your operating system.
 The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
-For more information, refer to the installation instructions by the OpenStudio Coalition.</description>
+For more information, refer to the installation instructions by the OpenStudio Coalition.
+The following table shows a compatibility matrix for OpenStudio application:</description>
     </item>
     
     <item>
       <title>Install the measure</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</link>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</link>
       <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/where_os_measure/</guid>
-      <description>This page provides details on where to find OSSTD create baseline measure and how to install it.
-Launch the OpenStudio application by clicking on the executable &amp;ldquo;OpenStudioApp.exe&amp;rdquo; located in the \bin folder under the installation directory. The default installation directory is C:\openstudioapplication-x.x.x where x.x.x defines the version.
-From the OpenStudio Application interface, select Components &amp;amp; Measures from the menu at the top.
-Navigate to Whole Building in the categories list.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</guid>
+      <description>This page provides details on where to find OSSTD &amp;lsquo;Create Baseline Measure&amp;rsquo; and how to install it. The baseline measure can be downloaded using two different approaches.
+1)	Download measure from the documentation website
+•	The create baseline building measure can be downloaded from measures.zip (7 KB)
+•	After downloading the measure, unzip the folder.
+•	Copy/Move the CreateBaselineBuilding measure folder to the local measures (My Measures) directory used by the OpenStudio App.</description>
     </item>
     
     <item>
@@ -38,7 +40,7 @@ Navigate to Whole Building in the categories list.</description>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
       <description>How to run the measure Before running the measure, review the model requirements in Model Requirements
-Navigate to the Measures tab from the vertical list on the left side of the interface. Select the Create ASHRAE 90.1-2019 PRM Model measure under Whole Building &amp;gt; Space Types from the library (right side) and drag it into the OpenStudio Measures section (left side). After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the Edit tab (right side).</description>
+graph LR; A(1.Navigate to Measures tab) --&gt; B(*Optional Step 2.* Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
     </item>
     
     <item>
@@ -47,17 +49,7 @@ Navigate to the Measures tab from the vertical list on the left side of the inte
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Run measure in CLI</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</link>
-      <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/run_measure_cli/</guid>
-      <description>Introduction This guide is intended to provide instructions on how to run the Create ASHRAE 90.1-2019 PRM Model measure via the command line interface (CLI). This allows the use of an updated version of the OpenStudio Standards package, which is not accessible through the OpenStudio App.
-Note: This approach allows the use of an updated version of the OpenStudio Standards package (V3.5), which is not accessible through the OpenStudio Application (V1.</description>
+      <description>This page is currently being updated. Please check back soon for new information.</description>
     </item>
     
   </channel>
