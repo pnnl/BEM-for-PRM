@@ -9,9 +9,14 @@ pre: "<b>- </b>"
 This page provides details on where to find OSSTD 'Create Baseline Measure' and how to install it.
 
 The baseline measure can be downloaded using two different approaches including:
-a)	Download from documentation website:
 
-•	The create baseline building measure can be downloaded from [measures.zip](BEM-for-PRM\get_start\os_app\run_measure_cli.files\measures.zip) (7 KB)
+**a)	Download measure from the documentation website**
+
+•	The create baseline building measure can be downloaded from [measures.zip](/BEM-for-PRM/get_start/os_app/run_measure_cli.files/measures.zip) (7 KB)
+
+#### Usage Instructions
+
+{{%attachments title="Create Baseline Building:" style="orange" pattern=".*\.(zip)$"/%}}
 
 •	After downloading the measure, unzip the folder.
 
@@ -21,7 +26,7 @@ a)	Download from documentation website:
 
 ![Openstudio Measures Directory](/BEM-for-PRM/get_start/os_app/images/osapp_measures_directory.jpg?width=800px&align=left&classes=border)
 
-b)	Download from Building Component Library (BCL):
+**b)	Download measure from the Building Component Library (BCL) within the OS App**
 
 •	Launch the OpenStudio application by clicking on the executable “OpenStudioApp.exe” located in the \bin folder under the installation directory. The default installation directory is C:\openstudioapplication-x.x.x where x.x.x defines the version.
 
@@ -38,7 +43,7 @@ b)	Download from Building Component Library (BCL):
 •	Close the find measures window.
 ![Openstudio Whole Building](/BEM-for-PRM/get_start/os_app/images/whole_building.jpg?width=800px&align=left&classes=border)
 
-Note: Another way of downloading the measure is via the BCL website shown below:
+**c) Download the measure from the Building Component Library (BCL) website**
 
 •	Go to https://bcl.nrel.gov/browse 
 

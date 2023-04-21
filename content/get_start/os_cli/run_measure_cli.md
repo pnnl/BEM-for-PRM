@@ -14,12 +14,6 @@ Note: This approach allows the use of an updated version of the OpenStudio Stand
 
 {{< line_break >}}
 
-#### Background
-
-The _Create ASHRAE 90.1-2019 PRM Model_ measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.
-
-{{< line_break >}}
-
 #### Usage Instructions
 
 {{%attachments title="Create Baseline Building:" style="orange" pattern=".*\.(zip)$"/%}}
