@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 date: 2022-09-21T15:01:00-07:00
-weight: 221
+weight: 231
 draft: false
 pre: "<b>- </b>"
 ---
@@ -37,7 +37,7 @@ ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x64-mingw32]
 More recent version of **OpenStudio** can be found in the OpenStudio release link: [https://github.com/NREL/OpenStudio/releases](https://github.com/NREL/OpenStudio/releases). The PRM is tested against **v3.4** and lower.
 
 {{% notice tip %}}
-**Importnat Note:**
+**Important Note:**
 The PRM routine in the OpenStudio Standard is tested against **v3.4**. However, the OpenStudio Standard is only tested on **v3.2.1** or lower.
 {{% /notice %}}
 {{< line_break >}}
@@ -66,7 +66,7 @@ The directory shall point to the `openstudio.rb` file under the OpenStudio insta
 You can verify the setting with the following command in the command line.
 
 ```
-C:\Users\smaple_user> irb
+C:\Users\sample_user> irb
 irb(main):001:0> require "openstudio"
 => true
 ```

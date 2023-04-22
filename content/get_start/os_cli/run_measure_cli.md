@@ -1,8 +1,8 @@
 ---
 title: Run measure in CLI
 date: 2022-09-21T14:50:40-07:00
-weight: 216
-draft: true
+weight: 221
+draft: false
 pre: "<b>- </b>"
 ---
 
@@ -14,40 +14,30 @@ Note: This approach allows the use of an updated version of the OpenStudio Stand
 
 {{< line_break >}}
 
-#### Background
-
-The _Create ASHRAE 90.1-2019 PRM Model_ measure provides a tool to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method.
-
-{{< line_break >}}
-
 #### Usage Instructions
 
 {{%attachments title="Create Baseline Building:" style="orange" pattern=".*\.(zip)$"/%}}
 
-##### Setup
-
-To get started:
+#### Setup
 
 1. Download and install [OpenStudio v3.5.0](https://github.com/NREL/OpenStudio/releases/tag/v3.5.0) using the default components selection.
 2. Download this [openstudio-standards package](https://github.com/NREL/openstudio-standards/archive/refs/heads/master.zip). Unzip the package to a local directory.
 3. Download the create baseline building measure in this page.
 4. Setup a local directory to include all required inputs (the following example is one way to setup the directory):
-
-- **Seed model**: place the `.osm` file in a directory named `files`. The Openstudio model should meet the [model requirements](https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/).
-- **Weather file**: place the `.epw` file in a directory named `weather`.
-- **Measure**: place the `CreateBaselineBuilding` measure in a directory called `measures`.
-- **OS Workflow**: place the `.osw` file in the main directory.
-- **User Data (_Optional_)**: place the `.csv` file in the main directory (same level as the `.osw`). The use of the user data can be found in the [add compliance data section](https://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/).
+>   - **Seed model**: place the `.osm` file in a directory named `files`. The Openstudio model should meet the [model requirements](https://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/).
+>   - **Weather file**: place the `.epw` file in a directory named `weather`.
+>   - **Measure**: place the `CreateBaselineBuilding` measure in a directory called `measures`.
+>   - **OS Workflow**: place the `.osw` file in the main directory.
+>   - **User Data (_Optional_)**: place the `.csv` file in the main directory (same level as the `.osw`). The use of the user data can be found in the [add compliance data section](https://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/).
 
 The image below shows one way to setup the main directory and their corresponding sub-directories.
 
-![Directory Setup](/BEM-for-PRM/get_start/os_app/images/DirectSetup.JPG?width=800px&align=left&classes=border)
+![Directory Setup](/BEM-for-PRM/get_start/os_cli/images/folder_structure.png?width=800px&align=left&classes=border)
 
 The OSW file can be structured as shown in the image below.
-
-- Lines 2-3 define the seed model and weather file.
-- Lines 4-5 define the measure path.
-- Lines 9-14 contain arguments to be passed to the measure. A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+>- Lines 2-3 define the seed model and weather file.
+>- Lines 4-5 define the measure path.
+>- Lines 9-14 contain arguments to be passed to the measure. A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
 
 ![OS Workflow Structure](/BEM-for-PRM/get_start/os_app/images/osw.JPG?width=600px&align=left&classes=border)
 
@@ -67,7 +57,7 @@ The directory names are not case sensitive. If you want to change the names of t
 **Example:**
 
 ```ruby
-C:\openstudio-3.5.0\bin\openstudio.exe  -I "C:\Users\example_user\openstudio-standard\lib" run -w "C:\Users\example_user\baselinePRM\test.osw"
+C:\openstudio-3.5.0\bin\openstudio.exe  -I "C:\Users\sample_user\openstudio-standard\lib" run -w "C:\Users\sample_user\baselinePRM\test.osw"
 ```
 
 {{% notice warning %}}
@@ -89,9 +79,9 @@ The OpenStudio SDK version can be **3.2.1** or later.
 
 Once the workflow simulation is **completed**:
 
-- An output OSW file `out.osw` is written to indicate whether or not the simulation run was successful.
+- An output OSW file `out.osw` is written to indicate whether the simulation run was successful or not.
 
-Once the workflow is completed **unsuccessfully (fails)** :
+Once the workflow is completed **unsuccessfully (fails)**:
 - A `run` directory is generated with a `run.log` file that contains the error message.  
 
 Once the workflow is completed **successfully**:

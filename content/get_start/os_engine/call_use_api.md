@@ -1,12 +1,12 @@
 ---
 title: "Call measure via API"
 date: 2022-09-21T15:00:28-07:00
-weight: 222
+weight: 232
 draft: false
 pre: "<b>- </b>"
 ---
 
-This instruction will give an quick overview of the API method that generates baseline model(s) from a provided openstudio model.
+This instruction will give a quick overview of the API method that generates baseline model(s) from a provided openstudio model.
 
 - [Create stable baseline building API](#create-stable-baseline-building-api)
 - [User data](#user-data)
@@ -59,11 +59,11 @@ standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bld
 
 What the script above did was:
 
-1. Load an OSM model - it could be any model created as a proposed model for creating a baseline system.
-2. Make adjustments to the model:
-   - Change the window-to-wall ratio to 60% (adding a span glazings on every wall)
-   - Add overhangs to the south facade of the model.
-3. General the baseline model by calling the API method.
+>1. Load an OSM model - it could be any model created as a proposed model for creating a baseline system.
+>2. Make adjustments to the model.
+>     -   Change the window-to-wall ratio to 60% (adding a span glazing on every wall).
+>     -   Add overhangs to the south facade of the model.
+>3. Generate the baseline model by calling the API method.
 
 At the end of the script, the `standard` object calls a function `model_create_prm_stable_baseline_building` is the API function that generates the baseline model.
 

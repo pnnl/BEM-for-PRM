@@ -20,12 +20,12 @@ The ASHRAE 90.1 Appendix G Performance Rating Method can be used to demonstrate 
 #### Benefits
 
 The benefits of automating the stable baseline include:
-- Time
+>- Time
     - Reduce Labor
     - Minimize disruptions in permit application
-- Cost
+>- Cost
     - Reduce company training cost
     - Reduce data entry errors
-- Opportunities
+>- Opportunities
     - Standardized reporting (ASHRAE 229)
     - OpenStudio measure integrations

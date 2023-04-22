@@ -16,4 +16,4 @@ The purpose of this documentation is to be a reference for the OSSTD-PRM tool th
 **OSSTD-PRM** is a tool that includes the *“Create ASHRAE 90.1-2019 PRM Model”* measure to automatically generate the baseline model according to the rules of the 2019 version of the ASHRAE 90.1 Appendix G Performance Rating Method. 
 While the tool currently creates a ‘baseline’ model, a future version is planned for a ‘proposed’ model. 
 
-The following sections provide details on the ASHRAE 90.1 Appendix G (PRM) and stable baseline that OSSTD-PRM is grounded on.
+Details about the ASHRAE 90.1 Appendix G (PRM) and the stable baseline that OSSTD-PRM is based on are presented in the following sections.

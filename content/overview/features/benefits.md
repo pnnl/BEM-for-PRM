@@ -18,7 +18,11 @@ pre: "<b>- </b>"
 - Accessibility with language bindings in Ruby, Python and C Sharp
 - Command Line Interface (CLI) is a powerful, cross-platform tool that allows users to run OpenStudio based workflows on supported architectures such as Linux, Windows and Mac.
 
+{{< line_break >}}
+
 **OpenStudio Measures** is a scripting facility that uses **Ruby ***(and soon to extend support for Python)*** scripts** to automate model queries and transformations and to incrementally extend and customize the platform. These Measures perform transformations that correspond to energy conservation measures—that’s the origin of the name—that range from simple lighting power density reductions to complex and context sensitive daylighting transformations, create custom reports, and link energy simulation to other analyses.
+
+{{< line_break >}}
 
 **OSSTD-PRM** 
 - Stable platform for existing users and third-party tool while enabling development of new applications

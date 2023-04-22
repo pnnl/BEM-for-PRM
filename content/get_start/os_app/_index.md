@@ -1,5 +1,5 @@
 +++
-title = "Use with OpenStudio App"
+title = "Use with OS App"
 date = 2022-09-21T14:49:40-07:00
 weight = 21
 chapter = true
@@ -10,4 +10,4 @@ pre = "<b>1. </b>"
 
 # Use with OpenStudio APP
 
-One way to use the Create ASHRAE 90.1-2019 PRM Model is as an add-in measure to the OpenStudio Application.
+One way to use the Create ASHRAE 90.1-2019 PRM Model is as an add-in measure to the OpenStudio Application (OS App).
