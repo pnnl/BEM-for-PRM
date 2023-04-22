@@ -57,17 +57,17 @@
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/",
-	"title": "Use with OS App using CLI",
+	"title": "Use with OS SDK using CLI",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 2.2 Use with OpenStudio APP using CLI The Create ASHRAE 90.1-2019 PRM Model add-in measure to the OpenStudio Application (OS App) can be run via the command line interface (CLI).\n"
+	"content": "Chapter 2.2 Use with OpenStudio SDK using CLI The Create ASHRAE 90.1-2019 PRM Model add-in measure to the OpenStudio SDK can be run via the command line interface (CLI).\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/",
-	"title": "Use with OS Engine",
+	"title": "Use with OS SDK API",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 2.3 Use with OpenStudio Engine This introduces a scripting method of using OpenStudio Standard in combination with OpenStudio engine to generate ASHRAE 90.1-2019 PRM model.\n"
+	"content": "Chapter 2.3 Use with OpenStudio SDK API This introduces a scripting method of using OpenStudio Standard in combination with the OpenStudio SDK API to generate ASHRAE 90.1-2019 PRM model.\n"
 },
 {
 	"uri": "http://pnnl.github.io/BEM-for-PRM/get_start/demo/",
