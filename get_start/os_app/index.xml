@@ -27,10 +27,10 @@ The following table shows a compatibility matrix for OpenStudio application:</de
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</guid>
       <description>This page provides details on where to find OSSTD &amp;lsquo;Create Baseline Measure&amp;rsquo; and how to install it. The baseline measure can be downloaded using two different approaches.
-1)	Download measure from the documentation website
-•	The create baseline building measure can be downloaded from measures.zip (7 KB)
-•	After downloading the measure, unzip the folder.
-•	Copy/Move the CreateBaselineBuilding measure folder to the local measures (My Measures) directory used by the OpenStudio App.</description>
+1) Download measure from the documentation website
+• The create baseline building measure can be downloaded from measures.zip (7 KB)
+• After downloading the measure, unzip the folder.
+• Copy/Move the CreateBaselineBuilding measure folder to the local measures directory used by the OpenStudio App.</description>
     </item>
     
     <item>

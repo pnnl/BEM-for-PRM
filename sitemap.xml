@@ -71,7 +71,13 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</loc>
     <lastmod>2022-09-21T14:52:25-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_cli/</loc>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/get_openstudio_sdk/</loc>
+    <lastmod>2022-09-21T14:50:40-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_the_measure/</loc>
+    <lastmod>2022-09-21T14:50:40-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</loc>
     <lastmod>2022-09-21T14:50:40-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</loc>
