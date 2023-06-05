@@ -11,19 +11,14 @@ The OpenStudio application, managed by the [OpenStudio Coalition](https://openst
 {{< line_break >}}
 
 ## Installation
-* Download the latest release of OpenStudio application from [OpenStudio Coalition GitHub page](https://github.com/openstudiocoalition/OpenStudioApplication/releases). Select the installer that matches your operating system.
-* The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
-* For more information, refer to the [installation instructions](https://openstudiocoalition.org/getting_started/getting_started/) by the OpenStudio Coalition.  
- 
-  
+
+- Download the latest release of OpenStudio application from [OpenStudio Coalition GitHub page](https://github.com/openstudiocoalition/OpenStudioApplication/releases). Select the installer that matches your operating system.
+- The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
+- For more information, refer to the [installation instructions](https://openstudiocoalition.org/getting_started/getting_started/) by the OpenStudio Coalition.
+
   The following table shows a compatibility matrix for OpenStudio application:
 
-
-    | OpenStudio App   | OpenStudio SDK   |EnergyPlus| Release Date|
-    | :-------:| :------: | :------: | :--------: |
-    | v1.5.0   | 3.5.1    | 22.2.0   | 01/03/2023 |
-    | v1.4.0   | 3.4.0    | 22.1.0   | 06/08/2022 |
-    | v1.3.0   | 3.3.0    | 9.6.0    | 12/17/2021 |
-    | v1.2.0   | 3.2.0    | 9.5.0    | 06/10/2021 |
-
-  
+  | OpenStudio App | OpenStudio SDK | EnergyPlus | OpenStudio Release Date |
+  | :------------: | :------------: | :--------: | :---------------------: |
+  |     v1.6.0     |     3.6.0      |   23.1.0   |       05/09/2023        |
+  |     v1.5.0     |     3.5.1      |   22.2.0   |       01/03/2023        |
