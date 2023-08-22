@@ -1,17 +1,20 @@
----
-title: "Limitations"
-date: 2022-09-21T14:48:14-07:00
-weight: 14
-draft: false
-pre: "<b> </b>"
----
++++
+title= "Limitations"
+date= 2022-09-21T14:48:14-07:00
+weight= 14
+draft= false
+pre= "<b>3. </b>"
+chapter = true 
++++
 
-### Current Limitations of the OSSTD-PRM
+### Chapter 1.3
+# Limitations of OSSTD-PRM
 
-{{< line_break >}}
+<!-- {{< line_break >}} -->
 
 Some features of 90.1-2019 Appendix G that have not yet been implemented into the baseline automation are summarized below.
 
+<!--
 #### PRM Rules and Differences
 
 | System                    | 90.1 Appendix G version | Baseline Model             | Proposed Model             |
@@ -24,6 +27,8 @@ Some features of 90.1-2019 Appendix G that have not yet been implemented into th
 |                           | 2019                    | 1.0 cfm/sf at 0.3 in water | 0.6 cfm/sf in water        |
 
 {{< line_break >}}
+
+-->
 
 #### Features
 
