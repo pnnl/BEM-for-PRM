@@ -8,33 +8,23 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 15:06:59 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Limitations</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:14 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</guid>
-      <description>Current Limitations of the OSSTD-PRM Some features of 90.1-2019 Appendix G that have not yet been implemented into the baseline automation are summarized below.
-PRM Rules and Differences System 90.1 Appendix G version Baseline Model Proposed Model Space and SWH system 2016 Separate System Combined System 2019 Single Central SWH System Combined System Receptacle Control 2016 No credit 2019 Allows credit Infiltration leakage rate 2016 0.4 cfm/sf at 0.3 in water 0.</description>
-    </item>
-    
-    <item>
-      <title>ASHRAE 90.1 Stable Baseline</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/stable_baseline/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/ashrae/stable_baseline/</guid>
-      <description>Appendix G uses a stable baseline approach with efficiency levels set at values that are not intended to be updated with each new addition of the code. Instead, the proposed building energy performance needs to exceed that of the baseline by an amount commensurate with the code year being evaluated.
-Background These changes came about with the modeling procedures in the 2016 standard, that are fundamentally different from previous versions in that the baseline building is fixed to be roughly equal in stringency to Standard 90.</description>
-    </item>
-    
-    <item>
       <title>Appendix G PRM Rules</title>
       <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/rules_appendix_g_prm/</link>
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/rules_appendix_g_prm/</guid>
-      <description>Appendix G Performance Rating Method Rules and OSSTD-PRM The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:
+      <description> Appendix G Performance Rating Method Rules and OSSTD-PRM The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model:
 Apply baseline envelope rules Space conditioning type Constructions Insulation levels Window-to-wall ratio Skylight-to-roof ratio Infiltration Apply baseline lighting rules Lighting power Lighting occupancy sensor control Determine and create baseline HVAC systems Remove user model HVAC Determine baseline HVAC based on building type and Appendix G rules Create new baseline HVAC systems Apply special rules for computer rooms and laboratories Size HVAC systems Apply HVAC efficiencies Apply fan power adjustments Apply baseline HVAC controls Rotate building model through cardinal directions Check for unmet load hours and rectify, if needed Handle additional compliance data Multiple building types Plug load measures Elevators Exterior lighting Interior lighting exceptions Number of systems per zone </description>
+    </item>
+    
+    <item>
+      <title>Limitations</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:14 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/limitations/</guid>
+      <description>Chapter 1.3 Limitations of OSSTD-PRM Some features of 90.1-2019 Appendix G that have not yet been implemented into the baseline automation are summarized below.
+Features System Item Baseline Model vs. Proposed Model Notes HVAC components Humidification Same as proposed model in the tool. In some cases, the baseline is required to be changed to adiabatic humidification. This has not been implemented Humidification For constant volume systems, Appendix G indicates that only 25% of the system reheat energy shall be included in the budget building performance This is not yet implemented.</description>
     </item>
     
     <item>
@@ -43,17 +33,8 @@ Apply baseline envelope rules Space conditioning type Constructions Insulation l
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/benefits/</guid>
-      <description>Here are some key benefits of using the OSSTD-PRM: OpenStudio provides an Application Programming Interface (API) to access the EnergyPlus modeling engine providing some key benefits:
-Stable Version controlled interface Space typology abstractions Ease for end-users to model buildings Accessibility with language bindings in Ruby, Python and C Sharp Command Line Interface (CLI) is a powerful, cross-platform tool that allows users to run OpenStudio based workflows on supported architectures such as Linux, Windows and Mac.</description>
-    </item>
-    
-    <item>
-      <title>Gallery</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/</link>
-      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/</guid>
-      <description>This page is currently being updated. Please check back soon for new information.</description>
+      <description>There are various benefits of using OSSTD-PRM, some of them include: Stable Foundation for User and Third-Party Tools: The OSSTD-PRM offers a dependable platform not only for existing users but also for third-party Building Energy Modeling (BEM) tools. Simultaneously, it encourages the creation of new applications that harness its capabilities.
+Enhanced Runtime Execution: This measure results in improved runtime execution, leading to faster and more efficient processes for users.</description>
     </item>
     
     <item>
@@ -62,8 +43,19 @@ Stable Version controlled interface Space typology abstractions Ease for end-use
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/use_case_applications/</guid>
-      <description>Here are some use cases for the OSSTD-PRM Energy Modelers: can use the OSSTD-PRM measure to automatically generate the baseline building and refer to PRM-RM for rules on generating the model of the proposed design.
-Software Developers: Software developers can use the PRM-RM modeling guidelines to customize their software to automatically create the baseline building model and assure that schedules and other modeling assumptions are neutral. The PRM-RM also defines contents for a standard output report that address the reporting requirements as defined for the PRM as well as United States Green Building Council’s (USGBC) Leadership in Energy and Environmental Design (LEED) certification</description>
+      <description>Here are some use cases for the OSSTD-PRM Energy Modelers
+Energy modelers can utilize the OSSTD-PRM measure to automate the creation of baseline building models. They can also refer to the PRM-RM (Performance Rating Method Reference Manual) for guidelines on how to generate models for proposed designs. This can streamline the energy modeling process and ensure consistency and compliance with relevant standards.
+BEM Software Vendors/Developers
+Building energy modeling software vendors and developers can incorporate the measure and methodology into their workflow to automatically generate baseline building models while ensuring the neutrality of schedules and other modeling assumptions.</description>
+    </item>
+    
+    <item>
+      <title>Planned Features</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/planned_features/</link>
+      <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/planned_features/</guid>
+      <description> Coming Soon&amp;hellip; </description>
     </item>
     
     <item>

@@ -13,17 +13,17 @@
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/benefits/</guid>
-      <description>Here are some key benefits of using the OSSTD-PRM: OpenStudio provides an Application Programming Interface (API) to access the EnergyPlus modeling engine providing some key benefits:
-Stable Version controlled interface Space typology abstractions Ease for end-users to model buildings Accessibility with language bindings in Ruby, Python and C Sharp Command Line Interface (CLI) is a powerful, cross-platform tool that allows users to run OpenStudio based workflows on supported architectures such as Linux, Windows and Mac.</description>
+      <description>There are various benefits of using OSSTD-PRM, some of them include: Stable Foundation for User and Third-Party Tools: The OSSTD-PRM offers a dependable platform not only for existing users but also for third-party Building Energy Modeling (BEM) tools. Simultaneously, it encourages the creation of new applications that harness its capabilities.
+Enhanced Runtime Execution: This measure results in improved runtime execution, leading to faster and more efficient processes for users.</description>
     </item>
     
     <item>
-      <title>Gallery</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/</link>
+      <title>Planned Features</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/overview/features/planned_features/</link>
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/gallery/</guid>
-      <description>This page is currently being updated. Please check back soon for new information.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/planned_features/</guid>
+      <description> Coming Soon&amp;hellip; </description>
     </item>
     
   </channel>
