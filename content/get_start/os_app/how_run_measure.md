@@ -6,7 +6,9 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-## How to run the measure
+{{<line_break>}}
+
+#### C. Run the measure in OS App
 
 Before running the measure, review the model requirements in
 [Model Requirements](/BEM-for-PRM/user_guide/model_requirements)
@@ -21,17 +23,17 @@ Before running the measure, review the model requirements in
 
  {{<mermaid align="center">}}
 graph LR;
-    A(1.Navigate to Measures tab) --> B(*Optional Step 2.* Check measure directory)
+    A(1.Navigate to Measures tab) --> B(*2. Optional Step* Check measure directory)
     B --> C(3.Select measure)
     C --> D(4.Adjust measure inputs)
     D --> E(5.Run simulation)
     {{</mermaid>}}
 
->1. Navigate to the *_Measures_* tab from the vertical list on the left side of the interface. 
->2. *Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.*
->3. Select the Create *_ASHRAE 90.1-2019 PRM Model_* measure under *_Whole Building > Space Types_* from the library (right side) and drag it into the *_OpenStudio Measures_* section (left side).
->4. After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the *_Edit_* tab (right side). A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
->5. Navigate to the *_Run Simulation_* tab to execute the simulation. 
+1. Navigate to the **_Measures_** tab from the vertical list on the left side of the interface. 
+2. *Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.*
+3. Go to the Library (right side). Under **_Whole Building > Space Types_**, select the **_Create ASHRAE 90.1-2019 PRM Model_** measure and drag it into the **_OpenStudio Measures_** section (left side).
+4. After dropping the measure, click on the measure and enter/adjust the measure inputs/arguments under the **_Edit_** tab (right side). Upload the user data .csv files here (optional). The use of the user data can be found in the [add compliance data section](../../../user_guide/add_compliance_data/). A detailed description of the arguments can be found in the [API document](https://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+5. Navigate to the **_Run Simulation_** tab to execute the simulation. 
 
 ![Openstudio download measure](/BEM-for-PRM/get_start/os_app/images/osapp3.jpg?width=800px&align=left&classes=border)
 
@@ -40,5 +42,9 @@ graph LR;
 {{% notice info %}}
 The measures selected on this tab will not run until you run your model, unlike the *_Apply Measure Now_* option. 
 {{% /notice %}}
+
+<!-- Need a user data link here in point 4.
+Update the images in November with proper numbering accounting for the Optional Step 2. 
+Update the images so that user data field is shown.-->
  
 
