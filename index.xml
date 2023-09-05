@@ -64,11 +64,10 @@ Building energy modeling software vendors and developers can incorporate the mea
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/get_os_app/</guid>
-      <description>The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.
-Installation Download the latest release of OpenStudio application from OpenStudio Coalition GitHub page. Select the installer that matches your operating system.
+      <description>A. Install the OpenStudio App following these steps. Download the latest release of OpenStudio application from OpenStudio Coalition GitHub page. Select the installer that matches your operating system.
 The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
 For more information, refer to the installation instructions by the OpenStudio Coalition.
-The following table shows a compatibility matrix for OpenStudio application:</description>
+The following table shows a compatibility matrix for OpenStudio application and &amp;ldquo;Create ASHRAE 90.</description>
     </item>
     
     <item>
@@ -77,11 +76,10 @@ The following table shows a compatibility matrix for OpenStudio application:</de
       <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</guid>
-      <description>This page provides details on where to find OSSTD &amp;lsquo;Create Baseline Measure&amp;rsquo; and how to install it. The baseline measure can be downloaded using two different approaches.
-1) Download measure from the documentation website
-• The create baseline building measure can be downloaded from measures.zip (7 KB)
-• After downloading the measure, unzip the folder.
-• Copy/Move the CreateBaselineBuilding measure folder to the local measures directory used by the OpenStudio App.</description>
+      <description>B. Install the OSSTD &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure using any of the following approaches. The PRM measure can be downloaded using two different approaches.
+1. Download measure from the documentation website The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure can be downloaded from measures.zip (7 KB)
+After downloading the measure, unzip the folder.
+Copy/Move the CreateBaselineBuilding measure folder to the local Measures directory used by the OpenStudio App. You can check the measures directory by clicking on Change My Measures Directory under the Preferences tab of the OS app.</description>
     </item>
     
     <item>
@@ -90,17 +88,8 @@ The following table shows a compatibility matrix for OpenStudio application:</de
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
-      <description>How to run the measure Before running the measure, review the model requirements in Model Requirements
-graph LR; A(1.Navigate to Measures tab) --&gt; B(*Optional Step 2.* Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
-    </item>
-    
-    <item>
-      <title>Troubleshooting</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</link>
-      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</guid>
-      <description>This page is currently being updated. Please check back soon for new information.</description>
+      <description>C. Run the measure in OS App Before running the measure, review the model requirements in Model Requirements
+graph LR; A(1.Navigate to Measures tab) --&gt; B(*2. Optional Step* Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
     </item>
     
     <item>
@@ -109,11 +98,11 @@ graph LR; A(1.Navigate to Measures tab) --&gt; B(*Optional Step 2.* Check measur
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/get_openstudio_sdk/</guid>
-      <description>The OpenStudio SDK, managed by the NREL, provides a command line interface (CLI) to access OpenStudio&amp;rsquo;s functionality.
-Installation Download the latest release of OpenStudio SDK from OpenStudio Releases GitHub page. Select the installer that matches your operating system.
+      <description>A. Install the correct version of OpenStudio SDK Download the latest release of OpenStudio SDK from OpenStudio Releases GitHub page. Select the installer that matches your operating system.
 The OpenStudio SDK installation package contains OpenStudio-Standards, EnergyPlus as well as other components (e.g., Ruby 2.7, etc..).
 For more installation information, refer to the OpenStudio Github page.
-Information about OpenStudio SDK CLI, refer to the Command Line Interface (CLI).</description>
+Information about OpenStudio SDK CLI, refer to the Command Line Interface (CLI).
+The following table shows a compatibility matrix for OpenStudio SDK and &amp;ldquo;Create ASHRAE 90.</description>
     </item>
     
     <item>
@@ -122,21 +111,20 @@ Information about OpenStudio SDK CLI, refer to the Command Line Interface (CLI).
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_the_measure/</guid>
-      <description>Prerequisite Before running any measures, make sure you have OpenStudio SDK installed. The instruction and correct version can be found in Get OpenStudio SDK.
-Download the PRM measure Download measure in the link below: Create Baseline Building: measures.zip (7 KB) Refer to Install the measure for other installation options.
-Setup Setup a local directory to include all required inputs (the following example is one way to setup the directory):
-Seed model: place the .</description>
+      <description>B. Run the measure with OS SDK using CLI There are 5 parts in the process of running the measure.
+Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Execute the measure Save the Output 1. Download the PRM measure Download measure in the link below: Create Baseline Building: measures.zip (7 KB) Refer to Install the measure for other installation options.
+2. Setup a local directory Setup a local directory to include all required inputs (the following example is one way to setup the directory):</description>
     </item>
     
     <item>
-      <title>Run measure on source code</title>
+      <title>Run measure w/ OSSTD Package</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</link>
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</guid>
-      <description>This instruction is provided for user who wants to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK. Follow the run measure instruction to setup your project folder.
-Setup Download this openstudio-standards package. Unzip the package to a local directory.
-Depends on which new feature you&amp;rsquo;d like to use, the download link could be different. See Github instruction on how to download source code</description>
+      <description>C. Steps to run the measure with OSSTD Package (Optional) This instruction is provided for users who want to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK.
+Follow the steps from Run the measure instruction by replacing the Setup (Step 2) and Execution steps (Step 4) as mentioned below.
+Setup Download this openstudio-standards package. Unzip the package to a local directory.</description>
     </item>
     
     <item>
@@ -145,10 +133,10 @@ Depends on which new feature you&amp;rsquo;d like to use, the download link coul
       <pubDate>Wed, 21 Sep 2022 15:01:00 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</guid>
-      <description>This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.
-Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard You will need the following applications to ensure OpenStudio Standard is running on your project.
-Download Ruby Ruby 2.7. Latest stable version is 2.7.6 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
-Follow the installation guide to complete the ruby installation.</description>
+      <description>A. Steps to install and get the OpenStudio PRM running for scripting with OpenStudio API There are 4 parts to this section.
+Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard 1. Download Ruby Download Ruby 2.7.x. Latest stable version is 2.7.2 and it can be downloaded at https://www.ruby-lang.org/en/news/2020/10/02/ruby-2-7-2-released/.
+You can also verify the ruby installation with the following command in the command line:
+C:\Users\sample_user&amp;gt;ruby -v ruby 2.</description>
     </item>
     
     <item>
@@ -157,29 +145,8 @@ Follow the installation guide to complete the ruby installation.</description>
       <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/</guid>
-      <description>This instruction will give a quick overview of the API method that generates baseline model(s) from a provided openstudio model.
-Create stable baseline building API User data Baseline outputs Create stable baseline building API The ASHRAE 90.1-2019 PRM automation can be called in a Ruby script via its API method. The API method provides great flexibility for creating customized modeling workflow. For example:
-require `openstudio` require `openstudio-standard` model_path = &amp;#39;C:\demo\output\\&amp;#39; save_path = &amp;#39;C:\demo\source\\&amp;#39; base_model = &amp;#39;test_model.</description>
-    </item>
-    
-    <item>
-      <title>API documentation</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</link>
-      <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</guid>
-      <description>The description of PRM API methods can be found in this API document.
-In addition, the PRM method is a subroutine under the package of OpenStudio Standard project. Therefore, OpenStudio Standard API methods can be accessed from the same routine. For example:
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) thermal_zones = [] model.getThermalZones.each do |zone| thermal_zones.append(zone) end end # Hot water loop hot_water_loop = standard.</description>
-    </item>
-    
-    <item>
-      <title>Troubleshooting</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</link>
-      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</guid>
-      <description>This page is currently being updated. Please check back soon for new information.</description>
+      <description>B. Here is a quick overview of calling the measure via the API method The steps that generate baseline model(s) from a provided openstudio model are as follows:
+Create stable baseline building API User data Baseline outputs 1. Create stable baseline building API The ASHRAE 90.1-2019 PRM automation can be called in a Ruby script via its API method create a baseline model from a proposed model. The API method provides great flexibility for creating customized modeling workflow.</description>
     </item>
     
     <item>
