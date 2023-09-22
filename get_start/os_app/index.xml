@@ -13,10 +13,11 @@
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/get_os_app/</guid>
-      <description>A. Install the OpenStudio App following these steps. Download the latest release of OpenStudio application from OpenStudio Coalition GitHub page. Select the installer that matches your operating system.
+      <description>The OpenStudio application, managed by the OpenStudio Coalition, provides a graphical user interface to the OpenStudio engine.
+Installation Download the latest release of OpenStudio application from OpenStudio Coalition GitHub page. Select the installer that matches your operating system.
 The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
 For more information, refer to the installation instructions by the OpenStudio Coalition.
-The following table shows a compatibility matrix for OpenStudio application and &amp;ldquo;Create ASHRAE 90.</description>
+The following table shows a compatibility matrix for OpenStudio application:</description>
     </item>
     
     <item>
@@ -25,10 +26,11 @@ The following table shows a compatibility matrix for OpenStudio application and 
       <pubDate>Wed, 21 Sep 2022 14:51:16 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</guid>
-      <description>B. Install the OSSTD &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure using any of the following approaches. The PRM measure can be downloaded using two different approaches.
-1. Download measure from the documentation website The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure can be downloaded from measures.zip (7 KB)
-After downloading the measure, unzip the folder.
-Copy/Move the CreateBaselineBuilding measure folder to the local Measures directory used by the OpenStudio App. You can check the measures directory by clicking on Change My Measures Directory under the Preferences tab of the OS app.</description>
+      <description>This page provides details on where to find OSSTD &amp;lsquo;Create Baseline Measure&amp;rsquo; and how to install it. The baseline measure can be downloaded using two different approaches.
+1) Download measure from the documentation website
+• The create baseline building measure can be downloaded from measures.zip (7 KB)
+• After downloading the measure, unzip the folder.
+• Copy/Move the CreateBaselineBuilding measure folder to the local measures directory used by the OpenStudio App.</description>
     </item>
     
     <item>
@@ -37,8 +39,17 @@ Copy/Move the CreateBaselineBuilding measure folder to the local Measures direct
       <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
-      <description>C. Run the measure in OS App Before running the measure, review the model requirements in Model Requirements
-graph LR; A(1.Navigate to Measures tab) --&gt; B(*2. Optional Step* Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
+      <description>How to run the measure Before running the measure, review the model requirements in Model Requirements
+graph LR; A(1.Navigate to Measures tab) --&gt; B(*Optional Step 2.* Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</link>
+      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/troubleshooting/</guid>
+      <description>This page is currently being updated. Please check back soon for new information.</description>
     </item>
     
   </channel>

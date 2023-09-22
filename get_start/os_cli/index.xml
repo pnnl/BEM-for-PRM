@@ -13,11 +13,11 @@
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/get_openstudio_sdk/</guid>
-      <description>A. Install the correct version of OpenStudio SDK Download the latest release of OpenStudio SDK from OpenStudio Releases GitHub page. Select the installer that matches your operating system.
+      <description>The OpenStudio SDK, managed by the NREL, provides a command line interface (CLI) to access OpenStudio&amp;rsquo;s functionality.
+Installation Download the latest release of OpenStudio SDK from OpenStudio Releases GitHub page. Select the installer that matches your operating system.
 The OpenStudio SDK installation package contains OpenStudio-Standards, EnergyPlus as well as other components (e.g., Ruby 2.7, etc..).
 For more installation information, refer to the OpenStudio Github page.
-Information about OpenStudio SDK CLI, refer to the Command Line Interface (CLI).
-The following table shows a compatibility matrix for OpenStudio SDK and &amp;ldquo;Create ASHRAE 90.</description>
+Information about OpenStudio SDK CLI, refer to the Command Line Interface (CLI).</description>
     </item>
     
     <item>
@@ -26,20 +26,21 @@ The following table shows a compatibility matrix for OpenStudio SDK and &amp;ldq
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_the_measure/</guid>
-      <description>B. Run the measure with OS SDK using CLI There are 5 parts in the process of running the measure.
-Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Execute the measure Save the Output 1. Download the PRM measure Download measure in the link below: Create Baseline Building: measures.zip (7 KB) Refer to Install the measure for other installation options.
-2. Setup a local directory Setup a local directory to include all required inputs (the following example is one way to setup the directory):</description>
+      <description>Prerequisite Before running any measures, make sure you have OpenStudio SDK installed. The instruction and correct version can be found in Get OpenStudio SDK.
+Download the PRM measure Download measure in the link below: Create Baseline Building: measures.zip (7 KB) Refer to Install the measure for other installation options.
+Setup Setup a local directory to include all required inputs (the following example is one way to setup the directory):
+Seed model: place the .</description>
     </item>
     
     <item>
-      <title>Run measure w/ OSSTD Package</title>
+      <title>Run measure on source code</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</link>
       <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</guid>
-      <description>C. Steps to run the measure with OSSTD Package (Optional) This instruction is provided for users who want to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK.
-Follow the steps from Run the measure instruction by replacing the Setup (Step 2) and Execution steps (Step 4) as mentioned below.
-Setup Download this openstudio-standards package. Unzip the package to a local directory.</description>
+      <description>This instruction is provided for user who wants to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK. Follow the run measure instruction to setup your project folder.
+Setup Download this openstudio-standards package. Unzip the package to a local directory.
+Depends on which new feature you&amp;rsquo;d like to use, the download link could be different. See Github instruction on how to download source code</description>
     </item>
     
   </channel>
