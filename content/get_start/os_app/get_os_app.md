@@ -19,7 +19,6 @@ pre: "<b>- </b>"
   | OpenStudio App | OpenStudio SDK | EnergyPlus | OpenStudio Release Date |     PRM measure     | 
   | :------------: | :------------: | :--------: | :---------------------: | :-----------------: |
   |     v1.6.0     |     3.6.1      |   23.1.0   |       05/09/2023        |        Beta         |
-  |     v1.5.0     |     3.5.1      |   22.2.0   |       01/03/2023        |        Beta         |
 
   <!-->  |     v1.7.0     |     3.7.0      |   24.1.0   |       11/09/2023        |       v1.0.0        | Move it to the top later and check the versions --> 
 
