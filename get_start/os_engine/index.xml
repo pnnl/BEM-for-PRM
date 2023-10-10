@@ -13,10 +13,10 @@
       <pubDate>Wed, 21 Sep 2022 15:01:00 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</guid>
-      <description>This instruction provides all you need to get OpenStudio Standard PRM installed on your local computer for scripting with OpenStudio API.
-Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard You will need the following applications to ensure OpenStudio Standard is running on your project.
-Download Ruby Ruby 2.7. Compatible version is 2.7.2 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz
-Follow the installation guide to complete the ruby installation.</description>
+      <description>A. Steps to install and get the OpenStudio PRM running for scripting with OpenStudio API There are 4 parts to this section.
+Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard 1. Download Ruby Download Ruby 2.7.x. Latest stable version is 2.7.2 and it can be downloaded at https://www.ruby-lang.org/en/news/2020/10/02/ruby-2-7-2-released/.
+You can also verify the ruby installation with the following command in the command line:
+C:\Users\sample_user&amp;gt;ruby -v ruby 2.</description>
     </item>
     
     <item>
@@ -25,29 +25,8 @@ Follow the installation guide to complete the ruby installation.</description>
       <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/call_use_api/</guid>
-      <description>This instruction will give a quick overview of the API method that generates baseline model(s) from a provided openstudio model.
-Create stable baseline building API User data Baseline outputs Create stable baseline building API The ASHRAE 90.1-2019 PRM automation can be called in a Ruby script via its API method. The API method provides great flexibility for creating customized modeling workflow. For example:
-require `openstudio` require `openstudio-standard` model_path = &amp;#39;C:\demo\output\\&amp;#39; save_path = &amp;#39;C:\demo\source\\&amp;#39; base_model = &amp;#39;test_model.</description>
-    </item>
-    
-    <item>
-      <title>API documentation</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</link>
-      <pubDate>Wed, 21 Sep 2022 15:01:04 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/link_api_doc/</guid>
-      <description>The description of PRM API methods can be found in this API document.
-In addition, the PRM method is a subroutine under the package of OpenStudio Standard project. Therefore, OpenStudio Standard API methods can be accessed from the same routine. For example:
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standard&amp;#39; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) translator = OpenStudio::OSVersion::VersionTranslator.new model = translator.loadModel(model_path + base_model).get standard.model_remove_prm_hvac(model) standard.model_remove_prm_ems_objects(model) thermal_zones = [] model.getThermalZones.each do |zone| thermal_zones.append(zone) end end # Hot water loop hot_water_loop = standard.</description>
-    </item>
-    
-    <item>
-      <title>Troubleshooting</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</link>
-      <pubDate>Wed, 21 Sep 2022 14:52:25 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/troubleshooting/</guid>
-      <description>This page is currently being updated. Please check back soon for new information.</description>
+      <description>B. Here is a quick overview of calling the measure via the API method The steps that generate baseline model(s) from a provided openstudio model are as follows:
+Create stable baseline building API User data Baseline outputs 1. Create stable baseline building API The ASHRAE 90.1-2019 PRM automation can be called in a Ruby script via its API method create a baseline model from a proposed model. The API method provides great flexibility for creating customized modeling workflow.</description>
     </item>
     
   </channel>
