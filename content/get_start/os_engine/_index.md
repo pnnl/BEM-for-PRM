@@ -10,4 +10,4 @@ pre = "<b>3. </b>"
 
 # Use with OpenStudio SDK API
 
-This introduces a scripting method of using OpenStudio Standard in combination with the OpenStudio SDK API to generate ASHRAE 90.1-2019 PRM model.
+This section introduces a scripting method of using OpenStudio Standard in combination with the OpenStudio SDK API to generate ASHRAE 90.1-2019 PRM model.

@@ -6,19 +6,20 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-The OpenStudio application, managed by the [OpenStudio Coalition](https://openstudiocoalition.org/), provides a graphical user interface to the OpenStudio engine.
-
 {{< line_break >}}
 
-## Installation
+#### A. Install the OpenStudio App following these steps. 
 
 - Download the latest release of OpenStudio application from [OpenStudio Coalition GitHub page](https://github.com/openstudiocoalition/OpenStudioApplication/releases). Select the installer that matches your operating system.
 - The OpenStudio engine as well as other components (e.g., EnergyPlus, Ruby API, etc..) are included in the installation package.
 - For more information, refer to the [installation instructions](https://openstudiocoalition.org/getting_started/getting_started/) by the OpenStudio Coalition.
 
-  The following table shows a compatibility matrix for OpenStudio application:
+  The following table shows a compatibility matrix for OpenStudio application and "Create ASHRAE 90.1-2019 PRM Model" measure version:
 
-  | OpenStudio App | OpenStudio SDK | EnergyPlus | OpenStudio Release Date |
-  | :------------: | :------------: | :--------: | :---------------------: |
-  |     v1.6.0     |     3.6.0      |   23.1.0   |       05/09/2023        |
-  |     v1.5.0     |     3.5.1      |   22.2.0   |       01/03/2023        |
+  | OpenStudio App | OpenStudio SDK | EnergyPlus | OpenStudio Release Date |     PRM measure     | 
+  | :------------: | :------------: | :--------: | :---------------------: | :-----------------: |
+  |     v1.6.0     |     3.6.1      |   23.1.0   |       05/09/2023        |        Beta         |
+
+  <!-->  |     v1.7.0     |     3.7.0      |   24.1.0   |       11/09/2023        |       v1.0.0        | Move it to the top later and check the versions --> 
+
+   You can also check the OS App Version Matrix [here](https://github.com/openstudiocoalition/OpenStudioApplication/wiki/OpenStudio-Application-Version-Compatibility-Matrix). 

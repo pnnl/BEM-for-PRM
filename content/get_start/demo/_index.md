@@ -8,4 +8,6 @@ pre = "<b>4. </b>"
 
 ### Chapter 2.4
 
-In this chapter, we will cover three examples to showcase the capability of the OSSTD-PRM method.
+# Illustrative Examples and Demos
+
+In this chapter, we shall delve into three illustrative examples that demonstrate the capability of the OSSTD-PRM method. Each of these examples is accompanied by a corresponding demo file, allowing you to follow along and get familiar with the process. 

@@ -2,11 +2,13 @@
 title: "API documentation"
 date: 2022-09-21T15:01:04-07:00
 weight: 233
-draft: false
+draft: true
 pre: "<b>- </b>"
 ---
 
-The description of PRM API methods can be found in this [API document](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+{{<line_break>}}
+
+ The description of PRM API methods can be found in this [API document](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
 
 In addition, the PRM method is a subroutine under the package of [**OpenStudio Standard**](https://github.com/NREL/openstudio-standards) project. Therefore, **OpenStudio Standard** API methods can be accessed from the same routine. For example:
 

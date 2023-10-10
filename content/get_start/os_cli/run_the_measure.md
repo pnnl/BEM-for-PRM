@@ -6,13 +6,27 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-## Prerequisite
+{{<line_break>}}
+
+<!-- ## Prerequisite
 
 Before running any measures, make sure you have OpenStudio SDK installed. The instruction and correct version can be found in [Get OpenStudio SDK](../../os_cli/get_openstudio_sdk).
 
 {{< line_break >}}
+-->
 
-## Download the PRM measure
+#### B. Run the measure with OS SDK using CLI
+
+There are 5 parts in the process of running the measure. 
+1.  [**Download the PRM measure (prerequisite)**](#1-download-the-prm-measure)
+2.  [**Setup a local directory**](#2-setup-a-local-directory)
+3.  [**Edit OSW file**](#3-edit-osw-file)
+4.  [**Execute the measure**](#4-execute-the-measure)
+5.  [**Save the Output**](#5-save-the-output)
+
+{{< line_break >}}
+
+##### **1. Download the PRM measure**
 
 Download measure in the link below:
 {{%attachments title="Create Baseline Building:" style="orange" pattern=".*\.(zip)$"/%}}
@@ -21,23 +35,24 @@ Refer to [Install the measure](../../os_app/install_measure) for other installat
 
 {{< line_break >}}
 
-## Setup
+##### **2. Setup a local directory**
 
 Setup a local directory to include all required inputs (the following example is one way to setup the directory):
 
 > - **Seed model**: place the `.osm` file in a directory named `files`. The Openstudio model should meet the [model requirements](../../../user_guide/model_requirements/).
 > - **Weather file**: place the `.epw` file in a directory named `weather`.
-> - **Measure**: place the `CreateBaselineBuilding` measure in a directory called `measures`.
+> - **Measure**: place the `Create ASHRAE 90.1 2019 PRM Model` measure in a directory called `measures`.
 > - **OS Workflow**: place the `.osw` file in the main directory.
 > - **User Data (_Optional_)**: place the `.csv` file in the main directory (same level as the `.osw`). The use of the user data can be found in the [add compliance data section](../../../user_guide/add_compliance_data/).
 
-The image below shows one way to setup the main directory and their corresponding sub-directories.
+The image below shows one way to setup the main directory and their corresponding sub-directories. This can be set up in any other way, however, this structure will be followed for all examples provided in this documentation. Thus, it's recommended to make necessary changes if the folders are set up in a different manner.
 
 ![Directory Setup](/BEM-for-PRM/get_start/os_cli/images/folder_structure.png?width=800px&align=left&classes=border)
 
+
 {{< line_break >}}
 
-## Edit OSW file
+##### **3. Edit OSW file**
 
 The OSW file can be structured as shown in the image below.
 
@@ -54,7 +69,7 @@ The directory names are not case sensitive. If you want to change the names of t
 
 {{< line_break >}}
 
-## Execution
+##### **4. Execute the measure**
 
 - Open Command Prompt as an administrator.
 - Type the following command with paths to the **openstudio\bin**, **openstudio-standard\lib** and the **OSW** directories.  
@@ -77,7 +92,7 @@ The OpenStudio SDK version needs to be **3.5.0** or later.
 
 {{< line_break >}}
 
-## Output
+##### **5. Save the Output**
 
 Once the workflow simulation is **completed**, you will find additional files generated in your project directory.
 
@@ -95,3 +110,14 @@ Once the workflow is completed **successfully**:
 - A `user_data_json` directory contains all user provided data in `json` format.
 
 ![Measure Output Structure](/BEM-for-PRM/get_start/os_cli/images/output_files.PNG?width=800px&align=left&classes=border)
+
+{{<line_break>}}
+
+#### Optional Steps  
+This instruction is provided for users who want to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK.
+
+Follow the above steps by replacing Step 2 and 4 as follows: 
+
+{{% notice info %}}
+The measures selected on this tab will not run until you run your model, unlike the *_Apply Measure Now_* option. 
+{{% /notice %}}
