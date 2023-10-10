@@ -23,20 +23,20 @@ In the file (as shown in the image), we can see all perimeter zones on the first
 ![userdata](/BEM-for-PRM/get_start/os_engine/images/demo2_space_userdata.PNG?width=700px&align=right&classes=border,alignLeft)
 
 In the following sections, follow the steps to run the demo file based on the method you will be using. 
-- [Using OS App](http://localhost:1313/BEM-for-PRM/get_start/demo/demo3/#a-using-os-app)
-- [Using OS SDK with CLI](http://localhost:1313/BEM-for-PRM/get_start/demo/demo3/#b-using-os-sdk-using-cli)
-- [Using OS SDK API](http://localhost:1313/BEM-for-PRM/get_start/demo/demo3/#c-using-os-sdk-api)
+- [Using OS App](/BEM-for-PRM/get_start/demo/demo3/#a-using-os-app)
+- [Using OS SDK with CLI](/BEM-for-PRM/get_start/demo/demo3/#b-using-os-sdk-using-cli)
+- [Using OS SDK API](/BEM-for-PRM/get_start/demo/demo3/#c-using-os-sdk-api)
 
 {{< line_break >}}
 
 ##### **A. Using OS App**
 
-1. **Launch OpenStudio Application (OS App):** It should be installed in your system, if not, make sure you have followed all the steps in [Use with OS App](http://localhost:1313/BEM-for-PRM/get_start/os_app/) section. 
+1. **Launch OpenStudio Application (OS App):** It should be installed in your system, if not, make sure you have followed all the steps in [Use with OS App](/BEM-for-PRM/get_start/os_app/) section. 
 
 2. **Load the .osm file:** Go to the File menu and select Open. Navigate to the folder `demo 2` and select `geometry_demo_model.osm` file. The project inputs like weather file, climate zone and location will load automatically (as shown in the image). If any parameter is missing, add it manually. 
 ![demo1_loadosmfile image](/BEM-for-PRM/get_start/demo/images/demo1_loadosmfile.PNG?width=1400px&align=right&classes=border,alignLeft)
 
-3. **Add the measure:** Go to the Measures tab in the left menu. Under Whole Building > Space Types, *_Create ASHRAE 90.1 2019 PRM Model_* measure should be available. If you don't see it, revisit the steps in [Use with OS App](http://localhost:1313/BEM-for-PRM/get_start/os_app/) section. Add the measure.
+3. **Add the measure:** Go to the Measures tab in the left menu. Under Whole Building > Space Types, *_Create ASHRAE 90.1 2019 PRM Model_* measure should be available. If you don't see it, revisit the steps in [Use with OS App](/BEM-for-PRM/get_start/os_app/) section. Add the measure.
 
 4. **Setting Project Parameters:** Click on the measure after adding it, a few project parameters will show up in the **Edit** menu on the right. Under **Inputs**, select the following: 
     - Default Building Area Type for Window To Wall Ratio : **_Office 5,000 to 50,000 sq ft_**
@@ -48,14 +48,14 @@ In the following sections, follow the steps to run the demo file based on the me
     - Use User Data : **_TRUE_** (TRUE selected since we are going to use the user data for this demo.) 
     - Input the absolute path for userdata_space.csv in the field provided. <!--to be updated in November-->
 
-5. **Run Simulation:** Go to the **Run Simulation** tab and run the  simulation. Once it's completed, go to the *_demo2_* folder in the system. A new folder *_geometry_demo_model_* would be created containing subfolders for the runs as shown in [Run the measure](http://localhost:1313/BEM-for-PRM/get_start/os_app/how_run_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](http://localhost:1313/BEM-for-PRM/get_start/demo/demo3/#demo-3-results).  
+5. **Run Simulation:** Go to the **Run Simulation** tab and run the  simulation. Once it's completed, go to the *_demo2_* folder in the system. A new folder *_geometry_demo_model_* would be created containing subfolders for the runs as shown in [Run the measure](/BEM-for-PRM/get_start/os_app/how_run_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](/BEM-for-PRM/get_start/demo/demo3/#demo-3-results).  
 
 {{<line_break>}}
 
 ##### **B. Using OS SDK using CLI**
 
-1. **Setup Local Directory:** Set up the files from `demo3` folder in a local directory. One such example of the folder structure is shown in [Run the measure](http://localhost:1313/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. For this demo, place the userdata_space.csv in the directory as well.
-2. **Edit OSW File:** Open the .osw file created initially (Refer to [Run the measure](http://localhost:1313/BEM-for-PRM/get_start/os_cli/run_the_measure/) section). Update the project inputs and parameters as follows. 
+1. **Setup Local Directory:** Set up the files from `demo3` folder in a local directory. One such example of the folder structure is shown in [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. For this demo, place the userdata_space.csv in the directory as well.
+2. **Edit OSW File:** Open the .osw file created initially (Refer to [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section). Update the project inputs and parameters as follows. 
 ![CLI Method osw file structure](/BEM-for-PRM/get_start/demo/images/demo1_CLImethod_oswfile.PNG?width=600px&align=right&classes=border,alignLeft) 
 3. **Execute:** Open Command Prompt as an administrator and type the following command with paths to the openstudio\bin and the OSW directories.
 
@@ -68,14 +68,14 @@ In the following sections, follow the steps to run the demo file based on the me
    - *_demo3_* to be replaced by the folder path where test.osw is located.
    {{% /notice %}}
 
-4. **Output:** Once the simulation is run, go to the demo3 folder (or the folder where you had all the files set up in the local directory) to access the output files as shown in [Run the measure](http://localhost:1313/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](http://localhost:1313/BEM-for-PRM/get_start/demo/demo3/#demo-3-results). 
+4. **Output:** Once the simulation is run, go to the demo3 folder (or the folder where you had all the files set up in the local directory) to access the output files as shown in [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](/BEM-for-PRM/get_start/demo/demo3/#demo-3-results). 
  
 
 {{<line_break>}}
 
 ##### **C. Using OS SDK API**
 
-1. Open the Ruby file created in the [Call measure via API](http://localhost:1313/BEM-for-PRM/get_start/os_engine/call_use_api/) section. 
+1. Open the Ruby file created in the [Call measure via API](/BEM-for-PRM/get_start/os_engine/call_use_api/) section. 
 2. **Check Project parameters:** Check and update the project parameters in the script as follows:
 
    ```Ruby
