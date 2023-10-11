@@ -45,6 +45,6 @@ standard.model_add_doas(model, thermal_top_zones,
 
 The above code loads a model, removes the existing HVAC systems, and calls the **OpenStudio Standard** methods to add a water source heat pump system.
 
-However, using those functions is out of the scope of this documentation. Using those functions shall always refer to the official [**OpenStudio Standard API documentation**](https://www.rubydoc.info/gems/openstudio-standards).
+However, using those functions is out of the scope of this documentation. Such functions shall always refer to the official [**OpenStudio Standard API documentation**](https://www.rubydoc.info/gems/openstudio-standards).
 
 The PRM routine also can be used to work with OpenStudio APIs. Access to the OpenStudio API documentation can be found on the [**OpenStudio official website**](https://s3.amazonaws.com/openstudio-sdk-documentation/index.html).

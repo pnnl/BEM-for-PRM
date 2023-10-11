@@ -63,22 +63,25 @@ hvac_bldg_type = 'other nonresidential'
 wwr_bldg_type = 'Office <= 5,000 sq ft'
 swh_bldg_type = 'Office'
 
-standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false)
+standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, unmet_load_hours_check=true, debug=false)
 ```
 
 What the above script did was:
 
->1. Load an OSM model - it could be any model created as a proposed model for creating a baseline system.
->2. Make adjustments to the model.
->     -   Change the window-to-wall ratio to 60% (adding a span glazing on every wall).
->     -   Add overhangs to the south facade of the model.
->3. Generate the baseline model by calling the API method.
->4. At the end of the script, the `standard` object calls a function `model_create_prm_stable_baseline_building` is the API function that generates the baseline model.
->  ```ruby
->  standard.model_create_prm_stable_baseline_building(model, climate_zone,    hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false)
->  ```
+> 1.  Load an OSM model - it could be any model created as a proposed model for creating a baseline system.
+> 2.  Make adjustments to the model.
+>     - Change the window-to-wall ratio to 60% (adding a span glazing on every wall).
+>     - Add overhangs to the south facade of the model.
+> 3.  Generate the baseline model by calling the API method.
 
-A detailed description of the arguments can be found in the [API document](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+At the end of the script, the `standard` object calls a function `model_create_prm_stable_baseline_building` is the API function that generates the baseline model.
+
+```ruby
+standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, unmet_load_hours_check=true, debug=false)
+```
+
+A detail description of the arguments can be found in the [API document](/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/).
+
 
 {{< line_break >}}
 
@@ -96,7 +99,7 @@ json_path = standard.convert_userdata_csv_to_json("#{File.dirname(Dir.pwd)}/user
 # Load the user data json files into the PRM routine.
 standard.load_userdata_to_standards_database(json_path)
 # Generate baseline
-standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, run_all_orients=false, unmet_load_hours_check=true, debug=false)
+standard.model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, unmet_load_hours_check=true, debug=false)
 ```
 
 What the above script did was: 
