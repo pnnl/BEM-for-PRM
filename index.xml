@@ -134,9 +134,8 @@ Setup Download this openstudio-standards package. Unzip the package to a local d
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</guid>
       <description>A. Steps to install and get the OpenStudio PRM running for scripting with OpenStudio API There are 4 parts to this section.
-Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard 1. Download Ruby Download Ruby 2.7.x. Latest stable version is 2.7.2 and it can be downloaded at https://www.ruby-lang.org/en/news/2020/10/02/ruby-2-7-2-released/.
-You can also verify the ruby installation with the following command in the command line:
-C:\Users\sample_user&amp;gt;ruby -v ruby 2.</description>
+Download Ruby Download OpenStudio Connect Ruby with OpenStudio Download OpenStudio Standard 1. Download Ruby Ruby 2.7. Compatible version is 2.7.2 and it can be downloaded at: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz
+You can verify the ruby installation with the following command in the command line: C:\Users\sample_user&amp;gt;ruby -v ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32] 2.</description>
     </item>
     
     <item>

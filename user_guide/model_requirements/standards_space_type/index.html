@@ -12,22 +12,22 @@
     <title>Standards space type : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1696954439" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1696954439" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1697036120" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1697036120" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1696954439" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1697036120" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1696954439" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1696954439" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1697036120" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1697036120" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1696954439"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1697036120"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1696954439"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1696954439"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1697036120"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1697036120"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1696954439"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1697036120"></script>
 
     
   </div>
@@ -1732,11 +1732,11 @@
 <p>The SpaceType object in OpenStudio has the property StandardsSpaceType which can be used to identify the appropriate lighting space type. The lighting space type is used to determine the baseline lighting power density and lighting control savings based on Table G3.7 of 90.1 Appendix G. The lighting space type is also used for a number of other purposes in the baseline generation, including: determining special requirements for computer rooms and laboratories, identifying residential spaces, and determining applicability of receptacle control measures according to space type.</p>
 <p>The lighting space type can also be assigned using the User Compliance Data files for <a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type">Space Type</a> and <a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space">Space</a>. If the User Compliance Data files contain lighting space type assignments, there is a hierachy for determining the final assignments:</p>
 <ol>
-<li>user_data_space is first priority</li>
-<li>user_data_space_type is second priority</li>
-<li>StandardsSpaceType property of the SpaceType objest is lowest priority</li>
+<li><strong>user_data_space</strong> is first priority</li>
+<li><strong>user_data_space_type</strong> is second priority</li>
+<li><strong>StandardsSpaceType</strong> property of the SpaceType objest is lowest priority</li>
 </ol>
-<p>It is possible to have lighting space type identified at the user_data_space level for some spaces and at either the user_data_space_type level or SpaceType:StandardsSpaceType level for other spaces.</p>
+<p>It is possible to have lighting space type identified at the <strong>user_data_space</strong> level for some spaces and at either the <strong>user_data_space_type</strong> level or <strong>SpaceType:StandardsSpaceType</strong> level for other spaces.</p>
 <p>Valid entries for StandardsSpaceType are listed below. If the &ldquo;whole building&rdquo; options are used, the baseline model will not get credit for occupancy control of lighting.</p>
 <table>
 <thead>
@@ -3162,16 +3162,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1696954439"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1696954439"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1696954439"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1696954439"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1696954439"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1696954439"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1697036120"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1697036120"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1697036120"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1697036120"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1697036120"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1697036120"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1696954439"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1696954439"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1696954439"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1697036120"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1697036120"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1697036120"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
