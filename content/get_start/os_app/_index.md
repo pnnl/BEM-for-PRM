@@ -10,4 +10,4 @@ pre = "<b>1. </b>"
 
 # Use with OpenStudio APP
 
-One way to use the Create ASHRAE 90.1-2019 PRM Model is as an add-in measure to the OpenStudio Application (OS App).
+This section covers the method of using "Create ASHRAE 90.1-2019 PRM Model" measure as an add-in measure to the OpenStudio Application (OS App).
