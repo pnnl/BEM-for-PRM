@@ -10,4 +10,4 @@ pre = "<b>2. </b>"
 
 # Use with OpenStudio SDK using CLI
 
-The Create ASHRAE 90.1-2019 PRM Model add-in measure to the OpenStudio SDK can be run via the command line interface (CLI).
+This section covers the method of running "Create ASHRAE 90.1-2019 PRM Model" add-in measure in the OpenStudio SDK via the Command Line Interface (CLI).
