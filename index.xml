@@ -149,46 +149,32 @@ Create stable baseline building API User data Baseline outputs 1. Create stable 
     </item>
     
     <item>
-      <title>Demo Files</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo_files/</link>
-      <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo_files/</guid>
-      <description>Each zip file contains the model, user data and weather file for performing demos.
-Demo Files demo1_zip: Transformations
-demo2_zip: User Data
-demo3_zip: HVAC
-Preparation You will need the script below for running the demo case. We will later explain each code block in the script.
-require &amp;#39;openstudio&amp;#39; require &amp;#39;openstudio-standards&amp;#39; # Project parameters default_hvac_bldg_type = &amp;#39;other nonresidential&amp;#39; default_wwr_bldg_type = &amp;#39;Office 5,000 to 50,000 sq ft&amp;#39; default_swh_bldg_type = &amp;#39;Office&amp;#39; climate_zone = &amp;#39;ASHRAE 169-2013-4A&amp;#39; # directories - change these two variables demo_folder = &amp;#39;demo1&amp;#39; proposed_model = &amp;#39;geometry_demo_model.</description>
-    </item>
-    
-    <item>
-      <title>Demo 1</title>
+      <title>Demo 1: Geometry</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo1/</link>
       <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo1/</guid>
-      <description>Demo 1 - Transformation The proposed model is a typical medium sized office building with roughly 60% window-to-wall ratio (WWR) and overhangs on its south facade. Project parameters First, we will need to check the project parameters in the script.
-# Project parameters default_hvac_bldg_type = &amp;#39;other nonresidential&amp;#39; default_wwr_bldg_type = &amp;#39;Office 5,000 to 50,000 sq ft&amp;#39; default_swh_bldg_type = &amp;#39;Office&amp;#39; climate_zone = &amp;#39;ASHRAE 169-2013-4A&amp;#39; For this demo, the example is a typical medium sized office building.</description>
+      <description>Demo 1 shows geometry transformations in a user model The proposed model (as shown in the image) is a typical medium sized office building with roughly 60% window-to-wall ratio (WWR) and overhangs on its south facade. The default_hvac_bldg_type is set to other nonresidential, and the window to wall ratio and service water heating system building types are both set according to the related category. The building is assumed to be located in New York City.</description>
     </item>
     
     <item>
-      <title>Demo 2</title>
+      <title>Demo 2: HVAC</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo2/</link>
       <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo2/</guid>
-      <description>Demo 2: User data Demo 1 shows the basic functionality of the PRM method. In Demo 2, we will demonstrate how to hanle multiple building types in a model. It is common for a building to have multiple types, for example, the first floor of the medium office can function as retail spaces and the rest of floors are offices. In this case, we will need to provide more information for the PRM function so it can properly handle the multi-building types scenario.</description>
+      <description>Demo 2 shows HVAC transformations in a user model In Demo 2, we have a medium office user model with an area of 52000 sqft. It is equipped with water source heat pumps for heating and cooling and a DOAS for ventilation (as shown in the image below). Also, the Core Top Zone is being identified as a high equipment density (40 W/m2) room.
+According to the ASHRAE 90.1 PRM method - &amp;ldquo;Baseline HVAC System Types&amp;rdquo; table, the baseline system type for the medium office that satisfies the requirements - Other residential + 5 floors or fewer and 25000ft2 to 150,000ft2, shall be a packaged VAV with reheat (system 5).</description>
     </item>
     
     <item>
-      <title>Demo 3</title>
+      <title>Demo 3: User Data</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo3/</link>
       <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo3/</guid>
-      <description>Demo 3: HVAC In the last demo, we have a medium office equipped with water source heat pumps for heating and cooling and a DOAS for ventilation. Also, the Core Top Zone is being identified as a high equipment density (40 W/m2) room.
-According to the ASHRAE 90.1 PRM method, the baseline system type for the medium office shall be a packaged VAV with reheat (system 5) and the Core Top Zone shall be separately conditioned by a packaged single zone air conditioner (system 3) according to the exception c.</description>
+      <description>Demo 3 shows how to provide additional user data for the PRM function In Demo 3, we will demonstrate how to input user data to handle multiple building types in a model.
+Download the folder &amp;ldquo;demo3_zip&amp;rdquo; on your system and extract it in any local folder (to be changed based on the method used in the sections below). The zip file contains the model (.osm), user data (.csv) and weather file (.</description>
     </item>
     
     <item>
