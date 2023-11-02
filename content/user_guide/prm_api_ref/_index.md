@@ -10,4 +10,10 @@ pre = "<b>3. </b>"
 
 # PRM API Reference
 
-A detail API reference to walk through functions in the OpenStudio Standard PRM method.
+This chapter provides a comprehensive API reference that guides you through the functions in the OpenStudio Standard PRM method.
+
+>It consists of the following sections: 
+>- Baseline Generation API 
+>- Window API
+
+
