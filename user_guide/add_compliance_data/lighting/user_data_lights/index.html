@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>User Compliance Data : OSSTD doc</title>
+    <title>Lights : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1698968541" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/">
+  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -870,14 +870,14 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/BEM-for-PRM/user_guide/add_compliance_data/">
           <b>2. </b>User Compliance Data
           
-            <i class="fas fa-solid fa-chevron-down read-icon"></i>
+            <i class="fas fa-chevron-right read-icon"></i>
           
       </a>
       
@@ -1284,7 +1284,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/" title="Lighting" class="dd-item
-        
+        parent
         
         
         ">
@@ -1312,7 +1312,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/" title="Lights" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/" title="Lights" class="dd-item active">
         <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/">
         <b>- </b>Lights
         <i class="fas fa-check read-icon"></i>
@@ -1624,6 +1624,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1638,7 +1640,19 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > User Compliance Data
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/'>User Compliance Data</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/lighting/'>Lighting</a> > Lights
+          
+        
+          
+        
           
         
           
@@ -1649,6 +1663,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1656,76 +1685,71 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Lights
+            </h1>
           
 
         
 
 
-
-	<h3 id="chapter-32">Chapter 3.2</h3>
-<h1 id="user-compliance-data">User Compliance Data</h1>
-<p>Compliance data is a set of <code>.csv</code> files with fixed format. The data can be used in the ASHRAE 90.1-2019 PRM method to provide additional information that cannot not be found in an OpenStudio model (e.g., <code>motor_power</code>). The compliance data can improve the accuracy of the PRM model.</p>
+<ul>
+<li><a href="#lights">Lights</a></li>
+<li><a href="#has_retail_display_exception">has_retail_display_exception</a></li>
+<li><a href="#has_unregulated_exception">has_unregulated_exception</a></li>
+<li><a href="#unregulated_category">unregulated_category</a></li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="lights">Lights</h4>
 <section class="attachments orange">
   <label>
     <i class="fas fa-paperclip" aria-hidden="true"></i>
-    Download Compliance Data Set
+    User Data CSV File:
   </label>
   <div class="attachments-files">
     <li>
-      <a href="/BEM-for-PRM/user_guide/add_compliance_data/_index.files/userdata_csv.zip">userdata_csv.zip</a>
-      (5 KB)
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights.files/userdata_lights.csv">userdata_lights.csv</a>
+      (81 B)
     </li>
   </div>
 </section>
 
-<p>Currently there are 16 <code>.csv</code> files in the compliance data set. Each of them covers a specific set of ASHRAE 90.1-2019 compliance data to OpenStudio object. This chapter will provide the detail explaination on each of the file.</p>
-
-<div class="expand" style="margin-top: 30px">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-medium;" class="fas fa-chevron-right"></i>
-        <span style="font-size: 1.0rem">
-        
-    	
-    	Quick link to each compliance data file user guide:
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <ul>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac">userdata_airloop_hvac.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas">userdata_airloop_hvac_doas.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_building">userdata_building.csv</a></li>
-<li>userdata_design_specification_outdoor_air.csv</li>
-<li>userdata_electric_equipment.csv</li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights">userdata_exterior_lights.csv</a></li>
-<li>userdata_gas_equipment.csv</li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights">userdata_lights.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/">userdata_space.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/">userdata_spacetype.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/">userdata_thermal_zone.csv</a></li>
-<li>userdata_wateruse_connections.csv</li>
-<li>userdata_wateruse_equipment.csv</li>
-<li>userdata_wateruse_equipment_definition.csv</li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac">userdata_zone_hvac.csv</a></li>
-<li>userdata_zone_infiltration.csv</li>
+<p>The <code>user_data_lights.csv</code> contains compliance data for lights compliance calculation. A sample of data record is shown below.</p>
+<p><img src="/BEM-for-PRM/user_guide/add_compliance_data/images/user_data_lights_sample.PNG?width=700px&amp;align=left&amp;classes=border,alignLeft" alt="user_data_lights"></p>
+<h4 id="has_retail_display_exception">has_retail_display_exception</h4>
+<p>Set this field to <strong>yes</strong> if the lights object qualifies as display lighting: the lighting must be specifically designed and directed to highlight merchandise and separately controlled from the general lighting. If it doesn&rsquo;t apply, leave this field blank or set to <strong>no</strong>.</p>
+<h4 id="has_unregulated_exception">has_unregulated_exception</h4>
+<p>Set this field to <strong>yes</strong> if the lights object qualifies as unregulated lighting. If it doesn&rsquo;t apply, leave this field blank or set to <strong>no</strong>. The following lighting system are considered unregulated.</p>
+<ul>
+<li>Display or accent lighting that is an essential element for the function performed in galleries, museums, and - uments.</li>
+<li>Lighting that is integral to equipment or instrumentation and is installed by its manufacturer.</li>
+<li>Lighting specifically designed for use only during medical or dental procedures and lighting integral to - ical equipment.</li>
+<li>Lighting integral to both open and glass-enclosed refrigerator and freezer cases.</li>
+<li>Lighting integral to food warming and food preparation equipment.</li>
+<li>Lighting specifically designed for the life support of nonhuman life forms.</li>
+<li>Lighting in retail display windows, provided the display area is enclosed by ceiling-height partitions.</li>
+<li>Lighting in interior spaces that have been specifically designated as a registered interior historic landmark.</li>
+<li>Lighting that is an integral part of advertising or directional signage.</li>
+<li>Exit signs.</li>
+<li>Lighting that is for sale or lighting educational demonstration systems.</li>
+<li>Lighting for theatrical purposes, including performance, stage, and film and video production.</li>
+<li>Lighting for television broadcasting in sporting activity areas.</li>
+<li>Casino gaming areas.</li>
+<li>Furniture-mounted supplemental task lighting that is controlled by automatic shutoff and complies with - ndard 90.1-2019 Section 9.4.1.3(c).</li>
+<li>Mirror lighting in dressing rooms and accent lighting in religious pulpit and choir areas.</li>
+<li>Parking garage transition lighting—lighting for covered vehicle entrances and exits from buildings and parking structures—that complies with Standard 90.1-2019 Section 9.4.1.2(a) and 9.4.1.2(c); each transition zone shall not exceed a depth of 66 ft inside the structure and a width of 50 ft.</li>
 </ul>
-
-    </div>
-</div>
-
+<h4 id="unregulated_category">unregulated_category</h4>
+<p>This field is used to inform the code reviewer about which category of unregulated lighting the model represented. It does not affect the baseline building generation.</p>
 
 
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -2490,6 +2514,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2502,6 +2527,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2518,6 +2544,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2660,10 +2689,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/" title="Standards space type"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/" title="Lighting"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/space/" title="Space" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/" title="Exterior Lights" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2695,3 +2724,4 @@
 
   </body>
 </html>
+

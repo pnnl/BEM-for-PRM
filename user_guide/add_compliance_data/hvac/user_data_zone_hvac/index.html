@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>User Compliance Data : OSSTD doc</title>
+    <title>Zone HVAC : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1698968541" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/">
+  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -870,14 +870,14 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/BEM-for-PRM/user_guide/add_compliance_data/">
           <b>2. </b>User Compliance Data
           
-            <i class="fas fa-solid fa-chevron-down read-icon"></i>
+            <i class="fas fa-chevron-right read-icon"></i>
           
       </a>
       
@@ -1061,7 +1061,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/" title="HVAC" class="dd-item
-        
+        parent
         
         
         ">
@@ -1089,7 +1089,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/" title="Zone HVAC" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/" title="Zone HVAC" class="dd-item active">
         <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/">
         <b>- </b>Zone HVAC
         <i class="fas fa-check read-icon"></i>
@@ -1624,6 +1624,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1638,7 +1640,19 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > User Compliance Data
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/'>User Compliance Data</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/hvac/'>HVAC</a> > Zone HVAC
+          
+        
+          
+        
           
         
           
@@ -1649,6 +1663,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1656,76 +1685,91 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Zone HVAC
+            </h1>
           
 
         
 
 
-
-	<h3 id="chapter-32">Chapter 3.2</h3>
-<h1 id="user-compliance-data">User Compliance Data</h1>
-<p>Compliance data is a set of <code>.csv</code> files with fixed format. The data can be used in the ASHRAE 90.1-2019 PRM method to provide additional information that cannot not be found in an OpenStudio model (e.g., <code>motor_power</code>). The compliance data can improve the accuracy of the PRM model.</p>
+<ul>
+<li><a href="#zone-hvac">Zone HVAC</a></li>
+<li><a href="#pressure-drop-adjustments">Pressure-drop adjustments</a>
+<ul>
+<li><a href="#has_fan_power_credit_fully_ducted">has_fan_power_credit_fully_ducted</a></li>
+<li><a href="#has_fan_power_credit_return_or_exhaust_flow_control">has_fan_power_credit_return_or_exhaust_flow_control</a></li>
+<li><a href="#fan_power_credit_exhaust_treatment">fan_power_credit_exhaust_treatment</a></li>
+<li><a href="#has_fan_power_credit_filtration_m9to12">has_fan_power_credit_filtration_m9to12</a></li>
+<li><a href="#has_fan_power_credit_filtration_m13to15">has_fan_power_credit_filtration_m13to15</a></li>
+<li><a href="#clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus">clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus</a></li>
+<li><a href="#fan_power_credit_gas_phase_cleaners">fan_power_credit_gas_phase_cleaners</a></li>
+<li><a href="#fan_power_credit_biosafety">fan_power_credit_biosafety</a></li>
+<li><a href="#fan_power_credit_other_than_coil_runaround">fan_power_credit_other_than_coil_runaround</a></li>
+<li><a href="#has_fan_power_credit_coil_runaround">has_fan_power_credit_coil_runaround</a></li>
+<li><a href="#fan_power_credit_evaporative_humidifier_or_cooler">fan_power_credit_evaporative_humidifier_or_cooler</a></li>
+<li><a href="#has_fan_power_credit_sound_attenuation">has_fan_power_credit_sound_attenuation</a></li>
+<li><a href="#has_fan_power_credit_exhaust_serving_fume_hoods">has_fan_power_credit_exhaust_serving_fume_hoods</a></li>
+<li><a href="#has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct">has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct</a></li>
+</ul>
+</li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="zone-hvac">Zone HVAC</h4>
 <section class="attachments orange">
   <label>
     <i class="fas fa-paperclip" aria-hidden="true"></i>
-    Download Compliance Data Set
+    User Data CSV File:
   </label>
   <div class="attachments-files">
     <li>
-      <a href="/BEM-for-PRM/user_guide/add_compliance_data/_index.files/userdata_csv.zip">userdata_csv.zip</a>
-      (5 KB)
+      <a href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac.files/userdata_zone_hvac.csv">userdata_zone_hvac.csv</a>
+      (896 B)
     </li>
   </div>
 </section>
 
-<p>Currently there are 16 <code>.csv</code> files in the compliance data set. Each of them covers a specific set of ASHRAE 90.1-2019 compliance data to OpenStudio object. This chapter will provide the detail explaination on each of the file.</p>
-
-<div class="expand" style="margin-top: 30px">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-medium;" class="fas fa-chevron-right"></i>
-        <span style="font-size: 1.0rem">
-        
-    	
-    	Quick link to each compliance data file user guide:
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <ul>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac">userdata_airloop_hvac.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac_doas">userdata_airloop_hvac_doas.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_building">userdata_building.csv</a></li>
-<li>userdata_design_specification_outdoor_air.csv</li>
-<li>userdata_electric_equipment.csv</li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_exterior_lights">userdata_exterior_lights.csv</a></li>
-<li>userdata_gas_equipment.csv</li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_lights">userdata_lights.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space/">userdata_space.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type/">userdata_spacetype.csv</a></li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_thermal_zone/">userdata_thermal_zone.csv</a></li>
-<li>userdata_wateruse_connections.csv</li>
-<li>userdata_wateruse_equipment.csv</li>
-<li>userdata_wateruse_equipment_definition.csv</li>
-<li><a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac">userdata_zone_hvac.csv</a></li>
-<li>userdata_zone_infiltration.csv</li>
-</ul>
-
-    </div>
-</div>
+<p>The <code>user_data_zone_hvac.csv</code> contains compliance data for zone HVAC compliance calculation. A sample of data record is shown below.</p>
+<p><img src="/BEM-for-PRM/user_guide/add_compliance_data/images/user_data_zone_hvac_sample.PNG?width=1000px&amp;align=left&amp;classes=border,alignLeft" alt="user_data_zone_hvac"></p>
+<h4 id="pressure-drop-adjustments">Pressure-drop adjustments</h4>
+<p>The following fields can be used to indicate what pressure-drop adjustment devices are present in each zone HVAC object in the proposed model. Each field corresponds to one of the pressure-drop adjustment categories from <strong>Table 6.5.3.1-2</strong>.</p>
+<h5 id="has_fan_power_credit_fully_ducted">has_fan_power_credit_fully_ducted</h5>
+<p>Set this field to the number of return or exhaust systems required by code or accreditation standards to be fully ducted, or systems required to maintain air pressure differentials between adjacent rooms that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_return_or_exhaust_flow_control">has_fan_power_credit_return_or_exhaust_flow_control</h5>
+<p>Set this field to the number of return and/or exhaust airflow control devices that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_exhaust_treatment">fan_power_credit_exhaust_treatment</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at fan system design conditions) of all exhaust filters, scrubbers, or other exhaust treatment devices that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_filtration_m9to12">has_fan_power_credit_filtration_m9to12</h5>
+<p>Set this field to the number of MERV 9 through 12 filters that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_filtration_m13to15">has_fan_power_credit_filtration_m13to15</h5>
+<p>Set this field to the number of MERV 13 through 15 filters that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus">clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at 2 times the clean filter pressure-drop at fan system design conditions) of all MERV 16+ filters and electronically enhanced filters that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_gas_phase_cleaners">fan_power_credit_gas_phase_cleaners</h5>
+<p>Set this field to the sum of carbon and other gas-phase air cleaners&rsquo; pressure-drop (at the fan system design conditions) that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_biosafety">fan_power_credit_biosafety</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at fan system design conditions) of biosafety cabinets that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_other_than_coil_runaround">fan_power_credit_other_than_coil_runaround</h5>
+<p>Set this field to the number of energy recovery devices other than coil runaround loop that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_coil_runaround">has_fan_power_credit_coil_runaround</h5>
+<p>Set this field to the number of runaround loop that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="fan_power_credit_evaporative_humidifier_or_cooler">fan_power_credit_evaporative_humidifier_or_cooler</h5>
+<p>Set this field to the sum of the pressure-drop (calculated at fan system design conditions) of the evaporative humidifier or cooler that the zone HVAC object includes. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_sound_attenuation">has_fan_power_credit_sound_attenuation</h5>
+<p>Set this field to the number of sound attenuation sections of fans serving spaces with design background noise goals below NC35 that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_exhaust_serving_fume_hoods">has_fan_power_credit_exhaust_serving_fume_hoods</h5>
+<p>Set this field to the number of exhaust systems serving fume hoods that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
+<h5 id="has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct">has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct</h5>
+<p>Set this field to the number of laboratory and vivarium exhaust systems in high-rise buildings that the zone HVAC object includes. If the number is 1, the field can also be set to <strong>yes</strong>. If it doesn&rsquo;t apply, leave this field blank or set to 0.</p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -2346,6 +2390,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2358,6 +2403,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2374,6 +2420,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2660,10 +2709,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/" title="Standards space type"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/" title="HVAC"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/space/" title="Space" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/" title="Zone Infiltration" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2695,3 +2744,4 @@
 
   </body>
 </html>
+

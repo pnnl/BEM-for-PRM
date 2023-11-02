@@ -8,14 +8,23 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 15:04:27 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Lights</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/</guid>
+      <description>Lights has_retail_display_exception has_unregulated_exception unregulated_category Lights User Data CSV File: userdata_lights.csv (81 B) The user_data_lights.csv contains compliance data for lights compliance calculation. A sample of data record is shown below.
+has_retail_display_exception Set this field to yes if the lights object qualifies as display lighting: the lighting must be specifically designed and directed to highlight merchandise and separately controlled from the general lighting. If it doesn&amp;rsquo;t apply, leave this field blank or set to no.</description>
+    </item>
+    
+    <item>
       <title>Exterior Lights</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</link>
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</guid>
-      <description>User Data CSV File: userdata_exterior_lights.csv (467 B) Introduction The userdata_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.
-It consists of the following data fields:
-name num_ext_lights_subcats end_use_subcategory Tradeable Exterior Lighting Subcategories Non-Tradeable Exterior Lighting Subcategories end_use_measurement_value For example, consider a building with an parking area that has 2 different kinds of exterior lights, one for the parking lots and drive areas and another for the exterior building facade area facing the parking lot.</description>
+      <description>Exterior Lights end_use_subcategory Tradeable Exterior Lighting Subcategories Non-Tradeable Exterior Lighting Subcategories end_use_measurement_value Exterior Lights User Data CSV File: userdata_exterior_lights.csv (467 B) The user_data_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. A sample of data record is shown below.
+end_use_subcategory Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on Appendix G Table G3.6. The lighting subcategories are designated by the labels:</description>
     </item>
     
   </channel>

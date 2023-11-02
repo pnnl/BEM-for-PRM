@@ -8,14 +8,32 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 15:04:27 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Zone HVAC</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/</guid>
+      <description>Zone HVAC Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Zone HVAC User Data CSV File: userdata_zone_hvac.csv (896 B) The user_data_zone_hvac.csv contains compliance data for zone HVAC compliance calculation. A sample of data record is shown below.
+Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each zone HVAC object in the proposed model.</description>
+    </item>
+    
+    <item>
+      <title>Zone Infiltration</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/</guid>
+      <description> User Data CSV File: userdata_zone_infiltration.csv (19 B) </description>
+    </item>
+    
+    <item>
       <title>Airloop HVAC</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/</guid>
-      <description>User Data CSV File: userdata_airloop_hvac.csv (988 B) Introduction The userdata_airloop_hvac.csv contains compliance data for airloop HVAC compliance calculation. It allows the user to specify pressure drop adjustments, air side economizer design considerations, exhaust air energy recovery design considerations as well as dcv exceptions.
-It consists of the following data fields:
-name Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Air-side economizer economizer_exception_for_gas_phase_air_cleaning economizer_exception_for_open_refrigerated_cases Exhaust air energy recovery exhaust_energy_recovery_exception_for_toxic_fumes_etc exhaust_energy_recovery_exception_for_type1_kitchen_hoods exhaust_energy_recovery_exception_for_type_distributed_exhaust exhaust_energy_recovery_exception_for_dehumidifcation_with_series_cooling_recovery dcv_exception_airloop An example of sample data is shown here:</description>
+      <description>Airloop HVAC Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Air-side economizer economizer_exception_for_gas_phase_air_cleaning economizer_exception_for_open_refrigerated_cases Exhaust air energy recovery exhaust_energy_recovery_exception_for_toxic_fumes_etc exhaust_energy_recovery_exception_for_type1_kitchen_hoods exhaust_energy_recovery_exception_for_type_distributed_exhaust exhaust_energy_recovery_exception_for_dehumidifcation_with_series_cooling_recovery Airloop HVAC User Data CSV File: userdata_airloop_hvac.csv (988 B) The user_data_airloop_hvac.csv contains compliance data for airloop HVAC compliance calculation. A sample of data record is shown below.
+Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC object in the proposed model.</description>
     </item>
     
     <item>
@@ -24,10 +42,8 @@ name Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_c
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac_doas/</guid>
-      <description>User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) Introduction The userdata_airloop_hvac_doas.csv contains compliance data for airloop HVAC DOAS compliance calculation. It allows users to specify the pressure drop adjustments for the DOAS airloop.
-The .csv consists of the following data fields.
-name Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct An example of sample data is shown here:
-name has_fan_ power_credit _fully_ducted has_fan_power_ credit_return_or_ exhaust_flow_control fan_power_credit_ exhaust_treatment has_fan_power_ credit_filtration_m9to12 has_fan_power_ credit_filtration_m13to15 clean_filter_pressure_ drop_for_fan_power_ credit_filtration_m16plus fan_power_credit_ gas_phase_cleaners fan_power_credit_ biosafety AHU_DOAS 0 0 0 0 yes 0 0 0 fan_power_credit_ other_than_coil_ runaround has_fan_power_credit_coil_runaround fan_power_credit_ evaporative_humidifier_or_ cooler has_fan_power_ credit_sound_ attenuation has_fan_power_ credit_exhaust_ serving_fume_hoods has_fan_power_ credit_lab_or_vivarium_ highrise_vertical_duct 0 0 0 0 0 0 Refer to the section below for more information about each field.</description>
+      <description>Airloop HVAC DOAS Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Airloop HVAC DOAS User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) The user_data_airloop_hvac_doas.csv contains compliance data for airloop HVAC DOAS compliance calculation. A sample of data record is shown below.
+Pressure-drop adjustments The following fields can be used to indicate what pressure-drop adjustment devices are present in each airloop HVAC DOAS object in the proposed model.</description>
     </item>
     
     <item>
@@ -36,9 +52,7 @@ name has_fan_ power_credit _fully_ducted has_fan_power_ credit_return_or_ exhaus
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_design_specification_outdoor_air/</guid>
-      <description>User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) Introduction The userdata_design_specification_outdoor_air.csv contains compliance data for outdoor air compliance calculation. It allows users to specify alternative Outdoor Air specifications for the baseline model. The proposed model will be the same as the user model.
-The .csv consists of the following data fields.
-name outdoor_airflow_per_person outdoor_airflow_per_floor_area outdoor_air_flowrate outdoor_air_flow_air_changes_per_hour For example, consider a zone named Office WholeBuilding - Md Office Ventilation with 0.0004 cfm per square feet.</description>
+      <description> User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) </description>
     </item>
     
   </channel>

@@ -95,9 +95,6 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</loc>
     <lastmod>2022-09-21T15:05:37-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/</loc>
-    <lastmod>2022-09-21T15:05:48-07:00</lastmod>
-  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/</loc>
     <lastmod>2022-09-21T15:04:27-07:00</lastmod>
   </url><url>
@@ -113,11 +110,14 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/</loc>
     <lastmod>2022-09-21T15:04:27-07:00</lastmod>
   </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/</loc>
+    <lastmod>2022-09-21T15:04:27-07:00</lastmod>
+  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</loc>
     <lastmod>2022-09-21T15:06:50-07:00</lastmod>
   </url><url>
-    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</loc>
-    <lastmod>2022-09-21T15:06:59-07:00</lastmod>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/userdata_api/</loc>
+    <lastmod>2022-09-21T15:06:50-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space/</loc>
     <lastmod>2022-09-21T15:06:18-07:00</lastmod>
@@ -129,6 +129,12 @@
     <lastmod>2022-09-21T15:06:12-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_hvac/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_zone_infiltration/</loc>
     <lastmod>2022-09-21T15:06:12-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/</loc>
@@ -143,11 +149,26 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_electric_equipment/</loc>
     <lastmod>2022-09-21T15:06:12-07:00</lastmod>
   </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_gas_equipment/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_lights/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</loc>
     <lastmod>2022-07-11T16:29:40-07:00</lastmod>
   </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/</loc>
-    <lastmod>2022-09-21T15:06:59-07:00</lastmod>
+    <lastmod>2022-09-21T15:06:50-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/categories/</loc>
   </url><url>
