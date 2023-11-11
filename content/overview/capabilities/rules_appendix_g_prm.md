@@ -11,8 +11,10 @@ pre: "<b>- </b>"
 
 #### Appendix G Performance Rating Method Rules and OSSTD-PRM
 
+The "Create ASHRAE 90.1-2019 PRM Model" measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline and Proposed model: 
 
-The "Create ASHRAE 90.1-2019 PRM Model" measure provides a detailed implementation of the rules of the Appendix G Performance Rating Method. Below are some of the key changes that are applied by the tool when creating the Baseline model: 
+##### **Rules for Baseline Model**
+
 - **Apply baseline envelope rules**
   - Space conditioning type
   - Constructions
@@ -41,3 +43,13 @@ The "Create ASHRAE 90.1-2019 PRM Model" measure provides a detailed implementati
   - Exterior lighting
   - Interior lighting exceptions
   - Number of systems per zone
+
+##### **Rules for Proposed Model**
+
+- **Apply proposed envelope rules**
+  - Infiltration
+- **Apply proposed lighting rules** 
+  - Residential lighting power
+- **Remove pipe losses for SWH**
+- **Adjust computer room equipment schedules**
+

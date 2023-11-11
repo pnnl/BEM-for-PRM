@@ -12,7 +12,7 @@ pre: "<b>- </b>"
 #### Demo 1 shows geometry transformations in a user model
 
 
-The proposed model (as shown in the image) is a typical medium sized office building with roughly `60%` window-to-wall ratio (WWR) and overhangs on its south facade. The `default_hvac_bldg_type` is set to `other nonresidential`, and the window to wall ratio and service water heating system building types are both set according to the related category. The building is assumed to be located in New York City. So its climate zone is `4A`.
+The user model (as shown in the image) is a typical medium sized office building with roughly `60%` window-to-wall ratio (WWR) and overhangs on its south facade. The `default_hvac_bldg_type` is set to `other nonresidential`, and the window to wall ratio and service water heating system building types are both set according to the related category. The building is assumed to be located in New York City. So its climate zone is `4A`.
 
 Download the folder "demo1_zip" on your system and extract it in any local folder (*_to be changed based on the method used in the sections below_*). The zip folder contains all the files including the model (.osm) and the weather file (.epw) to follow along the demo. 
 - **[demo1_zip](/BEM-for-PRM/get_start/demo/quick_start.files/demo1.zip): Transformations**

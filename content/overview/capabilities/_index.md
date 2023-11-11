@@ -10,7 +10,7 @@ pre = "<b>2. </b>"
 
 # Capabilities of OSSTD-PRM
 
-The key capability of OSSTD-PRM is the automatic generation of baseline building models in accordance with the ASHRAE 90.1 2019 Appendix G Performance Rating Method. OSSTD-PRM holds significant potential for extending this capability to encompass a wide range of other codes. Furthermore, its capabilities can be expanded to facilitate the automation of proposed model generation. The ongoing development of the OSSTD-PRM will introduce additional features in future releases while continuously refining existing measures. 
+The key capability of OSSTD-PRM is the automatic generation of baseline and proposed building models in accordance with the ASHRAE 90.1 2019 Appendix G Performance Rating Method. OSSTD-PRM holds significant potential for extending this capability to encompass a wide range of other codes. The ongoing development of the OSSTD-PRM will introduce additional features in future releases while continuously refining existing measures. 
 This section provides additional details about the "Create ASHRAE 90.1 2019 PRM Model" measure capabilities and its application.   
 
 <!-- {{< line_break >}} 
