@@ -6,7 +6,9 @@ draft: false
 pre: "<b>- </b>"
 ---
 
-## Standards Space Type
+{{<line_break>}}
+
+#### Best Practices for Space Type
 
 The SpaceType object in OpenStudio has the property StandardsSpaceType which can be used to identify the appropriate lighting space type. The lighting space type is used to determine the baseline lighting power density and lighting control savings based on Table G3.7 of 90.1 Appendix G. The lighting space type is also used for a number of other purposes in the baseline generation, including: determining special requirements for computer rooms and laboratories, identifying residential spaces, and determining applicability of receptacle control measures according to space type.
 

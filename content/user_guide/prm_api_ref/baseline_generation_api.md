@@ -3,26 +3,30 @@ title: "Baseline generation API"
 date: 2022-09-21T15:06:50-07:00
 weight: 331
 draft: false
-pre: "<b> </b>"
+pre: "<b> - </b>"
 ---
 
-- [model_create_prm_stable_baseline_building](#model_create_prm_stable_baseline_building)
-  - [model](#--prm-model)
-  - [climate_zone](#--climate_zone)
-  - [default_hvac_bldg_type](#--default_hvac_bldg_type)
-  - [default_wwr_bldg_type](#--default_wwr_bldg_type)
-  - [default_swh_bldg_type](#--default_swh_bldg_type)
-  - [output_dir](#--output_dir)
-  - [unmet_load_hours](#--unmet_load_hours)
-  - [debug](#--debug)
-- [convert_userdata_csv_to_json](#convert_userdata_csv_to_json)
-  - [userdata_dir](#--userdata_dir)
-  - [output_dir](#--output_dir)
-- [load_userdata_to_standards_database](#load_userdata_to_standards_database)
+{{<line_break>}}
+
+#### The API functions for baseline generation including its arguments are as listed
+
+- [model_create_prm_stable_baseline_building](#function-1-model_create_prm_stable_baseline_building)
+  - [model](#argument-1-model)
+  - [climate_zone](#argument-2-climate_zone)
+  - [default_hvac_bldg_type](#argument-3-default_hvac_bldg_type)
+  - [default_wwr_bldg_type](#argument-4-default_wwr_bldg_type)
+  - [default_swh_bldg_type](#argument-5-default_swh_bldg_type)
+  - [output_dir](#argument-6-output_dir)
+  - [unmet_load_hours](#argument-7-unmet_load_hours)
+  - [debug](#argument-8-debug)
+
+
+Read the section below for a detailed breakdown of each function. 
 
 {{< line_break >}}
 
-### model_create_prm_stable_baseline_building
+#### FUNCTION 1: model_create_prm_stable_baseline_building
+This is the primary API function to generate baseline models. The process involves taking a user-created OpenStudio model along with several user-defined arguments to produce a PRM baseline model. This function contains numerous arguments, many of which require specific enum values. It's crucial that these arguments align with their corresponding enum values.
 
 ```ruby
 standard = Standard.build("90.1-PRM-2019")
@@ -30,14 +34,18 @@ standard = Standard.build("90.1-PRM-2019")
 create_results = standard.model_create_prm_stable_baseline_building(model, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, output_dir, unmet_load_hours, debug)
 ```
 
-The key function that generates the ASHRAE 90.1 PRM model contains many arguments. Many of them have specific enum values. For a successful generation, these arguments need to match their enum values.
+Here is a breakdown of steps involved in the "model_create_prm_stable_baseline_building" function.
 
-This instruction will walk through the argument list, so this API call can be customized for any purpose and building cases.
+- **Step 1: Generate a proposed model**
+  {{<mermaid align="center">}}
+  graph LR;
+  A(User Model) -->|check severe errors| B{Decision}
+  B -->|Passed| C(Creates a proposed model)
+  B -->|Failed| D(Generates an error)
+  {{</mermaid>}}
 
-This API function is a primary function to generate baseline models. The process takes a user-created OpenStudio model and several user-defined arguments and produce a PRM baseline model.
 
-- ##### Step 1: Check proposed model
-
+- **Step 2: Check proposed model**
   {{<mermaid align="center">}}
   graph LR;
   A(Check proposed model) -->|check severe errors and unmet load hours| B{Decision}
@@ -45,9 +53,9 @@ This API function is a primary function to generate baseline models. The process
   B -->|Failed| D(Create one baseline model)
   {{</mermaid>}}
   The simulation results in this step will be saved in the folder `SR_PROP0`.
-
-- ##### Step 2: Adjust envelope and internal loads
-
+ 
+- **Step 3: Adjust envelope and internal loads**
+  
   In this step, the function starts adjusting the envelope and internal loads based on the information stored in the method arguments and user-supplied model. In addition, this step also prepares HVAC systems for a sizing run.
 
   {{<mermaid align="left">}}
@@ -64,9 +72,9 @@ This API function is a primary function to generate baseline models. The process
 
   After all the above is applied, a sizing run is conducted and labeled as `SR1` in the output directory.
 
-- ##### Step 3: Fine tune HVAC system parameters 1
+- **Step 4: Fine tune HVAC system parameters 1**
 
-  Based on the sizing run results in the `SR1` folder, this step will fine-tune the HVAC parameters based on the ASHRAE 90.1 appendix G specifications.
+  Based on the sizing run results in the `SR1` folder, this step will fine-tune the HVAC parameters based on the ASHRAE 90.1 Appendix G specifications.
 
   {{<mermaid align="left">}}
   graph LR;
@@ -79,7 +87,8 @@ This API function is a primary function to generate baseline models. The process
 
   After all the above steps are completed, a second sizing run is conducted and labeled as `SR2` in the output directory. In this run, several key metrics in the HVAC system will be determined, such as the capacity of the chillers and loop flow rates.
 
-- ##### Step 4: Fine tune HVAC system parameters 2
+- **Step 5: Fine tune HVAC system parameters 2**
+
   This step further fine-tunes some parameters in the HVAC components.
   {{<mermaid align="left">}}
   graph LR;
@@ -89,11 +98,10 @@ This API function is a primary function to generate baseline models. The process
   {{</mermaid>}}
   A third sizing run is conducted after this step and labeled as `SR3` in the output directory. The third sizing run is the final sizing run to refine size-dependent values, including the secondary flow rate in the parallel PIU reheat terminal and the maximum flow rate in the air terminal.
 
-After these four steps, baseline model(s) will be generated in the output directory. The output directory is an argument the user provides when calling this function. In the next section, we will give a detail explanation of these arguments.
+After these four steps, baseline model(s) will be generated in the output directory. The output directory is an argument the user provides when calling this function. 
+Below you can find a detailed explanation of these arguments, so this API call can be customized for any purpose and building cases.
 
-{{< line_break >}}
-
-#### - model
+##### **ARGUMENT 1: model**
 
 `model` is the OpenStudio model. A typical way to load an OpenStudio model is through the version translator.
 
@@ -103,9 +111,7 @@ translator = OpenStudio::OSVersion::VersionTranslator.new
 model = translator.loadModel(model_path).get
 ```
 
-{{< line_break >}}
-
-#### - climate_zone
+##### **ARGUMENT 2: climate_zone**
 
 The `climate_zone` shall be one of the strings from the list below:
 
@@ -131,9 +137,7 @@ The `climate_zone` shall be one of the strings from the list below:
 - `ASHRAE 169-2013-8A`
 - `ASHRAE 169-2013-8B`
 
-{{< line_break >}}
-
-#### - default_hvac_bldg_type
+##### **ARGUMENT 3: default_hvac_bldg_type**
 
 The `default_hvac_bldg_type` shall be one of the strings in the list below:
 
@@ -145,9 +149,7 @@ The `default_hvac_bldg_type` shall be one of the strings in the list below:
 - `residential`
 - `unconditioned`
 
-{{< line_break >}}
-
-#### - default_wwr_bldg_type
+##### **ARGUMENT 4: default_wwr_bldg_type**
 
 The `default_wwr_bldg_type` shall be one of the strings in the list below:
 
@@ -168,9 +170,7 @@ The `default_wwr_bldg_type` shall be one of the strings in the list below:
 - `Grocery store`
 - `All other`
 
-{{< line_break >}}
-
-#### - default_swh_bldg_type
+##### **ARGUMENT 5: default_swh_bldg_type**
 
 The `default_swh_bldg_type` shall be one of the strings in the list below:
 
@@ -211,15 +211,11 @@ The `default_swh_bldg_type` shall be one of the strings in the list below:
 - `Automotive facility`
 - `All others`
 
-{{< line_break >}}
-
-#### - output_dir
+##### **ARGUMENT 6: output_dir**
 
 `output_dir` is a mandatory field that specifies the directory to save all sizing runs. When applying the PRM method to a proposed model, OSSTD will perform several sizing runs. These sizing runs are usually saved in a directory specified in `sizing_run_dir`. In addition, the generated baseline model `.idf` and `.osm` will also be saved in this directory.
 
-{{< line_break >}}
-
-#### - unmet_load_hours
+##### **ARGUMENT 7: unmet_load_hours**
 
 `unmet_load_hours` is a flag that checks whether a `model` can successfully run an annual simulation and whether its annual unmet load hours meet the ASHRAE 90.1 Appendix G requirements. The default value for this flag is `true`.
 
@@ -227,57 +223,8 @@ The `default_swh_bldg_type` shall be one of the strings in the list below:
 Cautious when setting the `unmet_load_hours` to `false`. This could result in wrong baseline models or crash the baseline generation process.
 {{% /notice %}}
 
-{{< line_break >}}
-
-#### - debug
+##### **ARGUMENT 8: debug**
 
 `debug` default is set to `false`. This argument has no impact on the current PRM generation and is part of the future implementation. Any API calls set this field to `false` or ignore this argument.
 
-{{< line_break >}}
 
-### convert_userdata_csv_to_json
-
-The function converts user data from CSV format to JSON format, and it is typically called before loading the user data before baseline generation.
-
-```
-standard = Standard.build("90.1-PRM-2019")
-userdata_dir = "#{File.dirname(Dir.pwd)}/user_data"
-output_dir = "#{File.dirname(Dir.pwd)}/output"
-# Converts user data from .csv file to .json file
-json_path = standard.convert_userdata_csv_to_json(userdata_dir, output_dir)
-```
-
-The function has two arguments, `userdata_dir` and `output_dir`. The process first loads all the default user data templates as `json`, then grabs all the user CSV files saved in the `userdata_dir` and inserts data from the `csv` files into the `json` data. Lastly, the function saves the `json` to the `output_dir` in the `user_data_json` folder.
-
-#### - userdata_dir
-
-This argument shall be a valid directory string that points to the folder where all user data `csv` is saved. An example can be:
-
-```
-"C:\\documents\\my_user_data"
-```
-
-#### - output_dir
-
-This argument shall be a valid directory string that points to the folder where all user data `json` is saved. An example can be:
-
-```
-"C:\\documents\\user_data_json"
-```
-
-{{< line_break >}}
-
-### load_userdata_to_standards_database
-
-The function loads the user data folder into the `90.1-PRM-2019` instance. A typical workflow will call `convert_userdata_csv_to_json` first to convert all user data from `csv` to `json` and then call `load_userdata_to_standards_database` to load the json into the workflow.
-
-```
-standard = Standard.build("90.1-PRM-2019")
-userdata_dir = "#{File.dirname(Dir.pwd)}/user_data"
-output_dir = "#{File.dirname(Dir.pwd)}/output"
-# Converts user data from .csv file to .json file
-json_path = standard.convert_userdata_csv_to_json(userdata_dir, output_dir)
-standard.load_userdata_to_standards_database(json_path)
-```
-
-`json_path` shall be a valid directory string that points to the folder where all user data `json` is saved.

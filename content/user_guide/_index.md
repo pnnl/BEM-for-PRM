@@ -9,4 +9,4 @@ chapter = true
 
 # PRM Method User Guide
 
-A detail user guide that walks through API methods in the PRM method
+Before running the PRM measure, make sure you review the user guide that walks through the model requirements, utilizing user compliance data and provides insights into the API functions for the PRM measure.
