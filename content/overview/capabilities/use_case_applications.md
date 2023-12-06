@@ -12,12 +12,12 @@ pre: "<b>- </b>"
 
 - **Energy Modelers**
 
-   Energy modelers can utilize the OSSTD-PRM measure to automate the creation of baseline building models. They can also refer to the PRM-RM (Performance Rating Method Reference Manual) for guidelines on how to generate models for proposed designs. This can streamline the energy modeling process and ensure consistency and compliance with relevant standards. 
+   Energy modelers can utilize the OSSTD-PRM measure to automate the creation of baseline and proposed building models. This can streamline the energy modeling process and ensure consistency and compliance with relevant standards. 
 
 
 - **BEM Software Vendors/Developers**
 
-   Building energy modeling software vendors and developers can incorporate the measure and methodology into their workflow to automatically generate baseline building models while ensuring the neutrality of schedules and other modeling assumptions. This integration can be achieved through API calls or by utilizing the open-source code provided.
+   Building energy modeling software vendors and developers can incorporate the measure and methodology into their workflow to automatically generate baseline and proposed building models while ensuring the neutrality of schedules and other modeling assumptions. This integration can be achieved through API calls or by utilizing the open-source code provided.
 
 - **Program Administrators**
 
