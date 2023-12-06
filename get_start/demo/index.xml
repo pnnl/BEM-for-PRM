@@ -13,7 +13,7 @@
       <pubDate>Tue, 16 Aug 2022 13:04:42 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo1/</guid>
-      <description>Demo 1 shows geometry transformations in a user model The proposed model (as shown in the image) is a typical medium sized office building with roughly 60% window-to-wall ratio (WWR) and overhangs on its south facade. The default_hvac_bldg_type is set to other nonresidential, and the window to wall ratio and service water heating system building types are both set according to the related category. The building is assumed to be located in New York City.</description>
+      <description>Demo 1 shows geometry transformations in a user model The user model (as shown in the image) is a typical medium sized office building with roughly 60% window-to-wall ratio (WWR) and overhangs on its south facade. The default_hvac_bldg_type is set to other nonresidential, and the window to wall ratio and service water heating system building types are both set according to the related category. The building is assumed to be located in New York City.</description>
     </item>
     
     <item>
