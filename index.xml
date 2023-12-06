@@ -6,7 +6,7 @@
     <description>Recent content in Home on OSSTD doc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Sep 2022 15:06:59 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 15:06:50 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Appendix G PRM Rules</title>
       <link>http://pnnl.github.io/BEM-for-PRM/overview/capabilities/rules_appendix_g_prm/</link>
@@ -183,7 +183,8 @@ Download the folder &amp;ldquo;demo3_zip&amp;rdquo; on your system and extract i
       <pubDate>Wed, 21 Sep 2022 15:05:48 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</guid>
-      <description></description>
+      <description>Here are some best practices to run the PRM measure: The space types should be defined in the model : The lighting space type is used to determine the baseline lighting power density and lighting control savings. Read more about it in Standards space type section. If the User Compliance Data files contain lighting space type assignments, there is a hierachy for determining the final assignments:
+user_data_space is first priority user_data_space_type is second priority StandardsSpaceType property of the SpaceType objest is lowest priority Dates in the schedule must have a &amp;ldquo;MM/DD&amp;rdquo; formatting : Where is this inserted?</description>
     </item>
     
     <item>
@@ -192,17 +193,7 @@ Download the folder &amp;ldquo;demo3_zip&amp;rdquo; on your system and extract i
       <pubDate>Wed, 21 Sep 2022 15:05:37 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/standards_space_type/</guid>
-      <description>Standards Space Type The SpaceType object in OpenStudio has the property StandardsSpaceType which can be used to identify the appropriate lighting space type. The lighting space type is used to determine the baseline lighting power density and lighting control savings based on Table G3.7 of 90.1 Appendix G. The lighting space type is also used for a number of other purposes in the baseline generation, including: determining special requirements for computer rooms and laboratories, identifying residential spaces, and determining applicability of receptacle control measures according to space type.</description>
-    </item>
-    
-    <item>
-      <title>Other requirements</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/</link>
-      <pubDate>Wed, 21 Sep 2022 15:05:48 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/other_requirements/</guid>
-      <description>The user model should have occupancy control of lighting incorporated into the lighing use schedules where it is required by ASHRAE 90.1-2019. The program will back-calculate the uncontrolled lighting schedules for the Baseline model based on the occupancy sensor reduction values in Appendix G Table G3.7.
-The user model needs to have a fully defined HVAC system. Most of the HVAC objects are deleted when the Appendix G Baseline is created, but some information is taken from the user model and transferred to the Baselne.</description>
+      <description>Best Practices for Space Type The SpaceType object in OpenStudio has the property StandardsSpaceType which can be used to identify the appropriate lighting space type. The lighting space type is used to determine the baseline lighting power density and lighting control savings based on Table G3.7 of 90.1 Appendix G. The lighting space type is also used for a number of other purposes in the baseline generation, including: determining special requirements for computer rooms and laboratories, identifying residential spaces, and determining applicability of receptacle control measures according to space type.</description>
     </item>
     
     <item>
@@ -211,18 +202,19 @@ The user model needs to have a fully defined HVAC system. Most of the HVAC objec
       <pubDate>Wed, 21 Sep 2022 15:06:50 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</guid>
-      <description>model_create_prm_stable_baseline_building model climate_zone default_hvac_bldg_type default_wwr_bldg_type default_swh_bldg_type output_dir unmet_load_hours debug convert_userdata_csv_to_json userdata_dir output_dir load_userdata_to_standards_database model_create_prm_stable_baseline_building standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) create_results = standard.model_create_prm_stable_baseline_building(model, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, output_dir, unmet_load_hours, debug) The key function that generates the ASHRAE 90.1 PRM model contains many arguments. Many of them have specific enum values. For a successful generation, these arguments need to match their enum values.
-This instruction will walk through the argument list, so this API call can be customized for any purpose and building cases.</description>
+      <description>The API functions for baseline generation including its arguments are as listed model_create_prm_stable_baseline_building model climate_zone default_hvac_bldg_type default_wwr_bldg_type default_swh_bldg_type output_dir unmet_load_hours debug Read the section below for a detailed breakdown of each function.
+FUNCTION 1: model_create_prm_stable_baseline_building This is the primary API function to generate baseline models. The process involves taking a user-created OpenStudio model along with several user-defined arguments to produce a PRM baseline model. This function contains numerous arguments, many of which require specific enum values.</description>
     </item>
     
     <item>
-      <title>Window API</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</link>
-      <pubDate>Wed, 21 Sep 2022 15:06:59 -0700</pubDate>
+      <title>User Data API</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/userdata_api/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:50 -0700</pubDate>
       
-      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/wwr_api/</guid>
-      <description>Quick use Function workflow How to use Input arguments user_model climate_zone Output values result wwr_info Multi building area type handling Quick Use wwr_building_type = &amp;#34;Office &amp;lt;= 5,000 sq ft&amp;#34; standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) result, wwr_info = standard.model_apply_prm_baseline_window_to_wall_ratio(model, climate_zone=&amp;#39;&amp;#39;, wwr_building_type: wwr_building_type) The above code adjusts the window-to-wall ratio in the model to the specified building type. Each building type maps to a window-to-wall ratio.
-Building Area Types Baseline building vertical fenestration percentage of gross-above-grade wall area Grocery store 7% Warehouse (nonrefrigerated) 6% School (secondary and university) 22% School (primary) 22% Retail (strip mall) 20% Retail (stand alone) 11% Restaurant (quick service) 34% Restaurant (full serivce) 24% Office &amp;gt; 50,000 sq ft 40% Office &amp;lt;= 5,000 sq ft 19% Office 5,000 to 50,000 sq ft 31% Hotel/motel &amp;gt; 75 rooms 34% Hotel/motel &amp;lt;= 75 rooms 24% Hospital 27% Healthcare (outpatient) 21% All other 40% The mapping is shown in the above table.</description>
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/userdata_api/</guid>
+      <description>The API functions for user data including its arguments are as listed convert_userdata_csv_to_json userdata_dir output_dir load_userdata_to_standards_database generate_userdata_to_csv Read the section below for a detailed breakdown of each function.
+FUNCTION 1: convert_userdata_csv_to_json The function converts user data from CSV format to JSON format, and it is typically called before loading the user data before baseline generation.
+standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) userdata_dir = &amp;#34;#{File.dirname(Dir.pwd)}/user_data&amp;#34; output_dir = &amp;#34;#{File.dirname(Dir.pwd)}/output&amp;#34; # Converts user data from .</description>
     </item>
     
     <item>
