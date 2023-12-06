@@ -10,12 +10,14 @@ pre = "<b>2. </b>"
 
 # User Compliance Data
 
-Compliance data is a set of `.csv` files with fixed format. The data can be used in the ASHRAE 90.1-2019 PRM method to provide additional information that cannot not be found in an OpenStudio model (e.g., `motor_power`). The compliance data can improve the accuracy of the PRM model.
+Compliance data (referred to as user data in previous sections) is a set of `.csv` files with fixed format. The data can be used in the ASHRAE 90.1-2019 PRM method to provide additional information that cannot not be found in an OpenStudio model (e.g., `motor_power`). The compliance data can improve the accuracy of the PRM model.
 
 {{%attachments title="Download Compliance Data Set" style="orange" pattern=".*\.(zip)$"/%}}
+<!-- update it before the nov release -->
 
-Currently there are 16 `.csv` files in the compliance data set. Each of them covers a specific set of ASHRAE 90.1-2019 compliance data to OpenStudio object. This chapter will provide the detail explaination on each of the file.
+Currently there are 9 `.csv` files in the compliance data set. Each of them covers a specific set of ASHRAE 90.1-2019 compliance data to OpenStudio object. This chapter will provide the detailed explaination on each of the files.
 
+<!--
 {{%expand "Quick link to each compliance data file user guide:" %}}
 
 - [userdata_airloop_hvac.csv](/BEM-for-PRM/user_guide/add_compliance_data/user_data_airloop_hvac)
@@ -35,3 +37,4 @@ Currently there are 16 `.csv` files in the compliance data set. Each of them cov
 - [userdata_zone_hvac.csv](/BEM-for-PRM/user_guide/add_compliance_data/user_data_zone_hvac)
 - userdata_zone_infiltration.csv
   {{% /expand%}}
+  --> 

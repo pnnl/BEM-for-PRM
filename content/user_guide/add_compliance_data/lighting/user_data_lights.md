@@ -2,21 +2,19 @@
 title: "Lights"
 date: 2022-09-21T15:06:12-07:00
 weight: 3251
-draft: false
+draft: true
 pre: "<b>- </b>"
 ---
 
-- [Lights](#lights)
-- [has_retail_display_exception](#has_retail_display_exception)
-- [has_unregulated_exception](#has_unregulated_exception)
-- [unregulated_category](#unregulated_category)
+{{<line_break>}}
 
+{{%attachments title="User Data CSV File:" style="orange" pattern=".*\.(csv)$"/%}}
 
 {{< line_break >}}
 
-#### Lights
-
-{{%attachments title="User Data CSV File:" style="orange" pattern=".*\.(csv)$"/%}}
+- [has_retail_display_exception](#has_retail_display_exception)
+- [has_unregulated_exception](#has_unregulated_exception)
+- [unregulated_category](#unregulated_category)
 
 The `user_data_lights.csv` contains compliance data for lights compliance calculation. A sample of data record is shown below.
 
