@@ -19,11 +19,6 @@ pre: "<b>- </b>"
 
   | OpenStudio SDK | OpenStudio-Standard | EnergyPlus | OpenStudio Release Date | PRM measure |
   | :------------: | :-----------------: | :--------: | :---------------------: | :---------: |
-  |     3.6.0      |       v0.4.0        |   23.1.0   |       05/09/2023        |     Beta    |
+  |      3.7       |       v0.5.0        |   24.1.0   |       11/09/2023        |   v0.1.0    |
 
   You can also check the OS SDK Version Matrix [here](https://github.com/NREL/OpenStudio/wiki/OpenStudio-SDK-Version-Compatibility-Matrix).
-
-  <!-- Add this line above after Nov release after confirming the versions 
-  |     3.7.0     |     v0.5.0      |   24.1.0   |       11/09/2023        |       v1.0.0        |
-  -->
-

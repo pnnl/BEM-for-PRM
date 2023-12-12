@@ -8,8 +8,11 @@ pre: "<b>- </b>"
 
 {{< line_break >}}
 
-#### Coming Soon... 
-<!-- 
+#### New Features:
+
+- **Support SHW baseline modeling:** This feature will support creating a single or mulitple service hot water loops based on building types.
+
+<!--
 Example for future reference
 
 Areas of Planned FY20 Development
