@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Water on OSSTD doc</title>
+    <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/</link>
+    <description>Recent content in Water on OSSTD doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Sep 2022 15:04:27 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Water Connections</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</guid>
+      <description>User Data CSV File: userdata_wateruse_connections.csv (82 B) Introduction The userdata_wateruse_connections.csv contains compliance data for hot water and cold water supply temperature schedules. The schedules are used in the simulation to calculate the water demand loads.
+It consists of the following data fields:
+name hot_water_supply_temperature_schedule cold_water_supply_temperature_schedule An example of such data can be found in below. It should be noted that the schedule name provided shall be in the user model.</description>
+    </item>
+    
+    <item>
+      <title>Water Equip Definition</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</guid>
+      <description>User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) Introduction The userdata_wateruse_equipment_definition.csv contains compliance data the wateruse equipment definition. The object can be found in Openstudio SDK. The data file let&amp;rsquo;s user to modify data for an existing wateruse equipment definition object.
+It consists of the following data fields:
+name peak_flow_rate flow_rate_fraction_schedule target_temperature_schedule An example of such data can be found in below. It should be noted that the schedule name provided shall be in the user model.</description>
+    </item>
+    
+  </channel>
+</rss>

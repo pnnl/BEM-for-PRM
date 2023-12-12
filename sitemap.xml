@@ -110,6 +110,9 @@
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/</loc>
     <lastmod>2022-09-21T15:04:27-07:00</lastmod>
   </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/</loc>
+    <lastmod>2022-09-21T15:04:27-07:00</lastmod>
+  </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</loc>
     <lastmod>2022-09-21T15:06:50-07:00</lastmod>
   </url><url>
@@ -142,6 +145,12 @@
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</loc>
     <lastmod>2022-07-11T16:29:40-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
+  </url><url>
+    <loc>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</loc>
+    <lastmod>2022-09-21T15:06:12-07:00</lastmod>
   </url><url>
     <loc>http://pnnl.github.io/BEM-for-PRM/</loc>
     <lastmod>2022-09-21T15:06:50-07:00</lastmod>

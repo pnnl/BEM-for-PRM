@@ -55,7 +55,7 @@ Building energy modeling software vendors and developers can incorporate the mea
       <pubDate>Wed, 21 Sep 2022 14:48:04 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/overview/features/planned_features/</guid>
-      <description> Coming Soon&amp;hellip; </description>
+      <description> New Features: Support SHW baseline modeling: This feature will support creating a single or mulitple service hot water loops based on building types. </description>
     </item>
     
     <item>
@@ -312,6 +312,28 @@ name fraction_of_controlled_receptacles receptacle_power_savings motor_horsepowe
       <description>User Data CSV File: userdata_exterior_lights.csv (467 B) Introduction The userdata_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.
 It consists of the following data fields:
 name num_ext_lights_subcats end_use_subcategory Tradeable Exterior Lighting Subcategories Non-Tradeable Exterior Lighting Subcategories end_use_measurement_value For example, consider a building with an parking area that has 2 different kinds of exterior lights, one for the parking lots and drive areas and another for the exterior building facade area facing the parking lot.</description>
+    </item>
+    
+    <item>
+      <title>Water Connections</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</guid>
+      <description>User Data CSV File: userdata_wateruse_connections.csv (82 B) Introduction The userdata_wateruse_connections.csv contains compliance data for hot water and cold water supply temperature schedules. The schedules are used in the simulation to calculate the water demand loads.
+It consists of the following data fields:
+name hot_water_supply_temperature_schedule cold_water_supply_temperature_schedule An example of such data can be found in below. It should be noted that the schedule name provided shall be in the user model.</description>
+    </item>
+    
+    <item>
+      <title>Water Equip Definition</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</link>
+      <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</guid>
+      <description>User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) Introduction The userdata_wateruse_equipment_definition.csv contains compliance data the wateruse equipment definition. The object can be found in Openstudio SDK. The data file let&amp;rsquo;s user to modify data for an existing wateruse equipment definition object.
+It consists of the following data fields:
+name peak_flow_rate flow_rate_fraction_schedule target_temperature_schedule An example of such data can be found in below. It should be noted that the schedule name provided shall be in the user model.</description>
     </item>
     
   </channel>
