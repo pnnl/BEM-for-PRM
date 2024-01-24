@@ -51,7 +51,7 @@ In the following sections, follow the steps to run the demo file based on the me
 
 ##### **B. Using OS SDK using CLI**
 
-1. **Setup Local Directory:** Set up the files from `demo1` folder in a local directory. One such example of the folder structure is shown in [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. 
+1. **Setup Local Directory:** Set up the files from `demo2` folder in a local directory. One such example of the folder structure is shown in [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. 
 2. **Edit OSW File:** Open the .osw file created initially (Refer to [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section). Update the project inputs and parameters as follows. 
 ![CLI Method osw file structure](/BEM-for-PRM/get_start/demo/images/demo2_CLImethod_oswfile.PNG?width=600px&align=right&classes=border,alignLeft) 
 3. **Execute:** Open Command Prompt as an administrator and type the following command with paths to the openstudio\bin and the OSW directories.
@@ -65,7 +65,7 @@ In the following sections, follow the steps to run the demo file based on the me
    - *_demo2_* to be replaced by the folder path where test.osw is located.
    {{% /notice %}}
 
-4. **Output:** Once the simulation is run, go to the demo1 folder (or the folder where you had all the files set up in the local directory) to access the output files as shown in [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](/BEM-for-PRM/get_start/demo/demo2/#demo-2-results). 
+4. **Output:** Once the simulation is run, go to the demo2 folder (or the folder where you had all the files set up in the local directory) to access the output files as shown in [Run the measure](/BEM-for-PRM/get_start/os_cli/run_the_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](/BEM-for-PRM/get_start/demo/demo2/#demo-2-results). 
 
 
 {{<line_break>}}
