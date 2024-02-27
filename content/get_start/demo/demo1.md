@@ -155,7 +155,7 @@ Besides geometry, several building system performances are also updated. Table b
 
 | Category      | Dependent Variable                         | Standard Requirement       | Baseline Value                                    |
 | ------------- | ------------------------------------------ | -------------------------- | ------------------------------------------------- |
-| Exterior Wall | Climate Zone 4, nonresidential             | U-0.124 (R-8.06)           | PRM Steel Framed Exetrior Wall R-8.06             |
+| Exterior Wall | Climate Zone 4, nonresidential             | U-0.124 (R-8.06)           | PRM Steel Framed Exterior Wall R-8.06             |
 | Roof          | Climate Zone 4, nonresidential             | U-0.063 (R-15.87)          | PRM IEAD Roof R-15.87                             |
 | Window        | Climate Zone 4, nonresidential, 30-40% WWR | U-0.57, SHGC-0.39, Vt-0.43 | PRM U 0.57 SHGC 0.39 VT 0.4 Simple Glazing Window |
 | LPD           | Office, whole building                     | 1.10 W/ft2                 | 11.8 W/m2                                         |
