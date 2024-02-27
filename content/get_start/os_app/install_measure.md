@@ -8,24 +8,24 @@ pre: "<b>- </b>"
 
 {{< line_break >}}
 
-#### B. Install the OSSTD "Create ASHRAE 90.1-2019 PRM Model" measure using any of the following approaches. 
+#### B. Install the OSSTD "Create ASHRAE 90.1-2019 PRM Model" measure using any of the following approaches.
 
 The PRM measure can be downloaded using two different approaches.
 
 ##### **1. Download measure from the documentation website**
 
-- The "Create ASHRAE 90.1-2019 PRM Model" measure can be downloaded from [measures.zip](/BEM-for-PRM/get_start/os_app/run_measure_cli.files/measures.zip) (7 KB)
+- The "Create ASHRAE 90.1-2019 PRM Model" measure can be downloaded from [PerformanceRatingMethod.zip](/BEM-for-PRM/get_start/os_app/run_measure_cli.files/PerformanceRatingMethod.zip) (7 KB)
 
 - After downloading the measure, unzip the folder.
 
-- Copy/Move the `CreateBaselineBuilding` measure folder to the local *Measures* directory used by the OpenStudio App. <!-- Confirm if folder name was changed in november release --> 
+- Copy/Move the `PerformanceRatingMethod` measure folder to the local _Measures_ directory used by the OpenStudio App. <!-- Confirm if folder name was changed in november release -->
 
 - You can check the measures directory by clicking on **_Change My Measures Directory_** under the Preferences tab of the OS app. Typically, the local measures directory is located in `C:\Users\[sample_user]\OpenStudio\Measures`.
 
 ![Openstudio Measures Directory](/BEM-for-PRM/get_start/os_app/images/osapp_measures_directory.jpg?width=800px&align=left&classes=border)
 {{< line_break >}}
 
-#####  **2.a. Download measure from the Building Component Library (BCL) within the OS App**
+##### **2.a. Download measure from the Building Component Library (BCL) within the OS App**
 
 - Launch the OpenStudio application by clicking on the executable “OpenStudioApp.exe” located in the `\bin` folder under the installation directory. The default installation directory is `C:\openstudioapplication-x.x.x` where x.x.x defines the version.
 
@@ -55,4 +55,4 @@ The PRM measure can be downloaded using two different approaches.
 
 {{<line_break>}}
 
-##### **Once you have the measure downloaded, move to the next page to run the measure.** 
+##### **Once you have the measure downloaded, move to the next page to run the measure.**
