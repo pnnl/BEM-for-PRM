@@ -27,7 +27,7 @@ The following table shows a compatibility matrix for OpenStudio SDK and &amp;ldq
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_the_measure/</guid>
       <description>B. Run the measure with OS SDK using CLI There are 5 parts in the process of running the measure.
-Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Execute the measure Save the Output 1. Download the PRM measure Download measure in the link below: Create Baseline Building: measures.zip (7 KB) Refer to Install the measure for other installation options.
+Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Execute the measure Save the Output 1. Download the PRM measure Download measure in the link below: Create Baseline Building: PerformanceRatingMethod.zip (977 KB) Refer to Install the measure for other installation options.
 2. Setup a local directory Setup a local directory to include all required inputs (the following example is one way to setup the directory):</description>
     </item>
     
