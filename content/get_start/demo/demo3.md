@@ -33,7 +33,7 @@ In the following sections, follow the steps to run the demo file based on the me
 
 1. **Launch OpenStudio Application (OS App):** It should be installed in your system, if not, make sure you have followed all the steps in [Use with OS App](/BEM-for-PRM/get_start/os_app/) section. 
 
-2. **Load the .osm file:** Go to the File menu and select Open. Navigate to the folder `demo 2` and select `geometry_demo_model.osm` file. The project inputs like weather file, climate zone and location will load automatically (as shown in the image). If any parameter is missing, add it manually. 
+2. **Load the .osm file:** Go to the File menu and select Open. Navigate to the folder `demo 3` and select `geometry_demo_model.osm` file. The project inputs like weather file, climate zone and location will load automatically (as shown in the image). If any parameter is missing, add it manually. 
 ![demo1_loadosmfile image](/BEM-for-PRM/get_start/demo/images/demo1_loadosmfile.PNG?width=1400px&align=right&classes=border,alignLeft)
 
 3. **Add the measure:** Go to the Measures tab in the left menu. Under Whole Building > Space Types, *_Create ASHRAE 90.1 2019 PRM Model_* measure should be available. If you don't see it, revisit the steps in [Use with OS App](/BEM-for-PRM/get_start/os_app/) section. Add the measure.
@@ -48,7 +48,7 @@ In the following sections, follow the steps to run the demo file based on the me
     - Use User Data : **_TRUE_** (TRUE selected since we are going to use the user data for this demo.) 
     - Input the absolute path for userdata_space.csv in the field provided. <!--to be updated in November-->
 
-5. **Run Simulation:** Go to the **Run Simulation** tab and run the  simulation. Once it's completed, go to the *_demo2_* folder in the system. A new folder *_geometry_demo_model_* would be created containing subfolders for the runs as shown in [Run the measure](/BEM-for-PRM/get_start/os_app/how_run_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](/BEM-for-PRM/get_start/demo/demo3/#demo-3-results).  
+5. **Run Simulation:** Go to the **Run Simulation** tab and run the  simulation. Once it's completed, go to the *_demo3_* folder in the system. A new folder *_geometry_demo_model_* would be created containing subfolders for the runs as shown in [Run the measure](/BEM-for-PRM/get_start/os_app/how_run_measure/) section. The `generated_files` folder would contain the output .osm files, reports that should reflect the Output shown [here](/BEM-for-PRM/get_start/demo/demo3/#demo-3-results).  
 
 {{<line_break>}}
 
@@ -158,7 +158,7 @@ The WWR on the first floor should be decreased than the WWR on the second and th
 
    | Category      | Apply to                       | Dependent Variable                         | Standard Requirement       | Baseline Value                                    |
    | ------------- | ------------------------------ | ------------------------------------------ | -------------------------- | ------------------------------------------------- |
-   | Exterior Wall | All                            | Climate Zone 4, nonresidential             | U-0.124 (R-8.06)           | PRM Steel Framed Exetrior Wall R-8.06             |
+   | Exterior Wall | All                            | Climate Zone 4, nonresidential             | U-0.124 (R-8.06)           | PRM Steel Framed Exterior Wall R-8.06             |
    | Roof          | All                            | Climate Zone 4, nonresidential             | U-0.063 (R-15.87)          | PRM IEAD Roof R-15.87                             |
    | Window        | All                            | Climate Zone 4, nonresidential, 30-40% WWR | U-0.57, SHGC-0.39, Vt-0.43 | PRM U 0.57 SHGC 0.39 VT 0.4 Simple Glazing Window |
    | LPD           | Spaces excluded from user data | Office, whole building                     | 1.10 W/ft2                 | 11.8 W/m2                                         |
