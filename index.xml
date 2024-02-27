@@ -77,9 +77,9 @@ The following table shows a compatibility matrix for OpenStudio application and 
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/install_measure/</guid>
       <description>B. Install the OSSTD &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure using any of the following approaches. The PRM measure can be downloaded using two different approaches.
-1. Download measure from the documentation website The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure can be downloaded from PerformanceRatingMethod.zip (7 KB)
+1. Download measure from the documentation website The &amp;ldquo;Create ASHRAE 90.1-2019 PRM Model&amp;rdquo; measure can be downloaded from measures.zip (7 KB)
 After downloading the measure, unzip the folder.
-Copy/Move the PerformanceRatingMethod measure folder to the local Measures directory used by the OpenStudio App. You can check the measures directory by clicking on Change My Measures Directory under the Preferences tab of the OS app.</description>
+Copy/Move the CreateBaselineBuilding measure folder to the local Measures directory used by the OpenStudio App. You can check the measures directory by clicking on Change My Measures Directory under the Preferences tab of the OS app.</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@ Copy/Move the PerformanceRatingMethod measure folder to the local Measures direc
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_app/how_run_measure/</guid>
       <description>C. Run the measure in OS App Before running the measure, review the model requirements in Model Requirements
-graph LR; A(1.Navigate to Measures tab) --&gt; B(_2. Optional Step_ Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
+graph LR; A(1.Navigate to Measures tab) --&gt; B(*2. Optional Step* Check measure directory) B --&gt; C(3.Select measure) C --&gt; D(4.Adjust measure inputs) D --&gt; E(5.Run simulation) Navigate to the Measures tab from the vertical list on the left side of the interface. Optional: Check that the measure exists in the local measures directory by clicking on the my folder at the bottom right corner.</description>
     </item>
     
     <item>
@@ -112,7 +112,7 @@ The following table shows a compatibility matrix for OpenStudio SDK and &amp;ldq
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_the_measure/</guid>
       <description>B. Run the measure with OS SDK using CLI There are 5 parts in the process of running the measure.
-Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Execute the measure Save the Output 1. Download the PRM measure Download measure in the link below: Create Baseline Building: PerformanceRatingMethod.zip (977 KB) Refer to Install the measure for other installation options.
+Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Execute the measure Save the Output 1. Download the PRM measure Download measure in the link below: Create Baseline Building: measures.zip (7 KB) Refer to Install the measure for other installation options.
 2. Setup a local directory Setup a local directory to include all required inputs (the following example is one way to setup the directory):</description>
     </item>
     
