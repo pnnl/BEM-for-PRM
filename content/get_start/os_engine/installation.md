@@ -8,10 +8,9 @@ pre: "<b>- </b>"
 
 {{<line_break>}}
 
-
 #### A. Steps to install and get the OpenStudio PRM running for scripting with OpenStudio API
 
-There are 4 parts to this section. 
+There are 4 parts to this section.
 
 1. [**Download Ruby**](#1-download-ruby)
 2. [**Download OpenStudio**](#2-download-openstudio)
@@ -21,7 +20,9 @@ There are 4 parts to this section.
 {{< line_break >}}
 
 <!-- You will need the following applications to ensure OpenStudio Standard is running on your project.-->
+
 ##### **1. Download Ruby**
+
 **Ruby 2.7**. Compatible version is **2.7.2** and it can be downloaded at: [https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz](https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz)
 
 - You can verify the ruby installation with the following command in the command line:
@@ -34,8 +35,8 @@ There are 4 parts to this section.
 
 ##### **2. Download OpenStudio**
 
-**OpenStudio 3.6**. The latest stable 3.6 version is **3.6.1** and it can be downloaded at: [https://github.com/NREL/OpenStudio/releases/tag/v3.6.1](https://github.com/NREL/OpenStudio/releases/tag/v3.6.1)
-More recent version of **OpenStudio** can be found in the OpenStudio release link: [https://github.com/NREL/OpenStudio/releases](https://github.com/NREL/OpenStudio/releases). The PRM is tested against **v3.6** and lower.
+**OpenStudio 3.7**. The latest stable 3.7 version is **3.7.0** and it can be downloaded at: [https://github.com/NREL/OpenStudio/releases/tag/v3.7.0](https://github.com/NREL/OpenStudio/releases/tag/v3.7.0)
+More recent version of **OpenStudio** can be found in the OpenStudio release link: [https://github.com/NREL/OpenStudio/releases](https://github.com/NREL/OpenStudio/releases). The PRM is tested against **v3.7** and lower.
 
 {{< line_break >}}
 
@@ -74,18 +75,17 @@ Once you have both Ruby and OpenStudio installed, the next thing is to connect O
 
 ##### **4. Download OpenStudio Standards**
 
-- Install the gem **_OpenStudio Standards_**. 
-Open command prompt and type the following. 
+- Install the gem **_OpenStudio Standards_**.
+  Open command prompt and type the following.
   ```ruby
   gem install openstudio-standards
   ```
-{{<line_break>}}
-
+  {{<line_break>}}
 
 ##### **Now we can create a new ruby project using the OpenStudio Standard package.**
+
 The OpenStudio Standard package is hosted on Github as an open-source project. The latest PRM method development is in the [Appendix_G](https://github.com/NREL/openstudio-standards/tree/AppendixG_Dev) branch. You can either clone the branch or download it as a zip package. To run the package, import the path to your ruby script as the example shown below.
 
 ```ruby
 require_relative 'C:\\Users\\Documents\\OSSTD_Repo\\lib\\openstudio-stadnards.rb'
 ```
-
