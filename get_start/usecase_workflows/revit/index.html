@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Exterior Lights : OSSTD doc</title>
+    <title>PRM for Revit : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1709163567" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/">
+  <body class="" data-url="/BEM-for-PRM/get_start/usecase_workflows/revit/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -338,7 +338,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/get_start/" title="Getting Started" class="dd-item
-        
+        parent
         
         
         ">
@@ -752,7 +752,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/" title="Use-case Workflows" class="dd-item
-        
+        parent
         
         
         ">
@@ -780,7 +780,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/revit/" title="PRM for Revit" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/revit/" title="PRM for Revit" class="dd-item active">
         <a href="/BEM-for-PRM/get_start/usecase_workflows/revit/">
         <b>- </b>PRM for Revit
         <i class="fas fa-check read-icon"></i>
@@ -818,7 +818,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/" title="User Guide" class="dd-item
-        parent
+        
         
         
         ">
@@ -929,7 +929,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data" class="dd-item
-        parent
+        
         
         
         ">
@@ -1280,7 +1280,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/" title="Lighting" class="dd-item
-        parent
+        
         
         
         ">
@@ -1308,7 +1308,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/" title="Exterior Lights" class="dd-item active">
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/" title="Exterior Lights" class="dd-item ">
         <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/">
         <b>- </b>Exterior Lights
         <i class="fas fa-check read-icon"></i>
@@ -1598,13 +1598,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/'>User Compliance Data</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/lighting/'>Lighting</a> > Exterior Lights
-          
-        
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/get_start/'>Getting Started</a> > <a href='/BEM-for-PRM/get_start/usecase_workflows/'>Use-case Workflows</a> > PRM for Revit
           
         
           
@@ -1643,7 +1637,7 @@
           
             <h1>
               
-              Exterior Lights
+              PRM for Revit
             </h1>
           
 
@@ -1651,123 +1645,141 @@
 
 
 <div style="height: 1px; background-color: #dbd9d9"></div>
-<section class="attachments orange">
-  <label>
-    <i class="fas fa-paperclip" aria-hidden="true"></i>
-    User Data CSV File:
-  </label>
-  <div class="attachments-files">
-    <li>
-      <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights.files/userdata_exterior_lights.csv">userdata_exterior_lights.csv</a>
-      (467 B)
-    </li>
-  </div>
-</section>
-
+<h4 id="a-use-case-1-application-of-the-prm-measure-to-a-user-model-created-in-revit">A. Use Case 1: Application of the PRM measure to a user-model created in Revit</h4>
+<p>This use case includes translatiing a BIM model created in Revit to a BEM model and applying PRM measure to automatically generate a baseline and a proposed model based on the PRM rules.</p>
+<p>Revit is a building information modeling software used for planning, designing, constructing and managing buildings and infrastructure. The following workflow is based on the capabilities present in Revit 2024 and is likely applicable to other versions as well.</p>
+<p>The steps to apply the PRM measure to a BIM model created in Revit are as follows:</p>
+<ol>
+<li><a href="#1-create-geometry"><strong>Create geometry</strong></a></li>
+<li><a href="#2-define-assemblies-internal-loads-hvac"><strong>Define assemblies, internal loads, HVAC</strong></a></li>
+<li><a href="#3-export-model-different-routes"><strong>Export model: Different routes</strong></a></li>
+<li><a href="#4-apply-901-prm-method"><strong>Apply 90.1 PRM method</strong></a></li>
+</ol>
 <div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="introduction">Introduction</h4>
-<p>The <code>userdata_exterior_lights.csv</code> contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.</p>
-<!-- raw HTML omitted -->
-<p>It consists of the following data fields:</p>
+<h5 id="1-create-a-geometry"><strong>1. Create a geometry</strong></h5>
 <ul>
-<li><a href="#name">name</a></li>
-<li><a href="#num_ext_lights_subcats">num_ext_lights_subcats</a></li>
-<li><a href="#end_use_subcategory">end_use_subcategory</a>
+<li>
+<p>Create a layout of the building using the Revit elements like walls, roofs, floors, and windows based on the design stage of the model.</p>
 <ul>
-<li><a href="#tradeable-exterior-lighting-subcategories">Tradeable Exterior Lighting Subcategories</a></li>
-<li><a href="#non-tradeable-exterior-lighting-subcategories">Non-Tradeable Exterior Lighting Subcategories</a></li>
+<li>
+<p>For a Schematic Design (SD) model, a simple shoe-box model could be used to represent the model, envelope elements can be generated using the Revit conceptual massing feature and the windows could be modeled as a percentage of exterior wall area.</p>
+</li>
+<li>
+<p>For a Design Development (DD) model, consider separating some spaces based on their function. Model walls, roofs, floors an windows using actual Revit elements.</p>
+</li>
+<li>
+<p>For a Construction Document (CD) model, more detailed architectural, structural and lighting layouts should be created along with the actual building elements.</p>
+</li>
 </ul>
 </li>
-<li><a href="#end_use_measurement_value">end_use_measurement_value</a></li>
 </ul>
-<p>For example, consider a building with an parking area that has 2 different kinds of exterior lights, one for the parking lots and drive areas and another for the exterior building facade area facing the parking lot. The entries in the userdata_exterior_lights.csv file would be as follows:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">name</th>
-<th style="text-align:center">num_ext_lights_subcats</th>
-<th style="text-align:center">end_use_subcategory_01</th>
-<th style="text-align:center">end_use_measurement_value_01</th>
-<th style="text-align:center">end_use_subcategory_02</th>
-<th style="text-align:center">end_use_measurement_value_02</th>
+<th style="text-align:center">Plan (DD stage)</th>
+<th style="text-align:center">3D Model (DD stage)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">Parking Lights</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">parking_lots_and_drives_area</td>
-<td style="text-align:center">100</td>
-<td style="text-align:center">building_facades_area</td>
-<td style="text-align:center">150</td>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/revitplan_DDstage.png?width=500px&amp;align=right&amp;classes=border,alignCenter" alt="userdata"></td>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/revit3D_DDstage.png?width=700px&amp;align=right&amp;classes=border,alignCenter" alt="userdata"></td>
 </tr>
 </tbody>
 </table>
-<p>Refer to the section below for more information about each field.</p>
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="data-fields-details">Data Fields Details</h4>
-<p>Here is a detailed explanation of what each data field requires.</p>
-<h5 id="name"><strong>name</strong></h5>
-<p>Name of the exterior lights object.</p>
-<h5 id="num_ext_lights_subcats"><strong>num_ext_lights_subcats</strong></h5>
-<p>Number of subcategories for exterior lights.</p>
-<h5 id="end_use_subcategory"><strong>end_use_subcategory</strong></h5>
-<p>Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on <strong>Appendix G Table G3.6</strong>. The lighting subcategories are designated by the labels:<br>
-<em>end_use_subcategory_01</em> through <em>end_use_subcategory_09</em></p>
-<p>In order to work with the <strong>Appendix G</strong> code database, the following subcategory names <strong>must</strong> be used in the user data file:</p>
+<h5 id="2-define-assemblies-internal-loads-hvac"><strong>2. Define assemblies, internal loads, HVAC</strong></h5>
 <ul>
-<li>Tradeable Exterior Lighting Subcategories</li>
-</ul>
-<blockquote>
+<li>
+<p>Envelope Construction: Assign envelope assemblies using either:</p>
 <ul>
-<li><code>parking_lots_and_drives_area</code></li>
-<li><code>walkways_less_than_10_ft_wide_perim</code></li>
-<li><code>walkways_10_ft_wide_or_greater_area</code></li>
-<li><code>plaza_areas_area</code></li>
-<li><code>special_feature_areas_area</code></li>
-<li><code>stairways_area</code></li>
-<li><code>main_entries_area</code></li>
-<li><code>other_doors_perim</code></li>
-<li><code>canopies_area</code></li>
-<li><code>open_areas_including_vehicle_sales_lots_area</code></li>
-<li><code>street_frontage_for_vehicle_sales_perim</code></li>
+<li>Generic layer-by-layer assemblies from Revit built-in library (typical for SD phase).</li>
+<li>Schematic construction types present in the Revit build-in library (typical for DD phase).</li>
+<li>Actual construction defined in the Revit model (typical for CD phase).</li>
 </ul>
-</blockquote>
+</li>
+<li>
+<p>Internal Loads: Assign internal loads based on the default loads present in Revit. The defaults could be based on the building typology (preferred for SD phase) or on space by space method (preferred for DD phase) according to various standards and databases (e.g., ASHRAE 90.1, ASHRAE 62.1 and CBECS data). For a CD phase, additionally, the lighting definitions are based on the actual modeled luminaires.</p>
+</li>
+<li>
+<p>Thermal Zones: Assign the thermal zones. It could be single thermal zone for each floor of the building for an SD stage model or based on the core/perimeter layout for DD and CD stage models. A single thermal zone may encompass several spaces.</p>
+</li>
+<li>
+<p>HVAC: Assign an HVAC system.</p>
 <ul>
-<li>Non-Tradeable Exterior Lighting Subcategories</li>
+<li>For an SD model, HVAC system could be skipped since an ideal load air system system automatically generated in the export process.</li>
+<li>For DD and CD model, as an example for this workflow, a variable air volume (VAV) reheat packaged rooftop unit can be modeled with one system serving each floor. Any appropriate HVAC system must be modeled.</li>
 </ul>
-<blockquote>
+</li>
+</ul>
+<h5 id="3-export-the-model"><strong>3. Export the model</strong></h5>
+<p>Export the model from Revit (BIM) to OpenStudio (BEM) by any of the following methods. Few differences between the export methods are highlighted below.</p>
 <ul>
-<li><code>nontradeable_general_qty</code></li>
-<li><code>building_facades_area</code></li>
-<li><code>building_facades_perim</code></li>
-<li><code>automated_teller_machines_per_location_qty</code></li>
-<li><code>automated_teller_machines_per_machine_qty</code></li>
-<li><code>entries_and_gates_area</code></li>
-<li><code>loading_areas_for_emergency_vehicles_area</code></li>
-<li><code>drive_through_windows_and_doors_qty</code></li>
-<li><code>parking_near_24_hour_entrances_qty</code></li>
-<li><code>roadway_parking_qty</code></li>
+<li>gbXML export: All gbxml exports include essential model information, such as geometry, construction, internal gain definitions and schedules. There are some differences mentioned for each below:
+<ul>
+<li>Revit native gbXML</li>
+<li>Revit Systems Analysis gbXML : Additional information included related to HVAC objects.</li>
+<li>Autodesk Insight gbXML : Additional information included related to HVAC objects.</li>
 </ul>
-</blockquote>
+</li>
+</ul>
 
-<div class="notices warning" ><p>It is critical to use the identical string in the above list. Failure to match the list could result erroneous data in the PRM model.</p>
+<div class="notices info" ><p>Note that the basic import feature of the OpenStudio application (i.e. the user interface) only translates a limited set of gbXML contents including geometry, constructions, thermal zones, and schedules. The translation of the remaining contents can be achieved using OpenStudio measures.</p>
 </div>
 
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h5 id="end_use_measurement_value"><strong>end_use_measurement_value</strong></h5>
-<p>For each subcategory, the appropriate quantity must also be listed, as designated by:<br>
-<em>end_use_measurement_value_01</em> through <em>end_use_measurement_value_09</em></p>
-<p>The units of the <em>measurement value</em> are indicated by the last part of the subcategory name:<br>
-<code>area</code> = area in square feet<br>
-<code>perim</code> = perimeter length in linear feet<br>
-<code>qty</code> = integer quantity of items</p>
+<ul>
+<li>Revit Systems Analysis OpenStudio model
+<ul>
+<li>Offers a streamlined workflow</li>
+<li>Effectively translates most of the gbXML content into BEM using OpenStudio measures.</li>
+<li>Various export modes available like a) Use Conceptual Masses and Building Elements (can be preferred for SD models), b) Use Rooms or Spaces (can be preferred for DD and CD models)</li>
+</ul>
+</li>
+</ul>
 
-<div class="notices tip" ><p>Note: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to &lsquo;1&rsquo; for the baseline model.</p>
+<div class="notices info" ><p>&ldquo;Use Rooms or Spaces&rdquo; allows the BEM model to inherit all rooms and incorporate the pre-assigned thermal zoning from the BIM model. In the BIM model multiple spaces can be associated with the same thermal zone indicating that they are controlled by a single thermostat and this is reflected in the BEM model.</p>
 </div>
 
-<p>Credit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.</p>
+<h5 id="4-apply-901-prm-method"><strong>4. Apply 90.1 PRM method</strong></h5>
+<p>Apply the 90.1 PRM meausre in OpenStudio by following the steps provided in the initial sections of this user guide based on the method adopted.</p>
+<p>Key information required to run the PRM measure include space types for lighting power density, building area type for window to wall ratio, HVAC system selection and water heater system, and process loads.
+Thus, before running the measure, it is important to check the exported BEM model for any missing information and addressing them by following the steps provided for Model Preparation below to ensure a successful measure run.</p>
+<ul>
+<li>Model Preparation
+<ul>
+<li>
+<p>Standard Space Type Mapping</p>
+<p>Mapping of the space types is a common challenge across different export routes and design phases.</p>
+<ul>
+<li>Cross validate different building area types. In PRM there are three building type categories used to determine: the baseline window-to-wall-ratio (WWR), HVAC system type, and service hot water (SHW) system type that needs to have the same type assigned to them. For example, if the section of a building model is categorized as an &ldquo;Office (&lt;=5000 ft^2)&rdquo;, it must not be classified as a &ldquo;Multifamily&rdquo; building type to determine the baseline model SHW system.</li>
+<li>If required, manually map space types from Revit to those listed in PRM to align them accurately.</li>
+</ul>
+</li>
+<li>
+<p>HVAC System Integration</p>
+<p>One of the key data elements often missing in the initial stage of design is related to the HVAC systems. For example, ideal load air system commonly defined for SD phase since a complete HVAC system is not typically necessary. Additionally, various export methodologies might not be able to translate the HVAC system design into energy models.</p>
+<ul>
+<li>Address missing HVAC system data including details like fan power distribution ratios, crucial for a fully automated solution.</li>
+<li>A solution that can be adopted is generating the export using Revit Systems Analysis&rsquo;s built-in functionality. This feature generates a complete OpenStudio model using a gbXML based schema that includes a comprehensive HVAC system description, making it ready for the OSSTD-PRM generation process.</li>
+</ul>
+</li>
+<li>
+<p>Other building service systems</p>
+<ul>
+<li>Ensure data related to other building service systems such as SHW, heating, renewable and system controls, is included in the BEM model to avoid inaccuracies in the baseline model.</li>
+<li>Consider default settings or templates provided by OpenStudio for creating these systems if necessary.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Once the model is prepared and the PRM measure is applied on the BEM model, a baseline as well as a proposed model following the set of PRM rules would be generated.</strong></p>
 <div style="height: 1px; background-color: #dbd9d9"></div>
+<h5 id="best-practices"><strong>Best Practices</strong></h5>
+<ul>
+<li>Revit Systems Analysis must be preferred to export Revit models to OpenStudio for a successful application of the PRM measure.</li>
+<li>The Design Deveelopment phase, based on its level of detail, might be the most suitable for exporting to OpenStudio and then applying the PRM measure to automate the generation of a baseline and proposed model for code compliance.</li>
+<li>The Schematic Design phase model could be avoided since it lacks essential HVAC system data and the generated baseline model is influenced by its simplified zoning assumptions.</li>
+</ul>
 
 
 <footer class="footline">
@@ -1954,6 +1966,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1969,69 +1982,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2120,223 +2072,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -2490,6 +2225,284 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -2522,7 +2535,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2535,7 +2547,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2555,9 +2566,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2665,10 +2673,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/" title="Lighting"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/get_start/usecase_workflows/" title="Use-case Workflows"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/water/" title="Water" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/" title="User Guide" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

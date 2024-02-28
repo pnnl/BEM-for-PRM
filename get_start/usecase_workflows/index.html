@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Exterior Lights : OSSTD doc</title>
+    <title>Use-case Workflows : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1709163567" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/">
+  <body class="" data-url="/BEM-for-PRM/get_start/usecase_workflows/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -338,7 +338,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/get_start/" title="Getting Started" class="dd-item
-        
+        parent
         
         
         ">
@@ -753,13 +753,13 @@
     
     <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/" title="Use-case Workflows" class="dd-item
         
-        
+        active
         
         ">
       <a href="/BEM-for-PRM/get_start/usecase_workflows/">
           <b>5. </b>Use-case Workflows
           
-            <i class="fas fa-chevron-right read-icon"></i>
+            <i class="fas fa-solid fa-chevron-down read-icon"></i>
           
       </a>
       
@@ -818,7 +818,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/" title="User Guide" class="dd-item
-        parent
+        
         
         
         ">
@@ -929,7 +929,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data" class="dd-item
-        parent
+        
         
         
         ">
@@ -1280,7 +1280,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/" title="Lighting" class="dd-item
-        parent
+        
         
         
         ">
@@ -1308,7 +1308,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/" title="Exterior Lights" class="dd-item active">
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/" title="Exterior Lights" class="dd-item ">
         <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/">
         <b>- </b>Exterior Lights
         <i class="fas fa-check read-icon"></i>
@@ -1578,8 +1578,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -1594,19 +1592,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/'>User Compliance Data</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/lighting/'>Lighting</a> > Exterior Lights
-          
-        
-          
-        
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/get_start/'>Getting Started</a> > Use-case Workflows
           
         
           
@@ -1617,21 +1603,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -1639,141 +1610,29 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              Exterior Lights
-            </h1>
           
 
         
 
 
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<section class="attachments orange">
-  <label>
-    <i class="fas fa-paperclip" aria-hidden="true"></i>
-    User Data CSV File:
-  </label>
-  <div class="attachments-files">
-    <li>
-      <a href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights.files/userdata_exterior_lights.csv">userdata_exterior_lights.csv</a>
-      (467 B)
-    </li>
-  </div>
-</section>
 
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="introduction">Introduction</h4>
-<p>The <code>userdata_exterior_lights.csv</code> contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.</p>
-<!-- raw HTML omitted -->
-<p>It consists of the following data fields:</p>
-<ul>
-<li><a href="#name">name</a></li>
-<li><a href="#num_ext_lights_subcats">num_ext_lights_subcats</a></li>
-<li><a href="#end_use_subcategory">end_use_subcategory</a>
-<ul>
-<li><a href="#tradeable-exterior-lighting-subcategories">Tradeable Exterior Lighting Subcategories</a></li>
-<li><a href="#non-tradeable-exterior-lighting-subcategories">Non-Tradeable Exterior Lighting Subcategories</a></li>
-</ul>
-</li>
-<li><a href="#end_use_measurement_value">end_use_measurement_value</a></li>
-</ul>
-<p>For example, consider a building with an parking area that has 2 different kinds of exterior lights, one for the parking lots and drive areas and another for the exterior building facade area facing the parking lot. The entries in the userdata_exterior_lights.csv file would be as follows:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">name</th>
-<th style="text-align:center">num_ext_lights_subcats</th>
-<th style="text-align:center">end_use_subcategory_01</th>
-<th style="text-align:center">end_use_measurement_value_01</th>
-<th style="text-align:center">end_use_subcategory_02</th>
-<th style="text-align:center">end_use_measurement_value_02</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Parking Lights</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">parking_lots_and_drives_area</td>
-<td style="text-align:center">100</td>
-<td style="text-align:center">building_facades_area</td>
-<td style="text-align:center">150</td>
-</tr>
-</tbody>
-</table>
-<p>Refer to the section below for more information about each field.</p>
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="data-fields-details">Data Fields Details</h4>
-<p>Here is a detailed explanation of what each data field requires.</p>
-<h5 id="name"><strong>name</strong></h5>
-<p>Name of the exterior lights object.</p>
-<h5 id="num_ext_lights_subcats"><strong>num_ext_lights_subcats</strong></h5>
-<p>Number of subcategories for exterior lights.</p>
-<h5 id="end_use_subcategory"><strong>end_use_subcategory</strong></h5>
-<p>Each exterior lights object in the model can be assigned up to nine exterior lighting subcategories in the user data file based on <strong>Appendix G Table G3.6</strong>. The lighting subcategories are designated by the labels:<br>
-<em>end_use_subcategory_01</em> through <em>end_use_subcategory_09</em></p>
-<p>In order to work with the <strong>Appendix G</strong> code database, the following subcategory names <strong>must</strong> be used in the user data file:</p>
-<ul>
-<li>Tradeable Exterior Lighting Subcategories</li>
-</ul>
-<blockquote>
-<ul>
-<li><code>parking_lots_and_drives_area</code></li>
-<li><code>walkways_less_than_10_ft_wide_perim</code></li>
-<li><code>walkways_10_ft_wide_or_greater_area</code></li>
-<li><code>plaza_areas_area</code></li>
-<li><code>special_feature_areas_area</code></li>
-<li><code>stairways_area</code></li>
-<li><code>main_entries_area</code></li>
-<li><code>other_doors_perim</code></li>
-<li><code>canopies_area</code></li>
-<li><code>open_areas_including_vehicle_sales_lots_area</code></li>
-<li><code>street_frontage_for_vehicle_sales_perim</code></li>
-</ul>
-</blockquote>
-<ul>
-<li>Non-Tradeable Exterior Lighting Subcategories</li>
-</ul>
-<blockquote>
-<ul>
-<li><code>nontradeable_general_qty</code></li>
-<li><code>building_facades_area</code></li>
-<li><code>building_facades_perim</code></li>
-<li><code>automated_teller_machines_per_location_qty</code></li>
-<li><code>automated_teller_machines_per_machine_qty</code></li>
-<li><code>entries_and_gates_area</code></li>
-<li><code>loading_areas_for_emergency_vehicles_area</code></li>
-<li><code>drive_through_windows_and_doors_qty</code></li>
-<li><code>parking_near_24_hour_entrances_qty</code></li>
-<li><code>roadway_parking_qty</code></li>
-</ul>
-</blockquote>
-
-<div class="notices warning" ><p>It is critical to use the identical string in the above list. Failure to match the list could result erroneous data in the PRM model.</p>
-</div>
-
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h5 id="end_use_measurement_value"><strong>end_use_measurement_value</strong></h5>
-<p>For each subcategory, the appropriate quantity must also be listed, as designated by:<br>
-<em>end_use_measurement_value_01</em> through <em>end_use_measurement_value_09</em></p>
-<p>The units of the <em>measurement value</em> are indicated by the last part of the subcategory name:<br>
-<code>area</code> = area in square feet<br>
-<code>perim</code> = perimeter length in linear feet<br>
-<code>qty</code> = integer quantity of items</p>
-
-<div class="notices tip" ><p>Note: the measurement values in the user data table need to be the total quantities for the applicable exterior lights object (accounting for any multipliers). If there is a multiplier in the object, it will be changed to &lsquo;1&rsquo; for the baseline model.</p>
-</div>
-
-<p>Credit can only be taken for exterior lights that are classified as tradeable. Thus, each exterior lighting object in the model must be configured to represent either only tradeable or only non-tradeable subcategories. If any non-tradeable subcategories are included, the entire object will be treated as non-tradeable for the baseline.</p>
-<div style="height: 1px; background-color: #dbd9d9"></div>
+	<h3 id="chapter-25">Chapter 2.5</h3>
+<h1 id="use-case-workflows">Use-case Workflows</h1>
+<p>In this chapter, we shall cover concise overview of the different workflows available for applying PRM measures. It outlines the purpose and steps involved in each workflow, offering users a clear understanding of how to utilize them effectively. This section serves as an introduction to the various methods users can employ with a user-model created in their chosen platforms (such as Revit, Pollination) to implement PRM measures.</p>
 
 
-<footer class="footline">
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
+        
+            </div> 
         
         </div>
         
@@ -1954,6 +1813,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1969,69 +1829,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2120,223 +1919,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -2490,6 +2072,283 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -2522,7 +2381,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2535,7 +2393,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2555,9 +2412,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2665,10 +2519,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/add_compliance_data/lighting/" title="Lighting"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/get_start/demo/demo3/" title="Demo 3: User Data"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/water/" title="Water" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/get_start/usecase_workflows/revit/" title="PRM for Revit" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2700,4 +2554,3 @@
 
   </body>
 </html>
-

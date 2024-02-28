@@ -178,6 +178,16 @@ Download the folder &amp;ldquo;demo3_zip&amp;rdquo; on your system and extract i
     </item>
     
     <item>
+      <title>PRM for Revit</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/revit/</link>
+      <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/revit/</guid>
+      <description>A. Use Case 1: Application of the PRM measure to a user-model created in Revit This use case includes translatiing a BIM model created in Revit to a BEM model and applying PRM measure to automatically generate a baseline and a proposed model based on the PRM rules.
+Revit is a building information modeling software used for planning, designing, constructing and managing buildings and infrastructure. The following workflow is based on the capabilities present in Revit 2024 and is likely applicable to other versions as well.</description>
+    </item>
+    
+    <item>
       <title>Best Practices</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</link>
       <pubDate>Wed, 21 Sep 2022 15:05:48 -0700</pubDate>
