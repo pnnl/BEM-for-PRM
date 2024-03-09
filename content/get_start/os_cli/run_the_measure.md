@@ -44,7 +44,6 @@ Setup a local directory to include all required inputs (the following example is
 > - **Weather file**: place the `.epw` file in a directory named `weather`.
 > - **Measure**: place the `Create ASHRAE 90.1 2019 PRM Model` measure in a directory called `measures`.
 > - **OS Workflow**: place the `.osw` file in the main directory.
-> - **User Data (_Optional_)**: place the `.csv` file in the main directory (same level as the `.osw`). The use of the user data can be found in the [add compliance data section](../../../user_guide/add_compliance_data/).
 
 The image below shows one way to setup the main directory and their corresponding sub-directories. This can be set up in any other way, however, this structure will be followed for all examples provided in this documentation. Thus, it's recommended to make necessary changes if the folders are set up in a different manner.
 
@@ -117,8 +116,15 @@ Once the workflow is completed **successfully**:
 
 This instruction is provided for users who want to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK.
 
-Follow the above steps by replacing Step 2 and 4 as follows:
+In the workflow file, set the `evaluation_package` to `TRUE` and provide the evaluation package local path. This local path shall be the folder that saves the OSSTD source code.
+{{% notice tip %}}
+The OSSTD source code download instruction can be found in the [Use with OS SDK API](../../os_engine/installation/) instruction.
+{{% /notice %}}
 
-{{% notice info %}}
-The measures selected on this tab will not run until you run your model, unlike the _*Apply Measure Now*_ option.
+After the edit, your OSW file should contain data similar to the image
+![OS Evaluation Package](/BEM-for-PRM/get_start/os_cli/images/evaluation_package_use.JPG?width=800px&align=left&classes=border)
+
+Now running the PRM measure will use the local OSSTD source code.
+{{% notice warning %}}
+Although source code has passed the CI test, it is unstable and may introduce new bugs or issues.
 {{% /notice %}}

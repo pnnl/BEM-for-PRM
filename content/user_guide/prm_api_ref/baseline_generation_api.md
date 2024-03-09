@@ -20,18 +20,29 @@ pre: "<b> - </b>"
   - [unmet_load_hours](#argument-7-unmet_load_hours)
   - [debug](#argument-8-debug)
 
-
-Read the section below for a detailed breakdown of each function. 
+Read the section below for a detailed breakdown of each function.
 
 {{< line_break >}}
 
 #### FUNCTION 1: model_create_prm_stable_baseline_building
+
 This is the primary API function to generate baseline models. The process involves taking a user-created OpenStudio model along with several user-defined arguments to produce a PRM baseline model. This function contains numerous arguments, many of which require specific enum values. It's crucial that these arguments align with their corresponding enum values.
 
 ```ruby
 standard = Standard.build("90.1-PRM-2019")
 
-create_results = standard.model_create_prm_stable_baseline_building(model, climate_zone, default_hvac_bldg_type, default_wwr_bldg_type, default_swh_bldg_type, output_dir, unmet_load_hours, debug)
+create_results = standard.model_create_prm_any_baseline_building(model,
+                                                                '', # prototpye building type - not used by PRM
+                                                                climate_zone,
+                                                                hvac_building_type=default_hvac_bldg_type,
+                                                                wwr_building_types=default_wwr_bldg_type,
+                                                                swh_building_types=default_swh_bldg_type,
+                                                                model_deep_copy = true, # must set to true
+                                                                create_proposed_model = true,
+                                                                sizing_run_dir = run_dir_baseline,
+                                                                run_all_orients = false,
+                                                                unmet_load_hours_check = false,
+                                                                debug = GENERATE_PRM_LOG)
 ```
 
 Here is a breakdown of steps involved in the "model_create_prm_stable_baseline_building" function.
@@ -44,7 +55,6 @@ Here is a breakdown of steps involved in the "model_create_prm_stable_baseline_b
   B -->|Failed| D(Generates an error)
   {{</mermaid>}}
 
-
 - **Step 2: Check proposed model**
   {{<mermaid align="center">}}
   graph LR;
@@ -53,9 +63,9 @@ Here is a breakdown of steps involved in the "model_create_prm_stable_baseline_b
   B -->|Failed| D(Create one baseline model)
   {{</mermaid>}}
   The simulation results in this step will be saved in the folder `SR_PROP0`.
- 
+
 - **Step 3: Adjust envelope and internal loads**
-  
+
   In this step, the function starts adjusting the envelope and internal loads based on the information stored in the method arguments and user-supplied model. In addition, this step also prepares HVAC systems for a sizing run.
 
   {{<mermaid align="left">}}
@@ -98,7 +108,7 @@ Here is a breakdown of steps involved in the "model_create_prm_stable_baseline_b
   {{</mermaid>}}
   A third sizing run is conducted after this step and labeled as `SR3` in the output directory. The third sizing run is the final sizing run to refine size-dependent values, including the secondary flow rate in the parallel PIU reheat terminal and the maximum flow rate in the air terminal.
 
-After these four steps, baseline model(s) will be generated in the output directory. The output directory is an argument the user provides when calling this function. 
+After these four steps, baseline model(s) will be generated in the output directory. The output directory is an argument the user provides when calling this function.
 Below you can find a detailed explanation of these arguments, so this API call can be customized for any purpose and building cases.
 
 ##### **ARGUMENT 1: model**
@@ -111,7 +121,11 @@ translator = OpenStudio::OSVersion::VersionTranslator.new
 model = translator.loadModel(model_path).get
 ```
 
-##### **ARGUMENT 2: climate_zone**
+##### **ARGUMENT 2: building type**
+
+Do not use this argument, you should always provide an empty string.
+
+##### **ARGUMENT 3: climate_zone**
 
 The `climate_zone` shall be one of the strings from the list below:
 
@@ -137,7 +151,7 @@ The `climate_zone` shall be one of the strings from the list below:
 - `ASHRAE 169-2013-8A`
 - `ASHRAE 169-2013-8B`
 
-##### **ARGUMENT 3: default_hvac_bldg_type**
+##### **ARGUMENT 4: default_hvac_bldg_type**
 
 The `default_hvac_bldg_type` shall be one of the strings in the list below:
 
@@ -149,7 +163,7 @@ The `default_hvac_bldg_type` shall be one of the strings in the list below:
 - `residential`
 - `unconditioned`
 
-##### **ARGUMENT 4: default_wwr_bldg_type**
+##### **ARGUMENT 5: default_wwr_bldg_type**
 
 The `default_wwr_bldg_type` shall be one of the strings in the list below:
 
@@ -170,7 +184,7 @@ The `default_wwr_bldg_type` shall be one of the strings in the list below:
 - `Grocery store`
 - `All other`
 
-##### **ARGUMENT 5: default_swh_bldg_type**
+##### **ARGUMENT 6: default_swh_bldg_type**
 
 The `default_swh_bldg_type` shall be one of the strings in the list below:
 
@@ -211,11 +225,23 @@ The `default_swh_bldg_type` shall be one of the strings in the list below:
 - `Automotive facility`
 - `All others`
 
-##### **ARGUMENT 6: output_dir**
+##### **ARGUMENT 7: model_deep_copy**
 
-`output_dir` is a mandatory field that specifies the directory to save all sizing runs. When applying the PRM method to a proposed model, OSSTD will perform several sizing runs. These sizing runs are usually saved in a directory specified in `sizing_run_dir`. In addition, the generated baseline model `.idf` and `.osm` will also be saved in this directory.
+This field should always set to `true`.
 
-##### **ARGUMENT 7: unmet_load_hours**
+##### **ARGUMENT 8: create_proposed_model**
+
+Set to `true` the PRM will generate a proposed model. `false` otherwise.
+
+##### **ARGUMENT 9: sizing_run_dir**
+
+`sizing_run_dir` is a mandatory field that specifies the directory to save all sizing runs. When applying the PRM method to a proposed model, OSSTD will perform several sizing runs. These sizing runs are usually saved in a directory specified in `sizing_run_dir`. In addition, the generated baseline model `.idf` and `.osm` will also be saved in this directory.
+
+##### **ARGUMENT 10: run_all_orients**
+
+`run_all_orients` enables the user to turn on or off the PRM rotation feature. If `false` provided, PRM will not perform the baseline model rotations. Note, user data can override this flag.
+
+##### **ARGUMENT 11: unmet_load_hours**
 
 `unmet_load_hours` is a flag that checks whether a `model` can successfully run an annual simulation and whether its annual unmet load hours meet the ASHRAE 90.1 Appendix G requirements. The default value for this flag is `true`.
 
@@ -226,5 +252,3 @@ Cautious when setting the `unmet_load_hours` to `false`. This could result in wr
 ##### **ARGUMENT 8: debug**
 
 `debug` default is set to `false`. This argument has no impact on the current PRM generation and is part of the future implementation. Any API calls set this field to `false` or ignore this argument.
-
-
