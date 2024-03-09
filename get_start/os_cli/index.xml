@@ -31,16 +31,5 @@ Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Ex
 2. Setup a local directory Setup a local directory to include all required inputs (the following example is one way to setup the directory):</description>
     </item>
     
-    <item>
-      <title>Run measure w/ OSSTD Package</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</link>
-      <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</guid>
-      <description>C. Steps to run the measure with OSSTD Package (Optional) This instruction is provided for users who want to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK.
-Follow the steps from Run the measure instruction by replacing the Setup (Step 2) and Execution steps (Step 4) as mentioned below.
-Setup Download this openstudio-standards package. Unzip the package to a local directory.</description>
-    </item>
-    
   </channel>
 </rss>

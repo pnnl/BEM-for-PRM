@@ -117,17 +117,6 @@ Download the PRM measure (prerequisite) Setup a local directory Edit OSW file Ex
     </item>
     
     <item>
-      <title>Run measure w/ OSSTD Package</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</link>
-      <pubDate>Wed, 21 Sep 2022 14:50:40 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/os_cli/run_measure_with_osstd_package/</guid>
-      <description>C. Steps to run the measure with OSSTD Package (Optional) This instruction is provided for users who want to access the latest features or bug fixes that are not accessible in the latest OpenStudio SDK.
-Follow the steps from Run the measure instruction by replacing the Setup (Step 2) and Execution steps (Step 4) as mentioned below.
-Setup Download this openstudio-standards package. Unzip the package to a local directory.</description>
-    </item>
-    
-    <item>
       <title>Installation</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/os_engine/installation/</link>
       <pubDate>Wed, 21 Sep 2022 15:01:00 -0700</pubDate>
@@ -174,17 +163,7 @@ According to the ASHRAE 90.1 PRM method - &amp;ldquo;Baseline HVAC System Types&
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo3/</guid>
       <description>Demo 3 shows how to provide additional user data for the PRM function In Demo 3, we will demonstrate how to input user data to handle multiple building types in a model.
-Download the folder &amp;ldquo;demo3_zip&amp;rdquo; on your system and extract it in any local folder (to be changed based on the method used in the sections below). The zip file contains the model (.osm), user data (.csv) and weather file (.</description>
-    </item>
-    
-    <item>
-      <title>PRM for Revit</title>
-      <link>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/revit/</link>
-      <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
-      
-      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/revit/</guid>
-      <description>A. Use Case 1: Application of the PRM measure to a user-model created in Revit This use case includes translatiing a BIM model created in Revit to a BEM model and applying PRM measure to automatically generate a baseline and a proposed model based on the PRM rules.
-Revit is a building information modeling software used for planning, designing, constructing and managing buildings and infrastructure. The following workflow is based on the capabilities present in Revit 2024 and is likely applicable to other versions as well.</description>
+Download the folder &amp;ldquo;demo3zip&amp;rdquo; on your system and extract it in any local folder (*_to be changed based on the method used in the sections below*). The zip file contains the model (.osm), user data (.csv) and weather file (.</description>
     </item>
     
     <item>

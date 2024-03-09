@@ -33,7 +33,7 @@ According to the ASHRAE 90.1 PRM method - &amp;ldquo;Baseline HVAC System Types&
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/demo/demo3/</guid>
       <description>Demo 3 shows how to provide additional user data for the PRM function In Demo 3, we will demonstrate how to input user data to handle multiple building types in a model.
-Download the folder &amp;ldquo;demo3_zip&amp;rdquo; on your system and extract it in any local folder (to be changed based on the method used in the sections below). The zip file contains the model (.osm), user data (.csv) and weather file (.</description>
+Download the folder &amp;ldquo;demo3zip&amp;rdquo; on your system and extract it in any local folder (*_to be changed based on the method used in the sections below*). The zip file contains the model (.osm), user data (.csv) and weather file (.</description>
     </item>
     
   </channel>
