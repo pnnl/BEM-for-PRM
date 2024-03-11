@@ -37,8 +37,6 @@ D --> E(5.Run simulation)
 
 ![Openstudio download measure](/BEM-for-PRM/get_start/os_app/images/osapp3.jpg?width=800px&align=left&classes=border)
 
-![Openstudio download measure](/BEM-for-PRM/get_start/os_app/images/osapp4.jpg?width=800px&align=left&classes=border)
-
 <!-- Need a user data link here in point 4.
 Update the images in November with proper numbering accounting for the Optional Step 2.
 Update the images so that user data field is shown.-->
@@ -46,3 +44,50 @@ Update the images so that user data field is shown.-->
 {{<line_break>}}
 
 #### Measure Inputs
+
+![Openstudio download measure](/BEM-for-PRM/get_start/os_app/images/osapp4.jpg?width=800px&align=left&classes=border)
+
+##### **User input 1: Default Building Area Type for Window To Wall Ratio**
+
+Select a default building type for WWR assignment based on 90.1 Appendix G table G 3.1.1-1. The full list of available building area types can be found in the [Baseline generation API, Argument 5](../../../user_guide/prm_api_ref/baseline_generation_api/#argument-5-default_wwr_bldg_type).
+
+##### **User input 2: Default Building Area Type for Service Water Heating**
+
+Select a default building type for SWH system type assignment based on 90.1 Appendix G Table G3.1.1-2. The full list of available building area types can be found in the [Baseline generation API, Argument 6](../../../user_guide/prm_api_ref/baseline_generation_api/#argument-6-default_swh_bldg_type)
+
+##### **User input 3: Default Type for HVAC**
+
+Select a default building type for HVAC system type assignment based on 90.1 Appendix G Table G3.1.1-3. The full list of available building area types can be found in the [Baseline generation API, Argument 4](../../../user_guide/prm_api_ref/baseline_generation_api/#argument-4-default_hvac_bldg_type)
+
+##### **User input 4: Climate Zone**
+
+Select a climate zone to run the PRM measure. Note: PRM cannot select a climate zone from the provided model. This feature is under development.
+
+##### **User input 5: Exempt From Rotations**
+
+Select `TRUE` if the building in has rating authority approval that orientation is dictated by site consideration. Note: [userdata_building](../../../user_guide/add_compliance_data/building_type/user_data_building) can override this selection.
+
+##### **User input 6: Exempt From Unmet Load Hours Check**
+
+Select `TRUE` if the building in has rating authority approval allowing the models to exceed the specified values in Appendix G.
+
+##### **User input 7: Use User Data**
+
+Select `TRUE` if [user data CSVs](../../../user_guide/add_compliance_data) were provided and need to be incorporated in the PRM generation process.
+
+##### **User input 8: User Data Path**
+
+Required if select `TRUE` in **Use User Data**. A valid path string needs to be provided in this input field. The path string shall be the root folder that host all the user data CSV files.
+
+{{% notice warning %}}
+For **OpenStudio SDK 3.7** and **OpenStudio Application 1.7**, the string needs to be provided with forward slash. This also applies to Window OS.
+Example: `C:\Documents\user_data` needs to be revised to `C:/Documents/user_data`. Failed to compliant with the path format will cause PRM ignores the user data csvs.
+{{% /notice %}}
+
+##### **User input 9: Use PRM evaluation package**
+
+Select `TRUE` if the PRM should be run with a customized OpenStudio Standards Package. This can be the source code package downloaded from [OSSTD repo](https://github.com/NREL/openstudio-standards/tree/AppendixG_Dev).
+
+##### **User input 10: Evaluation Package Path**
+
+Required if select `TRUE` in **Use PRM evaluation package**. A valid path string needs to be provided in this input field. The path string shall be pointing to the root folder of the customized OSSTD source code.
