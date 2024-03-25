@@ -10,5 +10,5 @@ pre = "<b>5. </b>"
 
 # Use-case Workflows
 
-In this chapter, we shall cover concise overview of the different workflows available for applying PRM measures. It outlines the purpose and steps involved in each workflow, offering users a clear understanding of how to utilize them effectively. This section serves as an introduction to the various methods users can employ with a user-model created in their chosen platforms (such as Revit, Pollination) to implement PRM measures.
+In this chapter, we shall cover use-cases identified for applying the PRM measure. It outlines the purpose and steps involved in each use-case workflow, offering users a clear understanding of how to utilize the measure in their existing workflow effectively. This section serves as a guide for the users who want to implement the PRM measure on their user-models created in a wide variety of platforms (such as Revit, Pollination etc.).
 
