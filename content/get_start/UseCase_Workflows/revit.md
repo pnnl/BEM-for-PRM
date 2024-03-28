@@ -8,7 +8,7 @@ pre: "<b>- </b>"
 
 {{<line_break>}}
 
-#### A. Use Case 1: Application of the PRM measure to a user-model created in Revit
+#### A. Use Case 1: Application of the PRM measure to a BIM model - Revit System Analysis Workflow
 
 This use case showcases how an energy modeler can utilize a BIM (Building Information Modeling) model created in Revit by an architect/engineer and can translate it to a BEM (Building Energy Modeling) model to apply the PRM measure in OpenStudio. The goal is to automatically generate a proposed and baseline model(s) according to [ASHRAE 90.1 2019 Performance Rating Method (Appendix G)](/BEM-for-PRM/overview/ashrae) to streamline the energy modeling process.
 
