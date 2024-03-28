@@ -12,22 +12,22 @@
     <title>PRM for Revit : OSSTD doc</title>
 
     
-    <link href="/BEM-for-PRM/css/nucleus.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hybrid.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/featherlight.min.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/auto-complete.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/theme.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/tabs.css?1711385461" rel="stylesheet">
-    <link href="/BEM-for-PRM/css/hugo-theme.css?1711385461" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/nucleus.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/fontawesome-all.min.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hybrid.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/featherlight.min.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/perfect-scrollbar.min.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/auto-complete.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/atom-one-dark-reasonable.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/tabs.css?1711655148" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/hugo-theme.css?1711655148" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/theme-copper.css?1711385461" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/theme-copper.css?1711655148" rel="stylesheet">
     
-    <link href="/BEM-for-PRM/css/foo.css?1711385461" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1711385461" rel="stylesheet">
+    <link href="/BEM-for-PRM/css/foo.css?1711655148" rel="stylesheet"><link href="/BEM-for-PRM/css/bar.css?1711655148" rel="stylesheet">
 
-    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1711385461"></script>
+    <script src="/BEM-for-PRM/js/jquery-3.3.1.min.js?1711655148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1711385461"></script>
-<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1711385461"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/lunr.min.js?1711655148"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/auto-complete.js?1711655148"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/pnnl.github.io\/BEM-for-PRM";
     
 </script>
-<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1711385461"></script>
+<script type="text/javascript" src="/BEM-for-PRM/js/search.js?1711655148"></script>
 
     
   </div>
@@ -1650,14 +1650,14 @@
 <p><a href="https://www.autodesk.com/products/revit/overview?term=1-YEAR&amp;tab=subscription">Revit</a> is a building information modeling software used for planning, designing, constructing and managing buildings and infrastructure. The following workflow is based on the capabilities present in <a href="https://help.autodesk.com/view/RVT/2024/ENU/?guid=GUID-C81929D7-02CB-4BF7-A637-9B98EC9EB38B">Revit 2024</a> at the time of writing and is likely applicable to other versions as well. Changes and updates to the software may lead to modifications in these steps over time.</p>
 <p>The steps to apply the PRM measure to a BIM model created in Revit are as follows:</p>
 <ol>
-<li><a href="#1-create-a-model"><strong>Create a model</strong></a></li>
+<li><a href="#1-create-a-design-model"><strong>Create a design model</strong></a></li>
 <li><a href="#2-define-assemblies-internal-loads-hvac"><strong>Define assemblies, internal loads, HVAC</strong></a></li>
 <li><a href="#3-export-the-model"><strong>Export the model</strong></a></li>
 <li><a href="#4-apply-901-prm-measure"><strong>Apply 90.1 PRM measure</strong></a></li>
 </ol>
 <div style="height: 1px; background-color: #dbd9d9"></div>
-<h5 id="1-create-a-model"><strong>1. Create a model</strong></h5>
-<p>A layout of a 3 storey medium office building was created using the Revit elements like walls, roofs, floors, and windows. Spaces were separated as conference rooms, private as well as open office spaces based on their function.</p>
+<h5 id="1-create-a-design-model"><strong>1. Create a design model</strong></h5>
+<p>A layout of a 3 storey medium office building was created using the Revit elements like walls, roofs, floors, and windows. The WWR was around 32%. Spaces were separated as conference rooms, private as well as open office spaces based on their function.</p>
 <table>
 <thead>
 <tr>
@@ -1667,15 +1667,15 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/revitplan_DDstage.png?width=500px&amp;align=right&amp;classes=border,alignCenter" alt="userdata"></td>
-<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/revit3D_DDstage.png?width=700px&amp;align=right&amp;classes=border,alignCenter" alt="userdata"></td>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/revitplan_DDstage.png?width=500px&amp;align=right,alignCenter" alt="userdata"></td>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/revit3D_DDstage.png?width=700px&amp;align=right,alignCenter" alt="userdata"></td>
 </tr>
 </tbody>
 </table>
 <h5 id="2-define-assemblies-internal-loads-hvac"><strong>2. Define assemblies, internal loads, HVAC</strong></h5>
 <ul>
 <li>
-<p>Envelope Construction: Envelope assemblies were assigned using schematic construction types present in the Revit built-in library. Generic or actual construction types can also be used based on the amount of information available at hand.</p>
+<p>Envelope Construction: Envelope assemblies were assigned using schematic construction types present in the Revit built-in library. Generic or actual construction types can also be used based on the amount of information available at hand. Envelope Construction was assigned using the Energy Settings tab on Energy Optimization under the Analyze menu.</p>
 </li>
 <li>
 <p>Internal Loads: Internal loads were assigned based on the default loads present in Revit. The defaults could be based on the building typology or on space by space method according to various standards and databases (e.g., ASHRAE 90.1, ASHRAE 62.1 and CBECS data). Here, the occupancy, lighting and power definitions, and schedules were assigned to spaces based on space-by-space method according to ASHRAE 90.1-2010/62.1 standards.</p>
@@ -1688,19 +1688,123 @@
 </li>
 </ul>
 <p><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/DD_HVAC_Revit.png?width=700px&amp;align=right&amp;classes=border,alignCenter" alt="HVAC"></p>
+<ul>
+<li>Location: Location was set up as Denver, Colorado (Climate Zone 5B) using the Location option under Energy Optimization under the Analyze menu.</li>
+</ul>
 <h5 id="3-export-the-model"><strong>3. Export the model</strong></h5>
-<p>Then, the Revit model was exported as an OpenStudio model using <a href="https://help.autodesk.com/view/RVT/2024/ENU/?guid=GUID-200338BB-B394-4492-9A11-1A2A80A45AAE">Revit Systems Analysis</a> feature since it offers a streamlined workflow and effectively translates most of the gbXML content into BEM using OpenStudio measures. &ldquo;Rooms and Spaces&rdquo; mode was used which allows the BEM model to inherit all rooms and incorporate the pre-assigned thermal zoning from the BIM model. It provided a neat model with minor missing pieces such as the plenum area which was corrected manually before running the PRM measure.</p>
-<p>Note that the basic import feature of the OpenStudio application (i.e. the user interface) only translates a limited set of gbXML contents including geometry, constructions, thermal zones, and schedules. The translation of the remaining contents can be achieved using OpenStudio measures.</p>
-<p><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/image-2023-8-28_21-21-5-5.png?width=500px&amp;align=right&amp;classes=border,alignCenter" alt="Export"></p>
+<p>Then, the Revit model was exported as an OpenStudio model using <a href="https://help.autodesk.com/view/RVT/2024/ENU/?guid=GUID-200338BB-B394-4492-9A11-1A2A80A45AAE">Revit Systems Analysis</a> feature since it offers a streamlined workflow and effectively translates most of the gbXML content into BEM using OpenStudio measures. &ldquo;Rooms and Spaces&rdquo; mode was used which allows the BEM model to inherit all rooms and incorporate the pre-assigned thermal zoning from the BIM model. The .osm file generated was used to export the model to OpenStudio.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">3D Model in OpenStudio after Export</th>
+<th style="text-align:center">HVAC Layout in OpenStudio after Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/Revit3D_AfterExport_DDstage.png?width=500px&amp;align=right,alignCenter" alt="Export"></td>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/HVAC_UserModel_Revit_Pollination.png?width=400px&amp;align=right,alignCenter" alt="HVAC"></td>
+</tr>
+</tbody>
+</table>
 
-<div class="notices info" ><p>Other import alternatives could be used such as the <a href="https://help.autodesk.com/view/RVT/2024/ENU/?guid=GUID-586B9574-64DA-47BC-B8EC-DEF2D565928F">gbXML export</a>. Some of the options include generating a gbXML file using Revit native gbXML export, Systems Analysis or Revit Insight. Any information not translated properly during the export process or missing must be addressed before running the PRM measure.</p>
+<div class="notices info" ><p>Other import alternatives could be used such as the <a href="https://help.autodesk.com/view/RVT/2024/ENU/?guid=GUID-586B9574-64DA-47BC-B8EC-DEF2D565928F">gbXML export</a>. Some of the options include generating a gbXML file using Revit native gbXML export, Systems Analysis or Revit Insight. Any information not translated properly during the export process or missing must be addressed before running the PRM measure.
+Note that the basic import feature of the OpenStudio application (i.e. the user interface) only translates a limited set of gbXML contents including geometry, constructions, thermal zones, and schedules. The translation of the remaining contents can be achieved using OpenStudio measures.</p>
 </div>
 
 <h5 id="4-apply-901-prm-measure"><strong>4. Apply 90.1 PRM measure</strong></h5>
 <p>Finally, the 90.1 PRM measure was applied in OpenStudio by following the steps mentioned in the sections <a href="/BEM-for-PRM/get_start/os_app/how_run_measure">Use with OS App</a>, <a href="/BEM-for-PRM/get_start/os_cli/run_the_measure">Use with OS SDK using CLI</a> or <a href="/BEM-for-PRM/get_start/os_engine/call_use_api">Use with OS SDK API</a>.</p>
 <p>Key information required to run the PRM measure includes space types for lighting power density, building area type for window to wall ratio, HVAC system selection and water heater system, and process loads.
-Thus, before running the measure, it is important to check the exported BEM model for any missing information and addressing them by following the steps provided in <a href="#best-practices">Best Practices</a> section to ensure a successful measure run.</p>
-<p><strong>Once the PRM measure is applied on the BEM model, a proposed as well as one to four baseline models following the set of PRM rules were generated.</strong></p>
+Thus, before running the measure, it is important to check the exported BEM model for any missing information and addressing them by following the steps provided in <a href="#best-practices">Best Practices</a> section to ensure a successful measure run. Weather file must be uploaded in OpenStudio before running the simulation.</p>
+<p><strong>Once the PRM measure was applied on the BEM model, a proposed as well as one to four baseline models following the set of PRM rules were generated, some key details of which are provided below.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">3D Baseline Model in OpenStudio rendered by surface type</th>
+<th style="text-align:center">HVAC Layout in OpenStudio after Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/Revit3D_Baseline_DDstage.JPG?width=500px&amp;align=right,alignCenter" alt="Export"></td>
+<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/HVAC_Baseline_Revit.png?width=500px&amp;align=right,alignCenter" alt="HVAC"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The generated baseline model had a WWR of 31%.</li>
+<li>The model showed the correct boundary conditions for all elements.</li>
+<li>HVAC system transformed to include one hot water loop, 3 systems of Type System 5.</li>
+<li>Opaque assemblies were transformed to the following:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Dependent Variable</th>
+<th>Standard Requirement</th>
+<th>Baseline Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exterior Wall</td>
+<td>Climate Zone 5B, nonresidential</td>
+<td>U-0.084 (R-11.9)</td>
+<td>PRM Steel Framed Exterior Wall R-11.9</td>
+</tr>
+<tr>
+<td>Roof</td>
+<td>Climate Zone 5B, nonresidential</td>
+<td>U-0.063 (R-15.87)</td>
+<td>PRM IEAD Roof R-15.87</td>
+</tr>
+<tr>
+<td>Window</td>
+<td>Climate Zone 5B, nonresidential, 30-40% WWR</td>
+<td>U-0.57, SHGC-0.39, VT-0.43</td>
+<td>PRM U 0.57 SHGC 0.39 VT 0.4 Simple Glazing Window</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Lighting Power Density assigned based on the space types.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Dependent Variable</th>
+<th>Standard Requirement</th>
+<th>Baseline Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPD</td>
+<td>Office, Open plan</td>
+<td>1.10 W/ft2</td>
+<td>11.84 W/m2</td>
+</tr>
+<tr>
+<td></td>
+<td>Office, Enclosed</td>
+<td>1.10 W/ft2</td>
+<td>11.84 W/m2</td>
+</tr>
+<tr>
+<td></td>
+<td>Office, Conference</td>
+<td>1.30 W/ft2</td>
+<td>13.99 W/m2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em><em>Dependent Variable: The variables that determine the changes from a user model to a baseline model</em></em></li>
+<li><em><em>Standard Requirement: The requirements mentioned in the ASHRAE 90.1 2019 PRM method for a baseline model</em></em></li>
+<li><em><em>Baseline Value: The values assigned to the generated baseline model to match the Standard Requirements</em></em></li>
+</ul>
 <div style="height: 1px; background-color: #dbd9d9"></div>
 <h5 id="best-practices">Best Practices</h5>
 <ul>
@@ -2633,16 +2737,16 @@ Thus, before running the measure, it is important to check the exported BEM mode
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/BEM-for-PRM/js/clipboard.min.js?1711385461"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1711385461"></script>
-    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1711385461"></script>
-    <script src="/BEM-for-PRM/js/jquery.sticky.js?1711385461"></script>
-    <script src="/BEM-for-PRM/js/featherlight.min.js?1711385461"></script>
-    <script src="/BEM-for-PRM/js/highlight.pack.js?1711385461"></script>
+    <script src="/BEM-for-PRM/js/clipboard.min.js?1711655148"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.min.js?1711655148"></script>
+    <script src="/BEM-for-PRM/js/perfect-scrollbar.jquery.min.js?1711655148"></script>
+    <script src="/BEM-for-PRM/js/jquery.sticky.js?1711655148"></script>
+    <script src="/BEM-for-PRM/js/featherlight.min.js?1711655148"></script>
+    <script src="/BEM-for-PRM/js/highlight.pack.js?1711655148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1711385461"></script>
-    <script src="/BEM-for-PRM/js/learn.js?1711385461"></script>
-    <script src="/BEM-for-PRM/js/hugo-learn.js?1711385461"></script>
+    <script src="/BEM-for-PRM/js/modernizr.custom-3.6.0.js?1711655148"></script>
+    <script src="/BEM-for-PRM/js/learn.js?1711655148"></script>
+    <script src="/BEM-for-PRM/js/hugo-learn.js?1711655148"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
