@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Sep 2022 14:50:09 -0700</lastBuildDate><atom:link href="http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Revit System Analysis</title>
+      <title>Revit Systems Analysis</title>
       <link>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/revit/</link>
       <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/revit/</guid>
-      <description>A. Use Case 1: Application of the PRM measure to a BIM model - Revit System Analysis Workflow This use case showcases how an energy modeler can utilize a BIM (Building Information Modeling) model created in Revit by an architect/engineer and can translate it to a BEM (Building Energy Modeling) model to apply the PRM measure in OpenStudio. The goal is to automatically generate a proposed and baseline model(s) according to ASHRAE 90.</description>
+      <description>A. Use Case 1: Application of the PRM measure to a BIM model - Revit Systems Analysis Workflow This use case showcases how an energy modeler can utilize a BIM (Building Information Modeling) model created in Revit by an architect/engineer and can translate it to a BEM (Building Energy Modeling) model to apply the PRM measure in OpenStudio. The goal is to automatically generate a proposed and baseline model(s) according to ASHRAE 90.</description>
     </item>
     
     <item>
