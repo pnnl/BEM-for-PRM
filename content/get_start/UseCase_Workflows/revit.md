@@ -1,5 +1,5 @@
 ---
-title: "Revit System Analysis"
+title: "Revit Systems Analysis"
 date: 2022-09-21T15:00:28-07:00
 weight: 251
 draft: false
@@ -8,7 +8,7 @@ pre: "<b>- </b>"
 
 {{<line_break>}}
 
-#### A. Use Case 1: Application of the PRM measure to a BIM model - Revit System Analysis Workflow
+#### A. Use Case 1: Application of the PRM measure to a BIM model - Revit Systems Analysis Workflow
 
 This use case showcases how an energy modeler can utilize a BIM (Building Information Modeling) model created in Revit by an architect/engineer and can translate it to a BEM (Building Energy Modeling) model to apply the PRM measure in OpenStudio. The goal is to automatically generate a proposed and baseline model(s) according to [ASHRAE 90.1 2019 Performance Rating Method (Appendix G)](/BEM-for-PRM/overview/ashrae) to streamline the energy modeling process.
 
@@ -65,9 +65,9 @@ Finally, the 90.1 PRM measure was applied in OpenStudio by following the steps m
 Key information required to run the PRM measure includes space types for lighting power density, building area type for window to wall ratio, HVAC system selection and water heater system, and process loads.
 Thus, before running the measure, it is important to check the exported BEM model for any missing information and addressing them by following the steps provided in [Best Practices](#best-practices) section to ensure a successful measure run. Weather file must be uploaded in OpenStudio before running the simulation.
 
-**Once the PRM measure was applied on the BEM model, a proposed as well as one to four baseline models following the set of PRM rules were generated, some key details of which are provided below.**
+**Once the PRM measure was applied on the BEM model, a proposed as well as baseline model(s) following the set of PRM rules were generated, some key details of which are provided below.**
 
-|                                  3D Baseline Model in OpenStudio rendered by surface type                                   |                                        HVAC Layout in OpenStudio after Export                                        |
+|                                  3D Baseline Model in OpenStudio rendered by surface type                                   |                                        HVAC Layout in OpenStudio for the Baseline model                                        |
 | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 | ![Export](/BEM-for-PRM/get_start/UseCase_Workflows/images/Revit3D_Baseline_DDstage.JPG?width=500px&align=right,alignCenter) | ![HVAC](/BEM-for-PRM/get_start/UseCase_Workflows/images/HVAC_Baseline_Revit.png?width=500px&align=right,alignCenter) |
 
