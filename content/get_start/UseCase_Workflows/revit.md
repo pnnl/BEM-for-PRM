@@ -65,7 +65,7 @@ Finally, the 90.1 PRM measure was applied in OpenStudio by following the steps m
 Key information required to run the PRM measure includes space types for lighting power density, building area type for window to wall ratio, HVAC system selection and water heater system, and process loads.
 Thus, before running the measure, it is important to check the exported BEM model for any missing information and addressing them by following the steps provided in [Best Practices](#best-practices) section to ensure a successful measure run. Weather file must be uploaded in OpenStudio before running the simulation.
 
-**Once the PRM measure was applied on the BEM model, a proposed as well as one to four baseline models following the set of PRM rules were generated, some key details of which are provided below.**
+**Once the PRM measure was applied on the BEM model, a proposed as well as baseline model(s) following the set of PRM rules were generated, some key details of which are provided below.**
 
 |                                  3D Baseline Model in OpenStudio rendered by surface type                                   |                                        HVAC Layout in OpenStudio after Export                                        |
 | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |

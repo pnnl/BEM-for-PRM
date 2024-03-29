@@ -80,7 +80,7 @@ Before applying the 90.1 PRM measure, the exported BEM model was checked for any
 
 ![HVAC](/BEM-for-PRM/get_start/UseCase_Workflows/images/HVAC_UserModel_Revit_Pollination.png?width=300px&align=right&classes=border,alignCenter)
 
-**Once the PRM measure was applied on the BEM model, a proposed as well as one to four baseline models following the set of PRM rules were generated, some key details of which are provided below.**
+**Once the PRM measure was applied on the BEM model, a proposed as well as baseline model(s) following the set of PRM rules were generated, some key details of which are provided below.**
 
 |                                     3D Baseline Model in OpenStudio rendered by surface type                                      |                                             HVAC Layout for the Baseline Model                                             |
 | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
