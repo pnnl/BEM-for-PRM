@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Pollination : OSSTD doc</title>
+    <title>Compliance Check : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1727239863" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/get_start/usecase_workflows/pollination/">
+  <body class="" data-url="/BEM-for-PRM/get_start/usecase_workflows/compliance_check/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -780,7 +780,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/pollination/" title="Pollination" class="dd-item active">
+      <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/pollination/" title="Pollination" class="dd-item ">
         <a href="/BEM-for-PRM/get_start/usecase_workflows/pollination/">
         <b>- </b>Pollination
         <i class="fas fa-check read-icon"></i>
@@ -801,7 +801,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/compliance_check/" title="Compliance Check" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/get_start/usecase_workflows/compliance_check/" title="Compliance Check" class="dd-item active">
         <a href="/BEM-for-PRM/get_start/usecase_workflows/compliance_check/">
         <b>- </b>Compliance Check
         <i class="fas fa-check read-icon"></i>
@@ -1619,7 +1619,7 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/get_start/'>Getting Started</a> > <a href='/BEM-for-PRM/get_start/usecase_workflows/'>Use-case Workflows</a> > Pollination
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/get_start/'>Getting Started</a> > <a href='/BEM-for-PRM/get_start/usecase_workflows/'>Use-case Workflows</a> > Compliance Check
           
         
           
@@ -1658,7 +1658,7 @@
           
             <h1>
               
-              Pollination
+              Compliance Check
             </h1>
           
 
@@ -1666,175 +1666,102 @@
 
 
 <div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="b-use-case-2-application-of-the-prm-measure-to-a-bim-model---pollination-workflow">B. Use Case 2: Application of the PRM measure to a BIM model - Pollination Workflow</h4>
-<p>This use case showcases how an energy modeler can utilize a BIM (Building Information Modeling) model created in a BIM tool by an architect/engineer and can translate it to a BEM (Building Energy Modeling) model through Pollination to apply the PRM measure in OpenStudio. The goal is to automatically generate a proposed and baseline model(s) according to <a href="/BEM-for-PRM/overview/ashrae">ASHRAE 90.1 2019 Performance Rating Method (Appendix G)</a> to streamline the energy modeling process.</p>
-<p><a href="https://www.pollination.cloud/">Pollination</a> is a complete building performance simulation platform that is used to generate models, run simulations, and deliver results. It has a <a href="https://www.pollination.cloud/revit-plugin">Revit plugin</a> that helps extract analytical models directly from the design model to get real-time insight on energy consumption, daylight and thermal comfort. The workflow provided is based on using the Revit Plugin for Pollination as a stand-alone application. Additionally, please note that the steps provided are based on the capabilities present in the software at the time of writing. Changes and updates to the software may lead to modifications in these steps over time.</p>
-<p>The steps followed for this use case are as follows:</p>
-<ol>
-<li><a href="#1-create-a-design-model"><strong>Create a user model</strong></a></li>
-<li><a href="#2-define-the-construction-set-program-type-hvac"><strong>Define the Construction Set, Program type, HVAC</strong></a></li>
-<li><a href="#3-export-the-model"><strong>Export the model</strong></a></li>
-<li><a href="#4-apply-901-prm-method"><strong>Apply 90.1 PRM method</strong></a></li>
-</ol>
-<div style="height: 1px; background-color: #dbd9d9"></div>
-<h5 id="1-create-a-user-model"><strong>1. Create a user model</strong></h5>
-<p>A layout of a 3 storey medium office building was created using the Revit elements like walls, roofs, floors, and windows. The building is rectangular in shape with a footprint measuring 161 ft by 108 ft, where the longer perimeter sides have a north-south orientation and contains 17,420 ft2 per floor. The window to wall ratio (WWR) was around 32%. Spaces were separated as conference rooms, private as well as open office spaces based on their function.</p>
-<p>There are two Geometry Calculation options in Pollination that can be adopted - Extruded Floors and Full Volume. For this workflow, extruded floors option was selected.</p>
 
-<div class="notices info" ><p>Geometry Calculation setting is used to set the underlying engine that Pollination will use to parse the geometry. Full volume setting refers to Honeybee, while the Extruded Floor uses dragonfly.</p>
+<div class="notices note" ><p>This instruction is created based on the latest public information of <a href="https://tpc.ashrae.org/Documents?cmtKey=9ffa4db6-eebe-4418-a8c4-d0c220603735">ASHRAE Standard 229P</a>. It should be noted that the proposed standard is currently under development after its first public review. All information presented in this page can subject to change once the Standard is officially published.</p>
 </div>
 
-<p><strong>Extruded Floors</strong> option extrudes the room/space/area boundaries with added apertures.</p>
-<ul>
-<li>Apart from Extruded Floors option for geometry calculation, Detailed option for the window calculation method was selected.</li>
-<li>The model was visualized to make sure there are no issues. To avoid having minor issues after the export such as gaps between floors and adjacency issues that can eventually cause the EnergyPlus simulation to fail, the model was previewed in plane and wireframe view as well and following steps were carried out.
-<ul>
-<li>The height was adjusted to close any gaps formed in the model due to the default heights.</li>
-<li>The Align option was used to specify Reference Planes and Model Lines in Revit to pull the room/space boundaries to the nearest plane/line within a specified Align Distance defined in Pollination. This can help clean and fix the export without actually modifying the Revit model.</li>
-<li>Solve Adjacency was set to Full.</li>
-</ul>
-</li>
-</ul>
-<p><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/DD_Extr_Step6_After_Fix.png?width=700px&amp;align=right&amp;classes=border,alignCenter" alt="userdata"></p>
-<h5 id="2-define-the-construction-set-program-type-hvac"><strong>2. Define the Construction Set, Program type, HVAC</strong></h5>
-<p>Details related to &ldquo;Construction Set&rdquo;, &ldquo;Program Type&rdquo; and &ldquo;HVAC&rdquo; were specified within Pollination.</p>
-<ul>
-<li>
-<p><a href="https://docs.pollination.cloud/user-manual/revit-plugin/export-analytical-model">Construction Sets</a>: Several options for construction templates with different vintages are available, and can also be edited. For this workflow, <code>2019 Vintage</code>, <code>Climate Zone 5</code> and <code>Steel Framed</code> type were selected.</p>
-</li>
-<li>
-<p><a href="https://docs.pollination.cloud/user-manual/revit-plugin/export-analytical-model">Program Types</a>: Several options for load definitions and schedules for people, lighting, equipment, infiltration, ventilation, setpoint, service hot water corresponding to a list of space types and different vintages, are available and can be edited. Here, <code>2019 Vintage</code>, with <code>Medium Office</code> as the Building Type and three program types - <code>Conference</code>, <code>OpenOffice</code> and <code>Closed Office</code> were selected accordingly for different spaces.</p>
-</li>
-<li>
-<p><a href="https://docs.pollination.cloud/user-manual/revit-plugin/export-analytical-model">HVAC</a>: Only <code>Ideal air loads</code> option is available by default and hence was selected (which was modeled as zone equipment). However, an HVAC system is a key element to run the PRM measure, thus, HVAC was revisited after exporting the model to OpenStudio.
-There is also an option in Pollination to import HVAC systems from OpenStudio that could be considered to assign HVAC systems.</p>
-</li>
-<li>
-<p>Service Hot Water (SHW): There is an option for SHW but no system to be selected.</p>
-</li>
-<li>
-<p>Space Names: To avoid having random IDs assigned to the space names and thermal zones after the export, <code>Reset Identifier</code> option was enabled in Pollination&rsquo;s final step before export. This option typically enables Pollination to parse the correct space names into the OpenStudio model.</p>
-</li>
-</ul>
-<p><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/Constructionsets_programtype_HVAC.png?width=700px&amp;align=right&amp;classes=border,alignCenter" alt="construction"></p>
-<h5 id="3-export-the-model"><strong>3. Export the model</strong></h5>
-<p>The model was exported from Pollination by clicking on the export button in the final step (as shown in the image above) as an <code>.osm</code> file. It was further imported to OpenStudio and boundary conditions were checked to make sure it imported correctly.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">3D User Model in OpenStudio rendered by surface type</th>
-<th style="text-align:center">3D User Model in OpenStudio rendered by boundary condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/Pollination_OpenStudio_Model.png?width=500px&amp;align=right&amp;classes=border,alignCenter" alt="userdata"></td>
-<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/Pollination_Boundary_Condition_model.png?width=500px&amp;align=right&amp;classes=border,alignCenter" alt="userdata"></td>
-</tr>
-</tbody>
-</table>
-<h5 id="4-apply-901-prm-method"><strong>4. Apply 90.1 PRM method</strong></h5>
-<p>Before applying the 90.1 PRM measure, the exported BEM model was checked for any missing/incorrect information and those were addressed by following the steps below.</p>
-<ul>
-<li>
-<p>The measure tag for Standard Space Types had to be changed to match the names in the <a href="/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building">PRM database</a> (Standard Space Types were set to <code>office - enclosed &lt;= 250 sf</code>, <code>conference/meeting/multipurpose</code> and <code>office - open</code> depending on the space function). Although this does not cause a simulation error, the PRM baseline measure will not pick the correct space-related input values (e.g., LPD) if this step is skipped.</p>
-</li>
-<li>
-<p>The weather file for the location Denver, Colorado was assigned in OpenStudio.</p>
-</li>
-<li>
-<p>A Packaged Rooftop Air Conditioner, one for each floor was assigned along with the thermal zones.</p>
-</li>
-</ul>
-<p><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/HVAC_UserModel_Revit_Pollination.png?width=300px&amp;align=right&amp;classes=border,alignCenter" alt="HVAC"></p>
-<p><strong>Once the PRM measure was applied on the BEM model, a proposed as well as baseline model(s) following the set of PRM rules were generated, some key details of which are provided below.</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">3D Baseline Model in OpenStudio rendered by surface type</th>
-<th style="text-align:center">HVAC Layout for the Baseline Model</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/Pollination_OpenStudio_Model.png?width=500px&amp;align=right,alignCenter" alt="Baseline"></td>
-<td style="text-align:center"><img src="/BEM-for-PRM/get_start/UseCase_Workflows/images/HVAC_Baseline_Revit.png?width=700px&amp;align=right,alignCenter" alt="HVAC"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>The generated baseline model had a WWR of 30.95%.</li>
-<li>HVAC system transformed to include 1 Hot Water Loop, 3 systems of Type System 5 based on the thermal zones assigned for each room (as shown in the figure above).</li>
-<li>Opaque assemblies were transformed to the following:</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Category</th>
-<th>Dependent Variable</th>
-<th>Standard Requirement</th>
-<th>Baseline Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Exterior Wall</td>
-<td>Climate Zone 5B, nonresidential</td>
-<td>U-0.0.084 (R-11.9)</td>
-<td>PRM Steel Framed Exterior Wall R-11.9</td>
-</tr>
-<tr>
-<td>Roof</td>
-<td>Climate Zone 5B, nonresidential</td>
-<td>U-0.063 (R-15.87)</td>
-<td>PRM IEAD Roof R-15.87</td>
-</tr>
-<tr>
-<td>Window</td>
-<td>Climate Zone 5B, nonresidential, 30-40% WWR</td>
-<td>U-0.57, SHGC-0.39, VT-0.43</td>
-<td>PRM U 0.57 SHGC 0.39 VT 0.4 Simple Glazing Window</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Lighting Power Density assigned based on the space types.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Category</th>
-<th>Dependent Variable</th>
-<th>Standard Requirement</th>
-<th>Baseline Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LPD</td>
-<td>Office, Open plan</td>
-<td>1.10 W/ft2</td>
-<td>1.10 W/ft2</td>
-</tr>
-<tr>
-<td></td>
-<td>Office, Enclosed</td>
-<td>1.10 W/ft2</td>
-<td>1.10 W/ft2</td>
-</tr>
-<tr>
-<td></td>
-<td>Office, Conference</td>
-<td>1.30 W/ft2</td>
-<td>1.30 W/ft2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><em><em>Dependent Variable: The variables that determine the changes from a user model to a baseline model</em></em></li>
-<li><em><em>Standard Requirement: The requirements mentioned in the ASHRAE 90.1 2019 PRM method for a baseline model</em></em></li>
-<li><em><em>Baseline Value: The values assigned to the generated baseline model to match the Standard Requirements</em></em></li>
-</ul>
+<h4 id="c-use-case-3-application-of-the-prm-measure-for-code-compliance-check---ruleset-checking-tool">C. Use Case 3: Application of the PRM measure for code compliance check - Ruleset Checking Tool</h4>
+<p>This use case showcases how an energy modeler can utilize the PRM measure to develop a streamlined automation process for code compliance check. The goal is to automatically generate a proposed and baseline model(s) according to <a href="/BEM-for-PRM/overview/ashrae">ASHRAE 90.1 2019 Performance Rating Method (Appendix G)</a>, and then translate these models and their simulation results into ruleset project description (RPD) files that are compliant with ASHRAE Standard 229. The translated PRD files are used for running compliance rule check through the <a href="https://github.com/pnnl/ruleset-checking-tool">ruleset checking tool</a> to generate a compliance project check report.</p>
+<p>Several tools will be used in this demostration, including PRM measure, <a href="https://github.com/JasonGlazer/createRulesetProjectDescription">createRulesetProjectDescription</a> and the <a href="https://github.com/pnnl/ruleset-checking-tool">PNNL ruleset checking tool</a>. We also also provide the scripts in this tutorial that automates the process.</p>
+
+<div class="notices warning" ><p>The <a href="https://github.com/JasonGlazer/createRulesetProjectDescription">createRulesetProjectDescription</a> and the <a href="https://github.com/pnnl/ruleset-checking-tool">PNNL ruleset checking tool</a> are under development and they are both highly unstable. The workflow introduced in this page could require updates once both two are released.</p>
+</div>
+
+<h5 id="1-run-prm-measure"><strong>1. Run PRM measure</strong></h5>
+<p>There are multiple ways to run the PRM measure. These methods are covered in multiple sections previously. In this instruction, we will use a custom build script to call the PRM through OpenStudio Standard API directly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;openstudio&#39;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;openstudio-standards&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Project parameters</span>
+</span></span><span style="display:flex;"><span>default_hvac_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;other nonresidential&#39;</span>
+</span></span><span style="display:flex;"><span>default_wwr_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Office 5,000 to 50,000 sq ft&#39;</span>
+</span></span><span style="display:flex;"><span>default_swh_bldg_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Office&#39;</span>
+</span></span><span style="display:flex;"><span>climate_zone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ASHRAE 169-2013-3A&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OpenStudio model, and directories</span>
+</span></span><span style="display:flex;"><span>demo_folder <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;demo1&#39;</span>
+</span></span><span style="display:flex;"><span>proposed_model <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;geometry_demo_model.osm&#39;</span>
+</span></span><span style="display:flex;"><span>baseline_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output&#34;</span>
+</span></span><span style="display:flex;"><span>demo_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/source&#34;</span>
+</span></span><span style="display:flex;"><span>proposed_geo_model <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/</span><span style="color:#e6db74">#{</span>demo_folder<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">#{</span>proposed_model<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>user_data_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>demo_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">#{</span>demo_folder<span style="color:#e6db74">}</span><span style="color:#e6db74">/user_data&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Load the model</span>
+</span></span><span style="display:flex;"><span>translator <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenStudio</span><span style="color:#f92672">::</span><span style="color:#66d9ef">OSVersion</span><span style="color:#f92672">::</span><span style="color:#66d9ef">VersionTranslator</span><span style="color:#f92672">.</span>new
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> translator<span style="color:#f92672">.</span>loadModel(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>demo_path<span style="color:#e6db74">}#{</span>proposed_geo_model<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>get
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Initialized the Standard instance</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: it will need to be 90.1-PRM-2019</span>
+</span></span><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#34;90.1-PRM-2019&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run simulation on the user model - this is needed for a RPD generation</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_run_simulation_and_log_errors(model, run_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>baseline_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">/USER&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Load User data</span>
+</span></span><span style="display:flex;"><span>json_path <span style="color:#f92672">=</span> standard<span style="color:#f92672">.</span>convert_userdata_csv_to_json(user_data_path, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>baseline_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>load_userdata_to_standards_database(json_path)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate proposed and baseline models</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, unmet_load_hours_check<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>, debug<span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>)
+</span></span></code></pre></div><p>The above ruby script shall be sufficient to complete the PRM generation if you have both OpenStudio and OpenStudio-Standards installed on your computer. You can also check out the <a href="../../os_engine/installation">Installation</a> page to install the pre-requisite packages.</p>
+<p>In this script, we first specifies project parameters that will be used to set up the PRM generation rules. Next, set up the directories to the user model, user data files and output folder. After that, initiaite a <code>90.1-PRM-2019</code> Standard instance.
+The next step after that is to run a user model simulation. For a successful compliance check, a full year simulation is required on the user model.
+If there are user provided data, such as lighting space type, you will need to load those data using the <code>load_userdata_to_standards_database</code>. If those user data are in <code>.csv</code> format, you will also need to call <code>convert_userdata_csv_to_json</code> first.
+Lastly, call the PRM measure method, <code>model_create_prm_stable_baseline_building</code> function to generate proposed and baseline models. To have a successful compliance check, we will need to turn on the <code>unmet_load_hours_check</code>. This flag will not only run full year simulations on proposed and baseline models, but also export simulation results in jsons - a critical format for generating ruleset project description file.</p>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h5 id="2-generate-rpd-files-and-run-evaluation"><strong>2. Generate RPD files and run evaluation</strong></h5>
+<p>Before running this task, check the output folder. You should be seeing files ends with <code>.epjson</code>. Inside each simulation folder, you should also see <code>eplusout_hourly.json</code>.
+After verification, the next step is to ensure the package <a href="https://github.com/JasonGlazer/createRulesetProjectDescription">createRulesetProjectDescription</a>. The simplest installation method is to have their source code downloaded on your local directory. Make sure that you have read the requirements of the installation from each package, for example, the version of python, and follows their guideline to run the source code on test cases.</p>
+<p>Once the two software installed or downloaded on local directory, we can then develop another script to glue all the processes together.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># We need to import the createRulesetModelDescription in the script as the tool does not</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># provide a CLI function yet.</span>
+</span></span><span style="display:flex;"><span>sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;[YOUR_LOCAL_DIRECTORY]</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">createRulesetModelDescription&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> subprocess
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> energyplus_rpd.translator <span style="color:#f92672">import</span> Translator
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>RCT_DIR <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[YOUR_LOCAL_DIRECTORY]</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">ruleset-checking-tool</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user_model_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[directory_to_your_user_model]&#34;</span>
+</span></span><span style="display:flex;"><span>proposed_model_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[directory_to_your_proposed_model]&#34;</span>
+</span></span><span style="display:flex;"><span>baseline_model_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[directory_to_your_baseline_model]&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user_translator <span style="color:#f92672">=</span> Translator(Path(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>user_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/user_model.epJSON&#34;</span>), <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>user_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/user_rpd.rpd&#34;</span>)
+</span></span><span style="display:flex;"><span>user_translator<span style="color:#f92672">.</span>process()
+</span></span><span style="display:flex;"><span>proposed_translator <span style="color:#f92672">=</span> Translator(Path(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>proposed_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/proposed_model.epJSON&#34;</span>), <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>proposed_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/proposed_rpd.rpd&#34;</span>)
+</span></span><span style="display:flex;"><span>proposed_translator<span style="color:#f92672">.</span>process()
+</span></span><span style="display:flex;"><span>baseline_translator <span style="color:#f92672">=</span> Translator(Path(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>baseline_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/baseline_model.epJSON&#34;</span>), <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>baseline_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/baseline_rpd.rpd&#34;</span>)
+</span></span><span style="display:flex;"><span>baseline_translator<span style="color:#f92672">.</span>baseline()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># call RCT evaluation throught its CLI</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>subprocess<span style="color:#f92672">.</span>run([<span style="color:#e6db74">&#34;pipenv&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;run&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;rct229&#34;</span>, <span style="color:#75715e"># application name</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;evaluate&#34;</span>, <span style="color:#75715e"># function name</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-f&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>user_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/user_rpd.rpd&#34;</span>, <span style="color:#75715e"># -f command to append an RPD file to the evalute function</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-f&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>baseline_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/baseline_rpd.rpd&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-f&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>proposed_model_path<span style="color:#e6db74">}</span><span style="color:#e6db74">/proposed_rpd.rpd&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-rs&#34;</span>, <span style="color:#e6db74">&#34;ashrae9012019&#34;</span>, <span style="color:#75715e"># -rs command specifies the ruleset</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-r&#34;</span>, <span style="color:#e6db74">&#34;ASHRAE9012019_DETAIL&#34;</span>,  <span style="color:#75715e"># -r command specifies the type of report(s)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;-rd&#34;</span>, <span style="color:#e6db74">&#34;./example/output/&#34;</span>], <span style="color:#75715e"># -rd command specifies the output report saving directory</span>
+</span></span><span style="display:flex;"><span>                cwd<span style="color:#f92672">=</span>RCT_DIR,
+</span></span><span style="display:flex;"><span>                shell<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                )
+</span></span></code></pre></div><p>The above script does two steps:</p>
+<ol>
+<li>Utilize the Translator class in the <code>createRulesetModelDescription</code> application to translate the EnergyPlus simulation files, including <code>.epJSON</code>, <code>_modelout.json</code> and <code>_modelout_hourly.json</code>, to the RPD files. For this specific instance, we translated the <code>user</code>, <code>proposed</code> and <code>baseline</code> models. For many 90.1 2019 code compliance projects, baseline models in four orientations may need translation individually.</li>
+<li>Run RPD evaluations through the RCT tool&rsquo;s command line interface. For a project evaluation, the function is called <code>evaluate</code>. Arguments to this function includes RPD file paths (<code>-f</code>), ruleset option (<code>-rs</code>) and evaluation report (<code>-r</code>). The application will run an evaluation based on the specifications and produce one or multiple reports.</li>
+</ol>
+<p>In the end, we should found an output file <code>ashrae901_2019_detail_report.json</code> in the <code>./example/output</code> folder. The schema of this detail report is published on the <a href="https://github.com/pnnl/ruleset-checking-tool/blob/master/docs/_output_project_test_report_template.md">ruleset checking tool</a> website. In this file, you will be able to identify outcomes that are not showing <code>PASS</code> to address the compliance issues.</p>
 
 
 <footer class="footline">
@@ -2297,7 +2224,6 @@ There is also an option in Pollination to import HVAC systems from OpenStudio th
             
                 
                     
-                    
                 
                 
 
@@ -2314,8 +2240,6 @@ There is also an option in Pollination to import HVAC systems from OpenStudio th
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -2338,6 +2262,9 @@ There is also an option in Pollination to import HVAC systems from OpenStudio th
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2747,10 +2674,10 @@ There is also an option in Pollination to import HVAC systems from OpenStudio th
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/get_start/usecase_workflows/revit/" title="Revit Systems Analysis"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/get_start/usecase_workflows/pollination/" title="Pollination"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/get_start/usecase_workflows/compliance_check/" title="Compliance Check" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/" title="User Guide" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

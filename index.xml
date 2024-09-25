@@ -185,6 +185,16 @@ Download the folder &amp;ldquo;demo3zip&amp;rdquo; on your system and extract it
     </item>
     
     <item>
+      <title>Compliance Check</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/compliance_check/</link>
+      <pubDate>Wed, 21 Sep 2022 15:00:28 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/get_start/usecase_workflows/compliance_check/</guid>
+      <description>This instruction is created based on the latest public information of ASHRAE Standard 229P. It should be noted that the proposed standard is currently under development after its first public review. All information presented in this page can subject to change once the Standard is officially published.
+C. Use Case 3: Application of the PRM measure for code compliance check - Ruleset Checking Tool This use case showcases how an energy modeler can utilize the PRM measure to develop a streamlined automation process for code compliance check.</description>
+    </item>
+    
+    <item>
       <title>Best Practices</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/model_requirements/best_practices/</link>
       <pubDate>Wed, 21 Sep 2022 15:05:48 -0700</pubDate>
