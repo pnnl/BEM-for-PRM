@@ -8,7 +8,7 @@ pre: "<b>- </b>"
 
 {{<line_break>}}
 
-{{%attachments title="User Data CSV File:" style="orange" pattern=".*\.(csv)$"/%}}
+{{%attachments title="User Data CSV File:" style="orange" pattern=".*\.(csv|json)$"/%}}
 
 {{< line_break >}}
 
