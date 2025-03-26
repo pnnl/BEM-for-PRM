@@ -13,7 +13,7 @@
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/</guid>
-      <description>User Data CSV File: userdata_building.csv (97 B) Introduction The userdata_building.csv contains compliance data for building compliance calculations. It can be used to define Appendix G HVAC systems, service water heating systems and the window to wall ratio for the entire building. The .csv consists of the following fields.
+      <description>User Data CSV File: userdata_building.csv (97 B) userdata_building.json (4 KB) Introduction The userdata_building.csv contains compliance data for building compliance calculations. It can be used to define Appendix G HVAC systems, service water heating systems and the window to wall ratio for the entire building. The .csv consists of the following fields.
 name building_type_for_hvac building_type_for_swh building_type_for_wwr is_exempt_from_rotations For example, consider a building named Small Office less than 5000 sqft with less than 3 floors and in climate zone 2.</description>
     </item>
     
@@ -23,9 +23,8 @@ name building_type_for_hvac building_type_for_swh building_type_for_wwr is_exemp
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/</guid>
-      <description>User Data CSV File: userdata_thermal_zone.csv (114 B) Introduction The userdata_thermal_zone.csv contains compliance data for thermal zone calculations. A thermal zone is typically a space or a collection of spaces that have similar space conditioning requirements. The .csv file consists of the following fields.
-name building_type_for_hvac number_of_systems dcv_exception_thermal_zone has_health_safety_night_cycle_exception The userdata_thermal_zone.csv file allows the application of multiple systems in a single thermal zone object in the model.
-For example, consider a thermal zone named Thermal Zone - Retail that consists of shops, restaurants and a large atrium having 3 different HVAC systems.</description>
+      <description>User Data CSV File: userdata_thermal_zone.csv (114 B) userdata_thermal_zone.json (1 KB) Introduction The userdata_thermal_zone.csv contains compliance data for thermal zone calculations. A thermal zone is typically a space or a collection of spaces that have similar space conditioning requirements. The .csv file consists of the following fields.
+name building_type_for_hvac number_of_systems dcv_exception_thermal_zone has_health_safety_night_cycle_exception The userdata_thermal_zone.csv file allows the application of multiple systems in a single thermal zone object in the model.</description>
     </item>
     
   </channel>

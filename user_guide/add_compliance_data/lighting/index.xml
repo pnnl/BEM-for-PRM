@@ -13,7 +13,7 @@
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</guid>
-      <description>User Data CSV File: userdata_exterior_lights.csv (467 B) Introduction The userdata_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.
+      <description>User Data CSV File: userdata_exterior_lights.csv (467 B) userdata_exterior_lights.json (3 KB) Introduction The userdata_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.
 It consists of the following data fields:
 name num_ext_lights_subcats end_use_subcategory Tradeable Exterior Lighting Subcategories Non-Tradeable Exterior Lighting Subcategories end_use_measurement_value For example, consider a building with an parking area that has 2 different kinds of exterior lights, one for the parking lots and drive areas and another for the exterior building facade area facing the parking lot.</description>
     </item>

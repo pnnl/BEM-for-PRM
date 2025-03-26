@@ -240,7 +240,7 @@ standard = Standard.build(&amp;#34;90.1-PRM-2019&amp;#34;) userdata_dir = &amp;#
       <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space/</guid>
-      <description>User Data CSV File: userdata_space.csv (745 B) Introduction The userdata_space.csv file can be used to change the window-to-wall ratio and also provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
+      <description>User Data CSV File: userdata_space.csv (745 B) userdata_space.json (13 KB) Introduction The userdata_space.csv file can be used to change the window-to-wall ratio and also provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
 name building_type_for_wwr num_std_ltg_types std_ltg_type0x std_ltg_type_frac0x has_residential_exception The userdata_space.csv file allows the application of multiple lighting space types to a single Space object in the model.</description>
     </item>
     
@@ -250,7 +250,7 @@ name building_type_for_wwr num_std_ltg_types std_ltg_type0x std_ltg_type_frac0x 
       <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space_type/</guid>
-      <description>User Data CSV File: userdata_spacetype.csv (723 B) Introduction The userdata_space_type.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
+      <description>User Data CSV File: userdata_spacetype.csv (723 B) userdata_spacetype.json (13 KB) Introduction The userdata_space_type.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
 name num_std_ltg_types std_ltg_type0x std_ltg_type_frac0x The userdata_space_type.csv file allows the application of multiple lighting space types to a single SpaceType object in the model.</description>
     </item>
     
@@ -260,7 +260,7 @@ name num_std_ltg_types std_ltg_type0x std_ltg_type_frac0x The userdata_space_typ
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_building/</guid>
-      <description>User Data CSV File: userdata_building.csv (97 B) Introduction The userdata_building.csv contains compliance data for building compliance calculations. It can be used to define Appendix G HVAC systems, service water heating systems and the window to wall ratio for the entire building. The .csv consists of the following fields.
+      <description>User Data CSV File: userdata_building.csv (97 B) userdata_building.json (4 KB) Introduction The userdata_building.csv contains compliance data for building compliance calculations. It can be used to define Appendix G HVAC systems, service water heating systems and the window to wall ratio for the entire building. The .csv consists of the following fields.
 name building_type_for_hvac building_type_for_swh building_type_for_wwr is_exempt_from_rotations For example, consider a building named Small Office less than 5000 sqft with less than 3 floors and in climate zone 2.</description>
     </item>
     
@@ -270,9 +270,8 @@ name building_type_for_hvac building_type_for_swh building_type_for_wwr is_exemp
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/building_type/user_data_thermal_zone/</guid>
-      <description>User Data CSV File: userdata_thermal_zone.csv (114 B) Introduction The userdata_thermal_zone.csv contains compliance data for thermal zone calculations. A thermal zone is typically a space or a collection of spaces that have similar space conditioning requirements. The .csv file consists of the following fields.
-name building_type_for_hvac number_of_systems dcv_exception_thermal_zone has_health_safety_night_cycle_exception The userdata_thermal_zone.csv file allows the application of multiple systems in a single thermal zone object in the model.
-For example, consider a thermal zone named Thermal Zone - Retail that consists of shops, restaurants and a large atrium having 3 different HVAC systems.</description>
+      <description>User Data CSV File: userdata_thermal_zone.csv (114 B) userdata_thermal_zone.json (1 KB) Introduction The userdata_thermal_zone.csv contains compliance data for thermal zone calculations. A thermal zone is typically a space or a collection of spaces that have similar space conditioning requirements. The .csv file consists of the following fields.
+name building_type_for_hvac number_of_systems dcv_exception_thermal_zone has_health_safety_night_cycle_exception The userdata_thermal_zone.csv file allows the application of multiple systems in a single thermal zone object in the model.</description>
     </item>
     
     <item>
@@ -281,7 +280,7 @@ For example, consider a thermal zone named Thermal Zone - Retail that consists o
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac/</guid>
-      <description>User Data CSV File: userdata_airloop_hvac.csv (988 B) Introduction The userdata_airloop_hvac.csv contains compliance data for airloop HVAC compliance calculation. It allows the user to specify pressure drop adjustments, air side economizer design considerations, exhaust air energy recovery design considerations as well as dcv exceptions.
+      <description>User Data CSV File: userdata_airloop_hvac.csv (988 B) userdata_airloop_hvac.json (11 KB) Introduction The userdata_airloop_hvac.csv contains compliance data for airloop HVAC compliance calculation. It allows the user to specify pressure drop adjustments, air side economizer design considerations, exhaust air energy recovery design considerations as well as dcv exceptions.
 It consists of the following data fields:
 name Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct Air-side economizer economizer_exception_for_gas_phase_air_cleaning economizer_exception_for_open_refrigerated_cases Exhaust air energy recovery exhaust_energy_recovery_exception_for_toxic_fumes_etc exhaust_energy_recovery_exception_for_type1_kitchen_hoods exhaust_energy_recovery_exception_for_type_distributed_exhaust exhaust_energy_recovery_exception_for_dehumidifcation_with_series_cooling_recovery dcv_exception_airloop An example of sample data is shown here:</description>
     </item>
@@ -292,7 +291,7 @@ name Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_c
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_airloop_hvac_doas/</guid>
-      <description>User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) Introduction The userdata_airloop_hvac_doas.csv contains compliance data for airloop HVAC DOAS compliance calculation. It allows users to specify the pressure drop adjustments for the DOAS airloop.
+      <description>User Data CSV File: userdata_airloop_hvac_doas.csv (611 B) userdata_airloop_hvac_doas.json (7 KB) Introduction The userdata_airloop_hvac_doas.csv contains compliance data for airloop HVAC DOAS compliance calculation. It allows users to specify the pressure drop adjustments for the DOAS airloop.
 The .csv consists of the following data fields.
 name Pressure-drop adjustments has_fan_power_credit_fully_ducted has_fan_power_credit_return_or_exhaust_flow_control fan_power_credit_exhaust_treatment has_fan_power_credit_filtration_m9to12 has_fan_power_credit_filtration_m13to15 clean_filter_pressure_drop_for_fan_power_credit_filtration_m16plus fan_power_credit_gas_phase_cleaners fan_power_credit_biosafety fan_power_credit_other_than_coil_runaround has_fan_power_credit_coil_runaround fan_power_credit_evaporative_humidifier_or_cooler has_fan_power_credit_sound_attenuation has_fan_power_credit_exhaust_serving_fume_hoods has_fan_power_credit_lab_or_vivarium_highrise_vertical_duct An example of sample data is shown here:
 name has_fan_ power_credit _fully_ducted has_fan_power_ credit_return_or_ exhaust_flow_control fan_power_credit_ exhaust_treatment has_fan_power_ credit_filtration_m9to12 has_fan_power_ credit_filtration_m13to15 clean_filter_pressure_ drop_for_fan_power_ credit_filtration_m16plus fan_power_credit_ gas_phase_cleaners fan_power_credit_ biosafety AHU_DOAS 0 0 0 0 yes 0 0 0 fan_power_credit_ other_than_coil_ runaround has_fan_power_credit_coil_runaround fan_power_credit_ evaporative_humidifier_or_ cooler has_fan_power_ credit_sound_ attenuation has_fan_power_ credit_exhaust_ serving_fume_hoods has_fan_power_ credit_lab_or_vivarium_ highrise_vertical_duct 0 0 0 0 0 0 Refer to the section below for more information about each field.</description>
@@ -304,9 +303,9 @@ name has_fan_ power_credit _fully_ducted has_fan_power_ credit_return_or_ exhaus
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/hvac/user_data_design_specification_outdoor_air/</guid>
-      <description>User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) Introduction The userdata_design_specification_outdoor_air.csv contains compliance data for outdoor air compliance calculation. It allows users to specify alternative Outdoor Air specifications for the baseline model. The proposed model will be the same as the user model.
+      <description>User Data CSV File: userdata_design_specification_outdoor_air.csv (122 B) userdata_design_specification_outdoor_air.json (1 KB) Introduction The userdata_design_specification_outdoor_air.csv contains compliance data for outdoor air compliance calculation. It allows users to specify alternative Outdoor Air specifications for the baseline model. The proposed model will be the same as the user model.
 The .csv consists of the following data fields.
-name outdoor_airflow_per_person outdoor_airflow_per_floor_area outdoor_air_flowrate outdoor_air_flow_air_changes_per_hour For example, consider a zone named Office WholeBuilding - Md Office Ventilation with 0.0004 cfm per square feet.</description>
+name outdoor_airflow_per_person outdoor_airflow_per_floor_area outdoor_air_flowrate outdoor_air_flow_air_changes_per_hour For example, consider a zone named Office WholeBuilding - Md Office Ventilation with 0.</description>
     </item>
     
     <item>
@@ -315,7 +314,7 @@ name outdoor_airflow_per_person outdoor_airflow_per_floor_area outdoor_air_flowr
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_electric_equipment/</guid>
-      <description>User Data CSV File: userdata_electric_equipment.csv (411 B) Introduction The userdata_electric_equipment.csv contains compliance data for electric equipment compliance calculations that includes receptacles and process loads including motors, elevators and refrigeration equipment loads.
+      <description>User Data CSV File: userdata_electric_equipment.csv (411 B) userdata_electric_equipment.json (3 KB) Introduction The userdata_electric_equipment.csv contains compliance data for electric equipment compliance calculations that includes receptacles and process loads including motors, elevators and refrigeration equipment loads.
 It consists of the following fields:
 name fraction_of_controlled_receptacles receptacle_power_savings motor_horsepower motor_efficiency motor_is_exempt elevator_weight_of_car elevator_rated_load elevator_counter_weight_of_car elevator_speed_of_car elevator_number_of_stories elevator_number_of_lifts elevator_area_ft2 elevator_ventilation_cfm refrigeration_equipment_class refrigeration_equipment_volume refrigeration_equipment_total_display_area For example, consider 2 elevators for 3 stories in a building. One of the line items in the .</description>
     </item>
@@ -326,7 +325,7 @@ name fraction_of_controlled_receptacles receptacle_power_savings motor_horsepowe
       <pubDate>Mon, 11 Jul 2022 16:29:40 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/lighting/user_data_exterior_lights/</guid>
-      <description>User Data CSV File: userdata_exterior_lights.csv (467 B) Introduction The userdata_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.
+      <description>User Data CSV File: userdata_exterior_lights.csv (467 B) userdata_exterior_lights.json (3 KB) Introduction The userdata_exterior_lights.csv contains compliance data for exterior lighting compliance calculation. It allows the user to specify the sub categories for all the exterior lights along with the appropriate measurement units.
 It consists of the following data fields:
 name num_ext_lights_subcats end_use_subcategory Tradeable Exterior Lighting Subcategories Non-Tradeable Exterior Lighting Subcategories end_use_measurement_value For example, consider a building with an parking area that has 2 different kinds of exterior lights, one for the parking lots and drive areas and another for the exterior building facade area facing the parking lot.</description>
     </item>
@@ -337,7 +336,7 @@ name num_ext_lights_subcats end_use_subcategory Tradeable Exterior Lighting Subc
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_connections/</guid>
-      <description>User Data CSV File: userdata_wateruse_connections.csv (82 B) Introduction The userdata_wateruse_connections.csv contains compliance data for hot water and cold water supply temperature schedules. The schedules are used in the simulation to calculate the water demand loads.
+      <description>User Data CSV File: userdata_wateruse_connections.csv (82 B) userdata_wateruse_connections.json (1 KB) Introduction The userdata_wateruse_connections.csv contains compliance data for hot water and cold water supply temperature schedules. The schedules are used in the simulation to calculate the water demand loads.
 It consists of the following data fields:
 name hot_water_supply_temperature_schedule cold_water_supply_temperature_schedule An example of such data can be found in below. It should be noted that the schedule name provided shall be in the user model.</description>
     </item>
@@ -348,7 +347,7 @@ name hot_water_supply_temperature_schedule cold_water_supply_temperature_schedul
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/water/user_data_wateruse_equipment_definition/</guid>
-      <description>User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) Introduction The userdata_wateruse_equipment_definition.csv contains compliance data the wateruse equipment definition. The object can be found in Openstudio SDK. The data file let&amp;rsquo;s user to modify data for an existing wateruse equipment definition object.
+      <description>User Data CSV File: userdata_wateruse_equipment_definition.csv (76 B) userdata_wateruse_equipment_definition.json (1 KB) Introduction The userdata_wateruse_equipment_definition.csv contains compliance data the wateruse equipment definition. The object can be found in Openstudio SDK. The data file let&amp;rsquo;s user to modify data for an existing wateruse equipment definition object.
 It consists of the following data fields:
 name peak_flow_rate flow_rate_fraction_schedule target_temperature_schedule An example of such data can be found in below. It should be noted that the schedule name provided shall be in the user model.</description>
     </item>

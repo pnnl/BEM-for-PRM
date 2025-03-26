@@ -13,7 +13,7 @@
       <pubDate>Wed, 21 Sep 2022 15:06:12 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/equipment/user_data_electric_equipment/</guid>
-      <description>User Data CSV File: userdata_electric_equipment.csv (411 B) Introduction The userdata_electric_equipment.csv contains compliance data for electric equipment compliance calculations that includes receptacles and process loads including motors, elevators and refrigeration equipment loads.
+      <description>User Data CSV File: userdata_electric_equipment.csv (411 B) userdata_electric_equipment.json (3 KB) Introduction The userdata_electric_equipment.csv contains compliance data for electric equipment compliance calculations that includes receptacles and process loads including motors, elevators and refrigeration equipment loads.
 It consists of the following fields:
 name fraction_of_controlled_receptacles receptacle_power_savings motor_horsepower motor_efficiency motor_is_exempt elevator_weight_of_car elevator_rated_load elevator_counter_weight_of_car elevator_speed_of_car elevator_number_of_stories elevator_number_of_lifts elevator_area_ft2 elevator_ventilation_cfm refrigeration_equipment_class refrigeration_equipment_volume refrigeration_equipment_total_display_area For example, consider 2 elevators for 3 stories in a building. One of the line items in the .</description>
     </item>

@@ -13,7 +13,7 @@
       <pubDate>Wed, 21 Sep 2022 15:06:18 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space/</guid>
-      <description>User Data CSV File: userdata_space.csv (745 B) Introduction The userdata_space.csv file can be used to change the window-to-wall ratio and also provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
+      <description>User Data CSV File: userdata_space.csv (745 B) userdata_space.json (13 KB) Introduction The userdata_space.csv file can be used to change the window-to-wall ratio and also provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
 name building_type_for_wwr num_std_ltg_types std_ltg_type0x std_ltg_type_frac0x has_residential_exception The userdata_space.csv file allows the application of multiple lighting space types to a single Space object in the model.</description>
     </item>
     
@@ -23,7 +23,7 @@ name building_type_for_wwr num_std_ltg_types std_ltg_type0x std_ltg_type_frac0x 
       <pubDate>Wed, 21 Sep 2022 15:06:26 -0700</pubDate>
       
       <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/space/user_data_space_type/</guid>
-      <description>User Data CSV File: userdata_spacetype.csv (723 B) Introduction The userdata_space_type.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
+      <description>User Data CSV File: userdata_spacetype.csv (723 B) userdata_spacetype.json (13 KB) Introduction The userdata_space_type.csv file provides an alternative way to assign Appendix G lighting space types to the model. See model_requirements for additional information on lighting space types and the list of valid entries. The .csv file consists of the following fields.
 name num_std_ltg_types std_ltg_type0x std_ltg_type_frac0x The userdata_space_type.csv file allows the application of multiple lighting space types to a single SpaceType object in the model.</description>
     </item>
     
