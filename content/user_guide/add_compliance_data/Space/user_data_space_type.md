@@ -1,7 +1,7 @@
 ---
 title: "Space type"
 date: 2022-09-21T15:06:26-07:00
-weight: 3212
+weight: 3222
 draft: false
 pre: "<b>- </b>"
 ---

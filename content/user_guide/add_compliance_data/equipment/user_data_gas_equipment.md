@@ -1,7 +1,7 @@
 ---
 title: "Gas Equipment"
 date: 2022-09-21T15:06:12-07:00
-weight: 3242
+weight: 3252
 draft: true
 pre: "<b>- </b>"
 ---
