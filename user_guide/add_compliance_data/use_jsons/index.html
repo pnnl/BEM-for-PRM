@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/BEM-for-PRM/images/favicon.png" type="image/png">
 
-    <title>Standards space type : OSSTD doc</title>
+    <title>How to use Json Schema : OSSTD doc</title>
 
     
     <link href="/BEM-for-PRM/css/nucleus.css?1743109273" rel="stylesheet">
@@ -46,7 +46,7 @@
   gtag('config', 'G-XWF7DKJRZD');
 </script>
   </head>
-  <body class="" data-url="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/">
+  <body class="" data-url="/BEM-for-PRM/user_guide/add_compliance_data/use_jsons/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -870,7 +870,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/model_requirements/" title="Model requirements" class="dd-item
-        parent
+        
         
         
         ">
@@ -919,7 +919,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/" title="Standards space type" class="dd-item active">
+      <li data-nav-id="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/" title="Standards space type" class="dd-item ">
         <a href="/BEM-for-PRM/user_guide/model_requirements/standards_space_type/">
         <b>- </b>Standards space type
         <i class="fas fa-check read-icon"></i>
@@ -950,7 +950,7 @@
   
     
     <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data" class="dd-item
-        
+        parent
         
         
         ">
@@ -980,7 +980,7 @@
  
   
     
-      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/use_jsons/" title="How to use Json Schema" class="dd-item ">
+      <li data-nav-id="/BEM-for-PRM/user_guide/add_compliance_data/use_jsons/" title="How to use Json Schema" class="dd-item active">
         <a href="/BEM-for-PRM/user_guide/add_compliance_data/use_jsons/">
         How to use Json Schema
         <i class="fas fa-check read-icon"></i>
@@ -1620,8 +1620,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -1640,7 +1638,7 @@
             
           
           
-            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > <a href='/BEM-for-PRM/user_guide/model_requirements/'>Model requirements</a> > Standards space type
+            <a href='/BEM-for-PRM/'>Home</a> > <a href='/BEM-for-PRM/user_guide/'>User Guide</a> > <a href='/BEM-for-PRM/user_guide/add_compliance_data/'>User Compliance Data</a> > How to use Json Schema
           
         
           
@@ -1653,21 +1651,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -1675,472 +1658,205 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              Standards space type
-            </h1>
           
 
         
 
 
+<h2 id="provide-compliance-data-using-json-schema">Provide compliance data using Json Schema</h2>
 <div style="height: 1px; background-color: #dbd9d9"></div>
-<h4 id="best-practices-for-space-type">Best Practices for Space Type</h4>
-<p>The SpaceType object in OpenStudio has the property StandardsSpaceType which can be used to identify the appropriate lighting space type. The lighting space type is used to determine the baseline lighting power density and lighting control savings based on Table G3.7 of 90.1 Appendix G. The lighting space type is also used for a number of other purposes in the baseline generation, including: determining special requirements for computer rooms and laboratories, identifying residential spaces, and determining applicability of receptacle control measures according to space type.</p>
-<p>The lighting space type can also be assigned using the User Compliance Data files for <a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space_type">Space Type</a> and <a href="/BEM-for-PRM/user_guide/add_compliance_data/user_data_space">Space</a>. If the User Compliance Data files contain lighting space type assignments, there is a hierachy for determining the final assignments:</p>
-<ol>
-<li><strong>user_data_space</strong> is first priority</li>
-<li><strong>user_data_space_type</strong> is second priority</li>
-<li><strong>StandardsSpaceType</strong> property of the SpaceType objest is lowest priority</li>
-</ol>
-<p>It is possible to have lighting space type identified at the <strong>user_data_space</strong> level for some spaces and at either the <strong>user_data_space_type</strong> level or <strong>SpaceType:StandardsSpaceType</strong> level for other spaces.</p>
-<p>Valid entries for StandardsSpaceType are listed below. If the &ldquo;whole building&rdquo; options are used, the baseline model will not get credit for occupancy control of lighting.</p>
-<table>
-<thead>
-<tr>
-<th>StandardsSpaceType</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>apartment - hardwired</code></td>
-</tr>
-<tr>
-<td><code>audience seating - exercise center</code></td>
-</tr>
-<tr>
-<td><code>audience seating - gymnasium</code></td>
-</tr>
-<tr>
-<td><code>audience seating - sports arena</code></td>
-</tr>
-<tr>
-<td><code>audience seating - transportation facility</code></td>
-</tr>
-<tr>
-<td><code>audience seating - convention center</code></td>
-</tr>
-<tr>
-<td><code>audience seating - penitentiary</code></td>
-</tr>
-<tr>
-<td><code>audience seating - motion picture theater</code></td>
-</tr>
-<tr>
-<td><code>audience seating - religious facility</code></td>
-</tr>
-<tr>
-<td><code>audience seating - performing arts theater</code></td>
-</tr>
-<tr>
-<td><code>audience seating - auditorium</code></td>
-</tr>
-<tr>
-<td><code>audience seating - all other</code></td>
-</tr>
-<tr>
-<td><code>atrium &gt; 40 ft height</code></td>
-</tr>
-<tr>
-<td><code>atrium &lt;= 40 ft height</code></td>
-</tr>
-<tr>
-<td><code>banking activity</code></td>
-</tr>
-<tr>
-<td><code>classroom/lecture/training - penitentiary</code></td>
-</tr>
-<tr>
-<td><code>classroom/lecture/training - preschool to 12th</code></td>
-</tr>
-<tr>
-<td><code>classroom - laboratory or shop</code></td>
-</tr>
-<tr>
-<td><code>classroom/lecture/training - all other</code></td>
-</tr>
-<tr>
-<td><code>conference/meeting/multipurpose</code></td>
-</tr>
-<tr>
-<td><code>confinement cells</code></td>
-</tr>
-<tr>
-<td><code>copy/print</code></td>
-</tr>
-<tr>
-<td><code>corridor - manufacturing facility</code></td>
-</tr>
-<tr>
-<td><code>corridor - all other</code></td>
-</tr>
-<tr>
-<td><code>corridor - hospital</code></td>
-</tr>
-<tr>
-<td><code>corridor for visually impaired</code></td>
-</tr>
-<tr>
-<td><code>courtroom</code></td>
-</tr>
-<tr>
-<td><code>computer room</code></td>
-</tr>
-<tr>
-<td><code>dining - penitentiary</code></td>
-</tr>
-<tr>
-<td><code>dining - bar/lounge/leisure</code></td>
-</tr>
-<tr>
-<td><code>dining - family</code></td>
-</tr>
-<tr>
-<td><code>dining for visually impaired</code></td>
-</tr>
-<tr>
-<td><code>dining - cafeteria/fast food</code></td>
-</tr>
-<tr>
-<td><code>dining - all other</code></td>
-</tr>
-<tr>
-<td><code>electrical/mechanical</code></td>
-</tr>
-<tr>
-<td><code>emergency vehicle garage</code></td>
-</tr>
-<tr>
-<td><code>kitchen</code></td>
-</tr>
-<tr>
-<td><code>guest room</code></td>
-</tr>
-<tr>
-<td><code>judges chambers</code></td>
-</tr>
-<tr>
-<td><code>laboratory</code></td>
-</tr>
-<tr>
-<td><code>laundry/washing</code></td>
-</tr>
-<tr>
-<td><code>loading dock</code></td>
-</tr>
-<tr>
-<td><code>lobby - motion picture theater</code></td>
-</tr>
-<tr>
-<td><code>lobby - hotel</code></td>
-</tr>
-<tr>
-<td><code>lobby - performing arts theater</code></td>
-</tr>
-<tr>
-<td><code>lobby for visually impaired</code></td>
-</tr>
-<tr>
-<td><code>lobby - elevator</code></td>
-</tr>
-<tr>
-<td><code>lobby - all other</code></td>
-</tr>
-<tr>
-<td><code>locker room</code></td>
-</tr>
-<tr>
-<td><code>lounge/breakroom - healthcare facility</code></td>
-</tr>
-<tr>
-<td><code>lounge/breakroom - all other</code></td>
-</tr>
-<tr>
-<td><code>office - enclosed &lt;= 250 sf</code></td>
-</tr>
-<tr>
-<td><code>office - open</code></td>
-</tr>
-<tr>
-<td><code>office - open with workstation occup sensors</code></td>
-</tr>
-<tr>
-<td><code>parking area, interior</code></td>
-</tr>
-<tr>
-<td><code>pharmacy</code></td>
-</tr>
-<tr>
-<td><code>restroom - visually impaired</code></td>
-</tr>
-<tr>
-<td><code>restroom - all other</code></td>
-</tr>
-<tr>
-<td><code>sales</code></td>
-</tr>
-<tr>
-<td><code>seating area, general</code></td>
-</tr>
-<tr>
-<td><code>stairwell</code></td>
-</tr>
-<tr>
-<td><code>storage &lt; 50 sf - hospital</code></td>
-</tr>
-<tr>
-<td><code>storage 50 to 1000 sf - hospital</code></td>
-</tr>
-<tr>
-<td><code>storage &lt; 50 sf - all other</code></td>
-</tr>
-<tr>
-<td><code>storage 50 to 1000 sf - all other</code></td>
-</tr>
-<tr>
-<td><code>storage &gt;= 1000 sf - all other</code></td>
-</tr>
-<tr>
-<td><code>vehicular maintenance</code></td>
-</tr>
-<tr>
-<td><code>workshop</code></td>
-</tr>
-<tr>
-<td><code>chapel - visually impaired</code></td>
-</tr>
-<tr>
-<td><code>recreation/common living - visually impaired</code></td>
-</tr>
-<tr>
-<td><code>automotive</code></td>
-</tr>
-<tr>
-<td><code>exhibit - convention center</code></td>
-</tr>
-<tr>
-<td><code>dormitory - living quarters</code></td>
-</tr>
-<tr>
-<td><code>firestation - sleeping quarters</code></td>
-</tr>
-<tr>
-<td><code>gymnasium exercise area</code></td>
-</tr>
-<tr>
-<td><code>gymnasium playing area</code></td>
-</tr>
-<tr>
-<td><code>emergency room</code></td>
-</tr>
-<tr>
-<td><code>exam/treatment</code></td>
-</tr>
-<tr>
-<td><code>medical supply</code></td>
-</tr>
-<tr>
-<td><code>nursery</code></td>
-</tr>
-<tr>
-<td><code>nurses station</code></td>
-</tr>
-<tr>
-<td><code>operating room</code></td>
-</tr>
-<tr>
-<td><code>patient room</code></td>
-</tr>
-<tr>
-<td><code>physical therapy</code></td>
-</tr>
-<tr>
-<td><code>recovery</code></td>
-</tr>
-<tr>
-<td><code>library - reading</code></td>
-</tr>
-<tr>
-<td><code>library - stacks</code></td>
-</tr>
-<tr>
-<td><code>detailed manufacuring</code></td>
-</tr>
-<tr>
-<td><code>manufacturing equipment room</code></td>
-</tr>
-<tr>
-<td><code>manufacturing extra high bay</code></td>
-</tr>
-<tr>
-<td><code>manufacturing high bay</code></td>
-</tr>
-<tr>
-<td><code>manufacturing low bay</code></td>
-</tr>
-<tr>
-<td><code>museum exhibit area</code></td>
-</tr>
-<tr>
-<td><code>museum restoration</code></td>
-</tr>
-<tr>
-<td><code>post office - sorting area</code></td>
-</tr>
-<tr>
-<td><code>fellowship hall - religious facility</code></td>
-</tr>
-<tr>
-<td><code>worship/pulpit/choir area</code></td>
-</tr>
-<tr>
-<td><code>retail dressing room</code></td>
-</tr>
-<tr>
-<td><code>retail mall concourse</code></td>
-</tr>
-<tr>
-<td><code>sports arena playing area, class I</code></td>
-</tr>
-<tr>
-<td><code>sports arena playing area, class II</code></td>
-</tr>
-<tr>
-<td><code>sports arena playing area, class III</code></td>
-</tr>
-<tr>
-<td><code>sports arena playing area, class IV</code></td>
-</tr>
-<tr>
-<td><code>baggage/carousel</code></td>
-</tr>
-<tr>
-<td><code>airport concourse</code></td>
-</tr>
-<tr>
-<td><code>transportation ticket counter</code></td>
-</tr>
-<tr>
-<td><code>warehouse - bulk storage</code></td>
-</tr>
-<tr>
-<td><code>warehouse - fine storage</code></td>
-</tr>
-<tr>
-<td><code>attic - unoccupied</code></td>
-</tr>
-<tr>
-<td><code>elevator core</code></td>
-</tr>
-<tr>
-<td><code>plenum</code></td>
-</tr>
-<tr>
-<td><code>automotive facility - whole building</code></td>
-</tr>
-<tr>
-<td><code>convention center - whole building</code></td>
-</tr>
-<tr>
-<td><code>courthouse - whole building</code></td>
-</tr>
-<tr>
-<td><code>dining: bar lounge/leisure - whole building</code></td>
-</tr>
-<tr>
-<td><code>dining: cafeteria/fast food - whole building</code></td>
-</tr>
-<tr>
-<td><code>dining: family - whole building</code></td>
-</tr>
-<tr>
-<td><code>dormitory - whole building</code></td>
-</tr>
-<tr>
-<td><code>exercise center - whole building</code></td>
-</tr>
-<tr>
-<td><code>fire station - whole building</code></td>
-</tr>
-<tr>
-<td><code>gymnasium - whole building</code></td>
-</tr>
-<tr>
-<td><code>health-care clinic - whole building</code></td>
-</tr>
-<tr>
-<td><code>hospital - whole building</code></td>
-</tr>
-<tr>
-<td><code>hotel/motel - whole building</code></td>
-</tr>
-<tr>
-<td><code>library - whole building</code></td>
-</tr>
-<tr>
-<td><code>manufacturing facility - whole building</code></td>
-</tr>
-<tr>
-<td><code>motion picture theater - whole building</code></td>
-</tr>
-<tr>
-<td><code>multifamily - whole building</code></td>
-</tr>
-<tr>
-<td><code>museum - whole building</code></td>
-</tr>
-<tr>
-<td><code>office - whole building</code></td>
-</tr>
-<tr>
-<td><code>parking garage - whole building</code></td>
-</tr>
-<tr>
-<td><code>penitentiary - whole building</code></td>
-</tr>
-<tr>
-<td><code>performing arts theater - whole building</code></td>
-</tr>
-<tr>
-<td><code>police station - whole building</code></td>
-</tr>
-<tr>
-<td><code>post office - whole building</code></td>
-</tr>
-<tr>
-<td><code>religious facility - whole building</code></td>
-</tr>
-<tr>
-<td><code>retail - whole building</code></td>
-</tr>
-<tr>
-<td><code>school/university - whole building</code></td>
-</tr>
-<tr>
-<td><code>sports arena - whole building</code></td>
-</tr>
-<tr>
-<td><code>town hall - whole building</code></td>
-</tr>
-<tr>
-<td><code>transportation - whole building</code></td>
-</tr>
-<tr>
-<td><code>warehouse - whole building</code></td>
-</tr>
-<tr>
-<td><code>workshop - whole building</code></td>
-</tr>
-</tbody>
-</table>
-
+<h3 id="what-is-json-schema">What is JSON Schema?</h3>
+<p>JSON Schema is a powerful tool for validating the structure and content of JSON data. It defines the expected format of JSON documents, providing a clear, structured way to ensure that data adheres to a defined set of rules.</p>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="why-use-json-schema">Why Use JSON Schema?</h4>
+<ul>
+<li><strong>Validation</strong>: JSON Schema helps validate that the JSON data meets a predefined format, ensuring data integrity and reducing errors.</li>
+<li><strong>Documentation</strong>: By defining the structure of the data, JSON Schema acts as a form of documentation, making it easier for developers to understand what the data should look like.</li>
+<li><strong>Interoperability</strong>: It ensures that different systems can understand and exchange JSON data reliably by conforming to the same schema.</li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="how-to-use-json-schema">How to Use JSON Schema?</h4>
+<p>JSON Schema can sounds great but its use is very different from the <code>.csv</code> files. These schemas are meant to serve a documentation of data files but not data files themselves. Taking the <code>userdata_building.json</code> as example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;title&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ASHRAE 90.1 PRM Building Type User Data&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;definitions&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;UserDataBuildingData&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;object&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;properties&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;userdata_building&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;array&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;List of userdata_building rows&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;items&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;$ref&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#/definitions/UserDataBuilding&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;UserDataBuilding&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;object&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;properties&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Identifier or name for the building object&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;building_type_for_hvac&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;null&#34;</span>,<span style="color:#e6db74">&#34;string&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;enum&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;heated-only storage&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;hospital&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;other nonresidential&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;public assembly&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;residential&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;retail&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;unconditioned&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;default&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Building type for HVAC&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;$comment&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;This field is used to determine the baseline model HVAC system. It can be overwritten at the zone level (see the documentation for userdata_thermal_zone.json). It should be set to one of the following values that best describes the proposed model building type.&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;building_type_for_swh&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;null&#34;</span>,<span style="color:#e6db74">&#34;string&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;enum&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;All others&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Automotive facility&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Convenience store&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Convention center&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Courthouse&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Dining: Bar lounge/leisure&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Dining: Cafeteria/fast food&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Dining: Family&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Dormitory&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Exercise center&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Fire station&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Grocery store&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Gymnasium&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Health-care clinic&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Hospital and outpatient surgery center&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Hotel&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Library&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Manufacturing facility&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Motel&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Motion picture theater&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Multifamily&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Museum&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Office&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Parking garage&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Penitentiary&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Performing arts theater&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Police station&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Post office&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Religious facility&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Retail&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;School/university&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Sports arena&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Town hall&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Transportation&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Warehouse&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Workshop&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;default&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Building type for SWH&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;$comment&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;This field is used to determine the baseline model service water heating system. It should be set to one of the following values that best describes the proposed model building type.&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;building_type_for_wwr&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;null&#34;</span>, <span style="color:#e6db74">&#34;string&#34;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;enum&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;All others&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Grocery store&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Healthcare (outpatient)&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Hospital&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Hotel/motel &lt;= 75 rooms&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Hotel/motel &gt; 75 rooms&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Office 5,000 to 50,000 sq ft&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Office &lt;= 5,000 sq ft&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Office &gt; 50,000 sq ft&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Restaurant (full service)&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Restaurant (quick service)&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Retail (stand alone)&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Retail (strip mall)&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;School (primary)&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;School (secondary and university)&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Warehouse (nonrefrigerated)&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;default&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Building type for Window to wall ratio&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;$comment&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;This field is used to determine the baseline model’s window-to-wall ratio. It should be set to one of the following values that best described the proposed models building type.&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;is_exempt_from_rotations&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;boolean&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;default&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Is exempted from rotation requirements&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;$comment&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Set this field to true if it can be demonstrated to the satisfaction of the rating authority that the building orientation is dictated by site considerations. If it doesnt apply, leave this field blank or set to false.&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;User data building object&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;name&#34;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;additionalProperties&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>The above schema defines the format of the userdata json file for buildings. Here&rsquo;s a <code>userdata_building.json</code> file that adheres to the provided JSON Schema:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;userdata_building&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Building A&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;building_type_for_hvac&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;hospital&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;building_type_for_swh&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hospital and outpatient surgery center&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;building_type_for_wwr&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hospital&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;is_exempt_from_rotations&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Building B&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;building_type_for_hvac&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;public assembly&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;building_type_for_swh&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Convention center&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;building_type_for_wwr&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Office &lt;= 5,000 sq ft&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;is_exempt_from_rotations&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example:</p>
+<ul>
+<li>Each item in the userdata_building array corresponds to a building with required and optional properties.</li>
+<li>Properties like <code>building_type_for_hvac</code>, <code>building_type_for_swh</code>, and <code>building_type_for_wwr</code> use allowable values as specified in the schema.</li>
+<li>The <code>is_exempt_from_rotations</code> property is set to either true or false as specified in the schema.</li>
+</ul>
+<div style="height: 1px; background-color: #dbd9d9"></div>
+<h4 id="how-to-use-these-jsons-in-prm">How to use these jsons in PRM?</h4>
+<p>Similiarly, user who wish to use Json files instead of the <code>.csv</code> files shall name their json files exactly the same name as the JSON schema files. In the <code>user_data_path</code> directory, having these files created as the example below.</p>
+<pre tabindex="0"><code>- user_data_json
+    --&gt; userdata_building.json
+    --&gt; userdata_space.json
+    --&gt; userdata_exterior_lighting.json
+</code></pre><ul>
+<li><strong>Use with OS Measure</strong></li>
+</ul>
+<p>There is no change to the use of user data files when process it with PRM measure except the process will prioritize json files over csv files if found the <code>user_data_path</code> contains mix of these two types of files.</p>
+<ul>
+<li><strong>Use with OS SDK API</strong></li>
+</ul>
+<p>In this approach, we can skip calling <code>convert_userdata_csv_to_json</code> function if provided data in jsons.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># Create PRM object</span>
+</span></span><span style="display:flex;"><span>standard <span style="color:#f92672">=</span> <span style="color:#66d9ef">Standard</span><span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#39;90.1-PRM-2019&#39;</span>)
+</span></span><span style="display:flex;"><span>baseline_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/output&#34;</span>
+</span></span><span style="display:flex;"><span>json_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)<span style="color:#e6db74">}</span><span style="color:#e6db74">/user_data_json&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>baseline_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Load the user data json files into the PRM routine.</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>load_userdata_to_standards_database(json_path)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate baseline</span>
+</span></span><span style="display:flex;"><span>standard<span style="color:#f92672">.</span>model_create_prm_stable_baseline_building(model, climate_zone, hvac_bldg_type, wwr_bldg_type, swh_bldg_type, baseline_dir, unmet_load_hours_check<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>, debug<span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>)
+</span></span></code></pre></div>
 
 <footer class="footline">
 	
 </footer>
 
+        
+            </div> 
         
         </div>
         
@@ -2643,20 +2359,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -2664,47 +2366,6 @@
                 
 
                     
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
                     
                     
 
@@ -2729,6 +2390,61 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -3060,10 +2776,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/model_requirements/best_practices/" title="Best Practices"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/" title="User Compliance Data" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/BEM-for-PRM/user_guide/add_compliance_data/space/" title="Space" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

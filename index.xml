@@ -214,6 +214,16 @@ user_data_space is first priority user_data_space_type is second priority Standa
     </item>
     
     <item>
+      <title>How to use Json Schema</title>
+      <link>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/use_jsons/</link>
+      <pubDate>Wed, 21 Sep 2022 15:04:27 -0700</pubDate>
+      
+      <guid>http://pnnl.github.io/BEM-for-PRM/user_guide/add_compliance_data/use_jsons/</guid>
+      <description>Provide compliance data using Json Schema What is JSON Schema? JSON Schema is a powerful tool for validating the structure and content of JSON data. It defines the expected format of JSON documents, providing a clear, structured way to ensure that data adheres to a defined set of rules.
+Why Use JSON Schema? Validation: JSON Schema helps validate that the JSON data meets a predefined format, ensuring data integrity and reducing errors.</description>
+    </item>
+    
+    <item>
       <title>Baseline generation API</title>
       <link>http://pnnl.github.io/BEM-for-PRM/user_guide/prm_api_ref/baseline_generation_api/</link>
       <pubDate>Wed, 21 Sep 2022 15:06:50 -0700</pubDate>
