@@ -1,7 +1,7 @@
 ---
 title: "Electric Equipment"
 date: 2022-09-21T15:06:12-07:00
-weight: 3241
+weight: 3251
 draft: false
 pre: "<b>- </b>"
 ---
